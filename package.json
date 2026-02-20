@@ -1,0 +1,30 @@
+{
+  "name": "developer-agent-e2e",
+  "version": "1.0.0",
+  "description": "PRD-to-Feature Agent: AI-powered code generation from PRDs using codebase-aware retrieval",
+  "private": true,
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "index:full": "node indexer/run-indexer.js --mode=full",
+    "index:incremental": "node indexer/run-indexer.js --mode=incremental",
+    "parse": "node indexer/parse-codebase.js",
+    "build:symbol-map": "node indexer/build-symbol-map.js",
+    "build:repo-map": "node indexer/build-repo-map.js",
+    "validate:index": "node scripts/validate-index.js"
+  },
+  "dependencies": {
+    "web-tree-sitter": "^0.24.3",
+    "tree-sitter-javascript": "^0.23.0",
+    "better-sqlite3": "^11.7.0",
+    "glob": "^11.0.0",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@qdrant/js-client-rest": "^1.13.0",
+    "@orama/orama": "^3.1.0",
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {}
+}

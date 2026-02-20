@@ -1,0 +1,4022 @@
+[
+  {
+    "id": "backend/knexfile.js#preamble",
+    "description": "Processing: knexfile.js#module - other layer"
+  },
+  {
+    "id": "backend/knexfile.js#getMigrationDirectories",
+    "description": "Processing: knexfile.js#getMigrationDirectories - other layer"
+  },
+  {
+    "id": "backend/knexfile.js#generateConfigObject",
+    "description": "Processing: knexfile.js#generateConfigObject - other layer"
+  },
+  {
+    "id": "backend/jest.config.js#module",
+    "description": "Processing: jest.config.js#module - other layer"
+  },
+  {
+    "id": "backend/force_gc.js#module",
+    "description": "Processing: force_gc.js#module - other layer"
+  },
+  {
+    "id": "backend/src/server.js#module",
+    "description": "Processing: server.js#module - other layer"
+  },
+  {
+    "id": "backend/src/router.js#module",
+    "description": "Processing: router.js#module - other layer"
+  },
+  {
+    "id": "backend/src/newrelic.js#module",
+    "description": "Processing: newrelic.js#module - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/index.js#module",
+    "description": "Processing: index.js#module - other layer"
+  },
+  {
+    "id": "backend/config/source_access.js#module",
+    "description": "Processing: source_access.js#module - config layer"
+  },
+  {
+    "id": "backend/config/settings.js#module",
+    "description": "Processing: settings.js#module - config layer"
+  },
+  {
+    "id": "backend/config/scf_txn_monitoring_notifications.js#module",
+    "description": "Processing: scf_txn_monitoring_notifications.js#module - config layer"
+  },
+  {
+    "id": "backend/config/scf_notifications.js#module",
+    "description": "Processing: scf_notifications.js#module - config layer"
+  },
+  {
+    "id": "backend/config/routes.js#module",
+    "description": "Processing: routes.js#module - config layer"
+  },
+  {
+    "id": "backend/config/notification.js#module",
+    "description": "Processing: notification.js#module - config layer"
+  },
+  {
+    "id": "backend/config/migration_database.js#module",
+    "description": "Processing: migration_database.js#module - config layer"
+  },
+  {
+    "id": "backend/config/lending_notifications.js#module",
+    "description": "Processing: lending_notifications.js#module - config layer"
+  },
+  {
+    "id": "backend/config/lending_cache_route.js#module",
+    "description": "Processing: lending_cache_route.js#module - config layer"
+  },
+  {
+    "id": "backend/config/history.js#module",
+    "description": "Processing: history.js#module - config layer"
+  },
+  {
+    "id": "backend/config/finance_states.js#module",
+    "description": "Processing: finance_states.js#module - config layer"
+  },
+  {
+    "id": "backend/config/error_messages.js#module",
+    "description": "Processing: error_messages.js#module - config layer"
+  },
+  {
+    "id": "backend/config/envs.js#module",
+    "description": "Processing: envs.js#module - config layer"
+  },
+  {
+    "id": "backend/config/document_service.js#module",
+    "description": "Processing: document_service.js#module - config layer"
+  },
+  {
+    "id": "backend/config/database.js#module",
+    "description": "Processing: database.js#module - config layer"
+  },
+  {
+    "id": "backend/config/credit_facility_notifications.js#module",
+    "description": "Processing: credit_facility_notifications.js#module - config layer"
+  },
+  {
+    "id": "backend/config/config.js#preamble",
+    "description": "Processing: config.js#module - config layer"
+  },
+  {
+    "id": "backend/config/config.js#getAppEnv",
+    "description": "Processing: config.js#getAppEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#isDevEnv",
+    "description": "Processing: config.js#isDevEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#isProdEnv",
+    "description": "Processing: config.js#isProdEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#isStagingEnv",
+    "description": "Processing: config.js#isStagingEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#isQaEnv",
+    "description": "Processing: config.js#isQaEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#isTestEnv",
+    "description": "Processing: config.js#isTestEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#isDemoEnv",
+    "description": "Processing: config.js#isDemoEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#isUatEnv",
+    "description": "Processing: config.js#isUatEnv - config layer"
+  },
+  {
+    "id": "backend/config/config.js#getDb",
+    "description": "Processing: config.js#getDb - config layer"
+  },
+  {
+    "id": "backend/config/config.js#getApiResponseCodes",
+    "description": "Processing: config.js#getApiResponseCodes - config layer"
+  },
+  {
+    "id": "backend/config/config.js#getConfig",
+    "description": "Processing: config.js#getConfig - config layer"
+  },
+  {
+    "id": "backend/config/config.js#getAwsResource",
+    "description": "Processing: config.js#getAwsResource - config layer"
+  },
+  {
+    "id": "backend/config/config.js#getMigrationDb",
+    "description": "Processing: config.js#getMigrationDb - config layer"
+  },
+  {
+    "id": "backend/config/company_notifications.js#module",
+    "description": "Processing: company_notifications.js#module - config layer"
+  },
+  {
+    "id": "backend/config/common_notifications.js#module",
+    "description": "Processing: common_notifications.js#module - config layer"
+  },
+  {
+    "id": "backend/config/azure.js#module",
+    "description": "Processing: azure.js#module - config layer"
+  },
+  {
+    "id": "backend/config/auth_service.js#module",
+    "description": "Processing: auth_service.js#module - config layer"
+  },
+  {
+    "id": "backend/config/auth_api_service.js#module",
+    "description": "Processing: auth_api_service.js#module - config layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#preamble",
+    "description": "Processing: user_object.js#module - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#createPlatformUserObjectForRequest",
+    "description": "Processing: user_object.js#createPlatformUserObjectForRequest - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setUserId",
+    "description": "Processing: user_object.js#setUserId - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setOrgId",
+    "description": "Processing: user_object.js#setOrgId - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setUserToken",
+    "description": "Processing: user_object.js#setUserToken - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setTenantCode",
+    "description": "Processing: user_object.js#setTenantCode - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getTenantCode",
+    "description": "Processing: user_object.js#getTenantCode - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getUserID",
+    "description": "Processing: user_object.js#getUserID - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getOrgID",
+    "description": "Processing: user_object.js#getOrgID - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getUserToken",
+    "description": "Processing: user_object.js#getUserToken - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#resetTenantCode",
+    "description": "Processing: user_object.js#resetTenantCode - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#requestUserObject",
+    "description": "Processing: user_object.js#requestUserObject - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setInSession",
+    "description": "Processing: user_object.js#setInSession - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getFormSession",
+    "description": "Processing: user_object.js#getFormSession - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/rate_limit.js#module",
+    "description": "Processing: rate_limit.js#module - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/error_handler.js#module",
+    "description": "Processing: error_handler.js#module - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/convert_query_keys.js#module",
+    "description": "Processing: convert_query_keys.js#module - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#preamble",
+    "description": "Processing: asyncContext.js#module - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#setStore",
+    "description": "Processing: asyncContext.js#setStore - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#getStore",
+    "description": "Processing: asyncContext.js#getStore - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#runWithContext",
+    "description": "Processing: asyncContext.js#runWithContext - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/access_control.js#preamble",
+    "description": "Processing: access_control.js#module - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/access_control.js#_sendReject",
+    "description": "Processing: access_control.js#_sendReject - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/access_control.js#_checkUserOrgTenantComboExists",
+    "description": "Processing: access_control.js#_checkUserOrgTenantComboExists - middleware layer"
+  },
+  {
+    "id": "backend/src/middlewares/about.js#module",
+    "description": "Processing: about.js#module - middleware layer"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#preamble",
+    "description": "Processing: user_permissions_check.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#checkUserPermission",
+    "description": "Processing: user_permissions_check.js#checkUserPermission - util layer"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#formProductPermissionCode",
+    "description": "Processing: user_permissions_check.js#formProductPermissionCode - util layer"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#checkIfUserHasRole",
+    "description": "Processing: user_permissions_check.js#checkIfUserHasRole - util layer"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#checkIfUserHasUpdateRole",
+    "description": "Processing: user_permissions_check.js#checkIfUserHasUpdateRole - util layer"
+  },
+  {
+    "id": "backend/src/utils/user_org_email_object.js#UserOrgEmailObject",
+    "description": "Processing: user_org_email_object.js#UserOrgEmailObject - util layer"
+  },
+  {
+    "id": "backend/src/utils/upcoming_transactions_report.js#UpcomingTransactionsReport",
+    "description": "Processing: upcoming_transactions_report.js#UpcomingTransactionsReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/to_yaml.js#module",
+    "description": "Processing: to_yaml.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#preamble",
+    "description": "Processing: slack_notify_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_buildMessageFormat",
+    "description": "Processing: slack_notify_utils.js#_buildMessageFormat - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_send",
+    "description": "Processing: slack_notify_utils.js#_send - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_reportContactUsRequest",
+    "description": "Processing: slack_notify_utils.js#_reportContactUsRequest - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_reportTicket",
+    "description": "Processing: slack_notify_utils.js#_reportTicket - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_general",
+    "description": "Processing: slack_notify_utils.js#_general - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_info",
+    "description": "Processing: slack_notify_utils.js#_info - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_warn",
+    "description": "Processing: slack_notify_utils.js#_warn - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_error",
+    "description": "Processing: slack_notify_utils.js#_error - util layer"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_fatal",
+    "description": "Processing: slack_notify_utils.js#_fatal - util layer"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#_text_match",
+    "description": "Processing: skip_flow_utils.js#_text_match - util layer"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#_currency_range",
+    "description": "Processing: skip_flow_utils.js#_currency_range - util layer"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#_getCurrencyMinimumMaximumFromCurrencyRange",
+    "description": "Processing: skip_flow_utils.js#_getCurrencyMinimumMaximumFromCurrencyRange - util layer"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#text_match",
+    "description": "Processing: skip_flow_utils.js#text_match - util layer"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#currency_range",
+    "description": "Processing: skip_flow_utils.js#currency_range - util layer"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#getCurrencyMinimumMaximumFromCurrencyRange",
+    "description": "Processing: skip_flow_utils.js#getCurrencyMinimumMaximumFromCurrencyRange - util layer"
+  },
+  {
+    "id": "backend/src/utils/respond_error.js#module",
+    "description": "Processing: respond_error.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/reset_sequence.js#resetSequence",
+    "description": "Processing: reset_sequence.js#resetSequence - util layer"
+  },
+  {
+    "id": "backend/src/utils/reset_sequence.js#resetOnDate",
+    "description": "Processing: reset_sequence.js#resetOnDate - util layer"
+  },
+  {
+    "id": "backend/src/utils/regex_utils.js#preamble",
+    "description": "Processing: regex_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/regex_utils.js#validate",
+    "description": "Processing: regex_utils.js#validate - util layer"
+  },
+  {
+    "id": "backend/src/utils/regex_utils.js#match",
+    "description": "Processing: regex_utils.js#match - util layer"
+  },
+  {
+    "id": "backend/src/utils/random_utils.js#preamble",
+    "description": "Processing: random_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/random_utils.js#makeBasicKey",
+    "description": "Processing: random_utils.js#makeBasicKey - util layer"
+  },
+  {
+    "id": "backend/src/utils/random_utils.js#generateCode",
+    "description": "Processing: random_utils.js#generateCode - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#preamble",
+    "description": "Processing: query_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#_fetchTargetColumnData",
+    "description": "Processing: query_utils.js#_fetchTargetColumnData - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#extractSearchTerms",
+    "description": "Processing: query_utils.js#extractSearchTerms - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#convertSearchTermsToWhere",
+    "description": "Processing: query_utils.js#convertSearchTermsToWhere - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#pageFilter",
+    "description": "Processing: query_utils.js#pageFilter - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#validateQueryFields",
+    "description": "Processing: query_utils.js#validateQueryFields - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#validateCreationFields",
+    "description": "Processing: query_utils.js#validateCreationFields - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#checkMandatoryFields",
+    "description": "Processing: query_utils.js#checkMandatoryFields - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#convertDateFieldsToString",
+    "description": "Processing: query_utils.js#convertDateFieldsToString - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#validateStates",
+    "description": "Processing: query_utils.js#validateStates - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#differenceBetweenTimestampsInSecondsStatement",
+    "description": "Processing: query_utils.js#differenceBetweenTimestampsInSecondsStatement - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#dateDiffBetweenTimestamps",
+    "description": "Processing: query_utils.js#dateDiffBetweenTimestamps - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#applyGenericFilter",
+    "description": "Processing: query_utils.js#applyGenericFilter - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#applySearchSortAndPagination",
+    "description": "Processing: query_utils.js#applySearchSortAndPagination - util layer"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#selectAllWithOptions",
+    "description": "Processing: query_utils.js#selectAllWithOptions - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#preamble",
+    "description": "Processing: product_config_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFilePath",
+    "description": "Processing: product_config_utils.js#_getProductConfigFilePath - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getFinanceProductConfigById",
+    "description": "Processing: product_config_utils.js#_getFinanceProductConfigById - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFromFile",
+    "description": "Processing: product_config_utils.js#_getProductConfigFromFile - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFromFileNonAsync",
+    "description": "Processing: product_config_utils.js#_getProductConfigFromFileNonAsync - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFromFileWildCard",
+    "description": "Processing: product_config_utils.js#_getProductConfigFromFileWildCard - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigKeyValue",
+    "description": "Processing: product_config_utils.js#_getProductConfigKeyValue - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductKeyWithFinanceId",
+    "description": "Processing: product_config_utils.js#_getProductKeyWithFinanceId - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigByConfigId",
+    "description": "Processing: product_config_utils.js#_getProductConfigByConfigId - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getAllProductConfig",
+    "description": "Processing: product_config_utils.js#getAllProductConfig - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfig",
+    "description": "Processing: product_config_utils.js#getProductConfig - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigWildCard",
+    "description": "Processing: product_config_utils.js#getProductConfigWildCard - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeyWithValue",
+    "description": "Processing: product_config_utils.js#getProductConfigKeyWithValue - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeysValue",
+    "description": "Processing: product_config_utils.js#getProductConfigKeysValue - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getCommonProductConfigKeyValue",
+    "description": "Processing: product_config_utils.js#getCommonProductConfigKeyValue - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeysValueNonAsync",
+    "description": "Processing: product_config_utils.js#getProductConfigKeysValueNonAsync - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getCommonProductConfigKeyValueNonAsync",
+    "description": "Processing: product_config_utils.js#getCommonProductConfigKeyValueNonAsync - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getAllValidProductInfo",
+    "description": "Processing: product_config_utils.js#getAllValidProductInfo - util layer"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeyValueByFinanceId",
+    "description": "Processing: product_config_utils.js#getProductConfigKeyValueByFinanceId - util layer"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#preamble",
+    "description": "Processing: ports_mapping_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#_nameFormat",
+    "description": "Processing: ports_mapping_utils.js#_nameFormat - util layer"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#_portNameCodeObj",
+    "description": "Processing: ports_mapping_utils.js#_portNameCodeObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#portNameCodeMapper",
+    "description": "Processing: ports_mapping_utils.js#portNameCodeMapper - util layer"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#getPortMapper",
+    "description": "Processing: ports_mapping_utils.js#getPortMapper - util layer"
+  },
+  {
+    "id": "backend/src/utils/parse_csv.js#validateWorksheetHeaders",
+    "description": "Processing: parse_csv.js#validateWorksheetHeaders - util layer"
+  },
+  {
+    "id": "backend/src/utils/paginator.js#module",
+    "description": "Processing: paginator.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/overdue_transaction_report.js#OverdueTransactionsReport",
+    "description": "Processing: overdue_transaction_report.js#OverdueTransactionsReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/organisation_utils.js#preamble",
+    "description": "Processing: organisation_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/organisation_utils.js#getEncryptedMawaniRefId",
+    "description": "Processing: organisation_utils.js#getEncryptedMawaniRefId - util layer"
+  },
+  {
+    "id": "backend/src/utils/organisation_utils.js#getDecryptedMawaniRefId",
+    "description": "Processing: organisation_utils.js#getDecryptedMawaniRefId - util layer"
+  },
+  {
+    "id": "backend/src/utils/onboarding_detailed_report.js#onBoardingDetailedReport",
+    "description": "Processing: onboarding_detailed_report.js#onBoardingDetailedReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#_matchDateWithString",
+    "description": "Processing: ocr_utils.js#_matchDateWithString - util layer"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#_isDate",
+    "description": "Processing: ocr_utils.js#_isDate - util layer"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#_isNumeric",
+    "description": "Processing: ocr_utils.js#_isNumeric - util layer"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#matchValues",
+    "description": "Processing: ocr_utils.js#matchValues - util layer"
+  },
+  {
+    "id": "backend/src/utils/ocr_bulk_insert_data.js#ocrBulkInsertData",
+    "description": "Processing: ocr_bulk_insert_data.js#ocrBulkInsertData - util layer"
+  },
+  {
+    "id": "backend/src/utils/ocr_bulk_insert_data.js#ocrFieldData",
+    "description": "Processing: ocr_bulk_insert_data.js#ocrFieldData - util layer"
+  },
+  {
+    "id": "backend/src/utils/number_utils.js#parseTo2Decimal",
+    "description": "Processing: number_utils.js#parseTo2Decimal - util layer"
+  },
+  {
+    "id": "backend/src/utils/number_utils.js#formatToInteger",
+    "description": "Processing: number_utils.js#formatToInteger - util layer"
+  },
+  {
+    "id": "backend/src/utils/number_utils.js#formatWithThousandSeparator",
+    "description": "Processing: number_utils.js#formatWithThousandSeparator - util layer"
+  },
+  {
+    "id": "backend/src/utils/mawani_company_code_issuer_details.js#mawaniCompanyCodeIssuerDetails",
+    "description": "Processing: mawani_company_code_issuer_details.js#mawaniCompanyCodeIssuerDetails - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#normalizeData",
+    "description": "Processing: logger_pino.js#normalizeData - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#setOptions",
+    "description": "Processing: logger_pino.js#setOptions - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#fatal",
+    "description": "Processing: logger_pino.js#fatal - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#error",
+    "description": "Processing: logger_pino.js#error - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#warn",
+    "description": "Processing: logger_pino.js#warn - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#info",
+    "description": "Processing: logger_pino.js#info - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#debug",
+    "description": "Processing: logger_pino.js#debug - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#trace",
+    "description": "Processing: logger_pino.js#trace - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#preamble",
+    "description": "Processing: logger.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#getLabel",
+    "description": "Processing: logger.js#getLabel - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#normalizeData",
+    "description": "Processing: logger.js#normalizeData - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#setOptions",
+    "description": "Processing: logger.js#setOptions - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#fatal",
+    "description": "Processing: logger.js#fatal - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#error",
+    "description": "Processing: logger.js#error - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#warn",
+    "description": "Processing: logger.js#warn - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#info",
+    "description": "Processing: logger.js#info - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#debug",
+    "description": "Processing: logger.js#debug - util layer"
+  },
+  {
+    "id": "backend/src/utils/logger.js#trace",
+    "description": "Processing: logger.js#trace - util layer"
+  },
+  {
+    "id": "backend/src/utils/lending_upcoming_transactions_reports.js#LendingUpcomingTransactionsReport",
+    "description": "Processing: lending_upcoming_transactions_reports.js#LendingUpcomingTransactionsReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/joi_validation.js#replaceFieldConfigurations",
+    "description": "Processing: joi_validation.js#replaceFieldConfigurations - util layer"
+  },
+  {
+    "id": "backend/src/utils/joi_validation.js#validate",
+    "description": "Processing: joi_validation.js#validate - util layer"
+  },
+  {
+    "id": "backend/src/utils/joi_validation.js#validateWithProdConfigDependency",
+    "description": "Processing: joi_validation.js#validateWithProdConfigDependency - util layer"
+  },
+  {
+    "id": "backend/src/utils/invoice_generation_report.js#InvoiceGenerationReport",
+    "description": "Processing: invoice_generation_report.js#InvoiceGenerationReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/finance_application_report.js#FinanceApplicationReport",
+    "description": "Processing: finance_application_report.js#FinanceApplicationReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#formatCellValue",
+    "description": "Processing: file_utils.js#formatCellValue - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#createCSVFileFromJsonArray",
+    "description": "Processing: file_utils.js#createCSVFileFromJsonArray - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#parseCSVToJsonSync",
+    "description": "Processing: file_utils.js#parseCSVToJsonSync - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#isUnixHiddenPath",
+    "description": "Processing: file_utils.js#isUnixHiddenPath - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#deleteFile",
+    "description": "Processing: file_utils.js#deleteFile - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#extractZip",
+    "description": "Processing: file_utils.js#extractZip - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#checkAllowedFileFormats",
+    "description": "Processing: file_utils.js#checkAllowedFileFormats - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#exportToXLS",
+    "description": "Processing: file_utils.js#exportToXLS - util layer"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#exportToPDF",
+    "description": "Processing: file_utils.js#exportToPDF - util layer"
+  },
+  {
+    "id": "backend/src/utils/fi_onboarding_data.js#FIOnboardingData",
+    "description": "Processing: fi_onboarding_data.js#FIOnboardingData - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#_toLocalizedDateString",
+    "description": "Processing: date_utils.js#_toLocalizedDateString - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#_convertToDateStrings",
+    "description": "Processing: date_utils.js#_convertToDateStrings - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInTheWeek",
+    "description": "Processing: date_utils.js#getDateInTheWeek - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateByOffset",
+    "description": "Processing: date_utils.js#getDateByOffset - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInYYYYMMDD",
+    "description": "Processing: date_utils.js#getDateInYYYYMMDD - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInMMddYYYY",
+    "description": "Processing: date_utils.js#getDateInMMddYYYY - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInDDmmYYYY",
+    "description": "Processing: date_utils.js#getDateInDDmmYYYY - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getYearAndMonthInYYYY_MM",
+    "description": "Processing: date_utils.js#getYearAndMonthInYYYY_MM - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateStrNoDash",
+    "description": "Processing: date_utils.js#getDateStrNoDash - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateStrWithDash",
+    "description": "Processing: date_utils.js#getDateStrWithDash - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertDatesToStrings",
+    "description": "Processing: date_utils.js#convertDatesToStrings - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertDatesToISOStrings",
+    "description": "Processing: date_utils.js#convertDatesToISOStrings - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInSeconds",
+    "description": "Processing: date_utils.js#differenceBetweenDatesInSeconds - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInMinutes",
+    "description": "Processing: date_utils.js#differenceBetweenDatesInMinutes - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInHours",
+    "description": "Processing: date_utils.js#differenceBetweenDatesInHours - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInDays",
+    "description": "Processing: date_utils.js#differenceBetweenDatesInDays - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInDaysIgnoreTime",
+    "description": "Processing: date_utils.js#differenceBetweenDatesInDaysIgnoreTime - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDates",
+    "description": "Processing: date_utils.js#differenceBetweenDates - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateIndd_mm_yyyy",
+    "description": "Processing: date_utils.js#getDateIndd_mm_yyyy - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertExcelDateToJSDate",
+    "description": "Processing: date_utils.js#convertExcelDateToJSDate - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getFormatteDdate",
+    "description": "Processing: date_utils.js#getFormatteDdate - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertTZ",
+    "description": "Processing: date_utils.js#convertTZ - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getYearAndMonth",
+    "description": "Processing: date_utils.js#getYearAndMonth - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getLocalDateAndTime",
+    "description": "Processing: date_utils.js#getLocalDateAndTime - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateWithTime",
+    "description": "Processing: date_utils.js#getDateWithTime - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertToDate",
+    "description": "Processing: date_utils.js#convertToDate - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInDDMMYYFormat",
+    "description": "Processing: date_utils.js#getDateInDDMMYYFormat - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#formatDateToDDMMYYYY",
+    "description": "Processing: date_utils.js#formatDateToDDMMYYYY - util layer"
+  },
+  {
+    "id": "backend/src/utils/date_range.js#module",
+    "description": "Processing: date_range.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/credit_limit_report.js#CreditLimitReport",
+    "description": "Processing: credit_limit_report.js#CreditLimitReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/credit_application_detailed_report.js#creditApplicationDetailedReport",
+    "description": "Processing: credit_application_detailed_report.js#creditApplicationDetailedReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/completed_transactions_report.js#CompletedTransactionsReport",
+    "description": "Processing: completed_transactions_report.js#CompletedTransactionsReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/company_kyc_info_report.js#companyKycInfoReport",
+    "description": "Processing: company_kyc_info_report.js#companyKycInfoReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/company_kyc_documents_report.js#companyKycDocumentsReport",
+    "description": "Processing: company_kyc_documents_report.js#companyKycDocumentsReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isObject",
+    "description": "Processing: common_utils.js#_isObject - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_toCamel",
+    "description": "Processing: common_utils.js#_toCamel - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isEmptyorNull",
+    "description": "Processing: common_utils.js#_isEmptyorNull - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isEmptyObject",
+    "description": "Processing: common_utils.js#_isEmptyObject - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isDate",
+    "description": "Processing: common_utils.js#_isDate - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isInteger",
+    "description": "Processing: common_utils.js#_isInteger - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isString",
+    "description": "Processing: common_utils.js#_isString - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isSerial",
+    "description": "Processing: common_utils.js#_isSerial - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isNumber",
+    "description": "Processing: common_utils.js#_isNumber - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isPercantage",
+    "description": "Processing: common_utils.js#_isPercantage - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isIntegerFourDigit",
+    "description": "Processing: common_utils.js#_isIntegerFourDigit - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isYearLessOrEqualToCurrYear",
+    "description": "Processing: common_utils.js#_isYearLessOrEqualToCurrYear - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isEmail",
+    "description": "Processing: common_utils.js#_isEmail - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_toSnake",
+    "description": "Processing: common_utils.js#_toSnake - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_keysToCamel",
+    "description": "Processing: common_utils.js#_keysToCamel - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_validateInputParams",
+    "description": "Processing: common_utils.js#_validateInputParams - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_keysToSnake",
+    "description": "Processing: common_utils.js#_keysToSnake - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_invertKeyValues",
+    "description": "Processing: common_utils.js#_invertKeyValues - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_replaceWithVariableValue",
+    "description": "Processing: common_utils.js#_replaceWithVariableValue - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_replaceRowStaticValues",
+    "description": "Processing: common_utils.js#_replaceRowStaticValues - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_areObjectsEqual",
+    "description": "Processing: common_utils.js#_areObjectsEqual - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_convertDmsToLatLng",
+    "description": "Processing: common_utils.js#_convertDmsToLatLng - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_generateTraceContext",
+    "description": "Processing: common_utils.js#_generateTraceContext - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_generateExternalLinkToken",
+    "description": "Processing: common_utils.js#_generateExternalLinkToken - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#getUniquePropertyValuesFromObject",
+    "description": "Processing: common_utils.js#getUniquePropertyValuesFromObject - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#getUniquePropertyValuesFromJSONObject",
+    "description": "Processing: common_utils.js#getUniquePropertyValuesFromJSONObject - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_sortObjectArray",
+    "description": "Processing: common_utils.js#_sortObjectArray - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_generateRandomPassword",
+    "description": "Processing: common_utils.js#_generateRandomPassword - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#axiosRetry",
+    "description": "Processing: common_utils.js#axiosRetry - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_getKeyFromValue",
+    "description": "Processing: common_utils.js#_getKeyFromValue - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isUrl",
+    "description": "Processing: common_utils.js#_isUrl - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_capitalizeFirstLetter",
+    "description": "Processing: common_utils.js#_capitalizeFirstLetter - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_formatAndConvertToLowerCase",
+    "description": "Processing: common_utils.js#_formatAndConvertToLowerCase - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#convertSnakeCaseKeysToCamelCase",
+    "description": "Processing: common_utils.js#convertSnakeCaseKeysToCamelCase - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#capitalizeFirstCharacter",
+    "description": "Processing: common_utils.js#capitalizeFirstCharacter - util layer"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#isBlank",
+    "description": "Processing: common_utils.js#isBlank - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#preamble",
+    "description": "Processing: cloud_storage_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getCloudStorageContext",
+    "description": "Processing: cloud_storage_utils.js#getCloudStorageContext - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getDocumentContainerName",
+    "description": "Processing: cloud_storage_utils.js#getDocumentContainerName - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getChaincodeContainerName",
+    "description": "Processing: cloud_storage_utils.js#getChaincodeContainerName - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getArtifactContainerName",
+    "description": "Processing: cloud_storage_utils.js#getArtifactContainerName - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getBackupContainerName",
+    "description": "Processing: cloud_storage_utils.js#getBackupContainerName - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getTemplateUploadBucketName",
+    "description": "Processing: cloud_storage_utils.js#getTemplateUploadBucketName - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getEmailTemplateBucketName",
+    "description": "Processing: cloud_storage_utils.js#getEmailTemplateBucketName - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_provider.js#CloudStorageProvider",
+    "description": "Processing: cloud_storage_provider.js#CloudStorageProvider - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_provider.js#CloudStorageContext",
+    "description": "Processing: cloud_storage_provider.js#CloudStorageContext - util layer"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_provider.js#AzureStorageProvider",
+    "description": "Processing: cloud_storage_provider.js#AzureStorageProvider - util layer"
+  },
+  {
+    "id": "backend/src/utils/azure_blob_storage_utils.js#preamble",
+    "description": "Processing: azure_blob_storage_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/azure_blob_storage_utils.js#streamToBuffer",
+    "description": "Processing: azure_blob_storage_utils.js#streamToBuffer - util layer"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#preamble",
+    "description": "Processing: axios_cache_inspector.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#_axiosWithGetorUpdateRedisCache",
+    "description": "Processing: axios_cache_inspector.js#_axiosWithGetorUpdateRedisCache - util layer"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#_evictDataFromRedis",
+    "description": "Processing: axios_cache_inspector.js#_evictDataFromRedis - util layer"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#axiosWithCache",
+    "description": "Processing: axios_cache_inspector.js#axiosWithCache - util layer"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#preamble",
+    "description": "Processing: aws_config_utils.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsCreds",
+    "description": "Processing: aws_config_utils.js#getAwsCreds - util layer"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsRegion",
+    "description": "Processing: aws_config_utils.js#getAwsRegion - util layer"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsHttpOptions",
+    "description": "Processing: aws_config_utils.js#getAwsHttpOptions - util layer"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsConfig",
+    "description": "Processing: aws_config_utils.js#getAwsConfig - util layer"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsMetaData",
+    "description": "Processing: aws_config_utils.js#getAwsMetaData - util layer"
+  },
+  {
+    "id": "backend/src/utils/array_utils.js#_equals",
+    "description": "Processing: array_utils.js#_equals - util layer"
+  },
+  {
+    "id": "backend/src/utils/apikey_generator.js#module",
+    "description": "Processing: apikey_generator.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/account_summary_report.js#accountSummaryReport",
+    "description": "Processing: account_summary_report.js#accountSummaryReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/account_categorisation.js#preamble",
+    "description": "Processing: account_categorisation.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/account_categorisation.js#_getClientBucketByOverdueDays",
+    "description": "Processing: account_categorisation.js#_getClientBucketByOverdueDays - util layer"
+  },
+  {
+    "id": "backend/src/utils/DPWFS_commission_report.js#DPWFSCommissionReport",
+    "description": "Processing: DPWFS_commission_report.js#DPWFSCommissionReport - util layer"
+  },
+  {
+    "id": "backend/src/errors/user_authentication_error.js#module",
+    "description": "Processing: user_authentication_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/starvation_error.js#module",
+    "description": "Processing: starvation_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/source_error.js#module",
+    "description": "Processing: source_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/runtime_error.js#module",
+    "description": "Processing: runtime_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/not_found_error.js#module",
+    "description": "Processing: not_found_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/joi_schema_error.js#module",
+    "description": "Processing: joi_schema_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/invalid_email_error.js#module",
+    "description": "Processing: invalid_email_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/forbidden_error.js#module",
+    "description": "Processing: forbidden_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/file_upload_error.js#module",
+    "description": "Processing: file_upload_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/deferred_read_when_failed_error.js#module",
+    "description": "Processing: deferred_read_when_failed_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/deferred_read_error.js#module",
+    "description": "Processing: deferred_read_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/conflict_creation_error.js#module",
+    "description": "Processing: conflict_creation_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/authentication_error.js#module",
+    "description": "Processing: authentication_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/argument_error.js#module",
+    "description": "Processing: argument_error.js#module - error layer"
+  },
+  {
+    "id": "backend/src/errors/api_error.js#module",
+    "description": "Processing: api_error.js#module - error layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/insertionFlow.js#preamble",
+    "description": "Processing: insertionFlow.js#module - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/insertionFlow.js#insertMockData",
+    "description": "Processing: insertionFlow.js#insertMockData - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#preamble",
+    "description": "Processing: helpers.js#module - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#_shuffleArray",
+    "description": "Processing: helpers.js#_shuffleArray - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#login",
+    "description": "Processing: helpers.js#login - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#getOrganisations",
+    "description": "Processing: helpers.js#getOrganisations - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#getFinanceDetailsById",
+    "description": "Processing: helpers.js#getFinanceDetailsById - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#saveNewFinance",
+    "description": "Processing: helpers.js#saveNewFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#submitExistingFinance",
+    "description": "Processing: helpers.js#submitExistingFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#otherBCOApproveFinance",
+    "description": "Processing: helpers.js#otherBCOApproveFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#dtfAdminApproveFinance",
+    "description": "Processing: helpers.js#dtfAdminApproveFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#approveBankAssessment",
+    "description": "Processing: helpers.js#approveBankAssessment - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#rejectBankAssessment",
+    "description": "Processing: helpers.js#rejectBankAssessment - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#bcoAcceptPaymentTerm",
+    "description": "Processing: helpers.js#bcoAcceptPaymentTerm - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#disburseAmount",
+    "description": "Processing: helpers.js#disburseAmount - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#settleAccount",
+    "description": "Processing: helpers.js#settleAccount - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#updateShipmentEvent",
+    "description": "Processing: helpers.js#updateShipmentEvent - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#preamble",
+    "description": "Processing: generate_finance_mock_data.js#module - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#_getUserIdAndToken",
+    "description": "Processing: generate_finance_mock_data.js#_getUserIdAndToken - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#_generateBaseForInsertion",
+    "description": "Processing: generate_finance_mock_data.js#_generateBaseForInsertion - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#_getAdminMailIdFromOrgId",
+    "description": "Processing: generate_finance_mock_data.js#_getAdminMailIdFromOrgId - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#tradeFinanceMockData",
+    "description": "Processing: generate_finance_mock_data.js#tradeFinanceMockData - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/insertionFlow.js#preamble",
+    "description": "Processing: insertionFlow.js#module - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/insertionFlow.js#insertMockData",
+    "description": "Processing: insertionFlow.js#insertMockData - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#preamble",
+    "description": "Processing: helpers.js#module - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#_shuffleArray",
+    "description": "Processing: helpers.js#_shuffleArray - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#login",
+    "description": "Processing: helpers.js#login - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#getOrganisations",
+    "description": "Processing: helpers.js#getOrganisations - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#getFinanceDetailsById",
+    "description": "Processing: helpers.js#getFinanceDetailsById - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#saveNewFinance",
+    "description": "Processing: helpers.js#saveNewFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#submitExistingFinance",
+    "description": "Processing: helpers.js#submitExistingFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#otherBCOApproveFinance",
+    "description": "Processing: helpers.js#otherBCOApproveFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#dtfAdminApproveFinance",
+    "description": "Processing: helpers.js#dtfAdminApproveFinance - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#approveBankAssessment",
+    "description": "Processing: helpers.js#approveBankAssessment - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#rejectBankAssessment",
+    "description": "Processing: helpers.js#rejectBankAssessment - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#disburseAmount",
+    "description": "Processing: helpers.js#disburseAmount - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#settleAccount",
+    "description": "Processing: helpers.js#settleAccount - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#preamble",
+    "description": "Processing: generate_finance_mock_data.js#module - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#_getUserIdAndToken",
+    "description": "Processing: generate_finance_mock_data.js#_getUserIdAndToken - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#_generateBaseForInsertion",
+    "description": "Processing: generate_finance_mock_data.js#_generateBaseForInsertion - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#_getAdminMailIdFromOrgId",
+    "description": "Processing: generate_finance_mock_data.js#_getAdminMailIdFromOrgId - other layer"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#tradeFinanceMockData",
+    "description": "Processing: generate_finance_mock_data.js#tradeFinanceMockData - other layer"
+  },
+  {
+    "id": "backend/config/crm_data/staging.js#module",
+    "description": "Processing: staging.js#module - config layer"
+  },
+  {
+    "id": "backend/config/crm_data/prod.js#module",
+    "description": "Processing: prod.js#module - config layer"
+  },
+  {
+    "id": "backend/config/crm_data/dev.js#module",
+    "description": "Processing: dev.js#module - config layer"
+  },
+  {
+    "id": "backend/config/crm_data/demo.js#module",
+    "description": "Processing: demo.js#module - config layer"
+  },
+  {
+    "id": "backend/src/utils/reports/user_signup_metric_report.js#userSignupMetricReport",
+    "description": "Processing: user_signup_metric_report.js#userSignupMetricReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/reports/performance_report.js#performanceReport",
+    "description": "Processing: performance_report.js#performanceReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/reports/overall_monthly_report.js#overallMonthlyReport",
+    "description": "Processing: overall_monthly_report.js#overallMonthlyReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/reports/ocr_accuracy_report.js#ocrAccuracyReport",
+    "description": "Processing: ocr_accuracy_report.js#ocrAccuracyReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/reports/finance_report.js#financeReport",
+    "description": "Processing: finance_report.js#financeReport - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#preamble",
+    "description": "Processing: index.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#ping",
+    "description": "Processing: index.js#ping - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#setObj",
+    "description": "Processing: index.js#setObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#getObj",
+    "description": "Processing: index.js#getObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#deleteObj",
+    "description": "Processing: index.js#deleteObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hasObj",
+    "description": "Processing: index.js#hasObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#destroy",
+    "description": "Processing: index.js#destroy - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hsetObj",
+    "description": "Processing: index.js#hsetObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hgetObj",
+    "description": "Processing: index.js#hgetObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hdeleteAllObj",
+    "description": "Processing: index.js#hdeleteAllObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hdeleteObj",
+    "description": "Processing: index.js#hdeleteObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#deleteMatchingKeyObj",
+    "description": "Processing: index.js#deleteMatchingKeyObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#incrObj",
+    "description": "Processing: index.js#incrObj - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#preamble",
+    "description": "Processing: logger.js#module - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#normalizeData",
+    "description": "Processing: logger.js#normalizeData - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#setOptions",
+    "description": "Processing: logger.js#setOptions - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#fatal",
+    "description": "Processing: logger.js#fatal - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#error",
+    "description": "Processing: logger.js#error - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#warn",
+    "description": "Processing: logger.js#warn - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#info",
+    "description": "Processing: logger.js#info - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#debug",
+    "description": "Processing: logger.js#debug - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#trace",
+    "description": "Processing: logger.js#trace - util layer"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#destroy",
+    "description": "Processing: logger.js#destroy - util layer"
+  },
+  {
+    "id": "backend/src/lending/routes/scheduler.js#module",
+    "description": "Processing: scheduler.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/outstanding_reports_routes.js#module",
+    "description": "Processing: outstanding_reports_routes.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/notification.js#module",
+    "description": "Processing: notification.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/insurance.js#module",
+    "description": "Processing: insurance.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/financial_assessment.js#module",
+    "description": "Processing: financial_assessment.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/finance_application.js#module",
+    "description": "Processing: finance_application.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/external.js#module",
+    "description": "Processing: external.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/exposure_control.js#module",
+    "description": "Processing: exposure_control.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/dynamic_field_model.js#module",
+    "description": "Processing: dynamic_field_model.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/document.js#module",
+    "description": "Processing: document.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/credit_note.js#module",
+    "description": "Processing: credit_note.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/credit_facility.js#module",
+    "description": "Processing: credit_facility.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/compliance_screening.js#module",
+    "description": "Processing: compliance_screening.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/company_kyc_approval.js#module",
+    "description": "Processing: company_kyc_approval.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/common.js#module",
+    "description": "Processing: common.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/routes/boomi_integration.js#module",
+    "description": "Processing: boomi_integration.js#module - route layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#preamble",
+    "description": "Processing: schedulers.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#updateClientCategoryDaily",
+    "description": "Processing: schedulers.js#updateClientCategoryDaily - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#emailSettlementReport",
+    "description": "Processing: schedulers.js#emailSettlementReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#portfolioReviewScheduler",
+    "description": "Processing: schedulers.js#portfolioReviewScheduler - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#upcomingPortfolioReviewsWeeklyReminder",
+    "description": "Processing: schedulers.js#upcomingPortfolioReviewsWeeklyReminder - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#poConversionDueDateReminder",
+    "description": "Processing: schedulers.js#poConversionDueDateReminder - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/outstanding_reports_controller.js#preamble",
+    "description": "Processing: outstanding_reports_controller.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/outstanding_reports_controller.js#generateOutstandingReport",
+    "description": "Processing: outstanding_reports_controller.js#generateOutstandingReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#preamble",
+    "description": "Processing: oracle_fusion.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#saveExchangeRate",
+    "description": "Processing: oracle_fusion.js#saveExchangeRate - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#saveBankAccountStatement",
+    "description": "Processing: oracle_fusion.js#saveBankAccountStatement - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#testing",
+    "description": "Processing: oracle_fusion.js#testing - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#oracleFusionCreditFacilityFinanceFlowTest",
+    "description": "Processing: oracle_fusion.js#oracleFusionCreditFacilityFinanceFlowTest - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#dailyInterestAccrualJob",
+    "description": "Processing: oracle_fusion.js#dailyInterestAccrualJob - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#monthlyInterestAccrualJob",
+    "description": "Processing: oracle_fusion.js#monthlyInterestAccrualJob - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#statementOfAccount",
+    "description": "Processing: oracle_fusion.js#statementOfAccount - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#balanceConfirmationReport",
+    "description": "Processing: oracle_fusion.js#balanceConfirmationReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#manualTriggerForAdvices",
+    "description": "Processing: oracle_fusion.js#manualTriggerForAdvices - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#getOracleTaxData",
+    "description": "Processing: oracle_fusion.js#getOracleTaxData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#regenerateAdvice",
+    "description": "Processing: oracle_fusion.js#regenerateAdvice - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#triggerCustomerReceiptController",
+    "description": "Processing: oracle_fusion.js#triggerCustomerReceiptController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#triggerManualServiceBus",
+    "description": "Processing: oracle_fusion.js#triggerManualServiceBus - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#preamble",
+    "description": "Processing: notification.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#getNotificationsbyUserId",
+    "description": "Processing: notification.js#getNotificationsbyUserId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#getPendingTasksbyUserId",
+    "description": "Processing: notification.js#getPendingTasksbyUserId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#updateReadStatus",
+    "description": "Processing: notification.js#updateReadStatus - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#preamble",
+    "description": "Processing: insurance.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#createInsurance",
+    "description": "Processing: insurance.js#createInsurance - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getAllInsurances",
+    "description": "Processing: insurance.js#getAllInsurances - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getInsurance",
+    "description": "Processing: insurance.js#getInsurance - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getCfListForLendingInsurance",
+    "description": "Processing: insurance.js#getCfListForLendingInsurance - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#updateLendingInsuranceDetails",
+    "description": "Processing: insurance.js#updateLendingInsuranceDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#dailyInsuranceExpiryNotifiicationJob",
+    "description": "Processing: insurance.js#dailyInsuranceExpiryNotifiicationJob - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getCounterPartyByFacilityId",
+    "description": "Processing: insurance.js#getCounterPartyByFacilityId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#preamble",
+    "description": "Processing: financial_assessment.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#createFinancialAssessment",
+    "description": "Processing: financial_assessment.js#createFinancialAssessment - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#updateFinancialAssessment",
+    "description": "Processing: financial_assessment.js#updateFinancialAssessment - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessment",
+    "description": "Processing: financial_assessment.js#getFinancialAssessment - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessmentbyId",
+    "description": "Processing: financial_assessment.js#getFinancialAssessmentbyId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessmentOrgMapping",
+    "description": "Processing: financial_assessment.js#getFinancialAssessmentOrgMapping - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessmentDownload",
+    "description": "Processing: financial_assessment.js#getFinancialAssessmentDownload - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#preamble",
+    "description": "Processing: finance_application.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#_validateTransactionAction",
+    "description": "Processing: finance_application.js#_validateTransactionAction - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getFinanceApplications",
+    "description": "Processing: finance_application.js#getFinanceApplications - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getFinanceApplicationById",
+    "description": "Processing: finance_application.js#getFinanceApplicationById - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#fiAssessmentCalculationForUI",
+    "description": "Processing: finance_application.js#fiAssessmentCalculationForUI - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateBankAssessment",
+    "description": "Processing: finance_application.js#updateBankAssessment - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#bcoSaveLendingFinance",
+    "description": "Processing: finance_application.js#bcoSaveLendingFinance - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#financeLendingPushData",
+    "description": "Processing: finance_application.js#financeLendingPushData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getDocument",
+    "description": "Processing: finance_application.js#getDocument - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateFinanceData",
+    "description": "Processing: finance_application.js#updateFinanceData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadFinanceApplicationData",
+    "description": "Processing: finance_application.js#downloadFinanceApplicationData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getTransactions",
+    "description": "Processing: finance_application.js#getTransactions - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadCompletedTransactionsData",
+    "description": "Processing: finance_application.js#downloadCompletedTransactionsData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getUpcomingTransactions",
+    "description": "Processing: finance_application.js#getUpcomingTransactions - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadUpcomingTransactionsData",
+    "description": "Processing: finance_application.js#downloadUpcomingTransactionsData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#createTransaction",
+    "description": "Processing: finance_application.js#createTransaction - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getShipmentStatusByFinanceId",
+    "description": "Processing: finance_application.js#getShipmentStatusByFinanceId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#transactionComplianceScreeningForLending",
+    "description": "Processing: finance_application.js#transactionComplianceScreeningForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#financeTransactionPageCalculationForUI",
+    "description": "Processing: finance_application.js#financeTransactionPageCalculationForUI - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#evaluateTransactionEvent",
+    "description": "Processing: finance_application.js#evaluateTransactionEvent - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#waiveOffOverdueFee",
+    "description": "Processing: finance_application.js#waiveOffOverdueFee - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#settlementAdjustmentWaiver",
+    "description": "Processing: finance_application.js#settlementAdjustmentWaiver - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#disbursalToDefaultor",
+    "description": "Processing: finance_application.js#disbursalToDefaultor - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getShortPaymentAmount",
+    "description": "Processing: finance_application.js#getShortPaymentAmount - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateShortPaymentAmount",
+    "description": "Processing: finance_application.js#updateShortPaymentAmount - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getCombinedDiscountRateForLending",
+    "description": "Processing: finance_application.js#getCombinedDiscountRateForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getOverdueTransaction",
+    "description": "Processing: finance_application.js#getOverdueTransaction - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadOverdueTransactionsData",
+    "description": "Processing: finance_application.js#downloadOverdueTransactionsData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getCreditSummaryByUserId",
+    "description": "Processing: finance_application.js#getCreditSummaryByUserId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getApplicationStatuses",
+    "description": "Processing: finance_application.js#getApplicationStatuses - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getSpecificFinanceReceipts",
+    "description": "Processing: finance_application.js#getSpecificFinanceReceipts - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#generateTransactionAdvice",
+    "description": "Processing: finance_application.js#generateTransactionAdvice - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#approveTransaction",
+    "description": "Processing: finance_application.js#approveTransaction - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getBankReferenceNumberList",
+    "description": "Processing: finance_application.js#getBankReferenceNumberList - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateInventoryDetails",
+    "description": "Processing: finance_application.js#updateInventoryDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#joiValidationPOC",
+    "description": "Processing: finance_application.js#joiValidationPOC - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#rejectApplication",
+    "description": "Processing: finance_application.js#rejectApplication - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#exportInterestScheduleReport",
+    "description": "Processing: finance_application.js#exportInterestScheduleReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#fetchArDetailsForFinance",
+    "description": "Processing: finance_application.js#fetchArDetailsForFinance - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#fetchApplicationPendingAmount",
+    "description": "Processing: finance_application.js#fetchApplicationPendingAmount - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getApplicantDetails",
+    "description": "Processing: finance_application.js#getApplicantDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#preamble",
+    "description": "Processing: exposure_control.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#getExposureControlTerms",
+    "description": "Processing: exposure_control.js#getExposureControlTerms - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#getExposureControlTermsById",
+    "description": "Processing: exposure_control.js#getExposureControlTermsById - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#getExposureControlTermsByApprovedId",
+    "description": "Processing: exposure_control.js#getExposureControlTermsByApprovedId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#createExposure",
+    "description": "Processing: exposure_control.js#createExposure - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#updateExposureController",
+    "description": "Processing: exposure_control.js#updateExposureController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#preamble",
+    "description": "Processing: dynamic_field_model.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#getDynamicFieldsController",
+    "description": "Processing: dynamic_field_model.js#getDynamicFieldsController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#addDynamicFieldsController",
+    "description": "Processing: dynamic_field_model.js#addDynamicFieldsController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#updateDynamicFieldsController",
+    "description": "Processing: dynamic_field_model.js#updateDynamicFieldsController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#deleteDynamicFieldsController",
+    "description": "Processing: dynamic_field_model.js#deleteDynamicFieldsController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#getDynamicFlags",
+    "description": "Processing: dynamic_field_model.js#getDynamicFlags - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#addDynamicFlag",
+    "description": "Processing: dynamic_field_model.js#addDynamicFlag - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#updateDynamicFlag",
+    "description": "Processing: dynamic_field_model.js#updateDynamicFlag - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#removeDynamicFlag",
+    "description": "Processing: dynamic_field_model.js#removeDynamicFlag - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#preamble",
+    "description": "Processing: document.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#publishDocument",
+    "description": "Processing: document.js#publishDocument - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#submitLoanDocumentMapping",
+    "description": "Processing: document.js#submitLoanDocumentMapping - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#updateLoanDocumentMapping",
+    "description": "Processing: document.js#updateLoanDocumentMapping - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#convertDocument",
+    "description": "Processing: document.js#convertDocument - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getLoanDocumentMapping",
+    "description": "Processing: document.js#getLoanDocumentMapping - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getLoanDocumentVersions",
+    "description": "Processing: document.js#getLoanDocumentVersions - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getLoanDocument",
+    "description": "Processing: document.js#getLoanDocument - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#deleteLoanDocument",
+    "description": "Processing: document.js#deleteLoanDocument - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getAllLoanDocumentAndMapping",
+    "description": "Processing: document.js#getAllLoanDocumentAndMapping - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getCompanyDocuments",
+    "description": "Processing: document.js#getCompanyDocuments - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getOrgDocumentById",
+    "description": "Processing: document.js#getOrgDocumentById - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#uploadDocuments",
+    "description": "Processing: document.js#uploadDocuments - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#downloadDocuments",
+    "description": "Processing: document.js#downloadDocuments - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#preamble",
+    "description": "Processing: credit_note.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#createCreditNote",
+    "description": "Processing: credit_note.js#createCreditNote - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#updateCreditNote",
+    "description": "Processing: credit_note.js#updateCreditNote - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#getCreditNoteDetails",
+    "description": "Processing: credit_note.js#getCreditNoteDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#retryCreditNote",
+    "description": "Processing: credit_note.js#retryCreditNote - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#preamble",
+    "description": "Processing: credit_facility.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#filterValidValues",
+    "description": "Processing: credit_facility.js#filterValidValues - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditLimitData",
+    "description": "Processing: credit_facility.js#getCreditLimitData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditFacility",
+    "description": "Processing: credit_facility.js#setCreditFacility - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#updateCreditFacility",
+    "description": "Processing: credit_facility.js#updateCreditFacility - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditLimitDetailsById",
+    "description": "Processing: credit_facility.js#getCreditLimitDetailsById - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditLimitDetailsByRequestId",
+    "description": "Processing: credit_facility.js#getCreditLimitDetailsByRequestId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#creditLimitLegalReview",
+    "description": "Processing: credit_facility.js#creditLimitLegalReview - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#creditLimitUpdateLegalReview",
+    "description": "Processing: credit_facility.js#creditLimitUpdateLegalReview - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditLimit",
+    "description": "Processing: credit_facility.js#setCreditLimit - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditLimitSection",
+    "description": "Processing: credit_facility.js#setCreditLimitSection - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getDocument",
+    "description": "Processing: credit_facility.js#getDocument - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#cfAggrementUpdate",
+    "description": "Processing: credit_facility.js#cfAggrementUpdate - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#publishTermsSheet",
+    "description": "Processing: credit_facility.js#publishTermsSheet - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#downloadCreditLimitData",
+    "description": "Processing: credit_facility.js#downloadCreditLimitData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#downloadCfReviewReportForEmail",
+    "description": "Processing: credit_facility.js#downloadCfReviewReportForEmail - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#sendWeeklyReminderEmail",
+    "description": "Processing: credit_facility.js#sendWeeklyReminderEmail - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#irrCalculation",
+    "description": "Processing: credit_facility.js#irrCalculation - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#irrExceptionCalculation",
+    "description": "Processing: credit_facility.js#irrExceptionCalculation - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditPolicy",
+    "description": "Processing: credit_facility.js#setCreditPolicy - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditPolicy",
+    "description": "Processing: credit_facility.js#getCreditPolicy - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#addCounterparty",
+    "description": "Processing: credit_facility.js#addCounterparty - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditFaciltyUpdateRequestIds",
+    "description": "Processing: credit_facility.js#getCreditFaciltyUpdateRequestIds - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getAllRaisedCreditFacilityForOrganisation",
+    "description": "Processing: credit_facility.js#getAllRaisedCreditFacilityForOrganisation - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getGeneratedTerms",
+    "description": "Processing: credit_facility.js#getGeneratedTerms - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#createGenerateTerms",
+    "description": "Processing: credit_facility.js#createGenerateTerms - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setGenerateTerms",
+    "description": "Processing: credit_facility.js#setGenerateTerms - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#updateGeneratedTerms",
+    "description": "Processing: credit_facility.js#updateGeneratedTerms - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getTSDashboardDetailsController",
+    "description": "Processing: credit_facility.js#getTSDashboardDetailsController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#generateTermSheetController",
+    "description": "Processing: credit_facility.js#generateTermSheetController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#termSheetActionController",
+    "description": "Processing: credit_facility.js#termSheetActionController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#termSheetIrrCheckController",
+    "description": "Processing: credit_facility.js#termSheetIrrCheckController - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fixCreditFacilityAmounts",
+    "description": "Processing: credit_facility.js#fixCreditFacilityAmounts - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCfListForLending",
+    "description": "Processing: credit_facility.js#getCfListForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditFacilityFeePaymentDataById",
+    "description": "Processing: credit_facility.js#getCreditFacilityFeePaymentDataById - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#createAffInvoice",
+    "description": "Processing: credit_facility.js#createAffInvoice - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#updateAffInvoice",
+    "description": "Processing: credit_facility.js#updateAffInvoice - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#settleAffInvoice",
+    "description": "Processing: credit_facility.js#settleAffInvoice - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getAffInvoice",
+    "description": "Processing: credit_facility.js#getAffInvoice - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#evaluateAffTransaction",
+    "description": "Processing: credit_facility.js#evaluateAffTransaction - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#storeFacilityFeesPaymentDetails",
+    "description": "Processing: credit_facility.js#storeFacilityFeesPaymentDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#createCFUpdateRequest",
+    "description": "Processing: credit_facility.js#createCFUpdateRequest - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCounterpartyRiskRating",
+    "description": "Processing: credit_facility.js#getCounterpartyRiskRating - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#sendRenewalReminderCfEmails",
+    "description": "Processing: credit_facility.js#sendRenewalReminderCfEmails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#stopReminderEmailNotifications",
+    "description": "Processing: credit_facility.js#stopReminderEmailNotifications - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#verifyProductAmounts",
+    "description": "Processing: credit_facility.js#verifyProductAmounts - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCumulativeAffDetailsForCf",
+    "description": "Processing: credit_facility.js#getCumulativeAffDetailsForCf - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getAllFacilityFeeArsDetails",
+    "description": "Processing: credit_facility.js#getAllFacilityFeeArsDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#emailFacilityFeeTableDetails",
+    "description": "Processing: credit_facility.js#emailFacilityFeeTableDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#emailArsReportForCf",
+    "description": "Processing: credit_facility.js#emailArsReportForCf - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fetchInvoicesForAr",
+    "description": "Processing: credit_facility.js#fetchInvoicesForAr - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fetchCreditNotesForARs",
+    "description": "Processing: credit_facility.js#fetchCreditNotesForARs - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fetchArDetails",
+    "description": "Processing: credit_facility.js#fetchArDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#affReminderEmail",
+    "description": "Processing: credit_facility.js#affReminderEmail - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#sendTemporaryLimitEnhancementExpiryReminder",
+    "description": "Processing: credit_facility.js#sendTemporaryLimitEnhancementExpiryReminder - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/compliance_screening.js#preamble",
+    "description": "Processing: compliance_screening.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/compliance_screening.js#counterPartyComplianceScreening",
+    "description": "Processing: compliance_screening.js#counterPartyComplianceScreening - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/compliance_screening.js#counterPartyComplianceScreeningData",
+    "description": "Processing: compliance_screening.js#counterPartyComplianceScreeningData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#preamble",
+    "description": "Processing: company_kyc_approval.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompaniesKYCInfoList",
+    "description": "Processing: company_kyc_approval.js#getCompaniesKYCInfoList - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getMawaniCompanyDataForLending",
+    "description": "Processing: company_kyc_approval.js#getMawaniCompanyDataForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCodeIssuersForLending",
+    "description": "Processing: company_kyc_approval.js#getCodeIssuersForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycApprovalDocumentsForLending",
+    "description": "Processing: company_kyc_approval.js#getCompanyKycApprovalDocumentsForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyStatusWorkFlowForLending",
+    "description": "Processing: company_kyc_approval.js#getCompanyStatusWorkFlowForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getAllCompanyServicesForLending",
+    "description": "Processing: company_kyc_approval.js#getAllCompanyServicesForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycInternalCommentsForLending",
+    "description": "Processing: company_kyc_approval.js#getCompanyKycInternalCommentsForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycHistoryForLending",
+    "description": "Processing: company_kyc_approval.js#getCompanyKycHistoryForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycAuditForLending",
+    "description": "Processing: company_kyc_approval.js#getCompanyKycAuditForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getRegisteredServicesForLending",
+    "description": "Processing: company_kyc_approval.js#getRegisteredServicesForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycHistoryQuestionsForLending",
+    "description": "Processing: company_kyc_approval.js#getCompanyKycHistoryQuestionsForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getOngoingMonitoringData",
+    "description": "Processing: company_kyc_approval.js#getOngoingMonitoringData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getOngoingMonitoringDataForLendingUsers",
+    "description": "Processing: company_kyc_approval.js#getOngoingMonitoringDataForLendingUsers - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#downloadOngoingMonitoringDataForLendingUsers",
+    "description": "Processing: company_kyc_approval.js#downloadOngoingMonitoringDataForLendingUsers - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyDocuemntsHistoryForLending",
+    "description": "Processing: company_kyc_approval.js#getCompanyDocuemntsHistoryForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#preamble",
+    "description": "Processing: common.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#addRemarks",
+    "description": "Processing: common.js#addRemarks - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getHistoryData",
+    "description": "Processing: common.js#getHistoryData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#processWorkFlow",
+    "description": "Processing: common.js#processWorkFlow - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getProcessWorkflow",
+    "description": "Processing: common.js#getProcessWorkflow - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#updateProcessWorkflow",
+    "description": "Processing: common.js#updateProcessWorkflow - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getViewPageFilterValues",
+    "description": "Processing: common.js#getViewPageFilterValues - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getClientRemarksFormArrangingPlatform",
+    "description": "Processing: common.js#getClientRemarksFormArrangingPlatform - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getLendingTransactionDetailByTrxnId",
+    "description": "Processing: common.js#getLendingTransactionDetailByTrxnId - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#evictCacheForLending",
+    "description": "Processing: common.js#evictCacheForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#evictMatchingKeyCache",
+    "description": "Processing: common.js#evictMatchingKeyCache - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getCreditLimitDataApplyPage",
+    "description": "Processing: common.js#getCreditLimitDataApplyPage - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getRegulatoryReport",
+    "description": "Processing: common.js#getRegulatoryReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#saveRegulatoryReport",
+    "description": "Processing: common.js#saveRegulatoryReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#regulatoryReportDataScheduler",
+    "description": "Processing: common.js#regulatoryReportDataScheduler - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getOrgsDetailsForLending",
+    "description": "Processing: common.js#getOrgsDetailsForLending - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getPreviousClientCategory",
+    "description": "Processing: common.js#getPreviousClientCategory - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#updateClientCategory",
+    "description": "Processing: common.js#updateClientCategory - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getClientCategoryData",
+    "description": "Processing: common.js#getClientCategoryData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getDepartmentUsers",
+    "description": "Processing: common.js#getDepartmentUsers - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#calculateCreditFacilityAmounts",
+    "description": "Processing: common.js#calculateCreditFacilityAmounts - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getGroupDetails",
+    "description": "Processing: common.js#getGroupDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getTransactionSummary",
+    "description": "Processing: common.js#getTransactionSummary - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#exportTransactionSummary",
+    "description": "Processing: common.js#exportTransactionSummary - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/boomi_integration.js#preamble",
+    "description": "Processing: boomi_integration.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/boomi_integration.js#_processLMSDetails",
+    "description": "Processing: boomi_integration.js#_processLMSDetails - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/boomi_integration.js#boomiLMSIntegration",
+    "description": "Processing: boomi_integration.js#boomiLMSIntegration - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#preamble",
+    "description": "Processing: aecb_integration.js#module - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getAecbFileData",
+    "description": "Processing: aecb_integration.js#getAecbFileData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbTableView",
+    "description": "Processing: aecb_integration.js#aecbTableView - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generateAecbBatchFileForFinanceIds",
+    "description": "Processing: aecb_integration.js#generateAecbBatchFileForFinanceIds - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#submitAecbData",
+    "description": "Processing: aecb_integration.js#submitAecbData - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbOverdueDailyScheduler",
+    "description": "Processing: aecb_integration.js#aecbOverdueDailyScheduler - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbOutstandingMonthlyScheduler",
+    "description": "Processing: aecb_integration.js#aecbOutstandingMonthlyScheduler - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generateAecbMonthlySettledReport",
+    "description": "Processing: aecb_integration.js#generateAecbMonthlySettledReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generateAecbReport",
+    "description": "Processing: aecb_integration.js#generateAecbReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generatePastFinanceDisbursal",
+    "description": "Processing: aecb_integration.js#generatePastFinanceDisbursal - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getAecbDropDowns",
+    "description": "Processing: aecb_integration.js#getAecbDropDowns - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#submitAecbMonthlyReport",
+    "description": "Processing: aecb_integration.js#submitAecbMonthlyReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#resubmitAecbFileByBatchIds",
+    "description": "Processing: aecb_integration.js#resubmitAecbFileByBatchIds - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getSubmittedBatchFileStatus",
+    "description": "Processing: aecb_integration.js#getSubmittedBatchFileStatus - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getAecbErrorReport",
+    "description": "Processing: aecb_integration.js#getAecbErrorReport - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbMonitoringScheduler",
+    "description": "Processing: aecb_integration.js#aecbMonitoringScheduler - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#reconcileAecbFinanceStatus",
+    "description": "Processing: aecb_integration.js#reconcileAecbFinanceStatus - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#batchReconcileAecbFinances",
+    "description": "Processing: aecb_integration.js#batchReconcileAecbFinances - controller layer"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#reconcileByDateRange",
+    "description": "Processing: aecb_integration.js#reconcileByDateRange - controller layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#preamble",
+    "description": "Processing: helpers.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateDocUploadByDocNamesForBinaryFiles",
+    "description": "Processing: helpers.js#validateDocUploadByDocNamesForBinaryFiles - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateDocUploadByDocNames",
+    "description": "Processing: helpers.js#validateDocUploadByDocNames - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#checkFilesForAllowedTypes",
+    "description": "Processing: helpers.js#checkFilesForAllowedTypes - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#checkBinaryFilesForAllowedTypes",
+    "description": "Processing: helpers.js#checkBinaryFilesForAllowedTypes - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#checkZipFileDocumentTypes",
+    "description": "Processing: helpers.js#checkZipFileDocumentTypes - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#getFileNamesFromFileAPIRequest",
+    "description": "Processing: helpers.js#getFileNamesFromFileAPIRequest - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateMissingFiles",
+    "description": "Processing: helpers.js#validateMissingFiles - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#creditLimitConversion",
+    "description": "Processing: helpers.js#creditLimitConversion - service layer"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateDocUploadByDocType",
+    "description": "Processing: helpers.js#validateDocUploadByDocType - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_checkIfCompanyIsBeingRegisteredDuringCfFlow",
+    "description": "Processing: index.js#_checkIfCompanyIsBeingRegisteredDuringCfFlow - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_sendClientAgreementEmailToUsers",
+    "description": "Processing: index.js#_sendClientAgreementEmailToUsers - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_checkClientAgreementAcceptedForOrganisation",
+    "description": "Processing: index.js#_checkClientAgreementAcceptedForOrganisation - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_updateServiceBasedProfessionalClient",
+    "description": "Processing: index.js#_updateServiceBasedProfessionalClient - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#checkClientAgreementAcceptedForOrganisation",
+    "description": "Processing: index.js#checkClientAgreementAcceptedForOrganisation - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getFileAgreementDataForMawani",
+    "description": "Processing: index.js#getFileAgreementDataForMawani - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getUserAcceptedTermsVersion",
+    "description": "Processing: index.js#getUserAcceptedTermsVersion - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getClientAgreementPlatformMessage",
+    "description": "Processing: index.js#getClientAgreementPlatformMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getClientAgreementMessage",
+    "description": "Processing: index.js#getClientAgreementMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getClientAgreementAcceptanceMessage",
+    "description": "Processing: index.js#getClientAgreementAcceptanceMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveClientAgreement",
+    "description": "Processing: index.js#saveClientAgreement - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveClientAgreementSignature",
+    "description": "Processing: index.js#saveClientAgreementSignature - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveAcceptTermsVersion",
+    "description": "Processing: index.js#saveAcceptTermsVersion - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#sendTermsMail",
+    "description": "Processing: index.js#sendTermsMail - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getTermsDocument",
+    "description": "Processing: index.js#getTermsDocument - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveTermsDocument",
+    "description": "Processing: index.js#saveTermsDocument - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#sendClientAgreementEmail",
+    "description": "Processing: index.js#sendClientAgreementEmail - service layer"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#sendClientAgreementEmailWhenCompanyApproved",
+    "description": "Processing: index.js#sendClientAgreementEmailWhenCompanyApproved - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_storeEventInDB",
+    "description": "Processing: index.js#_storeEventInDB - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_sendMessage",
+    "description": "Processing: index.js#_sendMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_onMessageHandler",
+    "description": "Processing: index.js#_onMessageHandler - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_onErrorHandler",
+    "description": "Processing: index.js#_onErrorHandler - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_receiveMessage",
+    "description": "Processing: index.js#_receiveMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#sendMessage",
+    "description": "Processing: index.js#sendMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#receiveMessage",
+    "description": "Processing: index.js#receiveMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#preamble",
+    "description": "Processing: release_notes.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#fetchLatestReleaseNotes",
+    "description": "Processing: release_notes.js#fetchLatestReleaseNotes - service layer"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#fetchSpecificMonthReleaseNotes",
+    "description": "Processing: release_notes.js#fetchSpecificMonthReleaseNotes - service layer"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#saveReleaseNotesService",
+    "description": "Processing: release_notes.js#saveReleaseNotesService - service layer"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#deleteReleaseNotesService",
+    "description": "Processing: release_notes.js#deleteReleaseNotesService - service layer"
+  },
+  {
+    "id": "backend/src/services/support_services/helpers.js#preamble",
+    "description": "Processing: helpers.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/support_services/helpers.js#showPopupHelper",
+    "description": "Processing: helpers.js#showPopupHelper - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateAccountSummary",
+    "description": "Processing: index.js#generateAccountSummary - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateDailySofrReportData",
+    "description": "Processing: index.js#generateDailySofrReportData - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateUserSignupMetricReport",
+    "description": "Processing: index.js#generateUserSignupMetricReport - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateOCRAccuracyReport",
+    "description": "Processing: index.js#generateOCRAccuracyReport - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateDatalakeSyncReport",
+    "description": "Processing: index.js#generateDatalakeSyncReport - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateHeaderForOCRReport",
+    "description": "Processing: index.js#generateHeaderForOCRReport - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#flattenJSON",
+    "description": "Processing: index.js#flattenJSON - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#getWeekNumber",
+    "description": "Processing: index.js#getWeekNumber - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#getWeekDates",
+    "description": "Processing: index.js#getWeekDates - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#parseMawaniDate",
+    "description": "Processing: index.js#parseMawaniDate - service layer"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#formatDate",
+    "description": "Processing: index.js#formatDate - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_generateSHA1UserId",
+    "description": "Processing: index.js#_generateSHA1UserId - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_generateDefaultMawaniRefId",
+    "description": "Processing: index.js#_generateDefaultMawaniRefId - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#addStatusCode",
+    "description": "Processing: index.js#addStatusCode - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_insertDataForBulkInsertOCR",
+    "description": "Processing: index.js#_insertDataForBulkInsertOCR - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_updateLatestCompanyDataFromPayload",
+    "description": "Processing: index.js#_updateLatestCompanyDataFromPayload - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_updatePayloadForGSTInfo",
+    "description": "Processing: index.js#_updatePayloadForGSTInfo - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getDfsaCaymanMawaniDocMapping",
+    "description": "Processing: index.js#_getDfsaCaymanMawaniDocMapping - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getMawaniDocsAndOCRData",
+    "description": "Processing: index.js#_getMawaniDocsAndOCRData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getAuthorisedSignatoryDetails",
+    "description": "Processing: index.js#_getAuthorisedSignatoryDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getTradeLicenseDetails",
+    "description": "Processing: index.js#_getTradeLicenseDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getDirectorDetails",
+    "description": "Processing: index.js#_getDirectorDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getShareholderAndUBODetails",
+    "description": "Processing: index.js#_getShareholderAndUBODetails - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatPassportOCRData",
+    "description": "Processing: index.js#_formatPassportOCRData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatTradeLicenseOCRData",
+    "description": "Processing: index.js#_formatTradeLicenseOCRData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatRegisterOCRData",
+    "description": "Processing: index.js#_formatRegisterOCRData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatPoaOCRData",
+    "description": "Processing: index.js#_formatPoaOCRData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatAuthSingatoriesPayload",
+    "description": "Processing: index.js#_formatAuthSingatoriesPayload - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_creatAuthSignatoriesPayload",
+    "description": "Processing: index.js#_creatAuthSignatoriesPayload - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_createCompanyPayloadWithDifferentTenant",
+    "description": "Processing: index.js#_createCompanyPayloadWithDifferentTenant - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_buildDFSACompanyPayloadFromFI",
+    "description": "Processing: index.js#_buildDFSACompanyPayloadFromFI - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getApprovalFromAny",
+    "description": "Processing: index.js#_getApprovalFromAny - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processNewAuthorisedSignatories",
+    "description": "Processing: index.js#_processNewAuthorisedSignatories - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processNewAuthorisedSignatoriesWithExisting",
+    "description": "Processing: index.js#_processNewAuthorisedSignatoriesWithExisting - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processOnboardingAuthorisedSignatoryData",
+    "description": "Processing: index.js#_processOnboardingAuthorisedSignatoryData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processTransactionAuthorisedSignatoryData",
+    "description": "Processing: index.js#_processTransactionAuthorisedSignatoryData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processAuthorisedSignatoryData",
+    "description": "Processing: index.js#_processAuthorisedSignatoryData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processDirectShareholdersData",
+    "description": "Processing: index.js#_processDirectShareholdersData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_validateTotalPercentageForEachShareholder",
+    "description": "Processing: index.js#_validateTotalPercentageForEachShareholder - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_updateCompanyCodeIssuerRequestIdForNewShareholders",
+    "description": "Processing: index.js#_updateCompanyCodeIssuerRequestIdForNewShareholders - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleAdditionalInfoData",
+    "description": "Processing: index.js#_handleAdditionalInfoData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processdifcCodeIssuerDetails",
+    "description": "Processing: index.js#_processdifcCodeIssuerDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleCodeIssuerData",
+    "description": "Processing: index.js#_handleCodeIssuerData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleCompanyDocData",
+    "description": "Processing: index.js#_handleCompanyDocData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleCompanyData",
+    "description": "Processing: index.js#_handleCompanyData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_checkIfOrgIsApprovedByCompanyStatus",
+    "description": "Processing: index.js#_checkIfOrgIsApprovedByCompanyStatus - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createSponsorUpsertTasks",
+    "description": "Processing: index.js#createSponsorUpsertTasks - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#handleSponsorAssociationToRequestTable",
+    "description": "Processing: index.js#handleSponsorAssociationToRequestTable - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#checkIfBuySellExists",
+    "description": "Processing: index.js#checkIfBuySellExists - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updatePayloadForGSTInfo",
+    "description": "Processing: index.js#updatePayloadForGSTInfo - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getDfsaCaymanMawaniDocMapping",
+    "description": "Processing: index.js#getDfsaCaymanMawaniDocMapping - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getOrganisationByNameAndCountry",
+    "description": "Processing: index.js#getOrganisationByNameAndCountry - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getOrganisationByNameAndInvitingUserId",
+    "description": "Processing: index.js#getOrganisationByNameAndInvitingUserId - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#inviteOrganisation",
+    "description": "Processing: index.js#inviteOrganisation - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateDIFCPayloadWithCaymanData",
+    "description": "Processing: index.js#updateDIFCPayloadWithCaymanData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateMawaniCompanyData",
+    "description": "Processing: index.js#updateMawaniCompanyData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createCompanyWithDifferentTenant",
+    "description": "Processing: index.js#createCompanyWithDifferentTenant - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createDFSACompanyForCreditLimitByCloningFI",
+    "description": "Processing: index.js#createDFSACompanyForCreditLimitByCloningFI - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createDFSACompanyForCreditLimit",
+    "description": "Processing: index.js#createDFSACompanyForCreditLimit - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateDFSACompanyForCreditLimit",
+    "description": "Processing: index.js#updateDFSACompanyForCreditLimit - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateDFSACompanyForCreditLimitByCloningFi",
+    "description": "Processing: index.js#updateDFSACompanyForCreditLimitByCloningFi - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createOrganisationInMawani",
+    "description": "Processing: index.js#createOrganisationInMawani - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getMawaniCompaniesInDraftState",
+    "description": "Processing: index.js#getMawaniCompaniesInDraftState - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateRegistrationOCRDataOnMawani",
+    "description": "Processing: index.js#updateRegistrationOCRDataOnMawani - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getMawaniCompanyData",
+    "description": "Processing: index.js#getMawaniCompanyData - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getAuthorisedSignatories",
+    "description": "Processing: index.js#getAuthorisedSignatories - service layer"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#registerDFSACompaniesOnCayman",
+    "description": "Processing: index.js#registerDFSACompaniesOnCayman - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateLendingBySYNC",
+    "description": "Processing: index.js#_updateLendingBySYNC - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_getOnHoldComment",
+    "description": "Processing: index.js#_getOnHoldComment - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_checkIsFirstApproval",
+    "description": "Processing: index.js#_checkIsFirstApproval - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_crmEventDiscovery",
+    "description": "Processing: index.js#_crmEventDiscovery - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_isCompanyInactive",
+    "description": "Processing: index.js#_isCompanyInactive - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateCddReviewDetials",
+    "description": "Processing: index.js#_updateCddReviewDetials - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateCompanyDocuments",
+    "description": "Processing: index.js#_updateCompanyDocuments - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateCompanyKycDetails",
+    "description": "Processing: index.js#_updateCompanyKycDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_syncRiskRatingDataFromRequestTable",
+    "description": "Processing: index.js#_syncRiskRatingDataFromRequestTable - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_checkIfCompanyIsBeingRegisteredDuringCfFlow",
+    "description": "Processing: index.js#_checkIfCompanyIsBeingRegisteredDuringCfFlow - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#updateCompanyDataOnMawaniStatusChange",
+    "description": "Processing: index.js#updateCompanyDataOnMawaniStatusChange - service layer"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#updateCompanyKycDetails",
+    "description": "Processing: index.js#updateCompanyKycDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getUniquePropertyValuesFromObject",
+    "description": "Processing: index.js#getUniquePropertyValuesFromObject - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyKYCDetailsQuery",
+    "description": "Processing: index.js#_getListOfCompanyKYCDetailsQuery - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyKYCFiltersQuery",
+    "description": "Processing: index.js#_getListOfCompanyKYCFiltersQuery - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyKYCDocumentsQuery",
+    "description": "Processing: index.js#_getListOfCompanyKYCDocumentsQuery - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyDocumentsKYCFiltersQuery",
+    "description": "Processing: index.js#_getListOfCompanyDocumentsKYCFiltersQuery - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getDocumentRefListSorted",
+    "description": "Processing: index.js#_getDocumentRefListSorted - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#processCompanyRefIdForDownloadReports",
+    "description": "Processing: index.js#processCompanyRefIdForDownloadReports - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getOrganisationsDetailsWithFilters",
+    "description": "Processing: index.js#getOrganisationsDetailsWithFilters - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateOrganisationTenantSwitch",
+    "description": "Processing: index.js#updateOrganisationTenantSwitch - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getDetailsOfAuthorisedSignatoryFromCompanyObject",
+    "description": "Processing: index.js#getDetailsOfAuthorisedSignatoryFromCompanyObject - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#checkUserAuthorisedSignatory",
+    "description": "Processing: index.js#checkUserAuthorisedSignatory - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyInfoByEmailId",
+    "description": "Processing: index.js#getCompanyInfoByEmailId - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompaniesKYCInformationFromMawani",
+    "description": "Processing: index.js#getCompaniesKYCInformationFromMawani - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKycInfoWithFilters",
+    "description": "Processing: index.js#getCompanyKycInfoWithFilters - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateCompanyKYCInformation",
+    "description": "Processing: index.js#updateCompanyKYCInformation - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateCompanyKYCExpiryFlag",
+    "description": "Processing: index.js#updateCompanyKYCExpiryFlag - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCInfoRenewalReminderEmail",
+    "description": "Processing: index.js#sendCompanyKYCInfoRenewalReminderEmail - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCDocumentsRenewalReminderEmail",
+    "description": "Processing: index.js#sendCompanyKYCDocumentsRenewalReminderEmail - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCInfoReport",
+    "description": "Processing: index.js#sendCompanyKYCInfoReport - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCDocumentsReport",
+    "description": "Processing: index.js#sendCompanyKYCDocumentsReport - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKYCTableFilters",
+    "description": "Processing: index.js#getCompanyKYCTableFilters - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#downloadCompanyKycInfoWithFilters",
+    "description": "Processing: index.js#downloadCompanyKycInfoWithFilters - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompaniesKYCDocumentsInformationFromMawani",
+    "description": "Processing: index.js#getCompaniesKYCDocumentsInformationFromMawani - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKycDocumentsInfoWithFilters",
+    "description": "Processing: index.js#getCompanyKycDocumentsInfoWithFilters - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateCompanyKYCDocumentsInformation",
+    "description": "Processing: index.js#updateCompanyKYCDocumentsInformation - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKYCDocumentsTableFilters",
+    "description": "Processing: index.js#getCompanyKYCDocumentsTableFilters - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#downloadCompanyKycDocumentsInfoWithFilters",
+    "description": "Processing: index.js#downloadCompanyKycDocumentsInfoWithFilters - service layer"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#markAlternateKYCDocumentUpload",
+    "description": "Processing: index.js#markAlternateKYCDocumentUpload - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_processAndRemoveNullandUndefinedEntries",
+    "description": "Processing: index.js#_processAndRemoveNullandUndefinedEntries - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_fetchGenericPlaceholderValue",
+    "description": "Processing: index.js#_fetchGenericPlaceholderValue - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_fetchAllPlaceholders",
+    "description": "Processing: index.js#_fetchAllPlaceholders - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_fetchAttributeInternal",
+    "description": "Processing: index.js#_fetchAttributeInternal - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_createOrEditEmailDetails",
+    "description": "Processing: index.js#_createOrEditEmailDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_updateTemplateDetails",
+    "description": "Processing: index.js#_updateTemplateDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_sendEmail",
+    "description": "Processing: index.js#_sendEmail - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_sendEmailNotification",
+    "description": "Processing: index.js#_sendEmailNotification - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#getNotificationsbyUserId",
+    "description": "Processing: index.js#getNotificationsbyUserId - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#getPendingTasksbyUserId",
+    "description": "Processing: index.js#getPendingTasksbyUserId - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#updateReadStatus",
+    "description": "Processing: index.js#updateReadStatus - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#updateActionableStatus",
+    "description": "Processing: index.js#updateActionableStatus - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#getEmailNotificationState",
+    "description": "Processing: index.js#getEmailNotificationState - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#enableEmailNotifications",
+    "description": "Processing: index.js#enableEmailNotifications - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendNotification",
+    "description": "Processing: index.js#sendNotification - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendEmailNotification",
+    "description": "Processing: index.js#sendEmailNotification - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendNotificationToUsers",
+    "description": "Processing: index.js#sendNotificationToUsers - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendEmailNotificationToUsers",
+    "description": "Processing: index.js#sendEmailNotificationToUsers - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#captureEmailTemplateDetails",
+    "description": "Processing: index.js#captureEmailTemplateDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#updateTemplateAttributes",
+    "description": "Processing: index.js#updateTemplateAttributes - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendEmailGenericNotification",
+    "description": "Processing: index.js#sendEmailGenericNotification - service layer"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendMethodFailureEmail",
+    "description": "Processing: index.js#sendMethodFailureEmail - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/notification.js#preamble",
+    "description": "Processing: notification.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/notification.js#_getFinanceUsersDetailsWithOrgType",
+    "description": "Processing: notification.js#_getFinanceUsersDetailsWithOrgType - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/notification.js#sendStateNotification",
+    "description": "Processing: notification.js#sendStateNotification - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceUsersDetailsWithOrgType",
+    "description": "Processing: index.js#_getFinanceUsersDetailsWithOrgType - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateSyncAPIDataForSubmitFinance",
+    "description": "Processing: index.js#_generateSyncAPIDataForSubmitFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateSyncAPIDataForFIVaidation",
+    "description": "Processing: index.js#_generateSyncAPIDataForFIVaidation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#createContainerAndUrl",
+    "description": "Processing: index.js#createContainerAndUrl - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_ehblFinanceAssociation",
+    "description": "Processing: index.js#_ehblFinanceAssociation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_identifyCounterPartyAcceptanceStateFromFinanceState",
+    "description": "Processing: index.js#_identifyCounterPartyAcceptanceStateFromFinanceState - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_identifyApplicantAcceptanceStateFromFinanceState",
+    "description": "Processing: index.js#_identifyApplicantAcceptanceStateFromFinanceState - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceCurrentInvoicesDetails",
+    "description": "Processing: index.js#_getFinanceCurrentInvoicesDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinancePaymentTermsAndActiveDisbursalEvents",
+    "description": "Processing: index.js#_getFinancePaymentTermsAndActiveDisbursalEvents - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getActiveFinanceBanksDetails",
+    "description": "Processing: index.js#_getActiveFinanceBanksDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateTimelineDetails",
+    "description": "Processing: index.js#_generateTimelineDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceDetailsByIdShort",
+    "description": "Processing: index.js#_getFinanceDetailsByIdShort - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_formatOcrData",
+    "description": "Processing: index.js#_formatOcrData - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_calculateOverdueFee",
+    "description": "Processing: index.js#_calculateOverdueFee - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateTaxInfo",
+    "description": "Processing: index.js#_generateTaxInfo - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceDetailsById",
+    "description": "Processing: index.js#_getFinanceDetailsById - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceDocumentsData",
+    "description": "Processing: index.js#_getFinanceDocumentsData - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getBCOsDetails",
+    "description": "Processing: index.js#_getBCOsDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_isPaymentTermAcceptedByRaisingBCO",
+    "description": "Processing: index.js#_isPaymentTermAcceptedByRaisingBCO - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_doesOrgBelongToFinance",
+    "description": "Processing: index.js#_doesOrgBelongToFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_insertUpcomingTransactionDetails",
+    "description": "Processing: index.js#_insertUpcomingTransactionDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_updateUpcomigTransactionWithActualPaymentDate",
+    "description": "Processing: index.js#_updateUpcomigTransactionWithActualPaymentDate - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIfCompanyInvoiceComboExists",
+    "description": "Processing: index.js#_checkIfCompanyInvoiceComboExists - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_recalculateFinanceCommission",
+    "description": "Processing: index.js#_recalculateFinanceCommission - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getApplyFinanceCalculationDetails",
+    "description": "Processing: index.js#_getApplyFinanceCalculationDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_otherChargesFeeCalculations",
+    "description": "Processing: index.js#_otherChargesFeeCalculations - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_batchProcessingFinanceReport",
+    "description": "Processing: index.js#_batchProcessingFinanceReport - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processingFinanceApplicationReportDetails",
+    "description": "Processing: index.js#_processingFinanceApplicationReportDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_transactionPageCalculation",
+    "description": "Processing: index.js#_transactionPageCalculation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getPreviousTransactionsById",
+    "description": "Processing: index.js#_getPreviousTransactionsById - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_transactionPageCalculationForLending",
+    "description": "Processing: index.js#_transactionPageCalculationForLending - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_transactionPageCalculationUtil",
+    "description": "Processing: index.js#_transactionPageCalculationUtil - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceInstitutionAssessmentInputInformation",
+    "description": "Processing: index.js#_getFinanceInstitutionAssessmentInputInformation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getUpcomingTransactionObject",
+    "description": "Processing: index.js#_getUpcomingTransactionObject - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceInvoiceDetails",
+    "description": "Processing: index.js#_getFinanceInvoiceDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getDueDate",
+    "description": "Processing: index.js#_getDueDate - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getRequestParamsForCalcApi",
+    "description": "Processing: index.js#_getRequestParamsForCalcApi - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getCreditLimitStartEndDateForYear",
+    "description": "Processing: index.js#_getCreditLimitStartEndDateForYear - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIfFirstDisbursalApplicationInYearForCreditLimit",
+    "description": "Processing: index.js#_checkIfFirstDisbursalApplicationInYearForCreditLimit - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getBankBranchCodeType",
+    "description": "Processing: index.js#getBankBranchCodeType - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkCounterPartyDetail",
+    "description": "Processing: index.js#_checkCounterPartyDetail - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceSubmissionMessage",
+    "description": "Processing: index.js#_getFinanceSubmissionMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIsUserAuthorisedSingatory",
+    "description": "Processing: index.js#_checkIsUserAuthorisedSingatory - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_insertAuthUsersToApprovalMatrix",
+    "description": "Processing: index.js#_insertAuthUsersToApprovalMatrix - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_sendEmailToRemainingAuthSignatories",
+    "description": "Processing: index.js#_sendEmailToRemainingAuthSignatories - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkFinanceSubmittedByAuthSignatories",
+    "description": "Processing: index.js#_checkFinanceSubmittedByAuthSignatories - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processDocumentMapping",
+    "description": "Processing: index.js#_processDocumentMapping - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_deepEqual",
+    "description": "Processing: index.js#_deepEqual - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_isObject",
+    "description": "Processing: index.js#_isObject - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processDeltaHistoryForInvoicesAndtrackingInfo",
+    "description": "Processing: index.js#_processDeltaHistoryForInvoicesAndtrackingInfo - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateTotalCreditLimit",
+    "description": "Processing: index.js#_validateTotalCreditLimit - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateCounterPartyCreditLimit",
+    "description": "Processing: index.js#_validateCounterPartyCreditLimit - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateCreditLimitAtProductLevel",
+    "description": "Processing: index.js#_validateCreditLimitAtProductLevel - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIsDisbursalRestricted",
+    "description": "Processing: index.js#_checkIsDisbursalRestricted - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateCounterPartyCreditLimitBasedOnFlag",
+    "description": "Processing: index.js#_validateCounterPartyCreditLimitBasedOnFlag - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_isThereChangesInFinanceEffectingCharges",
+    "description": "Processing: index.js#_isThereChangesInFinanceEffectingCharges - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateDocumentRequiredTypesForFinanceNew",
+    "description": "Processing: index.js#_validateDocumentRequiredTypesForFinanceNew - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateDocumentRequiredTypesForFinance",
+    "description": "Processing: index.js#_validateDocumentRequiredTypesForFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processNotes",
+    "description": "Processing: index.js#_processNotes - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_updateNewSetOfAuthSignatories",
+    "description": "Processing: index.js#_updateNewSetOfAuthSignatories - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#validateIfUserBelongsToOrg",
+    "description": "Processing: index.js#validateIfUserBelongsToOrg - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateUpdatedDueDate",
+    "description": "Processing: index.js#_validateUpdatedDueDate - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleAddress",
+    "description": "Processing: index.js#handleAddress - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleApplicantBank",
+    "description": "Processing: index.js#handleApplicantBank - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleCounterPartyBank",
+    "description": "Processing: index.js#handleCounterPartyBank - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleSponsorBank",
+    "description": "Processing: index.js#handleSponsorBank - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCurrencyBenchmarkAndMargin",
+    "description": "Processing: index.js#getCurrencyBenchmarkAndMargin - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceUsersDetailsWithOrgType",
+    "description": "Processing: index.js#getFinanceUsersDetailsWithOrgType - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getBankBranchCode",
+    "description": "Processing: index.js#getBankBranchCode - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getMasterInstrumentList",
+    "description": "Processing: index.js#getMasterInstrumentList - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getPreShipmentOutstandingFinanceAmount",
+    "description": "Processing: index.js#getPreShipmentOutstandingFinanceAmount - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#generateSyncAPIDataForFIVaidation",
+    "description": "Processing: index.js#generateSyncAPIDataForFIVaidation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#calculateOverdueFee",
+    "description": "Processing: index.js#calculateOverdueFee - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#generateTaxInfo",
+    "description": "Processing: index.js#generateTaxInfo - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#generateContainerAndUrl",
+    "description": "Processing: index.js#generateContainerAndUrl - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#ehblFinanceAssociation",
+    "description": "Processing: index.js#ehblFinanceAssociation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#identifyCounterPartyAcceptanceStateFromFinanceState",
+    "description": "Processing: index.js#identifyCounterPartyAcceptanceStateFromFinanceState - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#identifyApplicantAcceptanceStateFromFinanceState",
+    "description": "Processing: index.js#identifyApplicantAcceptanceStateFromFinanceState - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceCurrentInvoicesDetails",
+    "description": "Processing: index.js#getFinanceCurrentInvoicesDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinancePaymentTermsAndActiveDisbursalEvents",
+    "description": "Processing: index.js#getFinancePaymentTermsAndActiveDisbursalEvents - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#isIdOrganisation",
+    "description": "Processing: index.js#isIdOrganisation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#isIdBank",
+    "description": "Processing: index.js#isIdBank - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#doesUserBelongsToOrgType",
+    "description": "Processing: index.js#doesUserBelongsToOrgType - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#isLogisticsFinanceEventCompleted",
+    "description": "Processing: index.js#isLogisticsFinanceEventCompleted - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getOrgDetailsFromUserIdQuery",
+    "description": "Processing: index.js#getOrgDetailsFromUserIdQuery - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getStaticData",
+    "description": "Processing: index.js#getStaticData - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCreditSummary",
+    "description": "Processing: index.js#getCreditSummary - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDetailsForUser",
+    "description": "Processing: index.js#getFinanceDetailsForUser - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDocumentsData",
+    "description": "Processing: index.js#getFinanceDocumentsData - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getShipmentStatusByFinanceId",
+    "description": "Processing: index.js#getShipmentStatusByFinanceId - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getListOfFinanceDetails",
+    "description": "Processing: index.js#getListOfFinanceDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getAllFinanceIdsByUser",
+    "description": "Processing: index.js#getAllFinanceIdsByUser - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getListOfUpcomingTransactionDetails",
+    "description": "Processing: index.js#getListOfUpcomingTransactionDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getLogisticsFinanceProofDoc",
+    "description": "Processing: index.js#getLogisticsFinanceProofDoc - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceCountByFinanceId",
+    "description": "Processing: index.js#getFinanceCountByFinanceId - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#processFinanceData",
+    "description": "Processing: index.js#processFinanceData - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#financeInsertNewRecord",
+    "description": "Processing: index.js#financeInsertNewRecord - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#financeUpdateRecord",
+    "description": "Processing: index.js#financeUpdateRecord - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateBankAssessment",
+    "description": "Processing: index.js#updateBankAssessment - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getBankAssessmentData",
+    "description": "Processing: index.js#getBankAssessmentData - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#bulkUpdateBankAssessment",
+    "description": "Processing: index.js#bulkUpdateBankAssessment - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#checkPermissionAndGetTransactionData",
+    "description": "Processing: index.js#checkPermissionAndGetTransactionData - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#bcoAcceptPaymentTerm",
+    "description": "Processing: index.js#bcoAcceptPaymentTerm - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#acceptPaymentTermByApplicantForUnregCounterParty",
+    "description": "Processing: index.js#acceptPaymentTermByApplicantForUnregCounterParty - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#createTransaction",
+    "description": "Processing: index.js#createTransaction - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getTransactionsByUser",
+    "description": "Processing: index.js#getTransactionsByUser - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceOrgs",
+    "description": "Processing: index.js#getFinanceOrgs - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getDocument",
+    "description": "Processing: index.js#getDocument - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#cancelFinance",
+    "description": "Processing: index.js#cancelFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#sendFinanceTermsAcceptanceMail",
+    "description": "Processing: index.js#sendFinanceTermsAcceptanceMail - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDataByIdPublic",
+    "description": "Processing: index.js#getFinanceDataByIdPublic - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDocumentPublic",
+    "description": "Processing: index.js#getFinanceDocumentPublic - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#acceptFinanceTermsPublic",
+    "description": "Processing: index.js#acceptFinanceTermsPublic - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#fiAssessmentCalculation",
+    "description": "Processing: index.js#fiAssessmentCalculation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#transactionPageCalculationForUI",
+    "description": "Processing: index.js#transactionPageCalculationForUI - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#arrangingPageCalculationForUI",
+    "description": "Processing: index.js#arrangingPageCalculationForUI - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getApplyFinanceCalculation",
+    "description": "Processing: index.js#getApplyFinanceCalculation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceApplicationDataReport",
+    "description": "Processing: index.js#getFinanceApplicationDataReport - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCompletedTransactionsReport",
+    "description": "Processing: index.js#getCompletedTransactionsReport - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getUpcomingTransactionsReport",
+    "description": "Processing: index.js#getUpcomingTransactionsReport - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateFinanceApplicationtDataForBoomi",
+    "description": "Processing: index.js#updateFinanceApplicationtDataForBoomi - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#bulkInsertOCRInformationForFinance",
+    "description": "Processing: index.js#bulkInsertOCRInformationForFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getTransactionsViewPageFilterValues",
+    "description": "Processing: index.js#getTransactionsViewPageFilterValues - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCombinedDiscountRate",
+    "description": "Processing: index.js#getCombinedDiscountRate - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getTransactionViewValues",
+    "description": "Processing: index.js#getTransactionViewValues - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#fiTermValidation",
+    "description": "Processing: index.js#fiTermValidation - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateFinanceDataByFI",
+    "description": "Processing: index.js#updateFinanceDataByFI - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateCreditLimitGraphDetails",
+    "description": "Processing: index.js#updateCreditLimitGraphDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#preamble",
+    "description": "Processing: highlighting.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#mkKey",
+    "description": "Processing: highlighting.js#mkKey - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#calculateAndCheckExhaustionPerFinance",
+    "description": "Processing: highlighting.js#calculateAndCheckExhaustionPerFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_getUntilisedLimitsPerCf",
+    "description": "Processing: highlighting.js#_getUntilisedLimitsPerCf - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#calculateExhaustionPerCf",
+    "description": "Processing: highlighting.js#calculateExhaustionPerCf - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_checkExhaustionAndHighlightFinances",
+    "description": "Processing: highlighting.js#_checkExhaustionAndHighlightFinances - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#makeLocalCache",
+    "description": "Processing: highlighting.js#makeLocalCache - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_checkIsDisbursalRestricted",
+    "description": "Processing: highlighting.js#_checkIsDisbursalRestricted - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#convertAmount",
+    "description": "Processing: highlighting.js#convertAmount - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#getCurrencyRateMap",
+    "description": "Processing: highlighting.js#getCurrencyRateMap - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#applyCurrencyConversion",
+    "description": "Processing: highlighting.js#applyCurrencyConversion - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_getCountOfFinancesRaisedAfterDefaulterFinance",
+    "description": "Processing: highlighting.js#_getCountOfFinancesRaisedAfterDefaulterFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_checkForNextDefaulter",
+    "description": "Processing: highlighting.js#_checkForNextDefaulter - service layer"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#updateIsFinanceDefaultedColumn",
+    "description": "Processing: highlighting.js#updateIsFinanceDefaultedColumn - service layer"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#preamble",
+    "description": "Processing: index.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#_processApplyCreditLimitAutoSaveApplication",
+    "description": "Processing: index.js#_processApplyCreditLimitAutoSaveApplication - service layer"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#autoSave",
+    "description": "Processing: index.js#autoSave - service layer"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#getSaveDetails",
+    "description": "Processing: index.js#getSaveDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/sofr_rates.js#preamble",
+    "description": "Processing: sofr_rates.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/sofr_rates.js#getSofrRatesApi",
+    "description": "Processing: sofr_rates.js#getSofrRatesApi - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#preamble",
+    "description": "Processing: social_sign_up_api.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#ssoAuthErrorHandler",
+    "description": "Processing: social_sign_up_api.js#ssoAuthErrorHandler - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromGoogle",
+    "description": "Processing: social_sign_up_api.js#getDetailsFromGoogle - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromGoogleCallback",
+    "description": "Processing: social_sign_up_api.js#getDetailsFromGoogleCallback - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromLinkedIn",
+    "description": "Processing: social_sign_up_api.js#getDetailsFromLinkedIn - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromLinkedInCallback",
+    "description": "Processing: social_sign_up_api.js#getDetailsFromLinkedInCallback - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromMicrosoft",
+    "description": "Processing: social_sign_up_api.js#getDetailsFromMicrosoft - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromMicrosoftCallback",
+    "description": "Processing: social_sign_up_api.js#getDetailsFromMicrosoftCallback - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/service_event_handler.js#handleServiceSendEvents",
+    "description": "Processing: service_event_handler.js#handleServiceSendEvents - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/service_event_handler.js#sendServiceBusMessage",
+    "description": "Processing: service_event_handler.js#sendServiceBusMessage - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#preamble",
+    "description": "Processing: runners_api.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#processErrorFromResponse",
+    "description": "Processing: runners_api.js#processErrorFromResponse - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#getDocumentByHBLFromRunner",
+    "description": "Processing: runners_api.js#getDocumentByHBLFromRunner - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#getDocumentDataByHBLFromRunner",
+    "description": "Processing: runners_api.js#getDocumentDataByHBLFromRunner - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#enableDisableOfHBLFromRunner",
+    "description": "Processing: runners_api.js#enableDisableOfHBLFromRunner - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#statusUpdateOfHBLFromRunner",
+    "description": "Processing: runners_api.js#statusUpdateOfHBLFromRunner - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/qa_api.js#triggerQAPushAPI",
+    "description": "Processing: qa_api.js#triggerQAPushAPI - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#preamble",
+    "description": "Processing: probe42_api.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#searchCompany",
+    "description": "Processing: probe42_api.js#searchCompany - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#companyConsolidatedReport",
+    "description": "Processing: probe42_api.js#companyConsolidatedReport - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#companyReferenceDocument",
+    "description": "Processing: probe42_api.js#companyReferenceDocument - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#companyReferenceDocumentById",
+    "description": "Processing: probe42_api.js#companyReferenceDocumentById - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#preamble",
+    "description": "Processing: panjiva_api.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#_formatPanjivaResponse",
+    "description": "Processing: panjiva_api.js#_formatPanjivaResponse - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#simpleStringify",
+    "description": "Processing: panjiva_api.js#simpleStringify - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#getPanjivaCompanyDetails",
+    "description": "Processing: panjiva_api.js#getPanjivaCompanyDetails - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/nanonets_api.js#preamble",
+    "description": "Processing: nanonets_api.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/nanonets_api.js#getOCRPredictedData",
+    "description": "Processing: nanonets_api.js#getOCRPredictedData - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/nanonets_api.js#getOCRDataByID",
+    "description": "Processing: nanonets_api.js#getOCRDataByID - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#preamble",
+    "description": "Processing: lending_api.js#module - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#headers",
+    "description": "Processing: lending_api.js#headers - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#_generateEventId",
+    "description": "Processing: lending_api.js#_generateEventId - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#sendEmailForFailedSyncReq",
+    "description": "Processing: lending_api.js#sendEmailForFailedSyncReq - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#getTaxDataFromLending",
+    "description": "Processing: lending_api.js#getTaxDataFromLending - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#bcoSaveLendingFinance",
+    "description": "Processing: lending_api.js#bcoSaveLendingFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#financeLendingPushData",
+    "description": "Processing: lending_api.js#financeLendingPushData - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#lendingAddRemarks",
+    "description": "Processing: lending_api.js#lendingAddRemarks - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#publishDocumentsToArrangingPlatform",
+    "description": "Processing: lending_api.js#publishDocumentsToArrangingPlatform - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#sendLendingSyncData",
+    "description": "Processing: lending_api.js#sendLendingSyncData - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#sendLendingSyncDataForFinance",
+    "description": "Processing: lending_api.js#sendLendingSyncDataForFinance - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#evictCacheAtLendingPlatfrom",
+    "description": "Processing: lending_api.js#evictCacheAtLendingPlatfrom - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#getCreditFaciltyUpdateRequestIds",
+    "description": "Processing: lending_api.js#getCreditFaciltyUpdateRequestIds - service layer"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#fixCreditFacilityAmountsAtLending",
+    "description": "Processing: lending_api.js#fixCreditFacilityAmountsAtLending - service layer"
+  }
+]

@@ -1,0 +1,4022 @@
+[
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formatDocumentPayload",
+    "description": "Formats credit facility document metadata into standardized payload structure"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formatDocumentPayloadMawani",
+    "description": "Formats Mawani company documents into standardized payload for credit facility"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getUploadedDocumentTypeByApplicant",
+    "description": "Retrieves uploaded document types for credit facility applicant from Mawani and company sources"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generateDocumentPayloadForApplicant",
+    "description": "Combines Mawani and company documents into credit facility applicant document payload"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getCommonProductBetweenFIandApplicant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_compare",
+    "description": "Evaluates comparison operators for eligibility criteria validation logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_evaluateNoGoCriteria",
+    "description": "Validates credit facility applicant against no-go rejection criteria thresholds"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_evaulateEligibilityResponses",
+    "description": "Validates credit facility questionnaire responses meet eligibility requirements"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_createOrUpdateMawaniCompanyForSubmitCreditFacility",
+    "description": "Creates or updates Mawani company profile when submitting credit facility application"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_createOrUpdateDFSACompanyByCloningFI",
+    "description": "Clones financial institution organization details to create DFSA company in Mawani"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formatCounterPartyIds",
+    "description": "Standardizes counter-party organization IDs from different database table sources"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processDiscountRate",
+    "description": "Calculates credit facility discount rate charges based on fixed or floating type"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processMarginDiscountRate",
+    "description": "Calculates credit facility margin discount rates for tenure-based pricing"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_creditLimitChargesProcessing",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getUserToIdMapping",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getCounterPartyToOrgTableQuery",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_determineRiskSeverityForCounterParty",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getCounterPartyToTradingPartnerTableQuery",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_orgTenantAndInternalCounterPartyEntry",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generateCreditChargesBatchId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getEventSubTypeForClientAcceptance",
+    "description": "Retrieves credit facility data with business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getStatusForUpdateClientTermsAcceptance",
+    "description": "Retrieves current workflow status"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processCounterPartiesforUpdateRequestAcceptTerms",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processSyncObjectforUpdateRequestAcceptTerms",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_superAdminLoginForExternalClients",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processcpRemarksDocuments",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_checkImporterAccptance",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getAnswersOfQuestion",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getApplicantSectors",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_sendNotifForSectorUpdate",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getProductInfoFromProductName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_updateRiskDataForFacility",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#checkImporterAccptance",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#getCreditFacilityInfoForApplicant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#getCounterPartyInfoForApplicant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#getBuyerInfoForApplicant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#getEligibilityQuestionOfFI",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#checkEligibilityForApplicant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#createCreditFacilityForFIAndApplicant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#submitCreditFacility",
+    "description": "Submits completed credit facility application for lender review"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#submitPendingCreditFacilityDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#fiAssessCreditFacility",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#upgradeCreditFacilityRequest",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#addCounterParty",
+    "description": "Adds approved trading counter-party to credit facility"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#acceptCreditFacilityTerms",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#acceptCreditFacilityTermsPublic",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#processCreditFacilityDocusignDocuments",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#calculateCreditFacilityAmounts",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#getAllRaisedCreditFacilityForOrganisation",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#determineRiskSeverityForCounterParty",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#getRiskObligorsBySponsorId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#getEhblDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#fetchHBLDocument",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#fetchHBLDocumentData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#surrenderCustodyOfHBL",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#statusUpdateOfHBL",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#findDocumentType",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#findFirstTimeFetch",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#addHistory",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/cargoes_hbl/index.js#getHblOwnershipData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_generateUpdateRequestTypeBasedOnEventSubType",
+    "description": "Updates entity with business rules"
+  },
+  {
+    "id": "backend/src/services/common/index.js#addStatusCode",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateCreditLimitApplicationStatuses",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formatDocumentPayload",
+    "description": "Formats credit facility document metadata into standardized payload structure"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getCompanyDocumentsByOrgId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getDocument",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_doesUserBelongToCreditLimitId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_doesUserBelongToCreditLimitIdArrayCheck",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processCounterPartyProductLevelException",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processProductLevelException",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_updateCompanyDataWithPanjivaInternalDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_uploadDocumentsAndUpdateTables",
+    "description": "Uploads document file to storage"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_generateDocumentUploadId",
+    "description": "Creates credit facility agreement document from template"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_generateDefaultMawaniRefId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getCountryList",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formatCraRiskDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getAnswersOfQuestion",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processCodeIssuerDependentQuestion",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processDependentQuestion",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processRiskAssessmentSummary",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processRiskAssessmentSummaryforClient",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_generateCRATemplate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_generateCRATemplateForClient",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_appendCRAScoreToTemplate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getCreditLimitDataWithCounterPartyInfo",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getCreditLimitDataWithCharges",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formatOCRData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getOCRPredictedData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formatBvdResponse",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getDeltaKycDocumentList",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_parseCompanyName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_matchCompanyName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getDocummentDeatilsForInternalCounterParty",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_authenticateAndGetCompanyDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getAccessToken",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_companyUpdateTask",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_upsertRiskRatingClientMappingRequest",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_companyUpdateTasksAfterPendingApprovalState",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_sortTablesObjByArrayOfTableOrder",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_bulkUpsertTableData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_bulkUpsertTableDataWithoutTC",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_upsertCreditFacilityTableData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_updateCreditChargesProductIds",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_upsertClientCategoryTableData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_addDocumentsOnArranging",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_trimLendingSpecificColumns",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getProductInfoFromShortForm",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#sendEmailToOperations",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_nextGreaterOrEqualElement",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_creditLimitDataWithCharges",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formatSchemaName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formatFinanceSchemaName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formatClientCategorySchemaName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getDTFAdminAndLendingOrgs",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_convertObjectToQueryParam",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processNotificationForCreditFacility",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_deepEqual",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_isObject",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processCounterParties",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processRejectedCounterParties",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_productConfigCombinationCreation",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processApprovedProductsDetails",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_findMatchingConfigs",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_checkImporterAccptance",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_checkIfOrgIsVerifiedByCompanyStatus",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_checkClientAgreementAcceptedForOrganisation",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#setAndPushCountryCode",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processExceptionsTerms",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_formInorporationCountriesDataBySourceAndDestinationCountries",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getRequiredProductsArrayByParamValue",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_determineRiskLevel",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_determineRiskScore",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_evaluateRiskByCriteria",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_evaluateRiskByCriteriaForRequest",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_upsertBasedOnClientAnswers",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_upsertBasedOnClientAnswersInRequestTable",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processAndUpsertCompanyRiskAssessmentData",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#sendFinanceInstituteDataToAccounting",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/common/index.js#verifyCaptcha",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateDocumentUploadId",
+    "description": "Creates credit facility agreement document from template"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateDefaultMawaniRefId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateDueNotification",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getChargesInParams",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditFacilityChargesWithExceptions",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDataForOrg",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDetailsById",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDocumentsById",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDataAndCharges",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDataByIdPublic",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getNotAppliedFinInsts",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getAllFinanceInstitutions",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDataApplyPage",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitChargesFinancePage",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getDocument",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDocumentPublic",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#addRemarks",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getMawaniDocumentsByMawaniRefId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCompanyDocumentsByOrgId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#downloadMawaniDocument",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getBcosTransactedWithBank",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getMawaniRefId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getOrgDetailsFromOrgId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#collectFinanceInstData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getFinanceInstDataFromMawani",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getFinanceInstData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitCountById",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#approveTransaction",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#validateToken",
+    "description": "Validates JWT token authenticity and expiration"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getHistoryData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#addHistory",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getOnboardedCounterPartyOrganisations",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#regenerateCommissionInvoiceReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#sendEmailDpwfsCommissionInvoicing",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/services/common/index.js#sendCreditLimitTermsAcceptanceMail",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitTermsAcceptancePage",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateFIOnboardingReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateInvoiceReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#recalculateDiscountAndProcessingFee",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getRiskCurrentConfiguration",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateRiskCurrentConfiguration",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateRiskAssessmentSummaryForCompanies",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateCompanyDetailsInPendingApprovalState",
+    "description": "Updates organization company registration details"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateRiskAssessmentSummaryByCompanyID",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateCargoEventNotifications",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#sendCreditLimitExpiryRenewalReminderEmail",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/common/index.js#sendCreditLimitReport",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getOrgsByCreditLimitId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getAccessibleOrgsByCreditFacilityId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCompanyInformationForBuyerOrSellerByMawaniRefId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getViewPageFilterValues",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCompanyDetailsForRegistration",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCompanyDocumentsForRegistration",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCompanyListFromPanjiva",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getApplyFinanceByAdminClients",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#fiIntegration",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateCreditLimitDataForBoomi",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getKYCDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getFinanceOCRPredictedData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getOCRDataByFinanceId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#addSalesAgentData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getSalesAgentData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#searchCompanyName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCompanyDataFromDataProviders",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getRemarkDocumentDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCompanyDocumentsFromDataProviders",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getApplicantOrgIdFromCreditLimitId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCreditLimitDetailsByCreditLimitId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#approveOCRDataForFinance",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getClientKYCDetailsForLenderBankUI",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getClientRemarksForLendingPlatform",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#crawlSOFrRates",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#insertSofrRatesProd",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getSofrRatesInDateRange",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#crawlSOFrRatesNonProd",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#discountFeeCalculations",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#processingFeeCalculations",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateFacilitySyncDataFromLending",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#updateClientCategorySyncDataFromLending",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getStaticData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateCreditLimitNotification",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateSofrRateChangeNotification",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#processAndUpsertCompanyRiskAssessmentData",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#upsertRiskRatingClientMappingRequest",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#authenticateAndGetCompanyDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getAccessToken",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#saveTemplate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getTemplate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_sendEmailNotifForSofrChange",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_sendEmailNotifForMissingSofrUpdate",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_uploadCompanyDocumentsForRegistration",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_uploadInternalCompanyCodes",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_uploadInternalCompanyDocuments",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getUniquePropertyValuesFromObject",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#generateInvoiceReportData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getCurrencyExchangeRate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#formatDate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#getSerialNum",
+    "description": "Retrieves finance application data with business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#createSubscriptionFeeObject",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#createCommissionObject",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#insertInvoiceReportDetailsQuery",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#uploadInvoiceReport",
+    "description": "Uploads trade invoice document for finance application"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_factoringFeeCalculations",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_processingFeeCalculations",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_discountFeeCalculations",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_recalculateDiscountAndProcessingFee",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getTermsheetStatusByOrgIdFiId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/index.js#_getCommonProductBetweenFIandApplicant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_deepEqual",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_areArraysEqual",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_areDatesEqual",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_isObject",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_getTypeOf",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_fixTableNomenclature",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_flattenMapObjects",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_getArrayDiff",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_updateIdentifierInDiff",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_isArrayEqual",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_getDirectObjectComparison",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_getObjectDiff",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_compareHistoryObjects",
+    "description": "Evaluates comparison operators for eligibility criteria validation logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_removeRequestFromTableName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_getDbData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_getSecondaryDbData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_processDataGrouping",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_groupByField",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_joinTables",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_mergeUpdateTables",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#_trimFieldsFromData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#generateHistoryDiff",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/history.js#generateUpdateHistoryDiff",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_sortTablesObjByArrayOfTableOrder",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_getAccessibleOrgIds",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_addDocumentsOnArranging",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_bulkUpsertTableData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_formatFinanceSchemaName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_determineTableUpsertOrder",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_getFinanceIdBasedOnEventSubType",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_determinePropertyRemovalSet",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processFinanceTransactionTable",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_upsertFinaceTableData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_trimLendingSpecificColumns",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_sortDataByEventName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_deepEqual",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_isObject",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processAddressAndOrganisationBankTable",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_insertAuthUsersToApprovalMatrix",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_checkIsUserAuthorisedSingatory",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_updateNewSetOfAuthSignatories",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_updateFinancePaymentTermsByState",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_sendUserEventByState",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processFinanceAssessment",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_getAction",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_formRemarkObject",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processFinanceRework",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processFinanceTransaction",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processTransactionMonitoring",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processOverdueWaiveOff",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processFinanceUpdateDueDate",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processCreditNoteSync",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processFinanceUpdateCustomInterestRate",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_processInventoryDetails",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#_replaceFinanceDetailsInPayload",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/common/finance_application.js#updateSyncFinanceDataFromLending",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#cachedCall",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#_getUserToken",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#_getStatusForCompany",
+    "description": "Retrieves current workflow status"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#_getCurrentStatusForCompany",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#_getRemainingDocumentsList",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#_formatList",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#_getCompanyDocumentsHistorySummary",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#_getCompanyDocumentsByApprovedDate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyKycHistory",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyKycAudit",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyKycInternalComments",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#addCompanyKycInternalComment",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#companyAssessment",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#companyAssessmentOnHold",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyStatusWorkFlow",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyStatusWorkFlowByRequestId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyKycApprovalDocuments",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyDocuemntsHistory",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompaniesList",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#searchTransferOwnershipUser",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#inviteUserMawani",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#transferOwnership",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getStatusForCompany",
+    "description": "Retrieves current workflow status"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyCodeIssuers",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyKycHistoryQuestions",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getRegisteredServices",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#sendCompanyDocumentReminderEmail",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#companyAutomaticOnhold",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#toggleAutomaticOnHold",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getAllCompanyServices",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#companyServicesStatusChange",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#companySuspension",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyReferenceValues",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyRiskAssessment",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getOngoingMonitoringData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#updateCompanyRiskAssessment",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#deactivateCompanyServices",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/company_kyc_approval/index.js#getCompanyDocumentsHistorySummary",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#_deleteRoles",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#_updateUserRolesToCache",
+    "description": "Updates user role and permissions"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#_createTransaction",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#_updateFinance",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#_boomiApiCall",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#_financeApplicationStatusUpdate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/boomi_pull_service/index.js#getStatusFromExternalFI",
+    "description": "Retrieves current workflow status"
+  },
+  {
+    "id": "backend/src/services/admin/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/admin/index.js#approveOrganisation",
+    "description": "Approves organization registration after KYC verification"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#_getPartyOrgDetailsOnType",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#_getPartyBankDetailsOnType",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#_fetchAnyOneProductDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#_handleBaseDetailsOnEventType",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#_handlePartyDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#validateEventPayloadSchema",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/accounting_integration/index.js#handleEventDataOnEventType",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#checkIfOrgExists",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#checkIfOrgIsVerifiedByCompanyStatus",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#checkIfCreditLimitSet",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#checkIfCreditLimitApplied",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getUserAcceptedTermsVersion",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getOrgFITermsAcceptedVersion",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getFinanceProductsSupportedByFI",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#userAcceptedTermsVersionByTenant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#userAcceptedTermsVersion",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getLatestTermsVersionByTenant",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#_formatDocumentPayload",
+    "description": "Formats credit facility document metadata into standardized payload structure"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#updateOrganisationsAllowedServices",
+    "description": "Updates existing organization profile details"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#createAllowedServiceArray",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#updateUserRolesToCache",
+    "description": "Updates user role and permissions"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getFormattedUserRoles",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#addViewAccessUserRoles",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getdefaultCompany",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getUserMutliTenantCompanies",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#createUserObjectForSelectedCompany",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#processLoggedInUserAllCompaniesDetails",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#processCompanyDetails",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#shouldSendNewUserEvent",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#markNewEventSent",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getUserCompanyDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#_createOrganisationAndUsers",
+    "description": "Creates new organization profile in system"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#_updateDefaultCompanyDetailInRedis",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#login",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#logout",
+    "description": "Terminates user session and invalidates token"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#authenticate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getCurrentUserDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#getCompanyDetails",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#forgotPassword",
+    "description": "Sends password reset link to user email"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#updatePassword",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#registerOrganisation",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#changeUserCompany",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#signedUserLogin",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#updateToRedisAndSendNotification",
+    "description": "Sends credit facility status notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#validateOtp",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#generateLead",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#generateLeadForCRM",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/index.js#loginWithUserNamePassword",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/services/auth_service/helpers.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/services/auth_service/helpers.js#userAcceptanceClientAgreementTerms",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#saveAcceptTermsVersion",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#saveAcceptTermsVersionForDFSA",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#getUserAcceptedTermsVersion",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#saveClientAgreement",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#getTermsDocument",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#saveTermsDocument",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#sendTermsMail",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#getTermsDocumentPublic",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/terms_acceptance.js#sendClientAgreementEmail",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/reports.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/reports.js#generateWeeklyReports",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/reports.js#generateDailyReports",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/reports.js#generateSOFRratesReport",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/reports.js#generateDatalakeSyncReport",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/reports.js#generateWeeklyUserSignupMetricReport",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/main/controllers/reports.js#createOCRAccuracyReport",
+    "description": "Handles entity creation request"
+  },
+  {
+    "id": "backend/src/main/controllers/release_notes.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/release_notes.js#getLatestReleaseNotes",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/release_notes.js#getSpecificReleaseNotes",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/release_notes.js#saveReleaseNotes",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#_triggerUpdateRegistrationOCRDataOnMawani",
+    "description": "Handles entity update request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#inviteOrg",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#registerOrg",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#updateMawaniCompanyData",
+    "description": "Handles organization update request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#getMawaniCompanyData",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#createCompanyWithDifferentTenant",
+    "description": "Handles user registration request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#createOrgInMawani",
+    "description": "Handles user registration request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#getMawaniCompaniesInDraftState",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#updateRegistrationOCRPredictedData",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#getAuthorisedSignatories",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/registration.js#getAllSponsors",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/push_api.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/push_api.js#updateCompanyDataOnMawaniStatusChange",
+    "description": "Handles entity update request"
+  },
+  {
+    "id": "backend/src/main/controllers/push_api.js#captureEmailTemplate",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/push_api.js#updateTemplateAttributes",
+    "description": "Handles entity update request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#getOrganisations",
+    "description": "Retrieves organization profile details by ID"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#updateOrganisationTenantSwitch",
+    "description": "Updates existing organization profile details"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#getCompaniesKYCDocuments",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#updateCompanyKYCDocuments",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#getCompaniesKYCInformation",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#getCompanyInfoByEmailId",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#updateCompanyKYCInformation",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#sendCompanyKYCInfoRenewalReminderEmail",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#getCompanyKYCTableFilters",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#downloadCompaniesKYCInfo",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#getCompanyKYCDocumentsTableFilters",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#downloadCompaniesKYCDocumentsInfo",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#markAlternateKYCDocumentUpload",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/organisations.js#updateCompanyKYCExpiryFlag",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/notifications.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/notifications.js#getNotificationsbyUserId",
+    "description": "Retrieves user notification messages"
+  },
+  {
+    "id": "backend/src/main/controllers/notifications.js#getPendingTasksbyUserId",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/notifications.js#updateReadStatus",
+    "description": "Handles entity update request"
+  },
+  {
+    "id": "backend/src/main/controllers/notifications.js#getEmailNotificationState",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/notifications.js#enableEmailNotifications",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#_checkIfCompanyInvoiceComboExists",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#_validateOrganisationIdIsOrg",
+    "description": "Validates organization registration data completeness"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#fiProductDeleted",
+    "description": "Handles entity deletion request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#_validateUserBelongsToOrgType",
+    "description": "Handles validation request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#_encodeCell",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#delete_row",
+    "description": "Handles entity deletion request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getCreditSummaryByUserId",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getFinanceById",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getFinances",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#bcoSaveFinance",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#bcoSubmitFinance",
+    "description": "Handles submission request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#otherBCOApproveFinance",
+    "description": "Handles approval decision request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#dtfAdminApproveFinance",
+    "description": "Handles approval decision request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#updateBankAssessment",
+    "description": "Handles finance application update request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#bulkUpdateBankAssessment",
+    "description": "Handles finance application update request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#createBulkTransaction",
+    "description": "Handles finance application creation request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#acceptPaymentTerms",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#acceptPaymentTermsByApplicantForUnregCounterParty",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#createTransaction",
+    "description": "Handles finance application creation request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getTransactions",
+    "description": "Retrieves transaction history with filters"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getTransactionView",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getTransactionById",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getUpcomingTransactions",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getAssociateCompaniesDetails",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getDocument",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getDocumentsDataById",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getFinanceDocumentPublic",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#cancelFinance",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#deleteFinance",
+    "description": "Handles entity deletion request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#sendFinanceTermsAcceptanceMail",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getFinanceByIdPublic",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#acceptFinancePaymentTermsPublic",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#fiAssessmentCalculationForUI",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#transactionPageCalculationForUI",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#arrangingPageCalculationForUI",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getApplyFinanceCalculation",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getShipmentStatusByFinanceId",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#downloadFinanceApplicationData",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#downloadCompletedTransactionsData",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#downloadUpcomingTransactionsData",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#settlementCalculationForUI",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getCombinedDiscountRate",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#fiTermValidation",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#updateFinanceDataByFI",
+    "description": "Handles finance application update request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getMasterInstrumentList",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/logistics_finance.js#getPreShipmentOutstandingFinanceAmount",
+    "description": "Handles finance application retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/fi_service.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/fi_service.js#getStatusFromExternalFI",
+    "description": "Retrieves current workflow status"
+  },
+  {
+    "id": "backend/src/main/controllers/feedback.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/feedback.js#getFeedbackWidget",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/feedback.js#submitFeedback",
+    "description": "Handles submission request"
+  },
+  {
+    "id": "backend/src/main/controllers/draft.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/draft.js#saveDraft",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/draft.js#getDraft",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/draft.js#autoSave",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/draft.js#getSaveDetails",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#getEnvelopeLink",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#getDocumentRecipientStatus",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#getSignedDocuments",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#getDocumentLinkPublic",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#getRecipientDetailsPublic",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#getSignedDocumentsPublic",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#updateRecipientTypeToCC",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#ownerIdValidation",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/docusign.js#_documentNameRequired",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#_getUniqueReferenceIdFromPublicPayload",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#addDocument",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#getOrgDocumentById",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#getOrgDocumentByIdForLender",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#uploadDocuments",
+    "description": "Uploads document file to storage"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#downloadDocuments",
+    "description": "Downloads document file to user"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#uploadDocumentsPublic",
+    "description": "Uploads document file to storage"
+  },
+  {
+    "id": "backend/src/main/controllers/document.js#downloadDocumentsPublic",
+    "description": "Downloads document file to user"
+  },
+  {
+    "id": "backend/src/main/controllers/crm.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/crm.js#updateOpportunityId",
+    "description": "Handles entity update request"
+  },
+  {
+    "id": "backend/src/main/controllers/crm.js#updateSalesPoc",
+    "description": "Handles entity update request"
+  },
+  {
+    "id": "backend/src/main/controllers/crm.js#createUserAccount",
+    "description": "Handles user registration request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#createCreditFacilityForFIAndApplicant",
+    "description": "Handles credit facility creation request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#getCreditFacilityInfoForApplicant",
+    "description": "Handles credit facility retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#getCounterPartyInfoForApplicant",
+    "description": "Handles credit facility retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#getBuyerInfoForApplicant",
+    "description": "Handles credit facility retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#getEligibilityQuestionOfFI",
+    "description": "Handles credit facility retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#checkEligibilityForApplicant",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#submitCreditFacility",
+    "description": "Submits completed credit facility application for lender review"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#renewCreditFacility",
+    "description": "Renews expiring credit facility for extended term"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#acceptCreditFacilityTermSheet",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#submitPendingCreditFacilityDetails",
+    "description": "Handles submission request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#fiAssessCreditFacility",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#upgradeCreditFacilityRequest",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#addCounterParty",
+    "description": "Adds approved trading counter-party to credit facility"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#acceptCreditFacilityTerms",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#acceptCreditFacilityTermsPublic",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#calculateCreditFacilityAmounts",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#getAllRaisedCreditFacilityForOrganisation",
+    "description": "Handles credit facility retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/credit_facility.js#getRiskObligorsBySponsorId",
+    "description": "Handles credit facility retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/compliance_screening.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/compliance_screening.js#companiesComplianceScreening",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/compliance_screening.js#companyComplianceScreening",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/compliance_screening.js#transactionComplianceScreening",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/compliance_screening.js#accuityPushNotification",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/compliance_screening.js#getComplianceScreeningData",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/compliance_screening.js#accuityPullLatestInfo",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#_sendReject",
+    "description": "Handles rejection decision request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyKycHistory",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyKycAudit",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyKycInternalComments",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#addCompanyKycInternalComment",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#companyAssessment",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#companyAssessmentOnHold",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyStatusWorkFlow",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyStatusWorkFlowByRequestId",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyKycApprovalDocuments",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyDocuemntsHistory",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyDocumentsHistorySummary",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompaniesList",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#searchTransferOwnershipUser",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#inviteUserMawani",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCodeIssuers",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#transferOwnership",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyKycHistoryQuestions",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getRegisteredServices",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getAllCompanyServices",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#companyServicesStatusChange",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#companySuspension",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#companyDocumentReminder",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#companyAutomaticOnhold",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#toggleAutomaticOnHold",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyReferenceValues",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getCompanyRiskAssessment",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#updateCompanyRiskAssessment",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#getOngoingMonitoringData",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/company_kyc_approval.js#deactivateCompanyServices",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#_getDocumentClassificationByOwner",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#_validateUserBelongsToOrgType",
+    "description": "Handles validation request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#_sendEmailsContactUs",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#_applicationStatusFields",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#_updateApplicationStatusCount",
+    "description": "Changes finance application workflow status"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#_processSyncDataFromLMS",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getExchangeRates",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#validateToken",
+    "description": "Validates JWT token authenticity and expiration"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#generateDueNotification",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitData",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getDocument",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getDocumentPathForLender",
+    "description": "Retrieves document file from storage"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitDocumentPublic",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitDataById",
+    "description": "Handles credit facility retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitDataByIdPublic",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getNotAppliedFinInsts",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitDataApplyPage",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitChargesFinancePage",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitDataApplyPageForAdmin",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#generateCargoEventNotifications",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#addRemarks",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getMawaniDocumentsByMawaniRefId",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCompanyDocumentsByOrgId",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#downloadCompanyDocument",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#contactUsForm",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#contactUsLoggedInForm",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getBcosTransactedWithBank",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getApplicationStatuses",
+    "description": "Retrieves current workflow status of finance application"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#collectFinanceInstData",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getFinanceInstData",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#approveTransaction",
+    "description": "Handles approval decision request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCountryCodes",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getHistoryData",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getOnboardedCounterPartyOrganisations",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#sendCreditLimitTermsAcceptanceMail",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCreditLimitTermsAcceptancePage",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#sendEmailDpwfsCommissionInvoicing",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#sendEmailDpwfsRegeneratedCommissionInvoicing",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getRiskCurrentConfiguration",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#updateRiskCurrentConfiguration",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#updateRiskAssessmentSummary",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#updateRiskAssessmentSummaryByOrgId",
+    "description": "Handles organization update request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getViewPageFilterValues",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#downloadCreditLimitData",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCompanyDetailsForRegistration",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCompanyDocumentsForRegistration",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getApplyFinanceByAdminClients",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCompanyListFromPanjiva",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getKYCDetails",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getFinanceOCRPredictedData",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getOCRDataByFinanceId",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#searchCompanyName",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCompanyDataFromDataProviders",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getRemarkDocumentDetails",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getCompanyDocumentsFromDataProviders",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#addSalesAgentData",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getSalesAgentData",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#sendCreditLimitRenewalReminderEmail",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getClientRemarksFormArrangingPlatform",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getClientRemarksForLendingPlatform",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getClientKYCDetailsForLenderBankUI",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#insertSofrRates",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getSofrRates",
+    "description": "Handles organization retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#crawlSOFrRates",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#updateSyncDataFromLending",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#crawlSOFrRatesNonProd",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getStaticData",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#generateCreditLimitNotification",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#generateSofrRateChangeNotification",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#saveTemplate",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/common.js#getTemplate",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/cargoes_hbl.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/cargoes_hbl.js#getEhblDetails",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/cargoes_hbl.js#getEhblDocumentFromRunners",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/cargoes_hbl.js#getEhblDataFromRunners",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/cargoes_hbl.js#surrenderCustodyOfHBL",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/cargoes_hbl.js#statusUpdateOfHBL",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/cargoes_hbl.js#getHblOwnershipDetails",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#_parseAuthenticationHeader",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#loginUser",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#loginUserWithToken",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#logoutUser",
+    "description": "Terminates user session and invalidates token"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#updatePassword",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#verifyCaptcha",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#forgotPassword",
+    "description": "Sends password reset link to user email"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#validateAccessToken",
+    "description": "Handles validation request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#loginWithRefreshToken",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#registerOrganisation",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#changeUserCompany",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#loginWithUserNamePassword",
+    "description": "Authenticates user credentials and returns session token"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#generateOtp",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#validateOtp",
+    "description": "Handles validation request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#registerUser",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#getDetailsFromGoogle",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#getDetailsFromGoogleCallback",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#getDetailsFromLinkedIn",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#getDetailsFromLinkedInCallback",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#getDetailsFromMicrosoft",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#getDetailsFromMicrosoftCallback",
+    "description": "Handles data retrieval request"
+  },
+  {
+    "id": "backend/src/main/controllers/auth.js#ssoSignupProceed",
+    "description": "Registers new user account with credentials"
+  },
+  {
+    "id": "backend/src/main/controllers/aecb_integration.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/aecb_integration.js#processLmsCreditFacilityDataForAecb",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/admin.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/main/controllers/admin.js#approveOrg",
+    "description": "Handles approval decision request"
+  },
+  {
+    "id": "backend/src/main/routes/terms_acceptance.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/support.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/reports.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/registration.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/push_api.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/organisations.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/notifications.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/logistics_finance.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/fi_service.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/feedback.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/draft.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/docusign.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/document.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/crm.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/credit_facility.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/compliance_screening.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/company_kyc_approval.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/common.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/cargoes_hbl.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/auth.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/aecb_integration.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/main/routes/admin.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_TRADE_PAYABLES_FINANCING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_TRADE_PAYABLES_FINANCING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_SCF_DPWFS_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_SCF_DPWFS_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_REVOLVING_CREDIT_FACILITY_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_REVERSE_FACTORING_SELLER_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_REVERSE_FACTORING_SELLER_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_REVERSE_FACTORING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_REVERSE_FACTORING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_PURCHASE_ORDER_FINANCING_COUNTER_PARTY_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_PURCHASE_ORDER_FINANCING_CLIENT_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_MRPA_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_MRPA_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_MRPA_CLIENT_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_MRPA_CLIENT_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVOICE_FACTORING_WO_RECOURSE_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVOICE_FACTORING_WO_RECOURSE_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVOICE_FACTORING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVOICE_FACTORING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVOICE_DISCOUNTING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVOICE_DISCOUNTING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVENTORY_FINANCE_SELLER_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/TRADE_FINANCE_INVENTORY_FINANCE_BUYER_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_TRADE_PAYABLES_FINANCING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_TRADE_PAYABLES_FINANCING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_REVERSE_FACTORING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_REVERSE_FACTORING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_INVOICE_FACTORING_WO_RECOURSE_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_INVOICE_FACTORING_WO_RECOURSE_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_INVOICE_FACTORING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_INVOICE_FACTORING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_INVOICE_DISCOUNTING_IN_TRANSIT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/LOGISTICS_FINANCE_INVOICE_DISCOUNTING_DEFERRED.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/config/product_config/configs/COMMON_PRODUCT.config.js#module",
+    "description": "Application configuration settings"
+  },
+  {
+    "id": "backend/src/lending/schemas/term_sheet/update_generate_terms.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/term_sheet/term_sheet_irr_check.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/term_sheet/term_sheet_action.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/term_sheet/set_generate_terms.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/term_sheet/get_ts_dashboard_details.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/term_sheet/generate_term_sheet.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/term_sheet/create_generate_terms.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/portfolio_review_schema/update_portfolio_review.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/portfolio_review_schema/submit_portfolio_review.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/portfolio_review_schema/portfolio_session_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/portfolio_review_schema/portfolio_review_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/insurance/update_renew_insurance.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/insurance/get_cf_list_for_insurance.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/insurance/get_all_insurances.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/insurance/create_insurance.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/notification/post_lending_notifications.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/notification/get_notifications.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/financial_assessment/update_financial_assessment.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/financial_assessment/get_financial_assessment_org_mapping.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/financial_assessment/get_financial_assessment.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/financial_assessment/create_financial_assessment.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/update_short_amount_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/update_finance_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/transaction_upload_finance.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/transaction_monitoring.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/specific_finance_receipts_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/short_amount_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/settlement_adjustment_waiver_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/reject_application.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/overdue_waive_off.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/overdue_transactions_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/lending_transaction_page_calculation.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/lending_finance_push_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/joi_validation_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/inventory_update.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/get_upcoming_transactions_by_range.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/get_upcoming_transactions.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/get_transactions.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/get_finances.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/get_combined_discount_rate.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/generate_transaction_advices.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/fi_assessment_calculation.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/evaluate_transaction_event.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/disbursal_to_defaultor_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/credit_summary.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/bco_save_lending_finance_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/bank_reference_list_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/bank_finance_assessment.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/finance_application/CA_update_finance_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/save_exchange_rate.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/save_bank_account_statement.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/save_aecb_file_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/manual_trigger_for_advices.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/get_tax_details.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/getAllAECBReports_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/cl_finance_test_route.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/aecb_file_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/external/aecb_error_report_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/dynamic_field_model/update_dynamic_flags.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/dynamic_field_model/update_dynamic_fields.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/dynamic_field_model/add_dynamic_flags.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/dynamic_field_model/add_dynamic_fields.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/document/upload_documents.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/document/submit_loan_document_mapping.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/document/get_loan_document_mapping.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/document/download_documents.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/document/download_document.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/document/download_company_document.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/document/convert_document.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/exposure_control/update_exposure.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/exposure_control/get_exposure_control_terms.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/exposure_control/create_exposure.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_note/update_credit_note_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_note/retry_credit_note.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_note/create_credit_note_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_note/create_credit_note_for_finance_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/compliance_screening/counter_party.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/company_kyc_approval/get_registered_services.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/company_kyc_approval/get_ongoing_monitoring_info.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/company_kyc_approval/get_company_kyc_documents.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/company_kyc_approval/get_code_issuers.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/update_process_workflow.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/update_client_category.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/transaction_summary.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/regulatory_reports.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_process_workflow.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_org_details_lending.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_lending_transaction_details_by_id.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_history.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_filter_values.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_credit_limit_data_apply_page.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_company_kyc_info.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_client_remarks_form_arranging_platform.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_client_category_history_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/get_client_category.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/defaulter_bco_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/common/add_remarks.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/tax_details.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/post_shipment.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/monthly_ar_sync.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/failed_advice_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/credit_memo_response.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/credit_memo.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/bank_statement.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/accounting/action_sync.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/update_set_credit_limit.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/update_credit_facility_details.js#preamble",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/update_credit_facility_details.js#customValidation",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/update_credit_facility_details.js#getValidProducts",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/update_credit_facility_details.js#customValidationBasedOnConfig",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/update_aff_invoice_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/store_facility_fees_payment_maker.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/store_facility_fees_payment_checker.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/settle_aff_invoice_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/set_credit_policy.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/set_credit_limit_section.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/set_credit_facility_details.js#preamble",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/set_credit_facility_details.js#customValidation",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/set_credit_facility_details.js#getValidProducts",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/set_credit_facility_details.js#customValidationBasedOnConfig",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/irr_exception_calculation.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/irr_calculation.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/get_user_credit_limit_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/get_credit_limit_data.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/get_credit_limit.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/get_credit_facility_list.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/get_aff_transaction_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/fix_credit_facility_amounts.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/evaluate_aff_transaction_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/credit_facility_update_sign_review.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/credit_facility_sign_review.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/create_cf_update_request.js#preamble",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/create_cf_update_request.js#customValidation",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/create_cf_update_request.js#getValidProducts",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/create_cf_update_request.js#customValidationBasedOnConfig",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/create_aff_invoice_schema.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/counter_party_risk_rating.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/cf_aggrement_update.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/boomi_integration_sync_api.js#module",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/add_counter_party.js#preamble",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/add_counter_party.js#getValidProducts",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/schemas/credit_facility/add_counter_party.js#customValidationBasedOnConfig",
+    "description": "Validates request payload schema structure"
+  },
+  {
+    "id": "backend/src/lending/routes/portfolio_management/portfolio_session_routes.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/portfolio_management/portfolio_review_routes.js#module",
+    "description": "Route definitions for API endpoints"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_session_controller.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_session_controller.js#getPortfolioReviewSessions",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_session_controller.js#getPortfolioReviewSessionById",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_session_controller.js#submitPortfolioReview",
+    "description": "Handles submission request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_session_controller.js#updatePortfolioReview",
+    "description": "Handles user profile update request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_session_controller.js#downloadPortfolioReviewSessions",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_review_controller.js#preamble",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_review_controller.js#getPortfolioReviews",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_review_controller.js#getPortfolioReviewsOverview",
+    "description": "Handles user details retrieval request"
+  },
+  {
+    "id": "backend/src/lending/controllers/portfolio_management/portfolio_review_controller.js#downloadPortfolioReview",
+    "description": "Handles API request"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#_validateEventMessage",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#sendScheduleReverseMessage",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#sendMessageToDeadLetter",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#markMessageToBeReadLater",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#addMinutesToDate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#handleValidationError",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#handleDeferredReadError",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#handleStarvationError",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#handleUnknownError",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#handleServiceEvents",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#_storeEventInDB",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#_sendMessage",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#_onMessageHandler",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#_receiveMessage",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#sendMessage",
+    "description": "Sends notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#receiveMessage",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/service_bus/index.js#handleServiceEvent",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/schedulers/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/schedulers/index.js#handlePortfolioReviewSession",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/schedulers/index.js#updateClientCategoryDaily",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/schedulers/index.js#emailSettlementReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/schedulers/index.js#portfolioReviewScheduler",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/schedulers/index.js#upcomingPortfolioReviewsWeeklyReminder",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/schedulers/index.js#poConversionDueDateReminder",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/transaction_summary/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/transaction_summary/index.js#getTransactionSummary",
+    "description": "Retrieves transaction history with filters"
+  },
+  {
+    "id": "backend/src/lending/services/transaction_summary/index.js#exportTransactionSummaryData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/transaction_summary/index.js#updateTransactionWithExchangeRate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/transaction_summary/index.js#processTransactionData",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/lending/services/transaction_summary/index.js#sortTransactions",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/transaction_summary/index.js#calculateTotals",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/regulatory_report/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/regulatory_report/index.js#getRegulatoryReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/regulatory_report/index.js#saveRegulatoryReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/regulatory_report/index.js#regulatoryReportDataScheduler",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_handleExceptionsForEmailEventName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_getEmailEvent",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_getPageLink",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_dictToCheckOrDefault",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_checkIfUserIsNextActive",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_getUserWithSkipFlow",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_startWorkflow",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_nextWorkflow",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_endWorkflow",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_restartWorkflow",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_handleExceptions",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_updateCreditFacilityActiveDept",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#_handleSendNotificationFlagForSubmittedAction",
+    "description": "Sends credit facility status notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#processWorkflow",
+    "description": "Processes business logic workflow"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#createSkipFlowTable",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/index.js#updateCreditFacilityActiveDept",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/helper.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/helper.js#_handleRejectWorkflows",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/helper.js#_handleSectionsException",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/helper.js#_getInitatitedUserDetailsIfLending",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/helper.js#getUserAllowedDetailsForWorkflow",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/process_workflow/helper.js#getUserDeptListForEmail",
+    "description": "Retrieves entity data with business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_session_service.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_session_service.js#_getUserDepartMentFullName",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_session_service.js#getPortfolioReviewSessions",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_session_service.js#getPortfolioReviewSessionById",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_session_service.js#submitPortfolioReview",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_session_service.js#updatePortfolioReview",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_session_service.js#downloadPortfolioReviewSessions",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_review_service.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_review_service.js#formatPortfolioData",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_review_service.js#getPortfolioReviews",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_review_service.js#getPortfolioReviewsOverview",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/portfolio_management/portfolio_review_service.js#downloadPortfolioReview",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/reports/outstanding_reports_service.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/reports/outstanding_reports_service.js#generateOutstandingReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/reports/outstanding_reports_service.js#getDateHighlightColor",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/reports/outstanding_reports_service.js#generateExcelReport",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/reports/outstanding_reports_service.js#validateReportParams",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#preamble",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#_generateUniqueBatchId",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#_formatDate",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#_checkIfCfIsAlreadyLinkedToInsurance",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#_checkIfCpIsAlreadyLinkedToInsurance",
+    "description": "Processes business logic"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#_updateRenewInsuranceCommonFunction",
+    "description": "Updates entity with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#_sendEmailNotificationForUpcomingExpiryOfInsurance",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#_sendEmailNotificationForUpcomingExpiryOfInsuranceLinkedToCf",
+    "description": "Sends email notification to recipients"
+  },
+  {
+    "id": "backend/src/lending/services/insurance/index.js#createInsurance",
+    "description": "Processes business logic"
+  }
+]

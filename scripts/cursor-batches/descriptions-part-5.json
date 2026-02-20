@@ -1,0 +1,4018 @@
+[
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getTransactionMonitoringDetails",
+    "description": "Retrieves transaction monitoring details for compliance review"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateTransactionWithId",
+    "description": "Updates finance transaction data by transaction ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getTradingPartnersInformationById",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getSofrRates",
+    "description": "Retrieves SOFR benchmark interest rates from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getLogisticsFinancePaymentTerms",
+    "description": "Retrieves logistics finance payment terms configuration"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertUpcomingTransactionDetails",
+    "description": "Creates upcoming scheduled transaction details record"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getOrganisationBanksByIds",
+    "description": "Retrieves organisation bank account records by IDs"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getOrganisationBanksDetailsByIds",
+    "description": "Retrieves organisation bank account details with address information"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAllFinanceIdsByUser",
+    "description": "Retrieves all finance application IDs accessible by user organisation"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertIntoSyncRequestTable",
+    "description": "Creates external system sync request log entry"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateIntoSyncRequestTable",
+    "description": "Updates sync request response data from external system"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getLMSTransactionViewData",
+    "description": "Retrieves loan management system transaction comprehensive view data"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertLendingFinanceTransaction",
+    "description": "Creates lending finance transaction record"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertLendingFinanceTransactionDistribution",
+    "description": "Creates finance transaction distribution breakdown record"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertShortAmountDistribution",
+    "description": "Creates short payment amount distribution allocation record"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateShortAmountDistribution",
+    "description": "Updates short payment distribution pre-remittance balance"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#decrementFinanceShortPaymentAmountFromOrgFi",
+    "description": "Decrements organisation settlement balance short payment amount"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getMakerFinanceTxnData",
+    "description": "Retrieves maker transaction data for checker approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getMakerFinanceTxnDataForAccounting",
+    "description": "Retrieves maker transaction data for accounting system integration"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getMakerFinanceTxnDistributionData",
+    "description": "Retrieves maker transaction distribution data for checker approval"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getMakerFinanceTxnDistributionDataForAccounting",
+    "description": "Retrieves maker transaction distribution data for accounting system sync"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getMakerShortAmountDistributionData",
+    "description": "Retrieves maker-created short payment distribution data for checker approval"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getUpcomingTransaction",
+    "description": "Retrieves upcoming scheduled transactions with filters"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getCompletedTransactionsFilterValues",
+    "description": "Retrieves filter options for completed transactions listing"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getUpcomingTransactionsFilterValues",
+    "description": "Retrieves filter options for upcoming transactions listing"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getCompletedTransactionsDetail",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getOverdueTransactionsDetails",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getSyncApiData",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinanceTransactionByFinId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getPreviousTransactionsByTrxnId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateLendingInvoiceDetails",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getMblDetailsByFinId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateLendingTrackingInfo",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertLendingTrackingInfo",
+    "description": "Creates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#createLendingTrackingAddressDetails",
+    "description": "Creates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getInvoiceDetailsByFinId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getDeltaFieldByFinId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinanceReceipts",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateDeltaField",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAecbOverdueTransactionsDetails",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getLogisticsFinanceOrgDetailsByOrgId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getTrackingInformationByMblNumber",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertFinanceInvoiceData",
+    "description": "Creates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getApplicantOutstandingAmountForGivenDate",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinanceStateTransactionByFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateTransactionMonitoring",
+    "description": "Retrieves transaction monitoring details for compliance review"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#upsertOrganisationBankDetail",
+    "description": "Upserts finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#upsertAddress",
+    "description": "Upserts finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateFinanceAmount",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateUpcomingTransactionsByFinanceIdAndEventName",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFiBankDetailByFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFiBankAddressDetailByFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#syncFinanceStateWithEffectiveStateByFinanceId",
+    "description": "Queries finance application data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getLendingFinanceProductConfigById",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getCfGroupMapping",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAllExpsoureUsingCfId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinanceDataForExposure",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertIntoTable",
+    "description": "Creates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateIntoTable",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#upsertIntoTable",
+    "description": "Upserts finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAllExposureDataByFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getBankReferenceNumberDetailsList",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getPreviousShortPaymentApplications",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getShortPaymentForFinance",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getCurrentShortPaymentForFinance",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getLastSettlementTransaction",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getTotalShortPaymentAmountForTransaction",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getSumOfPreviousShortPaymentApplications",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAmountSettlementOrder",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateFinanceShortPaymentAmount",
+    "description": "Updates short payment distribution pre-remittance balance"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#decrementFinanceShortPaymentAmount",
+    "description": "Decrements organisation settlement balance short payment amount"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#incrementFinanceShortPaymentAmount",
+    "description": "Increments finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getReceiptUsedDetailsForShortPayment",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getTotalShortPaymentAmountForFinance",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#upsertAccountingReceiptDetails",
+    "description": "Upserts finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#markBankStatementDeleted",
+    "description": "Queries finance application data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#insertTaxDetails",
+    "description": "Creates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getReceiptAmountUtilisation",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getDefaulterFinanceIfPresent",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateDefaulterFinanceForCFId",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getDefaulterFinances",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getSubmittedFinancesForCfId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getApprovedCreditLimit",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateDefaulterColumnForFinance",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAllFinancesForCfId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinancesDetailsByCounterParty",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinancesDetailsByProduct",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getInventoryDetialsById",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getIsPaymentByOtherClientByReferenceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#toBeDeletedInventories",
+    "description": "Queries finance application data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateInventoryDetails",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getArIdsForFundsReturnedApplications",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFeesCollectionDataForFinance",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getDisbursalTransactionDistributionForMakerStep",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getTermsAcceptanceDateForFinance",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAccountNumberFromCurrency",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#upsertUpfrontFee",
+    "description": "Upserts finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinanceMinInvoiceDate",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getListOfBatchFilesSubmitted",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateAecbBatchStatus",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinancesForProductAmountValidation",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinancesByCfId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getFinanceInterestScheduleData",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateCustomInterestSchduleTableDataFromId",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getMultiCurrencyDetails",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#checkArrangingFinanceExist",
+    "description": "Queries finance application data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getAndUpdateBaseCurrencyConversionRateFromFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#updateFinanceState",
+    "description": "Updates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getPoConversionDueDateApplications",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/finance_application.js#getReceiptDateQuery",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#preamble",
+    "description": "Queries external data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#upperCaseAndManipulate",
+    "description": "Queries external data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getEntriesForSendingMail",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getSettlementDateForFinance",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getFinanceIdsByCreditFacilityId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getDisbursedFinanceAmount",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getSettledFinanceAmount",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getSubjectFileJson",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getApplicantIdByFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbFinances",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getSettledDate",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAdviceDocumentsByFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbFileDataById",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbRecordId",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAllAECBDataFromAECBIntegration",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAECBFilterValuesData",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbFileDataByAecbId",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#updateContractFileData",
+    "description": "Updates contract data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getOverdueFinances",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#fetchAecbContractDataByFiId",
+    "description": "Retrieves contract data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#updateAecbContractDetails",
+    "description": "Updates contract data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getContractDataHavingDisbursalFile",
+    "description": "Retrieves contract data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#fetchFinancesByTrxnDateRange",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getMonthlySettledData",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getFinanceDueDate",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#fetchLatestTrxDetailsInDateRange",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getOverdueEntryOfAecb",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#updateContractFileStatus",
+    "description": "Updates contract data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#insertAecbHistoryData",
+    "description": "Creates external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbIntegrationRecordDetailsByBatchId",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getActiveFinances",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#checkForFileApproval",
+    "description": "Queries approval data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#checkForDisbursalFileApproval",
+    "description": "Queries approval data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getEventType",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#updateProviderApplicationNumber",
+    "description": "Updates external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getProviderApplicationNumber",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getActiveProviderApplicationNumber",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#deactivateProviderApplicationNumber",
+    "description": "Queries external data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#insertProviderApplicationNumberData",
+    "description": "Creates external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#updateClientLastUpdatedAt",
+    "description": "Updates external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#storeTopicEventVersion",
+    "description": "Queries external data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getTopicEventVersion",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#storeIncomingOutgoingCall",
+    "description": "Queries external data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#upsertProgramFeeData",
+    "description": "Upserts fee data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getProgramFeeData",
+    "description": "Retrieves fee data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getApplicableTaxRateByTrxnType",
+    "description": "Retrieves rate data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getMarginAmountForFinance",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getUpFrontCharges",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getInterestRateArDetails",
+    "description": "Retrieves interest data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getArDetailsForOracleArId",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#decrementPendingAmountFromProgramFees",
+    "description": "Decrements fee data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#incrementPendingAmountFromProgramFees",
+    "description": "Increments fee data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getFeeDetailsByOwnerIdOwnerTypeCategory",
+    "description": "Retrieves fee data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#updateAecbBatchStatusWithErrors",
+    "description": "Updates external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbErrorStatistics",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbErrorBreakdown",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getAecbBatchErrorDetails",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getDetailedRecordsBasedOnErrorType",
+    "description": "Retrieves external data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/external.js#getPreFinanceIdByPostFinanceId",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#preamble",
+    "description": "Queries exposure control data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#_getInternalCounterPartyDetails",
+    "description": "Queries counter-party data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#_getTradingPartnersInformationById",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#_getInternalOrgDetails",
+    "description": "Queries organisation data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getExposureControlTerms",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getExposureControlTermsForFilters",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getExposureControlApprovedTermsById",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getExposureControlTermsById",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#insertExposureDetails",
+    "description": "Creates exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#insertCfExposureMappingDetails",
+    "description": "Creates exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#insertIntoTable",
+    "description": "Creates exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#updateIntoTable",
+    "description": "Updates exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#upsertIntoTable",
+    "description": "Upserts exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getExposureRequestTableData",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getCfExposureMappingDetails",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getAllFinanceDataForExposure",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getCfIdsFromSourceRefId",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getFinanceCounterPartyDetails",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/exposure_control.js#getFinExposureMappingDetails",
+    "description": "Retrieves exposure control data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#getDynamicFieldsDetails",
+    "description": "Retrieves dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#getOutputFieldsInOrder",
+    "description": "Retrieves dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#getDynamicFieldsQuery",
+    "description": "Retrieves dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#insertQuery",
+    "description": "Creates dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#getFieldDetailsByFieldCode",
+    "description": "Retrieves dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#updateQuery",
+    "description": "Updates dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#getAllModelFlags",
+    "description": "Retrieves dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#getOutputFields",
+    "description": "Retrieves dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/dynamic_field_model.js#getFlagDetailsByFlagCode",
+    "description": "Retrieves dynamic field model data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#preamble",
+    "description": "Queries document data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#_deleteLoanDocumentDetails",
+    "description": "Queries document data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#_getLoanDocumentDetails",
+    "description": "Queries document data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocumentDetailsForFinanceByIdQuery",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocumentAccessibilityForLogisticsFinanceOrgByDocIdQuery",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateDocumentsAndAccessibilityTable",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocumentDetailsByOwnerId",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateDocument",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateDocumentsAccessibility",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getCounterPartyDocumentDetails",
+    "description": "Retrieves counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#addLoanDocuments",
+    "description": "Creates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateLoanDocuments",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#addLoanDocumentProductInfo",
+    "description": "Creates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#addLoanDocumentMappingInfo",
+    "description": "Creates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getLoanDocumentUniversalMappingInfo",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getLoanDocumentDetails",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#deleteLoanDocumentDetails",
+    "description": "Deletes document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getLoanDocuments",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getAllLoanDocumentAndMapping",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateLoanDocumentProductInfo",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getLoanDocumentTermsForFilters",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getLoanDocumentVersions",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getLatestTemplateVersion",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#addLoanDocumentVersion",
+    "description": "Creates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateDocumentByUploadId",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateDocumentByDocId",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#insertToCFDocumentMappingr",
+    "description": "Creates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#insertToDocumentAccessibility",
+    "description": "Creates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#insertToDocumentOwner",
+    "description": "Creates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocsDetailsByOwnerIdOwnerType",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocsDetailsByDocId",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getCreditLimitApplicantDocuments",
+    "description": "Retrieves credit limit data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getCreditLimitApplicantDocumentsByRequestId",
+    "description": "Retrieves credit limit data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getCreditLimitDocuments",
+    "description": "Retrieves credit limit data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getCreditLimitDocumentsByRequestId",
+    "description": "Retrieves credit limit data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateDocumentsTable",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocumentDetailsByDocId",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocumentDetailsByDocIds",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocumentAccessibilityForOrgByDocIdQuery",
+    "description": "Retrieves organisation data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#insertToFinanceDocMapping",
+    "description": "Creates finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocumentsByIsSentToClient",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#setIsSentToClient",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#updateDocumentTableById",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#getDocsDetailsByDocUploadId",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/document.js#deleteDocumentBySourceReferenceIds",
+    "description": "Deletes document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#preamble",
+    "description": "Queries credit note data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#validateIfCreditNoteNumberExists",
+    "description": "Queries credit note data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#fetchOraclrArIdByLmsArId",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#insertCreditNoteDetails",
+    "description": "Creates credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#getCfDetailsByArId",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#getCreditNoteDetails",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#getCreditNoteDetailsForApplication",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#updateCreditNoteDetails",
+    "description": "Updates credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#amtAdjustmentTaskInArTableDueToCreditNote",
+    "description": "Queries credit note data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#amtAdjustmentTaskInCfFeePaymentTableDueToCreditNote",
+    "description": "Queries payment data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#getCreditNotesDetails",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#getRemarks",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#fetchCnByArIdAndFinId",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#fetchCreditMemoDetails",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_note.js#fetchCreditNodeDetailsForIds",
+    "description": "Retrieves credit note data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#preamble",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_getOrgCreditLimitDetailsFromFinanceId",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_increaseFinanceAmountToRequestedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_decreaseFinanceAmountToRequestedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_increaseFinanceAmountToApprovedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_decreaseFinanceAmountToApprovedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_increaseFinanceAmountToDisbursedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_decreaseFinanceAmountToDisbursedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_getCreditFacilityApprovedByStateUser",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_getAllLendingCreditFacilitiesInWorkflows",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_getPaymentDetailsData",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_getCreditLimitAmountDetails",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_getCounterPartyDetailsById",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#_getOrgCreditFacilityUserDetails",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityCounterParties",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityDetailsForAccounting",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDataById",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitRequestDataById",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitBuyerDataByIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitRequestBuyerDataByIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitChargesByCreditLimitId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitChargesByCreditLimitRequestId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditNotesAppliedForFacilityFee",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAnnualProcessingFeeDataRequestId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateInternalCounterPartiesById",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDataForOrg",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDataForReport",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getApprovedCreditLimitDataForRenewTab",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDataForUpdateRequests",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitsFacilityFeePaymentStatus",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityFeePaymentDataByIdForUpdate",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getPendingFeesForCreditFacility",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityFeePaymentDataById",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDataForOrgForFilter",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertCreditFacilityTemplatePlaceholderMapping",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCreditLimitById",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertIntoCreditLimitCharge",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFaciliyProductIdByProductDetailsAndCreditId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getUpdateCreditFaciliyProductIdByProductDetailsAndCreditId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditLimitStateTransaction",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllCreditLimitIdsForOrg",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllCounterPartyIdsForOrg",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDetailsByID",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityDetailsBySourceRefID",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDetailsBySourceRef",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitRequestDetailsBySourceRef",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyDetailsByCreditIdAndActiveUser",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyRequestDetailsByCreditIdAndActiveUser",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDataForMultipleIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchComplianceScreeningDataQuery",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchSalesAgentDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchListOfAllCfsWithMaxExpiry",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#enableDisableStopEmailNotificationOnUi",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAffDetailsByArId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertAffInvoiceDetails",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateAffTrxnDetails",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertAffTrxnDetails",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCfDataByInvoiceId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getInvoiceDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#amtAdjustmentTaskInArTable",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#amtAdjustmentTaskInCfFeePaymentTable",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#amtAdjustmentTaskInInvoiceTable",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateAffInvoiceDetails",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAffInvoiceDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#incrementAffBilledAmounts",
+    "description": "Increments credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAffInvoiceTrxnDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateOverallNextPaymentDate",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateOverallLastPaymentDate",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#validateIfInvoiceNumberExists",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#validateInvoiceAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getInvoiceDetailsForWorkflow",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitRequestDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getEligibilityQnA",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getExceptionsByCreditLimitId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getUpdateExceptionsByCreditLimitId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getProductDetailsByCreditLimitId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getProductUpdateDetailsByCreditLimitId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerDetailsForInvoiceFact",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerDetailsFromTradingPartners",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerDetailsByCreditLimitId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerDetailsForInvoiceFactByRequestId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerDetailsFromTradingPartnersByRequestId",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerDetailsFromTradingPartnersById",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerDetailsByCreditLimitRequestId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyRemarks",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getApplicantBankDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateAnnualProcessingFeeCollectedUpdateDate",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOrgCreditLimitDetailsFromCreditId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOrgCreditLimitIdFromSourceReferenceId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOrgCreditLimitIdFromLendingCfId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitDisbursalFlagsFromId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyCombinationDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyDetailsByRequestId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#correctCreditFacilityAmountsLending",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#correctCounterPartyCreditFacilityAmountsLending",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getSourceCreditLimitIdFromCreditId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyIdWithCreditIdOrgIdAndCounterPartyType",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyDetailWithCreditIdCpIdAndCounterPartyType",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyIdWithCreditIdOrgIdAndProductComination",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getRequestCounterPartyIdWithCreditIdOrgIdAndProduct",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getRequestCounterPartyDetailWithCreditIdCpIdAndProduct",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getRequestCounterPartyIdFromSourceRefId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOrgCFDetailsFromSourceReferenceId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCFDetailsFromRequestTable",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getrequestIdFromCreditFacilityMainTable",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getUpdateTimeFromCreditFacilityReqTable",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateRequestIdInCreditFacilityMainTable",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityParentTableData",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getParentTableData",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getApprovedTermSheetAcrossAllProduct",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getTermSheetDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#prefillCreditLimitChargeForCreditLimit",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertIntoCreditLimitTermSheet",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateTermSheetByCreditLimitId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityApprovedByStateUser",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllLendingCreditFacilitiesInWorkflows",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#statusOfCreditPolicyForLendingOrgs",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertIntoCreditPolicyTerms",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditPolicyTerms",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertDiscountFeeIntoCreditLimitCharge",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCreditFacilityDetailById",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCFDetailBySourceRefId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCreditFacilityAmountByCFId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCounterPartyDetail",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCounterPartyDetail",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCounterPartyRequestDetail",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCounterPartyDetailBySourceReferenceId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertToCFDocumentMapping",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCounterPartyDetailById",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartiesDetailByCFId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertLoanDocumentationExceptions",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertToCFDocumentOwner",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCounterPartyDetailRequestById",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditFacilityCounterPartiesbyId",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertProductDetailsToRequestTable",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertExceptionChargesTableToRequestTable",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertAdvFacilityConditionTableToRequestTable",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertFeeChargesCollectionDetailsbyId",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditFacilityDetailsbyId",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitIdFromSrcRefernce",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditFacilityDocumentMappingbyId",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCreditExceptions",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCreditRequestExceptions",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditExceptions",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditUpdateExceptions",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditProductExceptionDetails",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditProductUpdateExceptionDetails",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditLimitAmountsbyId",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertExceptionToRequestTable",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditChargesIdFromCreditLimitAmounts",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditChargesDetailsFromIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getUpdateCreditChargesDetailsFromIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertCreditLimitChargesbyId",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertLoanDocumentExceptionsbyId",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCFFiDetailsByCFId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateDocumentState",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCFDocuments",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCFDeletedDocuments",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updatedCreditApprovalDate",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCounterPartyDetailByCfId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertTradingPartnerDetail",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#addAllTradingPartners",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getTradingPartnersNameById",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertToCFDocumentMappingRequest",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCfRequestDetailByReqId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertLoanDocumentationExceptionsForRequest",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertDiscountFeeIntoCreditLimitChargeRequest",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertIntoCreditLimitChargeRequest",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartiesDetailByCFRequestId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCounterPartyDetailByRequestId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCFAmountByCFRequestId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCFDocumentsForUpdate",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateDocumentStateForRequest",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCFidsByApplicantAndFIids",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCFAmountsTable",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getReqIdFromCreditLimitId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOrgCreditFacilityDetailsFromCreditId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditSummary",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOlderCreditSummary",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getPaymentDetailsData",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#increaseFinanceAmountToRequestedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#decreaseFinanceAmountToRequestedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#increaseFinanceAmountToApprovedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#decreaseFinanceAmountToApprovedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#increaseFinanceAmountToDisbursedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#decreaseFinanceAmountToDisbursedAmount",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getTransactionDistributionDetailsForLastTransaction",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOrgCreditLimitDetailsFromFinanceId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitAmountDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyDetailsById",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitAtProductLevel",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimitChargesByCreditLimitIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getApplicantAndFiNameFromFinId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getUpdateRequestId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getOrgCreditFacilityUserDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#deleteExceptionIdInProdDetails",
+    "description": "Deletes credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#deleteExceptionIdInProdDetailsRequest",
+    "description": "Deletes credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#deleteExceptionIdInCpDetails",
+    "description": "Deletes credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#deleteExceptionIdInCpDetailsRequest",
+    "description": "Deletes credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditChargesBatchIdByCfId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getExceptionIdsByCfId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getRequestExceptionIdsByCfId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllCreditFacilityDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllCounterPartyDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyDetailsByCpIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getApplicantNameByCfId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchCfListForLending",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getExposureDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateRemarksByExposureId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateReqIdInCFDeatils",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateChargesBatchId",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyLimit",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditLimit",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getInvoiceTrxnDetailsForAccounting",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFacilityFeePaymentDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFacilityFeePaymentTransactionDistribution",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateFacilityFeePaymentWorkflow",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertFacilityFeePaymentTransaction",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertLendingFinanceTransactionDistribution",
+    "description": "Creates finance transaction distribution breakdown record"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateFacilityFeePaymentTransaction",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#incrementPaidFacilityFees",
+    "description": "Increments credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#incrementFacilityFeeOnTaxDetails",
+    "description": "Increments credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#decrementBalanceFacilityFeesTax",
+    "description": "Decrements credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#incrementTotalFeesForPayment",
+    "description": "Increments credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateBalanceTaxAmount",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFacilityFeeIdForCreditFacility",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAnnualProcessingFeeData",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getPreviousChargesBatchId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getPreviousCreditLimitChargesDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCurrentRequestDetailsFromBatchId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getPreviousChargesRequestDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#setFacilityFeeTableData",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateFacilityFeeTableData",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFacilityFeesDetailsForCf",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getPaymentDetailsFacilityFeeId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getRequestType",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityFeePaymentDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertFacilityPaymentTableData",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getLatestFacilityFeeId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#checkIfFacilityInProgressExist",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllApprovedFacilityFeesDetailsForCf",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllFacilityFeesDetailsForCf",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getTradingPartnerDetails",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCountryRatings",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCommodityRatings",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertComplianceScreeningDataForLending",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCPDetailsByCpIds",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getApprovedCommoditiesByCounterPartyId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFacilityFeeForPendingCpCF",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getLatestFacilityFeeByFeeType",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getRequestCPId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchCounterPartiesDataForLendingOrgsByApplicantId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#retrieveCounterpartyRecordsForOngoingMonitoring",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCollectionDetailsByBatchId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertAdvFacilityConditionDetails",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAdvFacilityConditionDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertAdvFacilityConditionRequestDetails",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAdvFacilityConditionRequestDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertFeeChargesCollectionDetails",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#upsertFeeChargesCollectionRequestDetails",
+    "description": "Upserts credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFeeChargesCollectionDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateFeeChargesCollectionDetails",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFeeChargesCollectionRequestDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateFeeChargesCollectionRequestDetails",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCFMaxFinanceTenureData",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getProductExceptionMaxFinanceTenure",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCounterPartyExceptionMaxFinanceTenure",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getTotalPrincipalSettled",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getTotalPrincipalSettledForPartiallySettledApplications",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityProductDetailsFromCfId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateProductAmount",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#checkIfAnyActiveFinances",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchCreditFacilitiesByStatusList",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAffDetailsOnCfLvl",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getApplicableTaxDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAllArDetailsForCf",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getInvoicesRelatedToFee",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getAffAmountsAtCfLvlForAccounting",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateAmountsInCfFacilityFeePayment",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateAffAmountsForCfAndFeetype",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchListOfAllAffData",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#fetchArDetailsByArId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditNotesForArs",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getInvoicesForAr",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#resetCFLevelLimits",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#resetApprovedExposureLimits",
+    "description": "Queries credit facility data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateSponsorDetails",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateSponsorDetailsinRequestTable",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getIdFromOracleArId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateCreditNoteDetails",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getFacilityFeeArDetailsFromOracleArId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerSupplierDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getBuyerSupplierDetailsBuilder",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getGroupFacilityMapping",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateGroupFacilities",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCPGroupMapping",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateGroupFacilityMapping",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#updateGroupFacilityMappingComb",
+    "description": "Updates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#insertGroupFacilityMapping",
+    "description": "Creates credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getGroupedFacilities",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getTempLimitEnhancedFacilities",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/credit_facility.js#getCreditFacilityDetailsNotInLending",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#preamble",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#_getTableConstraintNameByConstraintType",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getCpDetailsFromSourceRefId",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getCreditFacilityCounterPartyRequestRemarks",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#addRemarks",
+    "description": "Creates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#addToHistoryWithAccessibleUsers",
+    "description": "Creates user data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getRemarksDetails",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getRemarksByListOfIds",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getHistoryDetails",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getHistoryDetailsByAction",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getLendingFIs",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getDocumentsByEntityId",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getStateTransactionByOwnerId",
+    "description": "Retrieves transaction data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getRemarksByEntityId",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getTableSchema",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getTableConstraintCoulmnName",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getPreviousCreditChargesBatchId",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#upsertTableData",
+    "description": "Upserts common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#insertTableData",
+    "description": "Creates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateTableData",
+    "description": "Updates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getCreditFacilityAmountAndChargesDetails",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getProductLevelExceptionDetails",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getCounterPartyLevelExceptionDetails",
+    "description": "Retrieves counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getListOfAllCompletedTransactions",
+    "description": "Retrieves transaction data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getListOfAllIncompleteTransactions",
+    "description": "Retrieves transaction data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getListOfAllFinancesForLending",
+    "description": "Retrieves finance application data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#fetchDataForSync",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getRegulatoryReportsDetail",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#saveRegulatoryReport",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getCompaniesKYCInfoFilterValues",
+    "description": "Retrieves company data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getOngoingMonitoringFilterValues",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getCompaniesKYCInfoListQuery",
+    "description": "Retrieves company data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getTenantCodeFromCmpRef",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#insertIntoRemarks",
+    "description": "Creates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#validateReceiptUsed",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateReceiptDetails",
+    "description": "Updates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#validateAndStoreReceiptUsed",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateUsedBankReceiptByRefId",
+    "description": "Updates bank account data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#upsertUsedBankReceipts",
+    "description": "Upserts bank account data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#upsertUsedBankReceiptsAmountDistribution",
+    "description": "Upserts bank account data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getAccountingReceiptDetails",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#deductReceiptAmounts",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getUsedReceiptDetails",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#checkIfReceiptExistInPendingApproved",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#deleteReceiptDistributionByIds",
+    "description": "Deletes common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateBankUsedReceiptWithCategoryId",
+    "description": "Updates bank account data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getDiffOfUpdatedOldReceipts",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateSpecificReceiptsDetails",
+    "description": "Updates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getLatestReceiptDateByReceiptIds",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getLendingProductConfigByConfigId",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getPreviousClientCategoryFromDb",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateClientCategoryRequestDetails",
+    "description": "Updates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#insertClientCategoryRequestDetails",
+    "description": "Creates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateClientCategoryDetails",
+    "description": "Updates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getClientCategoryDetailsById",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getClientCategoryData",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getClientOverdueDaysFromDb",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#updateClientBucketDetails",
+    "description": "Updates common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#upsertClientCategoryData",
+    "description": "Upserts common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getClientCategoryReqDetails",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getFieldCodesMappings",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getFAPeriodData",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getDepartmentUsers",
+    "description": "Retrieves user data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#getGroupDetails",
+    "description": "Retrieves common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/common.js#upsertGroupDetails",
+    "description": "Upserts common data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#insertTableData",
+    "description": "Creates bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#upsertTableData",
+    "description": "Upserts bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getTableData",
+    "description": "Retrieves bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#insertSyncRequestDataForCreditFacilityUpdate",
+    "description": "Creates external system sync request log entry"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#insertSyncRequestDataForFinance",
+    "description": "Creates external system sync request log entry"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#updateSyncRequestDataForCreditFacility",
+    "description": "Updates sync request response data from external system"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#updateSyncRequestDataForFinance",
+    "description": "Updates sync request response data from external system"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#upsertTable",
+    "description": "Upserts bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getCounterPartyIdBySourceReferenceId",
+    "description": "Retrieves counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getRowsCount",
+    "description": "Retrieves bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getIdFromSourceRefId",
+    "description": "Retrieves bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#updateDocumentTableById",
+    "description": "Updates document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#upsertCounterPartyData",
+    "description": "Upserts counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#upsertTradingPartnerData",
+    "description": "Upserts counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getDocUploadIdFromDocId",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getTradingPartnersIdBySourceReferenceId",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getInternalCounterPartyIdByCounterPartyOrgId",
+    "description": "Retrieves organisation data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getSellerDetailsFromTradingPartnersBySourceRefId",
+    "description": "Retrieves counter-party trading partner information by ID"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getBuyerDetailsFromCounterPartyOrgsId",
+    "description": "Retrieves organisation data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getCounterPartyDetailsFromSourceId",
+    "description": "Retrieves counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getCounterPartyRequestDetailsFromSourceId",
+    "description": "Retrieves counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getCreditLimitIdFromSourceReferenceId",
+    "description": "Retrieves credit limit data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getCounterPartyIdByReqId",
+    "description": "Retrieves counter-party data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#updateRequestIdInCFMainTable",
+    "description": "Updates bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getDocDetailsFromSrcId",
+    "description": "Retrieves document data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/bhoomi_integration.js#getLatestVersionOfConfig",
+    "description": "Retrieves bhoomi integration data in database"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#preamble",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_isEmpty",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_bulkUpsertTableData",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_deleteCachedArrangingFinanceData",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_filterTablesObjByArrayOfTableOrder",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_sortTablesObjByArrayOfTableOrder",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_getSchemaName",
+    "description": "Sends finance application notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_determineTableUpsertOrder",
+    "description": "Validates finance application with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_determinePropertyRemovalSet",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_insertLMSFinanceTableData",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_processInvoiceUpdates",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_replaceFinanceDetailsInPayload",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_upsertLMSdocsTableData",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_addDocumentsOnLending",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_processLMSNewFinance",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_processLMSTermAcceptance",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_processFinanceCancelLMS",
+    "description": "Processes finance application rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_processLMSDetailsForFinanceDocuments",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_processAddressAndOrganisationBankTable",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_formRemarkObject",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#_processFITermValidation",
+    "description": "Validates finance application with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#processLMSDetailsForFinanceApplication",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/finance_application.js#processInvoiceUpdates",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#preamble",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_isEmpty",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_addParamAfterInsertion",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_bulkUpsertTableData",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_mapCounterPartyStatus",
+    "description": "Processes credit facility approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_mapCounterPartyWorkflow",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#handleException",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_filterTablesObjByArrayOfTableOrder",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_sortTablesObjByArrayOfTableOrder",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processInsertionToRequestTables",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_insertLMSTableDataFromBoomi",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSTableDataForUpdateCfFromBoomi",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_insertLMSTableDataFromBoomiViaLending",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_upsertLMSTableDataFromBoomiForTermsheetAcceptance",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_getColumnIdFromPayload",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_getColumnApplicantIdFromPayload",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_upsertLMSdocsTableData",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_addDocumentsOnLending",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_moveTermsheetToDraftState",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_checkForSkipTermsheet",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForNewFacility",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateFacility",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateFacilityViaLending",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSDetailsForDocuments",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForFacilityAgreement",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateTA",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForCompanyReject",
+    "description": "Processes credit facility approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForCompanyRework",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForDetailsPending",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForRejectFacility",
+    "description": "Processes credit facility approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForSendBackForUpdate",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRejectFacility",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateProduct",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateLimit",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateBuyer",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRenew",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateSector",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRejectedLimit",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRejectedProduct",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRejectedRenew",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRejectedBuyer",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRejectedAgreement",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateRejectedPricing",
+    "description": "Processes credit facility rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateReworkLimit",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateReworkBuyer",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateReworkProduct",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateReworkRenew",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateReworkPricing",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateReworkTemporaryEnhancement",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processLMSCFDetailsForUpdateReworkSector",
+    "description": "Sends credit facility notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#_processCFDocuments",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/boomi_integration/credit_facility.js#processLMSDetailsForCreditFacility",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/finance_application.js#preamble",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/finance_application.js#headers",
+    "description": "Processes finance application business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/finance_application.js#_getParamsQuery",
+    "description": "Processes finance application approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/finance_application.js#transactionComplianceScreening",
+    "description": "Validates finance application with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/document.js#preamble",
+    "description": "Processes document business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/document.js#headers",
+    "description": "Processes document business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/document.js#getDocumentsFromArrangingService",
+    "description": "Processes document business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/credit_facility.js#preamble",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/credit_facility.js#_getFIorgIdandTenantCode",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/credit_facility.js#headers",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/credit_facility.js#addCounterParty",
+    "description": "Processes credit facility business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#preamble",
+    "description": "Processes company kyc approval business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#_getUserTokenandTenantCode",
+    "description": "Sends user notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getHeaders",
+    "description": "Processes company kyc approval business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getMawaniCompanyDataForLending",
+    "description": "Processes company business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyCodeIssuersForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyKycApprovalDocumentsForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyStatusWorkFlowForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getAllCompanyServicesForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyKycInternalCommentsForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyKycHistoryForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyKycAuditForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getRegisteredServicesForLending",
+    "description": "Processes company kyc approval approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyKycHistoryQuestionsForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getOngoingMonitoringDataForCompany",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#downloadOngoingMonitoringForCompany",
+    "description": "Processes company business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#getCompanyDocuemntsHistoryForLending",
+    "description": "Processes company approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#retrieveOngoingMonitoringRecordsForLendingOrgs",
+    "description": "Validates organisation with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/company_kyc_approval.js#downloadOngoingMonitoringDataForLendingOrgs",
+    "description": "Validates organisation with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/common.js#preamble",
+    "description": "Processes common business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/common.js#headers",
+    "description": "Processes common business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/common.js#addRemarkFromLendingPlatform",
+    "description": "Processes common business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/common.js#getClientRemarkFromArrangingPlatform",
+    "description": "Processes common business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/arranging_platform_service/common.js#getTransactionViewForLendingPlatform",
+    "description": "Processes transaction business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#preamble",
+    "description": "Validates index with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_getPartyOrgDetailsOnType",
+    "description": "Processes organisation business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_getPartyBankDetailsOnType",
+    "description": "Processes bank account business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_handleBaseDetailsOnEventType",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_handlePartyDetails",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_handleBankUtilisationDetails",
+    "description": "Processes bank account rejection with comments"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_processFeeCollectionDetails",
+    "description": "Processes fee approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#formatLocalDateTime",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_handleCalculationDetails",
+    "description": "Processes index approval workflow"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_handleProgramFeesDetails",
+    "description": "Processes fee business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#_handlePreshipmentDataDetails",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#checkForDeferral",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#checkForStarvation",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#validateEventPayloadSchema",
+    "description": "Validates index with business rules"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#handleEventDataOnEventType",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#processBankStatementData",
+    "description": "Processes bank account business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#processTaxDetails",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#processMonthlySyncData",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/accounting_integration/index.js#processFeeCollectionDetails",
+    "description": "Processes fee approval workflow"
+  },
+  {
+    "id": "backend/src/main/schemas/support/save_release_notes.js#module",
+    "description": "Validates save release notes request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/support/save_and_delete_release_notes.js#module",
+    "description": "Validates save and delete release notes request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/support/delete_release_notes.js#module",
+    "description": "Validates delete release notes request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/reports/weekly_report.js#module",
+    "description": "Validates weekly report request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/reports/datalake_sync_report.js#module",
+    "description": "Validates datalake sync report request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/reports/daily_sofr_report.js#module",
+    "description": "Validates daily sofr report request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/reports/daily_report.js#module",
+    "description": "Validates daily report request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/update_shipment_event.js#module",
+    "description": "Validates update shipment event request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/transaction_upload_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/register_organisation.js#module",
+    "description": "Validates register organisation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/other_bco_approve_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/invite_organisation.js#module",
+    "description": "Validates invite organisation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/get_upcoming_transactions.js#module",
+    "description": "Validates get upcoming transactions request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/get_transactions.js#module",
+    "description": "Validates get transactions request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/get_organisations.js#module",
+    "description": "Validates get organisations request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/get_notifications.js#module",
+    "description": "Validates get notifications request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/get_finances.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/enable_email_notifications.js#module",
+    "description": "Validates enable email notifications request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/dtf_admin_approve_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/delete_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/credit_summary.js#module",
+    "description": "Validates credit summary request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/cancel_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/bco_submit_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/bco_save_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/bank_finance_assessment.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/admin_approve_organisation.js#module",
+    "description": "Validates admin approve organisation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/trade_finance_schemas/accept_payment_terms.js#module",
+    "description": "Validates accept payment terms request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/registration/update_company_data.js#module",
+    "description": "Validates update company data request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/registration/get_mawani_companies.js#module",
+    "description": "Validates get mawani companies request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/registration/create_company.js#module",
+    "description": "Validates create company request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/dubai_trade/get_login_token.js#module",
+    "description": "Validates get login token request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/organisations/update_switch_tenant_organisations.js#module",
+    "description": "Validates update switch tenant organisations request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/organisations/update_company_kyc_information.js#module",
+    "description": "Validates update company kyc information request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/organisations/update_company_kyc_documents_info.js#module",
+    "description": "Validates update company kyc documents info request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/organisations/renewal_kyc_reminder_notification.js#module",
+    "description": "Validates renewal kyc reminder notification request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/organisations/get_company_kyc_information.js#module",
+    "description": "Validates get company kyc information request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/organisations/get_company_kyc_documents_info.js#module",
+    "description": "Validates get company kyc documents info request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/organisations/get_company_info_by_user_email.js#module",
+    "description": "Validates get company info by user email request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/draft/save_draft.js#module",
+    "description": "Validates save draft request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/draft/auto_save.js#module",
+    "description": "Validates auto save request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/update_finance_data_by_fi.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/transaction_upload_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/transaction_page_calculation.js#module",
+    "description": "Validates transaction page calculation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/settlement_calculation.js#module",
+    "description": "Validates settlement calculation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/other_bco_approve_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/get_upcoming_transactions.js#module",
+    "description": "Validates get upcoming transactions request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/get_transactions.js#module",
+    "description": "Validates get transactions request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/get_finances.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/get_apply_finance_calculation.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/finance_invoices_lending_schema.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/fi_term_validation.js#module",
+    "description": "Validates fi term validation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/fi_assessment_calculation.js#module",
+    "description": "Validates fi assessment calculation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/dtf_admin_approve_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/download_document.js#module",
+    "description": "Validates download document request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/delete_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/credit_summary.js#module",
+    "description": "Validates credit summary request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/combined_discount_rate.js#module",
+    "description": "Validates combined discount rate request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/cancel_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/bulk_transaction_upload_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/bulk_bank_finance_assessment.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/bco_submit_finance.js#preamble",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/bco_submit_finance.js#customValidationForTracking",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/bco_save_finance.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/bank_finance_assessment.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/accept_payment_terms_public.js#module",
+    "description": "Validates accept payment terms public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/logistics_finance_schemas/accept_payment_terms.js#module",
+    "description": "Validates accept payment terms request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/docusign/get_signed_documents_public.js#module",
+    "description": "Validates get signed documents public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/docusign/get_signed_documents.js#module",
+    "description": "Validates get signed documents request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/docusign/get_recipient_details_public.js#module",
+    "description": "Validates get recipient details public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/docusign/get_recipient_details.js#module",
+    "description": "Validates get recipient details request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/docusign/get_document_link_public.js#module",
+    "description": "Validates get document link public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/docusign/get_document_link.js#module",
+    "description": "Validates get document link request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/compliance_screening/transaction_screening.js#module",
+    "description": "Validates transaction screening request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/compliance_screening/push_notification.js#module",
+    "description": "Validates push notification request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/crm/crm_update_sales_schema.js#module",
+    "description": "Validates crm update sales schema request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/crm/crm_opportunity_schema.js#module",
+    "description": "Validates crm opportunity schema request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/crm/create_user_account_schema.js#module",
+    "description": "Validates create user account schema request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/documents/upload_documents_public.js#module",
+    "description": "Validates upload documents public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/documents/upload_documents.js#module",
+    "description": "Validates upload documents request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/documents/download_documents_public.js#module",
+    "description": "Validates download documents public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/documents/download_documents.js#module",
+    "description": "Validates download documents request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/update_apply_credit_limit.js#module",
+    "description": "Validates update apply credit limit request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/submit_pending_credit_facility_document.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/submit_credit_facility.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/renew_credit_facility.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/get_credit_facility_by_id.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/get_counter_party_info_for_applicant.js#module",
+    "description": "Validates get counter party info for applicant request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/get_buyer_info_for_applicant.js#module",
+    "description": "Validates get buyer info for applicant request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/create_credit_facility_param.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/counter_party_addition.js#preamble",
+    "description": "Validates counter party addition request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/counter_party_addition.js#getValidProducts",
+    "description": "Validates counter party addition request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/counter_party_addition.js#customValidationBasedOnConfig",
+    "description": "Validates counter party addition request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/check_eligibility_for_applicant.js#module",
+    "description": "Validates check eligibility for applicant request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/calculate_credit_facility_amounts.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/accept_credit_facility_terms_public.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/accept_credit_facility_terms.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/credit_facility/accept_credit_facility_term_sheet.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/auth/validate_otp.js#module",
+    "description": "Validates validate otp request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/auth/update_password.js#module",
+    "description": "Validates update password request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/auth/sso_signup_proceed.js#module",
+    "description": "Validates sso signup proceed request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/auth/register_user.js#module",
+    "description": "Validates register user request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/auth/login.js#module",
+    "description": "Validates login request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/auth/generate_otp.js#module",
+    "description": "Validates generate otp request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/auth/change_organisation.js#module",
+    "description": "Validates change organisation request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/accounting_sync/program_fi_create.js#module",
+    "description": "Validates program fi create request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/cargoes_hbl/get_hbl_from_runner.js#module",
+    "description": "Validates get hbl from runner request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/cargoes_hbl/ehbl_status_update_schema.js#module",
+    "description": "Validates ehbl status update schema request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/transfer_ownership.js#module",
+    "description": "Validates transfer ownership request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/search_transfer_ownership_user.js#module",
+    "description": "Validates search transfer ownership user request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/invite_user_mawani.js#module",
+    "description": "Validates invite user mawani request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/get_registered_services.js#module",
+    "description": "Validates get registered services request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/get_company_list.js#module",
+    "description": "Validates get company list request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/get_company_kyc_documents.js#module",
+    "description": "Validates get company kyc documents request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/get_code_issuers.js#module",
+    "description": "Validates get code issuers request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/company_suspension.js#module",
+    "description": "Validates company suspension request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/company_services_status_change.js#module",
+    "description": "Validates company services status change request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/company_risk_assessment.js#module",
+    "description": "Validates company risk assessment request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/company_document_reminder.js#module",
+    "description": "Validates company document reminder request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/company_automatic_onhold.js#module",
+    "description": "Validates company automatic onhold request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/company_assessment_on_hold.js#module",
+    "description": "Validates company assessment on hold request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/company_assessment.js#module",
+    "description": "Validates company assessment request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/company_kyc_approval/add_company_kyc_internal_comment.js#module",
+    "description": "Validates add company kyc internal comment request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/validate_doc_upload.js#module",
+    "description": "Validates validate doc upload request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/upload_document_to_file_storage.js#module",
+    "description": "Validates upload document to file storage request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/update_template_attribute_schema.js#module",
+    "description": "Validates update template attribute schema request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/update_set_credit_limit_draft.js#module",
+    "description": "Validates update set credit limit draft request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/update_risk_configuration.js#module",
+    "description": "Validates update risk configuration request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/update_risk_assessment.js#module",
+    "description": "Validates update risk assessment request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/update_apply_credit_limit_draft.js#module",
+    "description": "Validates update apply credit limit draft request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/update_apply_credit_limit.js#module",
+    "description": "Validates update apply credit limit request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/transaction_monitoring.js#module",
+    "description": "Validates transaction monitoring request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/terms_acceptance.js#module",
+    "description": "Validates terms acceptance request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/set_credit_limit.js#module",
+    "description": "Validates set credit limit request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/send_credit_limit_terms_acceptance_mail.js#module",
+    "description": "Validates send credit limit terms acceptance mail request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/send_agreement_mail.js#module",
+    "description": "Validates send agreement mail request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/search_company.js#module",
+    "description": "Validates search company request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/save_terms_document.js#module",
+    "description": "Validates save terms document request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/save_template.js#module",
+    "description": "Validates save template request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/remarks_document_schema.js#module",
+    "description": "Validates remarks document schema request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/mawani_push_api_schema.js#module",
+    "description": "Validates mawani push api schema request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/lending_sync_data.js#module",
+    "description": "Validates lending sync data request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/insert_sofr_rates_prod.js#module",
+    "description": "Validates insert sofr rates prod request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/insert_sofr_rates_non_prod.js#module",
+    "description": "Validates insert sofr rates non prod request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_transactions.js#module",
+    "description": "Validates get transactions request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_terms_document_public.js#module",
+    "description": "Validates get terms document public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_terms_document.js#module",
+    "description": "Validates get terms document request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_mawani_documents.js#module",
+    "description": "Validates get mawani documents request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_latest_credit_limit_trading_partners.js#module",
+    "description": "Validates get latest credit limit trading partners request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_kyc_company_details.js#module",
+    "description": "Validates get kyc company details request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_history.js#module",
+    "description": "Validates get history request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_finances.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_finance_ocr_data.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_finance_inst_data.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_filter_values.js#module",
+    "description": "Validates get filter values request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_credit_limit_data_apply_page_admin.js#module",
+    "description": "Validates get credit limit data apply page admin request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_credit_limit_data_apply_page.js#module",
+    "description": "Validates get credit limit data apply page request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_credit_limit_data.js#module",
+    "description": "Validates get credit limit data request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_credit_limit_charges_finance_page.js#preamble",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_credit_limit_charges_finance_page.js#customValidation",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_company_list_from_panjiva.js#module",
+    "description": "Validates get company list from panjiva request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_company_documents.js#module",
+    "description": "Validates get company documents request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_company_document_from_data_providers.js#module",
+    "description": "Validates get company document from data providers request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_company_details_for_registration.js#module",
+    "description": "Validates get company details for registration request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_company_data_from_data_providers.js#module",
+    "description": "Validates get company data from data providers request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_client_remarks_for_lending_platform.js#module",
+    "description": "Validates get client remarks for lending platform request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_client_agreement_public.js#module",
+    "description": "Validates get client agreement public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/get_apply_finance_clients.js#module",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/generate_sofr_rate_change_notification.js#module",
+    "description": "Validates generate sofr rate change notification request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/fi_assess_credit_facility.js#preamble",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/fi_assess_credit_facility.js#customValidation",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/exchange_rates.js#module",
+    "description": "Validates exchange rates request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/due_payment_notification.js#module",
+    "description": "Validates due payment notification request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/download_document.js#module",
+    "description": "Validates download document request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/credit_limit_notification.js#module",
+    "description": "Validates credit limit notification request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/credit_facility_sign_review.js#module",
+    "description": "Validates credit facility request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/crawl_sofr_rates.js#module",
+    "description": "Validates crawl sofr rates request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/contact_us.js#module",
+    "description": "Validates contact us request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/collect_finance_inst_data.js#preamble",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/collect_finance_inst_data.js#createJoiObjectForCountries",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/collect_finance_inst_data.js#getCountryValidation",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/collect_finance_inst_data.js#getRestrictDibsursalValidation",
+    "description": "Validates finance application request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/block_client.js#module",
+    "description": "Validates block client request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/apply_credit_limit.js#module",
+    "description": "Validates apply credit limit request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/add_sales_agent_data.js#module",
+    "description": "Validates add sales agent data request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/add_remarks.js#module",
+    "description": "Validates add remarks request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/accept_credit_limit_terms_sheet.js#module",
+    "description": "Validates accept credit limit terms sheet request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/accept_credit_limit_terms_public.js#module",
+    "description": "Validates accept credit limit terms public request payload structure"
+  },
+  {
+    "id": "backend/src/main/schemas/common/accept_credit_limit_terms.js#module",
+    "description": "Validates accept credit limit terms request payload structure"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#preamble",
+    "description": "Sends index notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#_onMessageHandler",
+    "description": "Sends index notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#_onErrorHandler",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#_storeEventInDB",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#_sendMessage",
+    "description": "Sends index notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#_receiveMessage",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#sendNssServiceBusMessage",
+    "description": "Sends index notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/notification_service/index.js#receiveNssServiceBusMessage",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#preamble",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#_onMessageHandler",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#_onErrorHandler",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#_storeEventInDB",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#_sendMessage",
+    "description": "Sends index notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#_receiveMessage",
+    "description": "Processes index business logic processing"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#sendMawaniServiceBusMessage",
+    "description": "Sends index notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/external_service_bus/mawani_service/index.js#receiveMawaniServiceBusMessage",
+    "description": "Sends index notification to stakeholders"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_session.js#getPortfolioReviewsSessionByReviewId",
+    "description": "Retrieves portfolio session data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_session.js#getPortfolioReviewSessionsByCreditFacilityId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_session.js#getPortfolioReviewSessionDetailsById",
+    "description": "Retrieves portfolio session data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_session.js#insertPortfolioDetails",
+    "description": "Creates portfolio session data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_session.js#updatePortfolioDetails",
+    "description": "Updates portfolio session data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_session.js#getPortfolioSessionDetails",
+    "description": "Retrieves portfolio session data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_session.js#updateIntoTable",
+    "description": "Updates portfolio session data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#preamble",
+    "description": "Queries portfolio review data from database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#getRequestedReviews",
+    "description": "Retrieves portfolio review data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#getOverdueReviews",
+    "description": "Retrieves portfolio review data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#getUpcomingReviews",
+    "description": "Retrieves portfolio review data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#getAllCreditFacilities",
+    "description": "Retrieves portfolio review data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#getPortfolioReviewsOverviewByCreditFacilityId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#getPortfolioReviewDetailsByCreditFacilityId",
+    "description": "Retrieves credit facility data in database"
+  },
+  {
+    "id": "backend/src/lending/services/db_service/portfolio_management/portfolio_review.js#updatePortfolioReviewDetails",
+    "description": "Updates portfolio review data in database"
+  },
+  {
+    "id": "backend/config/product_config/validation_schemas/lending/finance_application/finance.joischema.js#module",
+    "description": "Configuration settings for finance application"
+  },
+  {
+    "id": "backend/config/product_config/validation_schemas/lending/credit_facility/credit_facility.joischema.js#module",
+    "description": "Configuration settings for credit facility"
+  },
+  {
+    "id": "backend/config/product_config/validation_schemas/arranging/finance/index.joischema.js#module",
+    "description": "Configuration settings for index.joischema"
+  },
+  {
+    "id": "backend/config/product_config/validation_schemas/arranging/creditfacility/index.joischema.js#module",
+    "description": "Configuration settings for index.joischema"
+  }
+]

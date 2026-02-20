@@ -1,0 +1,4022 @@
+[
+  {
+    "id": "backend/src/services/external_services/kyc_company_service.js#preamble",
+    "description": "Configures KYC API endpoints and tenant-specific service provider codes"
+  },
+  {
+    "id": "backend/src/services/external_services/kyc_company_service.js#headers",
+    "description": "Constructs authorization headers for KYC API requests with tenant-specific configuration"
+  },
+  {
+    "id": "backend/src/services/external_services/kyc_company_service.js#getKYCQuestionForDFSACompany",
+    "description": "Retrieves KYC compliance questions for DFSA-regulated companies by jurisdiction"
+  },
+  {
+    "id": "backend/src/services/external_services/kyc_company_service.js#getAllKYCQuestionForCompany",
+    "description": "Fetches all KYC compliance questions required for company verification"
+  },
+  {
+    "id": "backend/src/services/external_services/kyc_company_service.js#getCompanyOverviewDetailsFromMawani",
+    "description": "Retrieves company overview and registration details from Mawani external system"
+  },
+  {
+    "id": "backend/src/services/external_services/kyc_company_service.js#putCompanyOnHold",
+    "description": "Places company KYC verification request on hold with reviewer comment"
+  },
+  {
+    "id": "backend/src/services/external_services/kyc_company_service.js#getCompanyRequestDetailsFromMawani",
+    "description": "Fetches company KYC request details from Mawani client management system"
+  },
+  {
+    "id": "backend/src/services/external_services/feedback.js#preamble",
+    "description": "Configures user feedback widget integration API endpoints"
+  },
+  {
+    "id": "backend/src/services/external_services/feedback.js#generateIntegrationToken",
+    "description": "Generates authentication token for feedback widget integration"
+  },
+  {
+    "id": "backend/src/services/external_services/feedback.js#getWidget",
+    "description": "Retrieves feedback widget configuration and settings"
+  },
+  {
+    "id": "backend/src/services/external_services/feedback.js#submitFeedback",
+    "description": "Submits user feedback and support requests to collection system"
+  },
+  {
+    "id": "backend/src/services/external_services/exchange_rates_api.js#preamble",
+    "description": "Configures currency exchange rate API integration endpoints"
+  },
+  {
+    "id": "backend/src/services/external_services/exchange_rates_api.js#sameCurrency",
+    "description": "Checks if two currencies match without conversion needed"
+  },
+  {
+    "id": "backend/src/services/external_services/exchange_rates_api.js#getExchangeRatesData",
+    "description": "Fetches current exchange rates for currency conversion calculations"
+  },
+  {
+    "id": "backend/src/services/external_services/exchange_rates_api.js#getCurrenciesMapping",
+    "description": "Retrieves currency code mappings for rate lookups"
+  },
+  {
+    "id": "backend/src/services/external_services/exchange_rates_api.js#getExchangeRateForDate",
+    "description": "Fetches historical exchange rate for specific date and currency pair"
+  },
+  {
+    "id": "backend/src/services/external_services/email_api.js#preamble",
+    "description": "Configures email notification service API endpoints and authentication"
+  },
+  {
+    "id": "backend/src/services/external_services/email_api.js#publicHeaders",
+    "description": "Constructs public API headers for email service requests"
+  },
+  {
+    "id": "backend/src/services/external_services/email_api.js#headers",
+    "description": "Constructs authenticated headers for email service API calls"
+  },
+  {
+    "id": "backend/src/services/external_services/email_api.js#_fetchNsspAuthToken",
+    "description": "Retrieves authentication token for NSSP email service"
+  },
+  {
+    "id": "backend/src/services/external_services/email_api.js#sendEmailByCategoryAndEvent",
+    "description": "Sends templated email based on category and event type"
+  },
+  {
+    "id": "backend/src/services/external_services/email_api.js#sendEmail",
+    "description": "Sends transactional email to recipients with content"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#preamble",
+    "description": "Configures document management service API endpoints"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#headers",
+    "description": "Constructs authorization headers for document service requests"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#uploadDocuments",
+    "description": "Uploads documents to external document storage service"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#uploadDocumentStream",
+    "description": "Uploads document file to storage system"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#downloadDocuments",
+    "description": "Downloads document file for user"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#downloadDocumentsAsArrayBuffer",
+    "description": "Downloads document file for user"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#uploadDocumentsForDocusign",
+    "description": "Uploads document file to storage system"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#getKYCDocumentForCompany",
+    "description": "Implements getKYCDocumentForCompany for document service operations"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#generateTemplate",
+    "description": "Implements generateTemplate for document service operations"
+  },
+  {
+    "id": "backend/src/services/external_services/document_service.js#downloadConvertedDocument",
+    "description": "Implements downloadConvertedDocument for document service operations"
+  },
+  {
+    "id": "backend/src/services/external_services/cargo_flow_api.js#preamble",
+    "description": "Configures CargoFlow shipment tracking API integration"
+  },
+  {
+    "id": "backend/src/services/external_services/cargo_flow_api.js#createShipmentContainer",
+    "description": "Implements createShipmentContainer for cargo flow api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/cargo_flow_api.js#createTrackingUrl",
+    "description": "Implements createTrackingUrl for cargo flow api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/cargo_flow_api.js#getShipmentDetails",
+    "description": "Retrieves cargo flow api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/bvd_api.js#preamble",
+    "description": "Configures Bureau van Dijk company data API integration"
+  },
+  {
+    "id": "backend/src/services/external_services/bvd_api.js#searchCompany",
+    "description": "Searches company information in BVD database"
+  },
+  {
+    "id": "backend/src/services/external_services/bvd_api.js#getCompanyData",
+    "description": "Retrieves currency exchange rates for conversion"
+  },
+  {
+    "id": "backend/src/services/external_services/bvd_api.js#getCompanyReport",
+    "description": "Downloads document file for user"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#preamble",
+    "description": "Configures Boomi integration platform API endpoints"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#_formatDirectorOrSMDetails",
+    "description": "Implements _formatDirectorOrSMDetails for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#_formatBODetails",
+    "description": "Implements _formatBODetails for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#_formatShareholderDetails",
+    "description": "Implements _formatShareholderDetails for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#_formatBoomiResponse",
+    "description": "Implements _formatBoomiResponse for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#_saveDumpData",
+    "description": "Implements _saveDumpData for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#getCompanyDetailsForRegistration",
+    "description": "Retrieves boomi api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#getCompanyDocumentsForRegistration",
+    "description": "Retrieves boomi api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#getCompanyInternalDocumentsForRegistration",
+    "description": "Retrieves boomi api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#getCompanyInternalCodesForRegistration",
+    "description": "Retrieves boomi api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#fiIntegration",
+    "description": "Implements fiIntegration for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#fiPullApi",
+    "description": "Implements fiPullApi for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#fetchFeesFromIntegratedFI",
+    "description": "Implements fetchFeesFromIntegratedFI for boomi api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/boomi_api.js#additionalDocumentUploadToIntegratedFI",
+    "description": "Uploads document file to storage system"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#preamble",
+    "description": "Configures authentication API service endpoints and integration"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#headers",
+    "description": "Constructs authorization headers for auth API requests"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#createOrg",
+    "description": "Creates auth api entity with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#createUser",
+    "description": "Creates new user account in authentication system"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#verifyUser",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#login",
+    "description": "Authenticates user credentials and returns JWT access token"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#authenticate",
+    "description": "Implements authenticate for auth api service operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#logout",
+    "description": "Implements logout for auth api service operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api_service.js#updatePassword",
+    "description": "Updates user password with validation"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#preamble",
+    "description": "Configures authentication service API endpoints and headers"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#headers",
+    "description": "Constructs authorization headers for authentication requests"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#formRangeHeader",
+    "description": "Implements formRangeHeader for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#updateIdentifierSummary",
+    "description": "Creates auth api entity with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#_logTimerForExternalApi",
+    "description": "Implements _logTimerForExternalApi for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#_checkIfThereIsALinkedOrg",
+    "description": "Implements _checkIfThereIsALinkedOrg for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#createOrg",
+    "description": "Creates auth api entity with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#createUser",
+    "description": "Registers new user account in authentication system"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#createUserWithOneTimePassword",
+    "description": "Updates user password with validation"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#checkUser",
+    "description": "Validates auth api business rules"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#login",
+    "description": "Authenticates user credentials and creates session"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#loginWithUserNamePassword",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#loginWithRefreshToken",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#authenticate",
+    "description": "Implements authenticate for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#logout",
+    "description": "Implements logout for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCurrentUserDetails",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyDetails",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyDetailsByServiceProvider",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyDetailsForExpiredAdmin",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getAllCompaniesByStatusAndModifiedDate",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getAllCompaniesByMultipleStatus",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getAllCompaniesByCreatedDate",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyReqeustOverview",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyComments",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyReqeustProcessInstanceIds",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getWorkFlowHistory",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyDetailsByCompRef",
+    "description": "Implements getCompanyDetailsByCompRef for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyUserDetailsByCompRef",
+    "description": "Implements getCompanyUserDetailsByCompRef for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyUserDetails",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#createCompanyInMawani",
+    "description": "Implements createCompanyInMawani for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getComapnyUserDetailsByUserName",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#updateCompanyDetails",
+    "description": "Implements updateCompanyDetails for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getMawaniDocument",
+    "description": "Removes document from storage system"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#uploadMawaniDocument",
+    "description": "Implements uploadMawaniDocument for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#updateIdentifierInformation",
+    "description": "Implements updateIdentifierInformation for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#updatePassword",
+    "description": "Updates user password with validation"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#forgotPassword",
+    "description": "Updates user password with validation"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserInvalidLoginAttemptData",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserDetailsByUserId",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserDetailsUserName",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserDetailsByUserEmailPhoneNumber",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserRoles",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserCompanyCombinationDetails",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserCompaniesByEmailId",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyKycHistoryFromMawani",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyKycAuditFromMawani",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyKycInternalCommentsFromMawani",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#addCompanyKycInternalCommentToMawani",
+    "description": "Implements addCompanyKycInternalCommentToMawani for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#mawaniCompanyAssessment",
+    "description": "Implements mawaniCompanyAssessment for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#mawaniCompanyAssessmentOnHold",
+    "description": "Implements mawaniCompanyAssessmentOnHold for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyKycDocumentsFromMawani",
+    "description": "Implements getCompanyKycDocumentsFromMawani for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getAllCompaniesWithFilters",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getMawaniClientTypes",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getUserDetailsByEmailId",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#inviteUser",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#transferOwnership",
+    "description": "Implements transferOwnership for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyCodeIssuersFromMawani",
+    "description": "Implements getCompanyCodeIssuersFromMawani for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyKycHistoryQuestionsFromMawani",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getRegisteredServicesFromMawani",
+    "description": "Implements getRegisteredServicesFromMawani for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getAllCompanyServicesFromMawani",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#companyServicesStatusChangeFromMawani",
+    "description": "Implements companyServicesStatusChangeFromMawani for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#companySuspensionFromMawani",
+    "description": "Implements companySuspensionFromMawani for auth api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/auth_api.js#getCompanyReferenceValuesFromMawani",
+    "description": "Retrieves auth api with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/aecb_integration.js#preamble",
+    "description": "Configures AECB credit bureau API integration"
+  },
+  {
+    "id": "backend/src/services/external_services/aecb_integration.js#_getLinkJson",
+    "description": "Implements _getLinkJson for aecb integration operations"
+  },
+  {
+    "id": "backend/src/services/external_services/aecb_integration.js#_getIndividualJson",
+    "description": "Implements _getIndividualJson for aecb integration operations"
+  },
+  {
+    "id": "backend/src/services/external_services/aecb_integration.js#handleGender",
+    "description": "Implements handleGender for aecb integration operations"
+  },
+  {
+    "id": "backend/src/services/external_services/aecb_integration.js#makeDropDownMap",
+    "description": "Implements makeDropDownMap for aecb integration operations"
+  },
+  {
+    "id": "backend/src/services/external_services/aecb_integration.js#processAecbIntegrationData",
+    "description": "Retrieves aecb integration with business logic"
+  },
+  {
+    "id": "backend/src/services/external_services/aecb_integration.js#updateMissedKycInfoForAecb",
+    "description": "Implements updateMissedKycInfoForAecb for aecb integration operations"
+  },
+  {
+    "id": "backend/src/services/external_services/accuity.js#preamble",
+    "description": "Configures Accuity sanctions and PEP screening API"
+  },
+  {
+    "id": "backend/src/services/external_services/accuity.js#accuityLogin",
+    "description": "Authenticates user credentials and creates session"
+  },
+  {
+    "id": "backend/src/services/external_services/accuity.js#accuityScreening",
+    "description": "Implements accuityScreening for accuity operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#preamble",
+    "description": "Imports dependencies for document management business logic"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#_getDocument",
+    "description": "Downloads document file for user"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#_generateS3PathGuid",
+    "description": "Implements _generateS3PathGuid for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#_uploadDocumentsAndUpdateTables",
+    "description": "Implements _uploadDocumentsAndUpdateTables for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#_processFinanceDocumentMapping",
+    "description": "Implements _processFinanceDocumentMapping for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#addDocument",
+    "description": "Implements addDocument for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#getOrgDocumentById",
+    "description": "Implements getOrgDocumentById for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#getOrgDocumentByIdForLender",
+    "description": "Implements getOrgDocumentByIdForLender for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#uploadDocuments",
+    "description": "Implements uploadDocuments for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#downloadDocuments",
+    "description": "Implements downloadDocuments for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/index.js#processFinanceDocumentMapping",
+    "description": "Implements processFinanceDocumentMapping for index operations"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#preamble",
+    "description": "Configures cloud storage service for document files"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#streamsToCompressed",
+    "description": "Implements streamsToCompressed for file storage service operations"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#uploadFile",
+    "description": "Implements uploadFile for file storage service operations"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#bulkUploadFiles",
+    "description": "Implements bulkUploadFiles for file storage service operations"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#bulkUploadStream",
+    "description": "Implements bulkUploadStream for file storage service operations"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#downloadFile",
+    "description": "Implements downloadFile for file storage service operations"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#download",
+    "description": "Downloads document file for user"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#downloadBuffer",
+    "description": "Implements downloadBuffer for file storage service operations"
+  },
+  {
+    "id": "backend/src/services/document_service/file_storage_service.js#bulkDownload",
+    "description": "Implements bulkDownload for file storage service operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/seller_envelope.js#preamble",
+    "description": "Configures DocuSign e-signature API integration"
+  },
+  {
+    "id": "backend/src/services/docusign_service/seller_envelope.js#makeEnvelope",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#preamble",
+    "description": "Configures DocuSign e-signature API integration"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#makeRecipientViewRequest",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#makeEnvelopeForCF",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#createAndSendEnvelopeForCF",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#createAndSendEnvelope",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#_getRecipientUsersForOrg",
+    "description": "Implements _getRecipientUsersForOrg for index operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#getEmbeddedDoc",
+    "description": "Creates index entity with business logic"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#getDocumentRecipientStatus",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#getSignedDocuments",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#getSignedDocumentsForCreditFacility",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#updateRecipientTypeToCC",
+    "description": "Updates index with business rules"
+  },
+  {
+    "id": "backend/src/services/docusign_service/index.js#updateRecipients",
+    "description": "Updates index with business rules"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#preamble",
+    "description": "Configures DocuSign e-signature API integration"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#_generateS3PathGuid",
+    "description": "Implements _generateS3PathGuid for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getAccessTokenJWT",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getUserInfo",
+    "description": "Retrieves document signing status"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getFinanceDetailsById",
+    "description": "Implements getFinanceDetailsById for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getCreditLimitDetailsFromId",
+    "description": "Implements getCreditLimitDetailsFromId for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getOrgDetailsForOrgID",
+    "description": "Implements getOrgDetailsForOrgID for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getEnvelopeID",
+    "description": "Implements getEnvelopeID for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#docusignDocumentInsert",
+    "description": "Implements docusignDocumentInsert for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#docusignDocumentStatusUpdate",
+    "description": "Updates helpers with business rules"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getDocsByDocTypeAndOwnerId",
+    "description": "Implements getDocsByDocTypeAndOwnerId for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getDocsByDocTypeDocNameAndOwnerId",
+    "description": "Implements getDocsByDocTypeDocNameAndOwnerId for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#getDocumentDetailsByDocIdListAndDocType",
+    "description": "Implements getDocumentDetailsByDocIdListAndDocType for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/helpers.js#uploadDocusignDocuments",
+    "description": "Implements uploadDocusignDocuments for helpers operations"
+  },
+  {
+    "id": "backend/src/services/docusign_service/buyer_envelope.js#preamble",
+    "description": "Configures DocuSign e-signature API integration"
+  },
+  {
+    "id": "backend/src/services/docusign_service/buyer_envelope.js#makeEnvelope",
+    "description": "Implements makeEnvelope for buyer envelope operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#preamble",
+    "description": "Imports dependencies for compliance screening business logic"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_getCountryCodesMapping",
+    "description": "Implements _getCountryCodesMapping for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_getCountryNationalitiesMapping",
+    "description": "Implements _getCountryNationalitiesMapping for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#formScreeningRecord",
+    "description": "Implements formScreeningRecord for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#formScreeningRecordArray",
+    "description": "Implements formScreeningRecordArray for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_processAccuityScreeningResult",
+    "description": "Implements _processAccuityScreeningResult for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#getFinalScreeningSummary",
+    "description": "Implements getFinalScreeningSummary for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_getFinalVerdict",
+    "description": "Implements _getFinalVerdict for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_upsertComplianceScreeningData",
+    "description": "Implements _upsertComplianceScreeningData for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_generateScreeningResultTemplate",
+    "description": "Implements _generateScreeningResultTemplate for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_generateAccuityPayloadForCompanyOnboarding",
+    "description": "Implements _generateAccuityPayloadForCompanyOnboarding for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_fetchAndProcessCompanyAccuityInformation",
+    "description": "Implements _fetchAndProcessCompanyAccuityInformation for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#_batchProcessingCompaniesForComplianceScreening",
+    "description": "Calculates index business values"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#companiesComplianceScreening",
+    "description": "Implements companiesComplianceScreening for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#companyComplianceScreening",
+    "description": "Implements companyComplianceScreening for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#transactionComplianceScreening",
+    "description": "Implements transactionComplianceScreening for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#accuityPushNotification",
+    "description": "Implements accuityPushNotification for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#getComplianceScreeningData",
+    "description": "Implements getComplianceScreeningData for index operations"
+  },
+  {
+    "id": "backend/src/services/compliance_screening/index.js#accuityPullLatestInfo",
+    "description": "Retrieves index with business logic"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#preamble",
+    "description": "Imports dependencies for CRM integration business logic"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#updateOpportunityId",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#updateSalesPoc",
+    "description": "Updates index with business rules"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#sendUserEvents",
+    "description": "Implements sendUserEvents for index operations"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#sendCRMUserStatus",
+    "description": "Updates index with business rules"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#getOpportunityDetailsFromCRM",
+    "description": "Retrieves index with business logic"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#updateSalesDetailsIfPresent",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#createUserAccount",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#getAuthToken",
+    "description": "Retrieves index with business logic"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#updateAndSendCRMevents",
+    "description": "Updates index with business rules"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#sendExistingCrmEvents",
+    "description": "Updates index with business rules"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#_shuffleArray",
+    "description": "Implements _shuffleArray for index operations"
+  },
+  {
+    "id": "backend/src/services/crm/index.js#_getUserAccountCreationMessage",
+    "description": "Implements _getUserAccountCreationMessage for index operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#preamble",
+    "description": "Imports database models for user-organisation associations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getSettlementBalanceByOrgBank",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_setSettlementBalanceByOrgBank",
+    "description": "Implements _setSettlementBalanceByOrgBank for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getOrganisationsByOrgIdsQuery",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getUserAndOrgDetails",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_updateTenantSwitchForOrganisation",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_updateCompanyKYCInformation",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getCompanyApprovedDate",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getOrgDetailsFromNameAndCountry",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getOrgDetailsFromNameAndCountryImporter",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getOrgDetailsFromOrgIdQuery",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getOrgDetailsFromMawaniRefId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getOrgDetailsFromMawaniRefIdWithoutTenantCode",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_updateOrganisationByMawaniReferenceId",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getCaymanOrgDetailsFromDFSACompanyRef",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getSalesAgentDataByOrgId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_getUserByDepartmentandIdQuery",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#_updateOrgInformation",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromOrgId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getSCFServiceValueForOrg",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getDTFAdminUserId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getDTFAdminOrgId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getAdminOrgIdsForTenant",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getDTFAdminUserDetails",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserDetailsFromUserId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserDetailsByUserMailAndMawaniId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#checkIfUserExists",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgsForUser",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertUserDetailsToUsers",
+    "description": "Implements insertUserDetailsToUsers for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#checkUserOrgTenantComboExists",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserAndOrgDetails",
+    "description": "Implements getUserAndOrgDetails for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertToOrganisation",
+    "description": "Implements insertToOrganisation for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getAllKYCDocsForCompany",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#removeDeletedKYCDocsForCompany",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertToCompanyKYCDocuments",
+    "description": "Implements insertToCompanyKYCDocuments for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateInternalKycDocDetails",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#markAlternateKYCDocumentUpload",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getKYCInfoWithExpiryDateInSixtyDays",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getKYCDocumentsWithExpiryDateInSixtyDays",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertToOrgUserTable",
+    "description": "Implements insertToOrgUserTable for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertToOrgTenantTable",
+    "description": "Implements insertToOrgTenantTable for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertToCompanyKYC",
+    "description": "Implements insertToCompanyKYC for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateCompanyKYCExpiryFlag",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateMawaniCompanyOverviewOwnedBy",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#createOrgWithMawaniCompanyData",
+    "description": "Implements createOrgWithMawaniCompanyData for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateTenantSwitchForOrganisation",
+    "description": "Implements updateTenantSwitchForOrganisation for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateCompanyKYCInformation",
+    "description": "Implements updateCompanyKYCInformation for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromOrgIdQuery",
+    "description": "Implements getOrgDetailsFromOrgIdQuery for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getCompanyApprovedDate",
+    "description": "Implements getCompanyApprovedDate for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#fetchAdminUsersForOrgID",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgCountByIdAndType",
+    "description": "Implements getOrgCountByIdAndType for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromUserIdQuery",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromNameAndCountry",
+    "description": "Implements getOrgDetailsFromNameAndCountry for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromNameAndCountryImporter",
+    "description": "Implements getOrgDetailsFromNameAndCountryImporter for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgByNameAndCountry",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUnregisteredOrgDetailsFromOrgIdQuery",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgByNameAndInvitingUserId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrganisationByOrgId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrganisationsByOrgIdsQuery",
+    "description": "Implements getOrganisationsByOrgIdsQuery for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrganisationsDetailsByOrgIds",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateOrganisationByNameAndCountry",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromMawaniRefId",
+    "description": "Implements getOrgDetailsFromMawaniRefId for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromMawaniRefIdWithoutTenantCode",
+    "description": "Implements getOrgDetailsFromMawaniRefIdWithoutTenantCode for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateOrganisationByMawaniReferenceId",
+    "description": "Implements updateOrganisationByMawaniReferenceId for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getLendingOrganisation",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getMawaniRefIDforOrganisation",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#upsertCaymanDfsaCompanyReferenceMapping",
+    "description": "Implements upsertCaymanDfsaCompanyReferenceMapping for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#checkCaymanDfsaCompanyReferenceMappingExist",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserDetailsFromUserAndOrgId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserDetailsFromOrgIdAndDepartment",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserDetailsFromUserIdAndDepartment",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#checkIsLendingOrganisation",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getCaymanOrgDetailsFromDFSACompanyRef",
+    "description": "Implements getCaymanOrgDetailsFromDFSACompanyRef for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getSalesAgentDataByOrgId",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertAddSalesAgentDataAtUserLevel",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertAddSalesAgentData",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateOrgIdForSalesAgentDetail",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getSalesAgentIdsByOrgId",
+    "description": "Implements getSalesAgentIdsByOrgId for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getDFSACreditOrganisationDetailsFromApplicantId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getEncryptedCompanyReferenceFromCompanyId",
+    "description": "Implements getEncryptedCompanyReferenceFromCompanyId for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getEncryptedCompanyReferenceAndOtherOrgDetailFromCompanyId",
+    "description": "Implements getEncryptedCompanyReferenceAndOtherOrgDetailFromCompanyId for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getSettlementBalanceByOrgBank",
+    "description": "Implements getSettlementBalanceByOrgBank for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#setSettlementBalanceByOrgBank",
+    "description": "Implements setSettlementBalanceByOrgBank for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserLastLoginFromUserId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgUserDetailsFromMawaniRefId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateLastLoginUsingUserId",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserDetailsByEmailId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgTypeFromOrgId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateCompanyKycDetails",
+    "description": "Implements updateCompanyKycDetails for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getCompanyOverviewTableFilterValues",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getCompaniesListQuery",
+    "description": "Implements getCompaniesListQuery for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getAdminOrganisationForUser",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgTenantMapsForCompanyRefs",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateCompanySuspendStatus",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getInternalCounterPartyOrgInfoByOwnerTypeAndOwnerId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserByDepartmentQuery",
+    "description": "Implements getUserByDepartmentQuery for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateOrgDetails",
+    "description": "Implements updateOrgDetails for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#fetchUserAndOrgInfo",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserInfoForReports",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#upsertToRiskRatingClientMapping",
+    "description": "Implements upsertToRiskRatingClientMapping for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#upsertToRiskRatingClientMappingRequest",
+    "description": "Implements upsertToRiskRatingClientMappingRequest for user organisation operations"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateRiskRatingClientMappingByMawaniRefId",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getUserDetailsByEmailOrMawaniId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getCompanyReviewHistory",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#insertIntoTable",
+    "description": "Inserts user organisation records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateOrganisationById",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateUserDeactivatedColumn",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsFromMawaniForAccounting",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getBankDetailsByType",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getFiDetailsById",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateDirectShareholderDetailsForMawaniRefId",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#updateDirectShareholderDetailsForOrg",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#checkIfCompanyIsInactive",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getAllSponsors",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getSponsorDetailsByCompanyRef",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getSponsorDetailsByCompanyRefFromRequestTable",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getSponsorRequestsByOrgAndRequestIdFromRequestTable",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#syncSponsorAssociationsToRequestTable",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#syncSponsorAssociationsToMainTable",
+    "description": "Updates user organisation records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/user_organisation.js#getOrgDetailsByOrgId",
+    "description": "Queries user organisation data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_getUnacceptedUserTermDetailsByCompanyIdDocType",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_getTermAcceptanceUserDetailsByCompanyIdDocType",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_getTermAcceptanceDetailsForUsersByCompanyIdDocType",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_getTermAcceptanceUserDetailsByEmailId",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_getTermsAcceptanceDetailsByUserId",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_updateEmailSentAtTermsAcceptance",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_updateResendEmailSentAtTermsAcceptance",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#_getAgreementDetails",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getUnacceptedUserTermDetailsByCompanyIdDocType",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getTermAcceptanceUserDetailsByCompanyIdDocType",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getTermAcceptanceDetailsForUsersByCompanyIdDocType",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getTermAcceptanceUserDetailsByEmailId",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getTermsAcceptanceDetailsByUserId",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#updateEmailSentAtTermsAcceptance",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#updateResendEmailSentAtTermsAcceptance",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getAgreementDetails",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getLatestTermsVersion",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getOrgsCreatedinDIFCForKYCforDPWFSLender",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#checkIfOrgCreatedinDIFCForKYCforDPWFSLender",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/terms_acceptance.js#getLatestTermsVersionByDocumentType",
+    "description": "Updates terms acceptance records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#getReleaseNotesCalender",
+    "description": "Queries support release notes data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#getSpecificReleaseNotes",
+    "description": "Queries support release notes data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#getLastLoginTimestampDbService",
+    "description": "Queries support release notes data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#addReleaseNotesDbService",
+    "description": "Inserts support release notes records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#editReleaseNotesDbService",
+    "description": "Updates support release notes records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#deleteReleaseNotesDbService",
+    "description": "Updates support release notes records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#getFeatureByIdDbService",
+    "description": "Queries support release notes data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#getFeaturesAddedAfterLastLogin",
+    "description": "Queries support release notes data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/support_release_notes.js#doesReleaseNotesTableHaveAFeature",
+    "description": "Queries support release notes data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/reports.js#getDataForDatalakeSyncReport",
+    "description": "Queries reports data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#_getRemarksDetails",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#getRemarksDetails",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#getRemarksDetailsWithDocs",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#getRemarksDocument",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#insertRemark",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#insertIntoRemarks",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#getRemarkInfoById",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#getRemarksByIdentificationAndType",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/remark.js#updateRemarksByUpdateRequestId",
+    "description": "Inserts remark records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/product_config.js#getLatestVersionOfConfig",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#preamble",
+    "description": "Imports database models for OCR extracted data"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#getWeekNumber",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#_getOCRAccuracyDataByWeek",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#_getSavedOCRDataById",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#_getReportData",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#_generateCompanyOCRApprovedData",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#getOCRReportDataQuery",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#getOCRFieldDataQuery",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#getOCRRecordDataQuery",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#getOCRAccuracyDataByWeek",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#getSavedOCRDataByMawaniRefId",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#getSavedOCRDataByFinanceId",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#bulkInsertOCRRecord",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#approveOCRData",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/ocr_info.js#processOCRDataForUserAllCompanies",
+    "description": "Queries ocr info data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/notification.js#insertEmailNotification",
+    "description": "Inserts notification records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/notification.js#fetchAttributeByCategory",
+    "description": "Inserts notification records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/notification.js#updateAttributeDetails",
+    "description": "Inserts notification records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/notification.js#insertAttributeDetails",
+    "description": "Inserts notification records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/notification.js#upsertEmailTemplate",
+    "description": "Inserts notification records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/notification.js#fetchEmailTemplateDetails",
+    "description": "Inserts notification records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#preamble",
+    "description": "Imports database models for logistics finance applications"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_addTransactionDistributionData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_isBuyerUnregisteredCheck",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_isInternalCPUnregisteredForApplicant",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getFinanceDetailsByCreditfacilityIds",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getFinanceTransactionDetailsByCreditfacilityIds",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceBaseDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceOrgDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceOrgDetailsByOrgId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getFinanceTransactionById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getPreviousTransactionsByTrxnId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsSellerBuyerDetailsFromFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceBanksDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceInvoicesDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceAmountDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinancePaymentTermsAndDisbursalEvents",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinancePaymentDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceStateTxnsDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getCustomInterestSchedule",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLogisticsFinanceTxnsDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getListOfCompanyInvoiceCombo",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_updateFinanceData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getFinanceInstitutionsCommissionData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getFinanceCommissionAmt",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getInternalCounterPartyDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLastInvoiceReportDateWithLimit",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_setOrganisationBankDetail",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_setOrganisationBankDetailByOrganisationName",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_setAddress",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_updateOrganisationBankDetail",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_updateAddress",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getCompletedTransactionQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getUpcomingTransactionQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getPaymentDetailsQueryForFinanceReport",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getTrackingInfoQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getLatestRemarksForApplicationQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_getListOfFinanceDetailsQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#_updateFiTermsValidationQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceDetail",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#addOrgAccessibilityForExistingDocs",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTransactionMonitoringDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFiTermValidationDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#isBuyerUnregisteredCheck",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#isInternalCPUnregisteredForApplicant",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinancesCountForOrgId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceCountByFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceBaseDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceAmountDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceOrgDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceOrgDetailsByOrgId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsSellerBuyerDetailsFromFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceBanksDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceInvoicesDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinancePaymentTermsAndDisbursalEvents",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinancePaymentDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceStateTxnsDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getCustomInterestSchedule",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceTxnsDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getListOfCompanyInvoiceCombo",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#changeLogisticsFinanceState",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateLogisticsBCOPaymentTermAcceptance",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateLogisticsBCOPaymentTermAcceptanceInvoice",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsPaymentTermById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#addOrgToLogisticsFinanceQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#deleteOrgFromLogisticsFinanceAndRemoveAccessibility",
+    "description": "Removes document from storage system"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateLogisticsFinanceEventAsCompleted",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsTransactionPaymentDate",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsSettlementTransaction",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsPartialSettledTransaction",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLastTransactionDetailsForFinance",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateTransactionWithId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsSettlementByFiTransaction",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsTransactionCreateDate",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceInstitutionsCommissionData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getInternalCounterPartyDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getCreditLimitAmountDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getProductDeletedInfo",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLastInvoiceReportDate",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getSettlementTxnByDate",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTxnWithDueDateInRange",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceStateTransactionById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceStateTransactionByFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceFilterValues",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getCompletedTransactionsFilterValues",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTransactionViewDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getUpcomingTransactionsFilterValues",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceInstitutionDataById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getAccountInFi",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinanceDetailsFromFI",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#createIntegratedFiDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateIntegratedFiDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getIntegratedFiDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#insertFinancePaymentTerms",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceDetailsByCreditfacilityIdsWithoutTenant",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceTransactionDetailsByCreditfacilityIdsWithoutTenant",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updatePaymentDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinanceAmount",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinance",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinanceUserStatus",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getOrgFinance",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#setOrganisationBankDetail",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#setOrganisationBankDetailByOrganisationName",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#setAddress",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateOrganisationBankDetail",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateAddress",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getApplyFinanceClientsQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceApplicationsDetailsWithIntegratedFi",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getBankDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getBankDetailsFromId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateLoanNumber",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateApprovedDueDate",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateSettlementAmount",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#insertFinanceSalesAgent",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getOcrDataForFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTrackingEventsDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTrackingInformationByMblNumber",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFirstDisbursalApplicationInYearForCreditLimit",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceInvoiceDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceIdForInvoiceNumber",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#checkFIisLendingOrgWithFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#createTrackingAddressDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getAddressbyId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getfinanceRateSource",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateDiscountRateDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#addTransactionDistributionData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getPreviousTransactionsByTrxnId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceTransactionById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFeesFromIntegratedFI",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFeesFromIntegratedFI",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinanceCommission",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinanceData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateCounterPartyFinanceData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceTenantCode",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getCreditfacilityIdForFinanceRaisedBetween",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFlagsFromFinanceId",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#findIfLendingFIforFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#insertTrackingStatusDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#upsertTrackingStatusDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#insertTrackingInformationDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceTransactionByTransactionId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#insertFinanceTransactionDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinanceTransactionDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFinanceDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateUpcomingTransactionDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#insertUpcomingTransactionDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#checkUpcomingTransactionEntry",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceValues",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getSyncApiData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getMblDetailsByFinId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getPaymentDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#upsertOrganisationBankDetail",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#upsertAddress",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#upsertFinancePaymentTerms",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTrackingEventsDetailsByFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getCompletedTransactionQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getUpcomingTransactionQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLogisticsFinanceDetailById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getPaymentDetailsQueryForFinanceReport",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTrackingInfoQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getLatestRemarksForApplicationQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTransactionMonitoringDetailsByFinanceIds",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getTermsValiationByFinanceIds",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getListOfFinanceDetailQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateFiTermsValidationQuery",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getBankDetailsByOrgIds",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getBankDetailsByIds",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getApplicantName",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateInvoiceDetail",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateTrackingInfo",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getSavedFinance",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceProductConfigById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getInventoryDetialsById",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#toBeDeletedInventories",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateInventoryDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#upsertCheckListData",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getChecklistDataForFinanceForEdit",
+    "description": "Retrieves currency exchange rates for conversion"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getChecklistDataForFinanceForViewPage",
+    "description": "Retrieves currency exchange rates for conversion"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getChecklistDataForFinance",
+    "description": "Retrieves currency exchange rates for conversion"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getFinanceMinInvoiceDate",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#facilityClosureCheck",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getMultiCurrencyDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getBenchmarkForFinApply",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getApplicantCfDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getMasterInstrumentDetails",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getMasterInvoiceCategoryByFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getPreshipmentApplicationMappingByPostFinanceId",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#getPreShipmentOutstandingFinanceAmount",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#insertIntoTable",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#updateIntoTable",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/logistics_finance.js#upsertIntoTable",
+    "description": "Inserts logistics finance records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/kyc_dump.js#_queryToGetDump",
+    "description": "Queries kyc dump data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/kyc_dump.js#_getExistingDataId",
+    "description": "Queries kyc dump data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/kyc_dump.js#getCompanyInfoFromDump",
+    "description": "Queries kyc dump data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/kyc_dump.js#addCompanyInfoToDump",
+    "description": "Implements addCompanyInfoToDump for kyc dump operations"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#_generateExternalLinkToken",
+    "description": "Generates or validates authentication token"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#_getTokenDetails",
+    "description": "Generates or validates authentication token"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#_getTableConstraintNameByConstraintType",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#generateExternalLinkToken",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getTokenDetails",
+    "description": "Generates or validates authentication token"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getCRADetails",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#checkIfRiskAnalysisIsDoneForCompany",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#setRiskAssementFlagForCompany",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#checkOtpForEmailId",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#createUserSignUpMetrics",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#updateUserSignUpMetrics",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#updateUserSignUpMetricsOTPVerify",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#updateUserSignUpMetricsUserRegistered",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#updateUserSignUpMetricsUserExistingUser",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getCountEmailsOtpSent",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getCountEmailsOtpVerified",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getCountEmailsExistingUserError",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getCountEmailsMawaniApiHit",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getCountEmailsSocialSignupUsed",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#insertSofrRates",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getSofrRatesInDateRange",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getSofrRates",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getPreviousDaySofrRate",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#fetchDataForSync",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getTableSchema",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getTableConstraintColumnName",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#upsertTableData",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#upsertTableDataWithoutTC",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getEnvelopeDetailsById",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getEnvelopeOwnerDetails",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getEnvelopeIdByOwnerDetails",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/index.js#getRiskConfigurationQuestionsAndAnswers",
+    "description": "Inserts index records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/history.js#_addToHistoryWithAccessibleUsers",
+    "description": "Inserts history records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/history.js#addToHistoryWithAccessibleUsers",
+    "description": "Inserts history records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#preamble",
+    "description": "Imports database helper utilities and common functions"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#upsert",
+    "description": "Inserts helpers records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#upsert_tc",
+    "description": "Inserts helpers records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#select",
+    "description": "Queries helpers data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#getByColumns",
+    "description": "Queries helpers data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#update",
+    "description": "Updates helpers records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#count",
+    "description": "Queries helpers data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#insert",
+    "description": "Inserts helpers records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#orgsToUsers",
+    "description": "Queries helpers data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/helpers.js#fiIdToUsers",
+    "description": "Queries helpers data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#preamble",
+    "description": "Imports database models for external system integration data"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#_getCompanyListFromPanjiva",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#_getPanjivaDetailsFromCompanyDetail",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#insertBoomiMetadata",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#setCargoFlowNotificationEvent",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getCargoFlowNotificationEvent",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateBoomiTransactionStatus",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#insertLeadIdCRM",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#insertCrmDetails",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateCRMDetails",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateCRMDetailsByUserId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateOpportunityIdCRM",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserIdFromOpportunityId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#insertCRMDetails",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateCRMDetailsByEmail",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateSourceAndSourceCampaign",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateAnnualTurnover",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateCrmDetailByOpportunityIdAndLeadId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#insertCRMeventDetails",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserCRMtDetailsByEmail",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserCRMtDetailsByEmailLeadId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getCRMeventDetails",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserCRMdetailsByOrgId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserCRMdetailsByOrgIdWithoutTenantCode",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserCRMdetailsByUserId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserCRMdetailsByUserIdCommon",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getCRMeventDetailsByLeadId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getCRMeventDetailsByStatus",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getCompanyListFromPanjiva",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getPanjivaDetailsFromCompanyDetail",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getFinanceDetails",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserDetails",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#updateOrgAndTenantForCRM",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#upsertAecbIntegrationData",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getLmsFacilityId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getAllOrganisationForAecb",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getCompanyJsonData",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getAecbRecordId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#storeIncomingOutgoingCall",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#storeTopicEventVersion",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getTopicEventVersion",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#insertLinkedClientId",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#checkIfFiIsLinked",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/external.js#getUserOrgsFromOrgIds",
+    "description": "Inserts external records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/draft.js#autoSaveData",
+    "description": "Inserts draft records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/draft.js#getSaveDetailsData",
+    "description": "Inserts draft records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/draft.js#updateAutoSaveData",
+    "description": "Inserts draft records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/draft.js#updateCreditFacilityDraftStatus",
+    "description": "Inserts draft records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#preamble",
+    "description": "Imports database models for document metadata storage"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#_getLogisticsFinanceDocumentsAndAccessibilityDetails",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#_deleteDocumentsByDetails",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#_getDocusignDocumentID",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#updateDocument",
+    "description": "Updates document metadata in database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#updateDocumentsAndAccessibilityTable",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#updateDocumentsTable",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentDetailsForFinanceByIdQuery",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentDetailsByIdQuery",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentAccessibilityForOrgByDocIdQuery",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getLogisticsFinanceDocumentsAndAccessibilityDetails",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#deleteDocumentsByDetails",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#deleteDocumentsWithMappingByIDs",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getLogisticsFinanceProofDoc",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getLogisticsFinanceDoc",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentAccessibilityForLogisticsFinanceOrgByDocIdQuery",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocsByDocTypeAndOwnerId",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocsByDocTypeDocNameAndOwnerId",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocsDetailsByOwnerIdOwnerType",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getAccessibilityOrgs",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getTermsDocumentDetails",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#addDocsToTermsDocumentsTable",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocsCountByVersionAndDocType",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#checkIfKycDocumentsUploadedForCompany",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#updateKycDocumentsUploadStatusForCompany",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocusignDocumentID",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentAccessibilityByDocId",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#updateDocumentsAccessibility",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentDetailsByOwnerIdUploadId",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentDetailsByDocId",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentDetailsByDocIdListAndDocType",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#insertDocOwner",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#insertDocAccessibility",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#insertToFinanceDocMapping",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#insertToDocumentAccessibility",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getEnvelopeIdForDocumentId",
+    "description": "Creates e-signature envelope for document signing"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#docusignDocumentMapping",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocumentDetailsByDocIdList",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#updateDocumentTableById",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#setIsSentToClient",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/document.js#getDocsDetailsByDocUploadId",
+    "description": "Inserts document records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#preamble",
+    "description": "Imports database models for credit facility data access"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_formDocumentTypesForCounterPartyArray",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getFinancialInstitutionDataQuery",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getOrgCreditLimitUserDetailsFromUserId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getOrgCreditLimitDetailsFromCreditId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getOrgCreditLimitDetailsFromFinanceId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_increaseFinanceAmountToRequestedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_decreaseFinanceAmountToRequestedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_increaseFinanceAmountToApprovedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_decreaseFinanceAmountToApprovedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getRequiredProductsArrayByParamValue",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getPendingCounterParties",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_increaseFinanceAmountToDisbursedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_decreaseFinanceAmountToDisbursedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getDPWFSEligibilityInfo",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getCreditLimitDataForRequestedTabQuery",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getCreditLimitDataForOrgQuery",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_getCreditLimitDataForReportQuery",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_filterInformationMatchingKey",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#filterInformationMatchingKey",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#_addResitrictDisbursalInfoForRemainingProducts",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getUpdateReqIdFromCounterPartyId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesInfo",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgCreditLimitUserDetailsFromUserId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgCreditLimitDetailsFromCreditId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgCreditLimitDetailsFromFinanceId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitCountById",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#checkIfCreditLimitExistsWithGivenOrgsById",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyCombinationDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgsByCreditLimitId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getExceptionsByCreditLimitId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getProductDetailsByCreditLimitId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditChargesDetailsFromIds",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditFacilityAmountAndChargesDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getProductLevelExceptionDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyLevelExceptionDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitDataForOrg",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitDataForReport",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#prevStatusOfEligibilityCheckForFI",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCreditLimitReqsUnderEligibilityRequestedStatus",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCounterPartyInformation",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditLimitStateTransaction",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditFacilityStateTransaction",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertBankDetailsToOrganisationBank",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgFinanceCreditLimitStatus",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getTradingPartnersInformation",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getTradingPartnersInformationById",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getApprovedCommoditiesByCounterPartyId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitsWithExpiryDateInSixtyDays",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#checkFIisLendingOrgWithCreditFacilityId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitChargesByCreditLimitIds",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getDPWFSEligibilityInfo",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#statusOfCreditPolicyForLendingOrgs",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#searchBuyerInfoByApplicantId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getInternalCounterPartyInfoByApplicantId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getEligibilityQuestionOfFI",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditFacilityDetailFromId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getTradingPartnerForApplicant",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#addTradingPartnerForApplicant",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getPrevousStatusOfCreditFacilityByApplicantIdFIID",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCreditFacilityDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditLimitAmounts",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertDocumentOwnerTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertEligibilityResponseForCreditfacility",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditFacilityAccessiblityOrgs",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCounterPartyObjectById",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#createNewCreditFacility",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditLimitUpgradeRequestData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateModificationRequestTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getUpdateCreditFacilityRequestData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCreditLimitUpgradeRequestDataByRequestId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#searchCounterPartyInfoByApplicantId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertAllCreditFacilityBuyerSupplierInfo",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCounterPartiesData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertAllCounterPartyInfoForApplicant",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditFacilityDocumentMapping",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateDocumentSentStatus",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateDocumentModificationRequestIds",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCreditFacilityDocumentMappingByUpdateId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getDocuSignDocumentForCreditFacility",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCounterPartyStatusByCreditFacilityId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#rejectCPStatusInCounterPartiesByCreditFacilityId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCounterPartyStatusByIdCreditFacilityId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getExistingAutoCreatedCreditFacilityForFIAndApplicant",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getAllCreditLimitData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesDetailsByCreditFacilityIdAndStatus",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesDetailMapByCreditFacilityIdsWithoutTenant",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgDetailsByCounterPartyOrgId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyRemarks",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgDetailsByPartyType",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getNotCompletedCounterPartiesByCFId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesDetailByCreditLimitId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesInfoByCreditLimitId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getDocumentsFromCounterPartyId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getRequiredDocs",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getFinancialInstitutionData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateNewOnboardingData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateDataIntoTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getFinanceInstituteData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getPricingExceptionData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getEligibilityQuestionsData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getSyncApiData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesFromOrginsation",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#checkIfCounterPartyExisitByProductTypeAndFacility",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertDiscountFeeIntoCreditFacilityChargesTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditFacilityCounterPartyOrganisation",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#checkIfCreditLimitExists",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyListDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#addTradingPartner",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#addAllTradingPartners",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditLimitCounterParty",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCreditLimitAmountsTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#correctCreditFacilityAmounts",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#correctCounterPartyCreditFacilityAmounts",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertIntoCreditLimitChargesTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCreditLimitCounterPartiesTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertCreditFacilityAccessiblityTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getOrgsByCreditFacilityId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getAccessibleOrgsByCreditFacilityId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getApprovedInternalCPOrgs",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditFacilitiesByApplicantIdForDPWFS",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateStatusOfCounterParties",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateStatusAndRequestIdOfCounterParties",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCounterPartiesObjectByCounterPartyIdProductType",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getDocumentsDetailsbyOwnerTypeAndOwnerId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateStatusOfCounterPartiesAndUpdateRequestIdByCounterPartyIdProductType",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCounterPartiesUpdateRequestIdByCounterPartyId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updatRequestIdOfCreditFacilityDocumentMappingByDocumentIds",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getApplicantBankDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCompanyDocuments",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getHistoryData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getAllDocsExpectCompanyDocs",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitDocuments",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitApplicantDocuments",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyListByCreditLimitId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateStatusOfCounterPartiesByIds",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCounterPartiesbyStatusAndProductType",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getDocumentForCreditFacilityByUpdateRequestId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesObjectByCounterPartyIdProductType",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesByCreditFaciltyIdPartyType",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getModificationRequestData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCounterPartiesObjectByCounterPartyIdProductTypeAndStatus",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCFidsByApplicantAndFIids",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateCFAmountsTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updatCreditFacilityDocumentMappingObj",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updatCreditFacilityDocumentMappingObjByDocIds",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartiesMappingDataByCreditfacility",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#doesCounterPartyWithStatusExistForCreditFacility",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getrequestTypeFromMRTable",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#insertDocusignMapping",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCFApplicantUserDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCfCreatedbyUserDetails",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#increaseFinanceAmountToRequestedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#decreaseFinanceAmountToRequestedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#increaseFinanceAmountToApprovedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#decreaseFinanceAmountToApprovedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#increaseFinanceAmountToDisbursedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#decreaseFinanceAmountToDisbursedAmount",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyDetailsById",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditLimitAtProductLevel",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getApplicantNameFromApplicantId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditSummaryDetails",
+    "description": "Retrieves currency exchange rates for conversion"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditFacilityInfoForReport",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getRecentRenewCFDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyCountryInformationByPartyType",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyIdById",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCountryRatings",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCommodityRatings",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#fetchCounterPartiesDataForLendingOrgsByApplicantId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCreditFacilityByApllicantId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#checkIfOrgIsLinked",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateOnBoardingStatus",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#checkIfOrgIsBankAndClientIsLinked",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#fetchUnsyncedFinanceInstituteDataToAccounting",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCFMaxFinanceTenureData",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getProductExceptionMaxFinanceTenure",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getCounterPartyExceptionMaxFinanceTenure",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#getRiskObligorsBySponsorId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateSponsorDetails",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/credit_facility.js#updateSponsorDetailsByRiskObligorId",
+    "description": "Inserts credit facility records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/compliance_screening.js#upsertComplianceScreeningData",
+    "description": "Implements upsertComplianceScreeningData for compliance screening operations"
+  },
+  {
+    "id": "backend/src/services/db_service/compliance_screening.js#updateComplianceScreeningData",
+    "description": "Updates compliance screening records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/compliance_screening.js#getComplianceDataByUniqueId",
+    "description": "Queries compliance screening data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#preamble",
+    "description": "Imports database models for company KYC approval workflow"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getCompanyDocuemntsHistory",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getCompanyOverviewDetails",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getdocumentsRequired",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getMawaniCompanyOverviewDetails",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getMawaniCompanyDetailsByOrgIds",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getOrgDetailsFromOrgIdQuery",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateIsDeactivated",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateCompanyKYCStatus",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateMawaniCompanyOwerview",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getQuestionsByCodesFromRiskConfiguration",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#isClientRiskRatingMapped",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getQuestionsByMawaniRefIdFromRiskRatingMapping",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getQuestionsByMawaniRefIdFromRiskRatingMappingRequest",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getRiskRatingClientMapping",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getRiskRatingClientMappingRequest",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#upsertIntoTable",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateColumnByCondition",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateColumnIfNotNull",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateOverallRiskRatingForClient",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateOverallRiskRatingRequestForClient",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#getExpiredCompanyData",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#updateIntoTable",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/company_kyc_approval.js#checkIfCompanyHasActiveCf",
+    "description": "Updates company kyc approval records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/common.js#getProductConfigByConfigId",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/common.js#getClientCategoryDetailsById",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/common.js#getLatestVersionTemplate",
+    "description": "Queries common data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#preamble",
+    "description": "Imports database models for house bill of lading data"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#getHblStatusFromHBLNumber",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#getHblStatusFromShipmentId",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#getHBLFetchFromHistory",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#upsertIntoCargoesBl",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#updateHBLStatusIntoCargoesBl",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#updateHBLDetailsWithFinanceId",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#getHblFinanceCombo",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#getHblFinanceStatus",
+    "description": "Creates credit facility with approved limit and terms"
+  },
+  {
+    "id": "backend/src/services/db_service/cargoes_hbl.js#getHblDataFromFinanceId",
+    "description": "Inserts cargoes hbl records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#preamble",
+    "description": "Imports database models for authorized signatory data access"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getAuthSigntoriesByCategory",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getAuthSigntoriesByFlowId",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getAuthSigntoriesFLowDetailsByCategory",
+    "description": "Queries auth signatories data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getAuthSignatoryFlowDetailsForTransaction",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#insertAuthSignFlowDetails",
+    "description": "Inserts auth signatories records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#updateAuthSignFlowDetails",
+    "description": "Updates auth signatories records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#insertAuthSignatoryUserDetails",
+    "description": "Inserts auth signatories records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#updateAuthSignUserInfo",
+    "description": "Updates auth signatories records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#insertAuthSignatoryTransactionDetails",
+    "description": "Inserts auth signatories records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#updateAuthSignTransactionDetails",
+    "description": "Updates auth signatories records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#upsertApprovedAuthSignatoryDetails",
+    "description": "Implements upsertApprovedAuthSignatoryDetails for auth signatories operations"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getApprovedAuthSignatoryDetails",
+    "description": "Queries auth signatories data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getUnacceptedAuthSignUserDetails",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#insertApprovedAuthSignUserInfo",
+    "description": "Inserts auth signatories records into database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getLatestClientAgreementVersion",
+    "description": "Queries auth signatories data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#updateAuthSignApprovalMatrix",
+    "description": "Updates auth signatories records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#removeExisitingApprovedAuthSignatories",
+    "description": "Updates auth signatories records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getTermAcceptanceDetailsForUsersByCompanyId",
+    "description": "Queries auth signatories data from database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getAcceptedClientAgreementVersion",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#getAcceptedClientAgreementDetails",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#removeExistingOnboardingAuthorisedSignatoryData",
+    "description": "Updates auth signatories records in database"
+  },
+  {
+    "id": "backend/src/services/db_service/auth_signatories.js#removeExistingTransactionAuthorisedSignatoryData",
+    "description": "Updates auth signatories records in database"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#preamble",
+    "description": "Imports dependencies for credit facility business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_productConfigCombinationCreation",
+    "description": "Implements _productConfigCombinationCreation for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getRequiredProductsArrayByParamValue",
+    "description": "Implements _getRequiredProductsArrayByParamValue for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_doCalculationForCreditFacilityAmounts",
+    "description": "Calculates index business values"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generateEventTypeInReworkFlow",
+    "description": "Implements _generateEventTypeInReworkFlow for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generateEventTypeFromAction",
+    "description": "Implements _generateEventTypeFromAction for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_validateProductBasedCounterParties",
+    "description": "Creates index entity with business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_validateCreditFacilityForCreditLimitUpdate",
+    "description": "Implements _validateCreditFacilityForCreditLimitUpdate for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generatePayloadDataForCreditAmounts",
+    "description": "Implements _generatePayloadDataForCreditAmounts for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_sendMismatchEmailForCreditFacilityAmounts",
+    "description": "Implements _sendMismatchEmailForCreditFacilityAmounts for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_fixCreditLimitAmountsData",
+    "description": "Implements _fixCreditLimitAmountsData for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processBankData",
+    "description": "Implements _processBankData for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getProductTypeProductCategoryFromProductName",
+    "description": "Implements _getProductTypeProductCategoryFromProductName for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getCoolOffPeriodStatus",
+    "description": "Implements _getCoolOffPeriodStatus for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_checkRequiredDocTypeIsPresent",
+    "description": "Implements _checkRequiredDocTypeIsPresent for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_checkRequiredDocIsPresentForEachBuyer",
+    "description": "Implements _checkRequiredDocIsPresentForEachBuyer for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formCreditFacilityDetailsObject",
+    "description": "Validates index business rules"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formCreditLimitAmounts",
+    "description": "Implements _formCreditLimitAmounts for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formInternalCounterPartyObject",
+    "description": "Sends email notification to user"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formCounterPartyRemarksObject",
+    "description": "Implements _formCounterPartyRemarksObject for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formCreditFacilityCounterPartyObject",
+    "description": "Implements _formCreditFacilityCounterPartyObject for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_formAdvFacilityConditionDetails",
+    "description": "Implements _formAdvFacilityConditionDetails for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generateDefaultMawaniRefId",
+    "description": "Implements _generateDefaultMawaniRefId for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generateSyncAPIDataForSubmitCreditLimit",
+    "description": "Implements _generateSyncAPIDataForSubmitCreditLimit for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_generateSyncAPIDataForDocuments",
+    "description": "Implements _generateSyncAPIDataForDocuments for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processCreditFacilityFinalStep",
+    "description": "Implements _processCreditFacilityFinalStep for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_convertObjectToQueryParam",
+    "description": "Implements _convertObjectToQueryParam for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processNotificationForCreditFacility",
+    "description": "Implements _processNotificationForCreditFacility for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processCreditFacilityRemarks",
+    "description": "Implements _processCreditFacilityRemarks for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_updateCreditFacilityAccessibility",
+    "description": "Implements _updateCreditFacilityAccessibility for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processCreditFacilityDocuments",
+    "description": "Implements _processCreditFacilityDocuments for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processCPDocuments",
+    "description": "Implements _processCPDocuments for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processCreditFacilityEligibilityQuestions",
+    "description": "Implements _processCreditFacilityEligibilityQuestions for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_processCreditFacilityCounterPartiesV2",
+    "description": "Creates index entity with business logic"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_validateCreditFacility",
+    "description": "Implements _validateCreditFacility for index operations"
+  },
+  {
+    "id": "backend/src/services/credit_facility/index.js#_getProductInfoFromShortForm",
+    "description": "Implements _getProductInfoFromShortForm for index operations"
+  }
+]

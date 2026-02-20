@@ -1,0 +1,4022 @@
+[
+  {
+    "id": "backend/knexfile.js#preamble",
+    "description": "Database migration tool configuration for PostgreSQL connection management"
+  },
+  {
+    "id": "backend/knexfile.js#getMigrationDirectories",
+    "description": "Discovers database migration directories using filesystem search"
+  },
+  {
+    "id": "backend/knexfile.js#generateConfigObject",
+    "description": "Generates Knex database configuration for migrations across environments"
+  },
+  {
+    "id": "backend/jest.config.js#module",
+    "description": "Unit test runner configuration defining coverage and module paths"
+  },
+  {
+    "id": "backend/force_gc.js#module",
+    "description": "Forces garbage collection after test execution preventing memory leaks"
+  },
+  {
+    "id": "backend/src/server.js#module",
+    "description": "Initializes HTTP server and bootstraps Express application instance"
+  },
+  {
+    "id": "backend/src/router.js#module",
+    "description": "Configures middleware pipeline and registers application route handlers"
+  },
+  {
+    "id": "backend/src/newrelic.js#module",
+    "description": "Configures New Relic APM monitoring for application performance tracking"
+  },
+  {
+    "id": "backend/scripts/mock_data/index.js#module",
+    "description": "Orchestrates mock data generation for test environment seeding"
+  },
+  {
+    "id": "backend/config/source_access.js#module",
+    "description": "Stores API keys and service URLs for external integrations"
+  },
+  {
+    "id": "backend/config/settings.js#module",
+    "description": "Defines application settings including port and CORS patterns"
+  },
+  {
+    "id": "backend/config/scf_txn_monitoring_notifications.js#module",
+    "description": "Email and bell notification templates for supply chain finance monitoring"
+  },
+  {
+    "id": "backend/config/scf_notifications.js#module",
+    "description": "Email and bell notification templates for supply chain finance events"
+  },
+  {
+    "id": "backend/config/routes.js#module",
+    "description": "Central route path definitions mapping API endpoints"
+  },
+  {
+    "id": "backend/config/notification.js#module",
+    "description": "Notification service configuration and template settings"
+  },
+  {
+    "id": "backend/config/migration_database.js#module",
+    "description": "Database connection settings for running migration scripts"
+  },
+  {
+    "id": "backend/config/lending_notifications.js#module",
+    "description": "Email and bell notification templates for lending approval workflows"
+  },
+  {
+    "id": "backend/config/lending_cache_route.js#module",
+    "description": "Cache invalidation route mappings for lending module"
+  },
+  {
+    "id": "backend/config/history.js#module",
+    "description": "Audit trail configuration for entity change tracking"
+  },
+  {
+    "id": "backend/config/finance_states.js#module",
+    "description": "Finance application workflow state definitions and transitions"
+  },
+  {
+    "id": "backend/config/error_messages.js#module",
+    "description": "Centralized error message constants for API validation responses"
+  },
+  {
+    "id": "backend/config/envs.js#module",
+    "description": "Enumerates environment names for deployment stage identification"
+  },
+  {
+    "id": "backend/config/document_service.js#module",
+    "description": "S3 bucket paths and document service endpoint configuration"
+  },
+  {
+    "id": "backend/config/database.js#module",
+    "description": "Configures PostgreSQL connection parameters across deployment environments"
+  },
+  {
+    "id": "backend/config/credit_facility_notifications.js#module",
+    "description": "Email templates for credit facility request and renewal notifications"
+  },
+  {
+    "id": "backend/config/config.js#preamble",
+    "description": "Central configuration module exporting environment-specific settings"
+  },
+  {
+    "id": "backend/config/config.js#getAppEnv",
+    "description": "Returns current application environment name"
+  },
+  {
+    "id": "backend/config/config.js#isDevEnv",
+    "description": "Checks if application running in development environment"
+  },
+  {
+    "id": "backend/config/config.js#isProdEnv",
+    "description": "Checks if application running in production environment"
+  },
+  {
+    "id": "backend/config/config.js#isStagingEnv",
+    "description": "Checks if application running in staging environment"
+  },
+  {
+    "id": "backend/config/config.js#isQaEnv",
+    "description": "Checks if application running in QA environment"
+  },
+  {
+    "id": "backend/config/config.js#isTestEnv",
+    "description": "Checks if application running in test environment"
+  },
+  {
+    "id": "backend/config/config.js#isDemoEnv",
+    "description": "Checks if application running in demo environment"
+  },
+  {
+    "id": "backend/config/config.js#isUatEnv",
+    "description": "Checks if application running in UAT environment"
+  },
+  {
+    "id": "backend/config/config.js#getDb",
+    "description": "Returns Knex database connection instance"
+  },
+  {
+    "id": "backend/config/config.js#getApiResponseCodes",
+    "description": "Returns HTTP status code constants for API responses"
+  },
+  {
+    "id": "backend/config/config.js#getConfig",
+    "description": "Retrieves configuration value by key with fallback support"
+  },
+  {
+    "id": "backend/config/config.js#getAwsResource",
+    "description": "Returns AWS resource configuration for current environment"
+  },
+  {
+    "id": "backend/config/config.js#getMigrationDb",
+    "description": "Returns database connection for migration operations"
+  },
+  {
+    "id": "backend/config/company_notifications.js#module",
+    "description": "Email templates for company registration approval and rejection notifications"
+  },
+  {
+    "id": "backend/config/common_notifications.js#module",
+    "description": "Email and bell notification templates for common notifications workflows"
+  },
+  {
+    "id": "backend/config/azure.js#module",
+    "description": "Database connection configuration for azure operations"
+  },
+  {
+    "id": "backend/config/auth_service.js#module",
+    "description": "Configures authentication service endpoints and provider credentials"
+  },
+  {
+    "id": "backend/config/auth_api_service.js#module",
+    "description": "Configuration settings for auth api module behavior"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#preamble",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#createPlatformUserObjectForRequest",
+    "description": "Validates JWT tokens and extracts authenticated user context"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setUserId",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setOrgId",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setUserToken",
+    "description": "Validates JWT tokens and extracts authenticated user context"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setTenantCode",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getTenantCode",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getUserID",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getOrgID",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getUserToken",
+    "description": "Validates JWT tokens and extracts authenticated user context"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#resetTenantCode",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#requestUserObject",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#setInSession",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/user_object.js#getFormSession",
+    "description": "Request pipeline middleware for user object processing"
+  },
+  {
+    "id": "backend/src/middlewares/rate_limit.js#module",
+    "description": "Throttles API requests per IP address within time window"
+  },
+  {
+    "id": "backend/src/middlewares/error_handler.js#module",
+    "description": "Catches exceptions and transforms them into standardized API responses"
+  },
+  {
+    "id": "backend/src/middlewares/convert_query_keys.js#module",
+    "description": "Request pipeline middleware for convert query keys processing"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#preamble",
+    "description": "Manages async context storage for request-scoped data tracking"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#setStore",
+    "description": "Manages async context storage for request-scoped data tracking"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#getStore",
+    "description": "Manages async context storage for request-scoped data tracking"
+  },
+  {
+    "id": "backend/src/middlewares/asyncContext.js#runWithContext",
+    "description": "Manages async context storage for request-scoped data tracking"
+  },
+  {
+    "id": "backend/src/middlewares/access_control.js#preamble",
+    "description": "Enforces CORS policy and validates request origin domains"
+  },
+  {
+    "id": "backend/src/middlewares/access_control.js#_sendReject",
+    "description": "Enforces CORS policy and validates request origin domains"
+  },
+  {
+    "id": "backend/src/middlewares/access_control.js#_checkUserOrgTenantComboExists",
+    "description": "Enforces CORS policy and validates request origin domains"
+  },
+  {
+    "id": "backend/src/middlewares/about.js#module",
+    "description": "Provides application version and health check endpoint data"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#preamble",
+    "description": "Utility functions for user permissions check operations"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#checkUserPermission",
+    "description": "Utility functions for user permissions check operations"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#formProductPermissionCode",
+    "description": "Utility functions for user permissions check operations"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#checkIfUserHasRole",
+    "description": "Utility functions for user permissions check operations"
+  },
+  {
+    "id": "backend/src/utils/user_permissions_check.js#checkIfUserHasUpdateRole",
+    "description": "Utility functions for user permissions check operations"
+  },
+  {
+    "id": "backend/src/utils/user_org_email_object.js#UserOrgEmailObject",
+    "description": "Email sending and template rendering utility functions"
+  },
+  {
+    "id": "backend/src/utils/upcoming_transactions_report.js#UpcomingTransactionsReport",
+    "description": "Utility functions for upcoming transactions report operations"
+  },
+  {
+    "id": "backend/src/utils/to_yaml.js#module",
+    "description": "Utility functions for to yaml operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#preamble",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_buildMessageFormat",
+    "description": "Formats slack notify utils data for display or transmission"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_send",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_reportContactUsRequest",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_reportTicket",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_general",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_info",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_warn",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_error",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/slack_notify_utils.js#_fatal",
+    "description": "Utility functions for slack notify utils operations"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#_text_match",
+    "description": "Utility functions for skip flow utils operations"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#_currency_range",
+    "description": "Utility functions for skip flow utils operations"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#_getCurrencyMinimumMaximumFromCurrencyRange",
+    "description": "Utility functions for skip flow utils operations"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#text_match",
+    "description": "Utility functions for skip flow utils operations"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#currency_range",
+    "description": "Utility functions for skip flow utils operations"
+  },
+  {
+    "id": "backend/src/utils/skip_flow_utils.js#getCurrencyMinimumMaximumFromCurrencyRange",
+    "description": "Utility functions for skip flow utils operations"
+  },
+  {
+    "id": "backend/src/utils/respond_error.js#module",
+    "description": "Utility functions for respond error operations"
+  },
+  {
+    "id": "backend/src/utils/reset_sequence.js#resetSequence",
+    "description": "Resets database auto-increment sequences for test cleanup"
+  },
+  {
+    "id": "backend/src/utils/reset_sequence.js#resetOnDate",
+    "description": "Resets database auto-increment sequences for test cleanup"
+  },
+  {
+    "id": "backend/src/utils/regex_utils.js#preamble",
+    "description": "Utility functions for regex utils operations"
+  },
+  {
+    "id": "backend/src/utils/regex_utils.js#validate",
+    "description": "Validates regex utils data structure and values"
+  },
+  {
+    "id": "backend/src/utils/regex_utils.js#match",
+    "description": "Utility functions for regex utils operations"
+  },
+  {
+    "id": "backend/src/utils/random_utils.js#preamble",
+    "description": "Utility functions for random utils operations"
+  },
+  {
+    "id": "backend/src/utils/random_utils.js#makeBasicKey",
+    "description": "Utility functions for random utils operations"
+  },
+  {
+    "id": "backend/src/utils/random_utils.js#generateCode",
+    "description": "Generates random utils using utility logic"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#preamble",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#_fetchTargetColumnData",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#extractSearchTerms",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#convertSearchTermsToWhere",
+    "description": "Converts query utils between different formats"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#pageFilter",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#validateQueryFields",
+    "description": "Validates query utils data structure and values"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#validateCreationFields",
+    "description": "Validates query utils data structure and values"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#checkMandatoryFields",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#convertDateFieldsToString",
+    "description": "Converts query utils between different formats"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#validateStates",
+    "description": "Validates query utils data structure and values"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#differenceBetweenTimestampsInSecondsStatement",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#dateDiffBetweenTimestamps",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#applyGenericFilter",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#applySearchSortAndPagination",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/query_utils.js#selectAllWithOptions",
+    "description": "Utility functions for query utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#preamble",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFilePath",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getFinanceProductConfigById",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFromFile",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFromFileNonAsync",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigFromFileWildCard",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigKeyValue",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductKeyWithFinanceId",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#_getProductConfigByConfigId",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getAllProductConfig",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfig",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigWildCard",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeyWithValue",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeysValue",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getCommonProductConfigKeyValue",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeysValueNonAsync",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getCommonProductConfigKeyValueNonAsync",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getAllValidProductInfo",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/product_config_utils.js#getProductConfigKeyValueByFinanceId",
+    "description": "Utility functions for product config utils operations"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#preamble",
+    "description": "Utility functions for ports mapping utils operations"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#_nameFormat",
+    "description": "Formats ports mapping utils data for display or transmission"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#_portNameCodeObj",
+    "description": "Utility functions for ports mapping utils operations"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#portNameCodeMapper",
+    "description": "Utility functions for ports mapping utils operations"
+  },
+  {
+    "id": "backend/src/utils/ports_mapping_utils.js#getPortMapper",
+    "description": "Utility functions for ports mapping utils operations"
+  },
+  {
+    "id": "backend/src/utils/parse_csv.js#validateWorksheetHeaders",
+    "description": "Validates parse csv data structure and values"
+  },
+  {
+    "id": "backend/src/utils/paginator.js#module",
+    "description": "Utility functions for paginator operations"
+  },
+  {
+    "id": "backend/src/utils/overdue_transaction_report.js#OverdueTransactionsReport",
+    "description": "Utility functions for overdue transaction report operations"
+  },
+  {
+    "id": "backend/src/utils/organisation_utils.js#preamble",
+    "description": "Utility functions for organisation utils operations"
+  },
+  {
+    "id": "backend/src/utils/organisation_utils.js#getEncryptedMawaniRefId",
+    "description": "Utility functions for organisation utils operations"
+  },
+  {
+    "id": "backend/src/utils/organisation_utils.js#getDecryptedMawaniRefId",
+    "description": "Utility functions for organisation utils operations"
+  },
+  {
+    "id": "backend/src/utils/onboarding_detailed_report.js#onBoardingDetailedReport",
+    "description": "Utility functions for onboarding detailed report operations"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#_matchDateWithString",
+    "description": "Utility functions for ocr utils operations"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#_isDate",
+    "description": "Utility functions for ocr utils operations"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#_isNumeric",
+    "description": "Utility functions for ocr utils operations"
+  },
+  {
+    "id": "backend/src/utils/ocr_utils.js#matchValues",
+    "description": "Utility functions for ocr utils operations"
+  },
+  {
+    "id": "backend/src/utils/ocr_bulk_insert_data.js#ocrBulkInsertData",
+    "description": "Utility functions for ocr bulk insert data operations"
+  },
+  {
+    "id": "backend/src/utils/ocr_bulk_insert_data.js#ocrFieldData",
+    "description": "Utility functions for ocr bulk insert data operations"
+  },
+  {
+    "id": "backend/src/utils/number_utils.js#parseTo2Decimal",
+    "description": "Parses number utils from string or external format"
+  },
+  {
+    "id": "backend/src/utils/number_utils.js#formatToInteger",
+    "description": "Formats number utils data for display or transmission"
+  },
+  {
+    "id": "backend/src/utils/number_utils.js#formatWithThousandSeparator",
+    "description": "Formats number utils data for display or transmission"
+  },
+  {
+    "id": "backend/src/utils/mawani_company_code_issuer_details.js#mawaniCompanyCodeIssuerDetails",
+    "description": "Utility functions for mawani company code issuer details operations"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#normalizeData",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#setOptions",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#fatal",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#error",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#warn",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#info",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#debug",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger_pino.js#trace",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#preamble",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#getLabel",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#normalizeData",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#setOptions",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#fatal",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#error",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#warn",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#info",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#debug",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/logger.js#trace",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/lending_upcoming_transactions_reports.js#LendingUpcomingTransactionsReport",
+    "description": "Utility functions for lending upcoming transactions reports operations"
+  },
+  {
+    "id": "backend/src/utils/joi_validation.js#replaceFieldConfigurations",
+    "description": "Input validation and data sanitization utilities"
+  },
+  {
+    "id": "backend/src/utils/joi_validation.js#validate",
+    "description": "Input validation and data sanitization utilities"
+  },
+  {
+    "id": "backend/src/utils/joi_validation.js#validateWithProdConfigDependency",
+    "description": "Input validation and data sanitization utilities"
+  },
+  {
+    "id": "backend/src/utils/invoice_generation_report.js#InvoiceGenerationReport",
+    "description": "Utility functions for invoice generation report operations"
+  },
+  {
+    "id": "backend/src/utils/finance_application_report.js#FinanceApplicationReport",
+    "description": "Utility functions for finance application report operations"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#formatCellValue",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#createCSVFileFromJsonArray",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#parseCSVToJsonSync",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#isUnixHiddenPath",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#deleteFile",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#extractZip",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#checkAllowedFileFormats",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#exportToXLS",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/file_utils.js#exportToPDF",
+    "description": "File upload, storage, and retrieval utility functions"
+  },
+  {
+    "id": "backend/src/utils/fi_onboarding_data.js#FIOnboardingData",
+    "description": "Utility functions for fi onboarding data operations"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#_toLocalizedDateString",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#_convertToDateStrings",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInTheWeek",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateByOffset",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInYYYYMMDD",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInMMddYYYY",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInDDmmYYYY",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getYearAndMonthInYYYY_MM",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateStrNoDash",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateStrWithDash",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertDatesToStrings",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertDatesToISOStrings",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInSeconds",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInMinutes",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInHours",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInDays",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDatesInDaysIgnoreTime",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#differenceBetweenDates",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateIndd_mm_yyyy",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertExcelDateToJSDate",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getFormatteDdate",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertTZ",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getYearAndMonth",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getLocalDateAndTime",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateWithTime",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#convertToDate",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#getDateInDDMMYYFormat",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_utils.js#formatDateToDDMMYYYY",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/date_range.js#module",
+    "description": "Date formatting and timezone conversion utility functions"
+  },
+  {
+    "id": "backend/src/utils/credit_limit_report.js#CreditLimitReport",
+    "description": "Utility functions for credit limit report operations"
+  },
+  {
+    "id": "backend/src/utils/credit_application_detailed_report.js#creditApplicationDetailedReport",
+    "description": "Utility functions for credit application detailed report operations"
+  },
+  {
+    "id": "backend/src/utils/completed_transactions_report.js#CompletedTransactionsReport",
+    "description": "Utility functions for completed transactions report operations"
+  },
+  {
+    "id": "backend/src/utils/company_kyc_info_report.js#companyKycInfoReport",
+    "description": "Utility functions for company kyc info report operations"
+  },
+  {
+    "id": "backend/src/utils/company_kyc_documents_report.js#companyKycDocumentsReport",
+    "description": "Utility functions for company kyc documents report operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isObject",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_toCamel",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isEmptyorNull",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isEmptyObject",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isDate",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isInteger",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isString",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isSerial",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isNumber",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isPercantage",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isIntegerFourDigit",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isYearLessOrEqualToCurrYear",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isEmail",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_toSnake",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_keysToCamel",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_validateInputParams",
+    "description": "Validates common utils data structure and values"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_keysToSnake",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_invertKeyValues",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_replaceWithVariableValue",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_replaceRowStaticValues",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_areObjectsEqual",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_convertDmsToLatLng",
+    "description": "Converts common utils between different formats"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_generateTraceContext",
+    "description": "Generates common utils using utility logic"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_generateExternalLinkToken",
+    "description": "Generates common utils using utility logic"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#getUniquePropertyValuesFromObject",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#getUniquePropertyValuesFromJSONObject",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_sortObjectArray",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_generateRandomPassword",
+    "description": "Generates common utils using utility logic"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#axiosRetry",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_getKeyFromValue",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_isUrl",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_capitalizeFirstLetter",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#_formatAndConvertToLowerCase",
+    "description": "Formats common utils data for display or transmission"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#convertSnakeCaseKeysToCamelCase",
+    "description": "Converts common utils between different formats"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#capitalizeFirstCharacter",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/common_utils.js#isBlank",
+    "description": "Utility functions for common utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#preamble",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getCloudStorageContext",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getDocumentContainerName",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getChaincodeContainerName",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getArtifactContainerName",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getBackupContainerName",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getTemplateUploadBucketName",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_utils.js#getEmailTemplateBucketName",
+    "description": "Utility functions for cloud storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_provider.js#CloudStorageProvider",
+    "description": "Utility functions for cloud storage provider operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_provider.js#CloudStorageContext",
+    "description": "Utility functions for cloud storage provider operations"
+  },
+  {
+    "id": "backend/src/utils/cloud_storage_provider.js#AzureStorageProvider",
+    "description": "Utility functions for cloud storage provider operations"
+  },
+  {
+    "id": "backend/src/utils/azure_blob_storage_utils.js#preamble",
+    "description": "Utility functions for azure blob storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/azure_blob_storage_utils.js#streamToBuffer",
+    "description": "Utility functions for azure blob storage utils operations"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#preamble",
+    "description": "Utility functions for axios cache inspector operations"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#_axiosWithGetorUpdateRedisCache",
+    "description": "Utility functions for axios cache inspector operations"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#_evictDataFromRedis",
+    "description": "Utility functions for axios cache inspector operations"
+  },
+  {
+    "id": "backend/src/utils/axios_cache_inspector.js#axiosWithCache",
+    "description": "Utility functions for axios cache inspector operations"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#preamble",
+    "description": "Utility functions for aws config utils operations"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsCreds",
+    "description": "Utility functions for aws config utils operations"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsRegion",
+    "description": "Utility functions for aws config utils operations"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsHttpOptions",
+    "description": "Utility functions for aws config utils operations"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsConfig",
+    "description": "Utility functions for aws config utils operations"
+  },
+  {
+    "id": "backend/src/utils/aws_config_utils.js#getAwsMetaData",
+    "description": "Utility functions for aws config utils operations"
+  },
+  {
+    "id": "backend/src/utils/array_utils.js#_equals",
+    "description": "Utility functions for array utils operations"
+  },
+  {
+    "id": "backend/src/utils/apikey_generator.js#module",
+    "description": "Utility functions for apikey generator operations"
+  },
+  {
+    "id": "backend/src/utils/account_summary_report.js#accountSummaryReport",
+    "description": "Utility functions for account summary report operations"
+  },
+  {
+    "id": "backend/src/utils/account_categorisation.js#preamble",
+    "description": "Utility functions for account categorisation operations"
+  },
+  {
+    "id": "backend/src/utils/account_categorisation.js#_getClientBucketByOverdueDays",
+    "description": "Utility functions for account categorisation operations"
+  },
+  {
+    "id": "backend/src/utils/DPWFS_commission_report.js#DPWFSCommissionReport",
+    "description": "Utility functions for DPWFS commission report operations"
+  },
+  {
+    "id": "backend/src/errors/user_authentication_error.js#module",
+    "description": "Error class for user authentication error exception handling"
+  },
+  {
+    "id": "backend/src/errors/starvation_error.js#module",
+    "description": "Error class for starvation error exception handling"
+  },
+  {
+    "id": "backend/src/errors/source_error.js#module",
+    "description": "Error class for source error exception handling"
+  },
+  {
+    "id": "backend/src/errors/runtime_error.js#module",
+    "description": "Error class for runtime error exception handling"
+  },
+  {
+    "id": "backend/src/errors/not_found_error.js#module",
+    "description": "Error class for not found error exception handling"
+  },
+  {
+    "id": "backend/src/errors/joi_schema_error.js#module",
+    "description": "Error class for joi schema error exception handling"
+  },
+  {
+    "id": "backend/src/errors/invalid_email_error.js#module",
+    "description": "Error class for invalid email error exception handling"
+  },
+  {
+    "id": "backend/src/errors/forbidden_error.js#module",
+    "description": "Error class for forbidden error exception handling"
+  },
+  {
+    "id": "backend/src/errors/file_upload_error.js#module",
+    "description": "Error class for file upload error exception handling"
+  },
+  {
+    "id": "backend/src/errors/deferred_read_when_failed_error.js#module",
+    "description": "Error class for deferred read when failed error exception handling"
+  },
+  {
+    "id": "backend/src/errors/deferred_read_error.js#module",
+    "description": "Error class for deferred read error exception handling"
+  },
+  {
+    "id": "backend/src/errors/conflict_creation_error.js#module",
+    "description": "Error class for conflict creation error exception handling"
+  },
+  {
+    "id": "backend/src/errors/authentication_error.js#module",
+    "description": "Error class for authentication error exception handling"
+  },
+  {
+    "id": "backend/src/errors/argument_error.js#module",
+    "description": "Error class for argument error exception handling"
+  },
+  {
+    "id": "backend/src/errors/api_error.js#module",
+    "description": "Custom error class for API exceptions with status codes"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/insertionFlow.js#preamble",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/insertionFlow.js#insertMockData",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#preamble",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#_shuffleArray",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#login",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#getOrganisations",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#getFinanceDetailsById",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#saveNewFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#submitExistingFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#otherBCOApproveFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#dtfAdminApproveFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#approveBankAssessment",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#rejectBankAssessment",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#bcoAcceptPaymentTerm",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#disburseAmount",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#settleAccount",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/helpers.js#updateShipmentEvent",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#preamble",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#_getUserIdAndToken",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#_generateBaseForInsertion",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#_getAdminMailIdFromOrgId",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/trade-finance/generate_finance_mock_data.js#tradeFinanceMockData",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/insertionFlow.js#preamble",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/insertionFlow.js#insertMockData",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#preamble",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#_shuffleArray",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#login",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#getOrganisations",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#getFinanceDetailsById",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#saveNewFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#submitExistingFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#otherBCOApproveFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#dtfAdminApproveFinance",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#approveBankAssessment",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#rejectBankAssessment",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#disburseAmount",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/helpers.js#settleAccount",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#preamble",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#_getUserIdAndToken",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#_generateBaseForInsertion",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#_getAdminMailIdFromOrgId",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/scripts/mock_data/logistics-finance/generate_finance_mock_data.js#tradeFinanceMockData",
+    "description": "Generates test data fixtures for development environment"
+  },
+  {
+    "id": "backend/config/crm_data/staging.js#module",
+    "description": "Configuration settings for staging module behavior"
+  },
+  {
+    "id": "backend/config/crm_data/prod.js#module",
+    "description": "Configuration settings for prod module behavior"
+  },
+  {
+    "id": "backend/config/crm_data/dev.js#module",
+    "description": "Configuration settings for dev module behavior"
+  },
+  {
+    "id": "backend/config/crm_data/demo.js#module",
+    "description": "Configuration settings for demo module behavior"
+  },
+  {
+    "id": "backend/src/utils/reports/user_signup_metric_report.js#userSignupMetricReport",
+    "description": "Utility functions for user signup metric report operations"
+  },
+  {
+    "id": "backend/src/utils/reports/performance_report.js#performanceReport",
+    "description": "Utility functions for performance report operations"
+  },
+  {
+    "id": "backend/src/utils/reports/overall_monthly_report.js#overallMonthlyReport",
+    "description": "Utility functions for overall monthly report operations"
+  },
+  {
+    "id": "backend/src/utils/reports/ocr_accuracy_report.js#ocrAccuracyReport",
+    "description": "Utility functions for ocr accuracy report operations"
+  },
+  {
+    "id": "backend/src/utils/reports/finance_report.js#financeReport",
+    "description": "Utility functions for finance report operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#preamble",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#ping",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#setObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#getObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#deleteObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hasObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#destroy",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hsetObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hgetObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hdeleteAllObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#hdeleteObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#deleteMatchingKeyObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/cache/index.js#incrObj",
+    "description": "Utility functions for index operations"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#preamble",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#normalizeData",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#setOptions",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#fatal",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#error",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#warn",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#info",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#debug",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#trace",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/utils/__mocks__/logger.js#destroy",
+    "description": "Provides logging functions for application events and errors"
+  },
+  {
+    "id": "backend/src/lending/routes/scheduler.js#module",
+    "description": "Defines HTTP routes for scheduler API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/outstanding_reports_routes.js#module",
+    "description": "Defines HTTP routes for outstanding reports API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/notification.js#module",
+    "description": "Defines HTTP routes for notification API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/insurance.js#module",
+    "description": "Defines HTTP routes for insurance API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/financial_assessment.js#module",
+    "description": "Defines HTTP routes for financial assessment API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/finance_application.js#module",
+    "description": "Defines HTTP routes for finance application API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/external.js#module",
+    "description": "Defines HTTP routes for external API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/exposure_control.js#module",
+    "description": "Defines HTTP routes for exposure control API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/dynamic_field_model.js#module",
+    "description": "Defines HTTP routes for dynamic field model API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/document.js#module",
+    "description": "Defines HTTP routes for document API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/credit_note.js#module",
+    "description": "Defines HTTP routes for credit note API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/credit_facility.js#module",
+    "description": "Defines HTTP routes for credit facility API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/compliance_screening.js#module",
+    "description": "Defines HTTP routes for compliance screening API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/company_kyc_approval.js#module",
+    "description": "Defines HTTP routes for company kyc approval API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/common.js#module",
+    "description": "Defines HTTP routes for common API endpoints"
+  },
+  {
+    "id": "backend/src/lending/routes/boomi_integration.js#module",
+    "description": "Defines HTTP routes for boomi integration API endpoints"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#preamble",
+    "description": "Handles HTTP requests for schedulers operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#updateClientCategoryDaily",
+    "description": "Handles update schedulers request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#emailSettlementReport",
+    "description": "Handles emailSettlementReport request for schedulers"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#portfolioReviewScheduler",
+    "description": "Handles portfolioReviewScheduler request for schedulers"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#upcomingPortfolioReviewsWeeklyReminder",
+    "description": "Handles upcomingPortfolioReviewsWeeklyReminder request for schedulers"
+  },
+  {
+    "id": "backend/src/lending/controllers/schedulers.js#poConversionDueDateReminder",
+    "description": "Handles poConversionDueDateReminder request for schedulers"
+  },
+  {
+    "id": "backend/src/lending/controllers/outstanding_reports_controller.js#preamble",
+    "description": "Handles HTTP requests for outstanding reports operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/outstanding_reports_controller.js#generateOutstandingReport",
+    "description": "Handles generateOutstandingReport request for outstanding reports"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#preamble",
+    "description": "Handles HTTP requests for oracle fusion operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#saveExchangeRate",
+    "description": "Handles saveExchangeRate request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#saveBankAccountStatement",
+    "description": "Handles saveBankAccountStatement request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#testing",
+    "description": "Handles testing request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#oracleFusionCreditFacilityFinanceFlowTest",
+    "description": "Handles update oracle fusion request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#dailyInterestAccrualJob",
+    "description": "Handles dailyInterestAccrualJob request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#monthlyInterestAccrualJob",
+    "description": "Handles monthlyInterestAccrualJob request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#statementOfAccount",
+    "description": "Handles statementOfAccount request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#balanceConfirmationReport",
+    "description": "Handles balanceConfirmationReport request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#manualTriggerForAdvices",
+    "description": "Handles manualTriggerForAdvices request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#getOracleTaxData",
+    "description": "Handles request retrieving oracle fusion data"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#regenerateAdvice",
+    "description": "Handles regenerateAdvice request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#triggerCustomerReceiptController",
+    "description": "Handles triggerCustomerReceiptController request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/oracle_fusion.js#triggerManualServiceBus",
+    "description": "Handles triggerManualServiceBus request for oracle fusion"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#preamble",
+    "description": "Handles HTTP requests for notification operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#getNotificationsbyUserId",
+    "description": "Handles request retrieving notification data"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#getPendingTasksbyUserId",
+    "description": "Handles request retrieving notification data"
+  },
+  {
+    "id": "backend/src/lending/controllers/notification.js#updateReadStatus",
+    "description": "Handles update notification request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#preamble",
+    "description": "Handles HTTP requests for insurance operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#createInsurance",
+    "description": "Handles create insurance request returning created record"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getAllInsurances",
+    "description": "Handles request fetching all insurance records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getInsurance",
+    "description": "Handles request retrieving insurance data"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getCfListForLendingInsurance",
+    "description": "Handles request fetching all insurance records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#updateLendingInsuranceDetails",
+    "description": "Handles update insurance request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#dailyInsuranceExpiryNotifiicationJob",
+    "description": "Handles dailyInsuranceExpiryNotifiicationJob request for insurance"
+  },
+  {
+    "id": "backend/src/lending/controllers/insurance.js#getCounterPartyByFacilityId",
+    "description": "Handles request retrieving insurance data"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#preamble",
+    "description": "Handles HTTP requests for financial assessment operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#createFinancialAssessment",
+    "description": "Handles create financial assessment request returning created record"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#updateFinancialAssessment",
+    "description": "Handles update financial assessment request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessment",
+    "description": "Handles request retrieving financial assessment data"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessmentbyId",
+    "description": "Handles request retrieving financial assessment details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessmentOrgMapping",
+    "description": "Handles request retrieving financial assessment data"
+  },
+  {
+    "id": "backend/src/lending/controllers/financial_assessment.js#getFinancialAssessmentDownload",
+    "description": "Handles request retrieving financial assessment data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#preamble",
+    "description": "Handles HTTP requests for finance application operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#_validateTransactionAction",
+    "description": "Handles finance application validation request checking business rules"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getFinanceApplications",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getFinanceApplicationById",
+    "description": "Handles request retrieving finance application details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#fiAssessmentCalculationForUI",
+    "description": "Handles fiAssessmentCalculationForUI request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateBankAssessment",
+    "description": "Handles finance application update request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#bcoSaveLendingFinance",
+    "description": "Handles bcoSaveLendingFinance request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#financeLendingPushData",
+    "description": "Handles financeLendingPushData request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getDocument",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateFinanceData",
+    "description": "Handles finance application update request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadFinanceApplicationData",
+    "description": "Handles finance application download request generating file response"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getTransactions",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadCompletedTransactionsData",
+    "description": "Handles finance application download request generating file response"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getUpcomingTransactions",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadUpcomingTransactionsData",
+    "description": "Handles finance application download request generating file response"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#createTransaction",
+    "description": "Handles finance application creation request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getShipmentStatusByFinanceId",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#transactionComplianceScreeningForLending",
+    "description": "Handles transactionComplianceScreeningForLending request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#financeTransactionPageCalculationForUI",
+    "description": "Handles financeTransactionPageCalculationForUI request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#evaluateTransactionEvent",
+    "description": "Handles evaluateTransactionEvent request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#waiveOffOverdueFee",
+    "description": "Handles waiveOffOverdueFee request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#settlementAdjustmentWaiver",
+    "description": "Handles settlementAdjustmentWaiver request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#disbursalToDefaultor",
+    "description": "Handles disbursalToDefaultor request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getShortPaymentAmount",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateShortPaymentAmount",
+    "description": "Handles finance application update request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getCombinedDiscountRateForLending",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getOverdueTransaction",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#downloadOverdueTransactionsData",
+    "description": "Handles finance application download request generating file response"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getCreditSummaryByUserId",
+    "description": "Handles finance application update request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getApplicationStatuses",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getSpecificFinanceReceipts",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#generateTransactionAdvice",
+    "description": "Handles generateTransactionAdvice request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#approveTransaction",
+    "description": "Handles finance application approval request updating status to approved"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getBankReferenceNumberList",
+    "description": "Handles request fetching all finance application records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#updateInventoryDetails",
+    "description": "Handles finance application update request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#joiValidationPOC",
+    "description": "Handles joiValidationPOC request for finance application"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#rejectApplication",
+    "description": "Handles finance application rejection request updating status to rejected"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#exportInterestScheduleReport",
+    "description": "Handles finance application export request generating Excel report"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#fetchArDetailsForFinance",
+    "description": "Handles request retrieving finance application details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#fetchApplicationPendingAmount",
+    "description": "Handles request retrieving finance application data"
+  },
+  {
+    "id": "backend/src/lending/controllers/finance_application.js#getApplicantDetails",
+    "description": "Handles request retrieving finance application details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#preamble",
+    "description": "Handles HTTP requests for exposure control operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#getExposureControlTerms",
+    "description": "Handles request retrieving exposure control data"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#getExposureControlTermsById",
+    "description": "Handles request retrieving exposure control details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#getExposureControlTermsByApprovedId",
+    "description": "Handles request retrieving exposure control data"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#createExposure",
+    "description": "Handles create exposure control request returning created record"
+  },
+  {
+    "id": "backend/src/lending/controllers/exposure_control.js#updateExposureController",
+    "description": "Handles update exposure control request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#preamble",
+    "description": "Handles HTTP requests for dynamic field model operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#getDynamicFieldsController",
+    "description": "Handles request retrieving dynamic field model data"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#addDynamicFieldsController",
+    "description": "Handles create dynamic field model request returning created record"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#updateDynamicFieldsController",
+    "description": "Handles update dynamic field model request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#deleteDynamicFieldsController",
+    "description": "Handles delete dynamic field model request removing record"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#getDynamicFlags",
+    "description": "Handles request retrieving dynamic field model data"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#addDynamicFlag",
+    "description": "Handles create dynamic field model request returning created record"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#updateDynamicFlag",
+    "description": "Handles update dynamic field model request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/dynamic_field_model.js#removeDynamicFlag",
+    "description": "Handles delete dynamic field model request removing record"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#preamble",
+    "description": "Handles HTTP requests for document operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#publishDocument",
+    "description": "Handles publishDocument request for document"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#submitLoanDocumentMapping",
+    "description": "Handles document submission request initiating approval workflow"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#updateLoanDocumentMapping",
+    "description": "Handles update document request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#convertDocument",
+    "description": "Handles convertDocument request for document"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getLoanDocumentMapping",
+    "description": "Handles request retrieving document data"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getLoanDocumentVersions",
+    "description": "Handles request retrieving document data"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getLoanDocument",
+    "description": "Handles request retrieving document data"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#deleteLoanDocument",
+    "description": "Handles delete document request removing record"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getAllLoanDocumentAndMapping",
+    "description": "Handles request fetching all document records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getCompanyDocuments",
+    "description": "Handles request retrieving document data"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#getOrgDocumentById",
+    "description": "Handles request retrieving document details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#uploadDocuments",
+    "description": "Handles document upload request storing file metadata"
+  },
+  {
+    "id": "backend/src/lending/controllers/document.js#downloadDocuments",
+    "description": "Handles document upload request storing file metadata"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#preamble",
+    "description": "Handles HTTP requests for credit note operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#createCreditNote",
+    "description": "Handles create credit note request returning created record"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#updateCreditNote",
+    "description": "Handles update credit note request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#getCreditNoteDetails",
+    "description": "Handles update credit note request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_note.js#retryCreditNote",
+    "description": "Handles update credit note request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#preamble",
+    "description": "Handles HTTP requests for credit facility operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#filterValidValues",
+    "description": "Handles filterValidValues request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditLimitData",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditFacility",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#updateCreditFacility",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditLimitDetailsById",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditLimitDetailsByRequestId",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#creditLimitLegalReview",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#creditLimitUpdateLegalReview",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditLimit",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditLimitSection",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getDocument",
+    "description": "Handles request retrieving credit facility data"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#cfAggrementUpdate",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#publishTermsSheet",
+    "description": "Handles publishTermsSheet request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#downloadCreditLimitData",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#downloadCfReviewReportForEmail",
+    "description": "Handles credit facility download request generating file response"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#sendWeeklyReminderEmail",
+    "description": "Handles credit facility notification request triggering email"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#irrCalculation",
+    "description": "Handles irrCalculation request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#irrExceptionCalculation",
+    "description": "Handles irrExceptionCalculation request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setCreditPolicy",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditPolicy",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#addCounterparty",
+    "description": "Handles create credit facility request returning new facility record"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditFaciltyUpdateRequestIds",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getAllRaisedCreditFacilityForOrganisation",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getGeneratedTerms",
+    "description": "Handles request retrieving credit facility data"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#createGenerateTerms",
+    "description": "Handles create credit facility request returning new facility record"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#setGenerateTerms",
+    "description": "Handles setGenerateTerms request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#updateGeneratedTerms",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getTSDashboardDetailsController",
+    "description": "Handles request retrieving credit facility details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#generateTermSheetController",
+    "description": "Handles generateTermSheetController request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#termSheetActionController",
+    "description": "Handles termSheetActionController request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#termSheetIrrCheckController",
+    "description": "Handles credit facility validation request checking business rules"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fixCreditFacilityAmounts",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCfListForLending",
+    "description": "Handles request fetching all credit facility records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCreditFacilityFeePaymentDataById",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#createAffInvoice",
+    "description": "Handles create credit facility request returning new facility record"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#updateAffInvoice",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#settleAffInvoice",
+    "description": "Handles settleAffInvoice request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getAffInvoice",
+    "description": "Handles request retrieving credit facility data"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#evaluateAffTransaction",
+    "description": "Handles evaluateAffTransaction request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#storeFacilityFeesPaymentDetails",
+    "description": "Handles storeFacilityFeesPaymentDetails request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#createCFUpdateRequest",
+    "description": "Handles create credit facility request returning new facility record"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCounterpartyRiskRating",
+    "description": "Handles request retrieving credit facility data"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#sendRenewalReminderCfEmails",
+    "description": "Handles credit facility notification request triggering email"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#stopReminderEmailNotifications",
+    "description": "Handles stopReminderEmailNotifications request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#verifyProductAmounts",
+    "description": "Handles verifyProductAmounts request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getCumulativeAffDetailsForCf",
+    "description": "Handles request retrieving credit facility details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#getAllFacilityFeeArsDetails",
+    "description": "Handles request fetching all credit facility records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#emailFacilityFeeTableDetails",
+    "description": "Handles emailFacilityFeeTableDetails request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#emailArsReportForCf",
+    "description": "Handles emailArsReportForCf request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fetchInvoicesForAr",
+    "description": "Handles request retrieving credit facility data"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fetchCreditNotesForARs",
+    "description": "Handles credit facility update request modifying facility terms"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#fetchArDetails",
+    "description": "Handles request retrieving credit facility details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#affReminderEmail",
+    "description": "Handles affReminderEmail request for credit facility"
+  },
+  {
+    "id": "backend/src/lending/controllers/credit_facility.js#sendTemporaryLimitEnhancementExpiryReminder",
+    "description": "Handles credit facility notification request triggering email"
+  },
+  {
+    "id": "backend/src/lending/controllers/compliance_screening.js#preamble",
+    "description": "Handles HTTP requests for compliance screening operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/compliance_screening.js#counterPartyComplianceScreening",
+    "description": "Handles counterPartyComplianceScreening request for compliance screening"
+  },
+  {
+    "id": "backend/src/lending/controllers/compliance_screening.js#counterPartyComplianceScreeningData",
+    "description": "Handles counterPartyComplianceScreeningData request for compliance screening"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#preamble",
+    "description": "Handles HTTP requests for company kyc approval operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompaniesKYCInfoList",
+    "description": "Handles request fetching all company kyc approval records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getMawaniCompanyDataForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCodeIssuersForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycApprovalDocumentsForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyStatusWorkFlowForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getAllCompanyServicesForLending",
+    "description": "Handles request fetching all company kyc approval records with filters"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycInternalCommentsForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycHistoryForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycAuditForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getRegisteredServicesForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyKycHistoryQuestionsForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getOngoingMonitoringData",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getOngoingMonitoringDataForLendingUsers",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#downloadOngoingMonitoringDataForLendingUsers",
+    "description": "Handles company kyc approval download request generating file response"
+  },
+  {
+    "id": "backend/src/lending/controllers/company_kyc_approval.js#getCompanyDocuemntsHistoryForLending",
+    "description": "Handles request retrieving company kyc approval data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#preamble",
+    "description": "Handles HTTP requests for common operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#addRemarks",
+    "description": "Handles create common request returning created record"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getHistoryData",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#processWorkFlow",
+    "description": "Handles processWorkFlow request for common"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getProcessWorkflow",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#updateProcessWorkflow",
+    "description": "Handles update common request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getViewPageFilterValues",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getClientRemarksFormArrangingPlatform",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getLendingTransactionDetailByTrxnId",
+    "description": "Handles request retrieving common details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#evictCacheForLending",
+    "description": "Handles evictCacheForLending request for common"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#evictMatchingKeyCache",
+    "description": "Handles evictMatchingKeyCache request for common"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getCreditLimitDataApplyPage",
+    "description": "Handles update common request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getRegulatoryReport",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#saveRegulatoryReport",
+    "description": "Handles saveRegulatoryReport request for common"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#regulatoryReportDataScheduler",
+    "description": "Handles regulatoryReportDataScheduler request for common"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getOrgsDetailsForLending",
+    "description": "Handles request retrieving common details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getPreviousClientCategory",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#updateClientCategory",
+    "description": "Handles update common request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getClientCategoryData",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getDepartmentUsers",
+    "description": "Handles request retrieving common data"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#calculateCreditFacilityAmounts",
+    "description": "Handles update common request with validation"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getGroupDetails",
+    "description": "Handles request retrieving common details by identifier"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#getTransactionSummary",
+    "description": "Handles request generating common summary report"
+  },
+  {
+    "id": "backend/src/lending/controllers/common.js#exportTransactionSummary",
+    "description": "Handles common export request generating Excel report"
+  },
+  {
+    "id": "backend/src/lending/controllers/boomi_integration.js#preamble",
+    "description": "Handles HTTP requests for boomi integration operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/boomi_integration.js#_processLMSDetails",
+    "description": "Handles _processLMSDetails request for boomi integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/boomi_integration.js#boomiLMSIntegration",
+    "description": "Handles boomiLMSIntegration request for boomi integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#preamble",
+    "description": "Handles HTTP requests for aecb integration operations"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getAecbFileData",
+    "description": "Handles request retrieving aecb integration data"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbTableView",
+    "description": "Handles aecbTableView request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generateAecbBatchFileForFinanceIds",
+    "description": "Handles generateAecbBatchFileForFinanceIds request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#submitAecbData",
+    "description": "Handles aecb integration submission request initiating approval workflow"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbOverdueDailyScheduler",
+    "description": "Handles aecbOverdueDailyScheduler request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbOutstandingMonthlyScheduler",
+    "description": "Handles aecbOutstandingMonthlyScheduler request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generateAecbMonthlySettledReport",
+    "description": "Handles generateAecbMonthlySettledReport request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generateAecbReport",
+    "description": "Handles generateAecbReport request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#generatePastFinanceDisbursal",
+    "description": "Handles generatePastFinanceDisbursal request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getAecbDropDowns",
+    "description": "Handles request retrieving aecb integration data"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#submitAecbMonthlyReport",
+    "description": "Handles aecb integration submission request initiating approval workflow"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#resubmitAecbFileByBatchIds",
+    "description": "Handles aecb integration submission request initiating approval workflow"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getSubmittedBatchFileStatus",
+    "description": "Handles request retrieving aecb integration data"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#getAecbErrorReport",
+    "description": "Handles request retrieving aecb integration data"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#aecbMonitoringScheduler",
+    "description": "Handles aecbMonitoringScheduler request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#reconcileAecbFinanceStatus",
+    "description": "Handles reconcileAecbFinanceStatus request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#batchReconcileAecbFinances",
+    "description": "Handles batchReconcileAecbFinances request for aecb integration"
+  },
+  {
+    "id": "backend/src/lending/controllers/aecb_integration.js#reconcileByDateRange",
+    "description": "Handles reconcileByDateRange request for aecb integration"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#preamble",
+    "description": "Implements business logic for helpers operations"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateDocUploadByDocNamesForBinaryFiles",
+    "description": "Validates helpers against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateDocUploadByDocNames",
+    "description": "Validates helpers against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#checkFilesForAllowedTypes",
+    "description": "Validates helpers against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#checkBinaryFilesForAllowedTypes",
+    "description": "Validates helpers against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#checkZipFileDocumentTypes",
+    "description": "Validates helpers against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#getFileNamesFromFileAPIRequest",
+    "description": "Retrieves helpers data with business transformations"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateMissingFiles",
+    "description": "Validates helpers against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#creditLimitConversion",
+    "description": "Updates helpers applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/trade_finance_service/helpers.js#validateDocUploadByDocType",
+    "description": "Validates helpers against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_checkIfCompanyIsBeingRegisteredDuringCfFlow",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_sendClientAgreementEmailToUsers",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_checkClientAgreementAcceptedForOrganisation",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#_updateServiceBasedProfessionalClient",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#checkClientAgreementAcceptedForOrganisation",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getFileAgreementDataForMawani",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getUserAcceptedTermsVersion",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getClientAgreementPlatformMessage",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getClientAgreementMessage",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getClientAgreementAcceptanceMessage",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveClientAgreement",
+    "description": "Processes saveClientAgreement business logic for index"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveClientAgreementSignature",
+    "description": "Processes saveClientAgreementSignature business logic for index"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveAcceptTermsVersion",
+    "description": "Processes saveAcceptTermsVersion business logic for index"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#sendTermsMail",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#getTermsDocument",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#saveTermsDocument",
+    "description": "Processes saveTermsDocument business logic for index"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#sendClientAgreementEmail",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/terms_acceptance/index.js#sendClientAgreementEmailWhenCompanyApproved",
+    "description": "Approves index updating status and sending notifications"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_storeEventInDB",
+    "description": "Processes _storeEventInDB business logic for index"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_sendMessage",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_onMessageHandler",
+    "description": "Processes _onMessageHandler business logic for index"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_onErrorHandler",
+    "description": "Processes _onErrorHandler business logic for index"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#_receiveMessage",
+    "description": "Processes _receiveMessage business logic for index"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#sendMessage",
+    "description": "Notifies users about index events"
+  },
+  {
+    "id": "backend/src/services/service_bus/index.js#receiveMessage",
+    "description": "Processes receiveMessage business logic for index"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#preamble",
+    "description": "Implements business logic for release notes operations"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#fetchLatestReleaseNotes",
+    "description": "Retrieves release notes data with business transformations"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#fetchSpecificMonthReleaseNotes",
+    "description": "Retrieves release notes data with business transformations"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#saveReleaseNotesService",
+    "description": "Processes saveReleaseNotesService business logic for release notes"
+  },
+  {
+    "id": "backend/src/services/support_services/release_notes.js#deleteReleaseNotesService",
+    "description": "Deletes release notes handling cascade relationships"
+  },
+  {
+    "id": "backend/src/services/support_services/helpers.js#preamble",
+    "description": "Implements business logic for helpers operations"
+  },
+  {
+    "id": "backend/src/services/support_services/helpers.js#showPopupHelper",
+    "description": "Processes showPopupHelper business logic for helpers"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateAccountSummary",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateDailySofrReportData",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateUserSignupMetricReport",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateOCRAccuracyReport",
+    "description": "Generates index Excel report with data"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateDatalakeSyncReport",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#generateHeaderForOCRReport",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#flattenJSON",
+    "description": "Processes flattenJSON business logic for index"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#getWeekNumber",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#getWeekDates",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#parseMawaniDate",
+    "description": "Processes parseMawaniDate business logic for index"
+  },
+  {
+    "id": "backend/src/services/reports/index.js#formatDate",
+    "description": "Processes formatDate business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_generateSHA1UserId",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_generateDefaultMawaniRefId",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#addStatusCode",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_insertDataForBulkInsertOCR",
+    "description": "Processes _insertDataForBulkInsertOCR business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_updateLatestCompanyDataFromPayload",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_updatePayloadForGSTInfo",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getDfsaCaymanMawaniDocMapping",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getMawaniDocsAndOCRData",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getAuthorisedSignatoryDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getTradeLicenseDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getDirectorDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getShareholderAndUBODetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatPassportOCRData",
+    "description": "Processes _formatPassportOCRData business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatTradeLicenseOCRData",
+    "description": "Processes _formatTradeLicenseOCRData business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatRegisterOCRData",
+    "description": "Processes _formatRegisterOCRData business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatPoaOCRData",
+    "description": "Processes _formatPoaOCRData business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_formatAuthSingatoriesPayload",
+    "description": "Processes _formatAuthSingatoriesPayload business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_creatAuthSignatoriesPayload",
+    "description": "Processes _creatAuthSignatoriesPayload business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_createCompanyPayloadWithDifferentTenant",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_buildDFSACompanyPayloadFromFI",
+    "description": "Processes _buildDFSACompanyPayloadFromFI business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_getApprovalFromAny",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processNewAuthorisedSignatories",
+    "description": "Processes index approval updating status and notifying"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processNewAuthorisedSignatoriesWithExisting",
+    "description": "Processes index approval updating status and notifying"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processOnboardingAuthorisedSignatoryData",
+    "description": "Processes index payment executing settlement workflow"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processTransactionAuthorisedSignatoryData",
+    "description": "Processes index payment executing settlement workflow"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processAuthorisedSignatoryData",
+    "description": "Processes index payment executing settlement workflow"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processDirectShareholdersData",
+    "description": "Processes index executing business workflow"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_validateTotalPercentageForEachShareholder",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_updateCompanyCodeIssuerRequestIdForNewShareholders",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleAdditionalInfoData",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_processdifcCodeIssuerDetails",
+    "description": "Processes index executing business workflow"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleCodeIssuerData",
+    "description": "Processes _handleCodeIssuerData business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleCompanyDocData",
+    "description": "Processes _handleCompanyDocData business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_handleCompanyData",
+    "description": "Processes _handleCompanyData business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#_checkIfOrgIsApprovedByCompanyStatus",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createSponsorUpsertTasks",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#handleSponsorAssociationToRequestTable",
+    "description": "Processes handleSponsorAssociationToRequestTable business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#checkIfBuySellExists",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updatePayloadForGSTInfo",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getDfsaCaymanMawaniDocMapping",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getOrganisationByNameAndCountry",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getOrganisationByNameAndInvitingUserId",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#inviteOrganisation",
+    "description": "Processes inviteOrganisation business logic for index"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateDIFCPayloadWithCaymanData",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateMawaniCompanyData",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createCompanyWithDifferentTenant",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createDFSACompanyForCreditLimitByCloningFI",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createDFSACompanyForCreditLimit",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateDFSACompanyForCreditLimit",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateDFSACompanyForCreditLimitByCloningFi",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#createOrganisationInMawani",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getMawaniCompaniesInDraftState",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#updateRegistrationOCRDataOnMawani",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getMawaniCompanyData",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#getAuthorisedSignatories",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/registration/index.js#registerDFSACompaniesOnCayman",
+    "description": "Processes registerDFSACompaniesOnCayman business logic for index"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateLendingBySYNC",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_getOnHoldComment",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_checkIsFirstApproval",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_crmEventDiscovery",
+    "description": "Processes _crmEventDiscovery business logic for index"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_isCompanyInactive",
+    "description": "Processes _isCompanyInactive business logic for index"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateCddReviewDetials",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateCompanyDocuments",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_updateCompanyKycDetails",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_syncRiskRatingDataFromRequestTable",
+    "description": "Synchronizes index with external system"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#_checkIfCompanyIsBeingRegisteredDuringCfFlow",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#updateCompanyDataOnMawaniStatusChange",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/push_api/index.js#updateCompanyKycDetails",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getUniquePropertyValuesFromObject",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyKYCDetailsQuery",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyKYCFiltersQuery",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyKYCDocumentsQuery",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getListOfCompanyDocumentsKYCFiltersQuery",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#_getDocumentRefListSorted",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#processCompanyRefIdForDownloadReports",
+    "description": "Processes index executing business workflow"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getOrganisationsDetailsWithFilters",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateOrganisationTenantSwitch",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getDetailsOfAuthorisedSignatoryFromCompanyObject",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#checkUserAuthorisedSignatory",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyInfoByEmailId",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompaniesKYCInformationFromMawani",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKycInfoWithFilters",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateCompanyKYCInformation",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateCompanyKYCExpiryFlag",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCInfoRenewalReminderEmail",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCDocumentsRenewalReminderEmail",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCInfoReport",
+    "description": "Notifies users about index events"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#sendCompanyKYCDocumentsReport",
+    "description": "Notifies users about index events"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKYCTableFilters",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#downloadCompanyKycInfoWithFilters",
+    "description": "Processes downloadCompanyKycInfoWithFilters business logic for index"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompaniesKYCDocumentsInformationFromMawani",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKycDocumentsInfoWithFilters",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#updateCompanyKYCDocumentsInformation",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#getCompanyKYCDocumentsTableFilters",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#downloadCompanyKycDocumentsInfoWithFilters",
+    "description": "Processes downloadCompanyKycDocumentsInfoWithFilters business logic for index"
+  },
+  {
+    "id": "backend/src/services/organisations/index.js#markAlternateKYCDocumentUpload",
+    "description": "Processes markAlternateKYCDocumentUpload business logic for index"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_processAndRemoveNullandUndefinedEntries",
+    "description": "Deletes index handling cascade relationships"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_fetchGenericPlaceholderValue",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_fetchAllPlaceholders",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_fetchAttributeInternal",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_createOrEditEmailDetails",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_updateTemplateDetails",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_sendEmail",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#_sendEmailNotification",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#getNotificationsbyUserId",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#getPendingTasksbyUserId",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#updateReadStatus",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#updateActionableStatus",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#getEmailNotificationState",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#enableEmailNotifications",
+    "description": "Processes enableEmailNotifications business logic for index"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendNotification",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendEmailNotification",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendNotificationToUsers",
+    "description": "Notifies users about index events"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendEmailNotificationToUsers",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#captureEmailTemplateDetails",
+    "description": "Processes captureEmailTemplateDetails business logic for index"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#updateTemplateAttributes",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendEmailGenericNotification",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/notification_service/index.js#sendMethodFailureEmail",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/notification.js#preamble",
+    "description": "Implements business logic for notification operations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/notification.js#_getFinanceUsersDetailsWithOrgType",
+    "description": "Retrieves notification data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/notification.js#sendStateNotification",
+    "description": "Notifies users about notification events"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceUsersDetailsWithOrgType",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateSyncAPIDataForSubmitFinance",
+    "description": "Submits index for approval initiating workflow"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateSyncAPIDataForFIVaidation",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#createContainerAndUrl",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_ehblFinanceAssociation",
+    "description": "Processes _ehblFinanceAssociation business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_identifyCounterPartyAcceptanceStateFromFinanceState",
+    "description": "Processes _identifyCounterPartyAcceptanceStateFromFinanceState business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_identifyApplicantAcceptanceStateFromFinanceState",
+    "description": "Processes _identifyApplicantAcceptanceStateFromFinanceState business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceCurrentInvoicesDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinancePaymentTermsAndActiveDisbursalEvents",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getActiveFinanceBanksDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateTimelineDetails",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceDetailsByIdShort",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_formatOcrData",
+    "description": "Processes _formatOcrData business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_calculateOverdueFee",
+    "description": "Calculates index amounts using business formulas"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_generateTaxInfo",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceDetailsById",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceDocumentsData",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getBCOsDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_isPaymentTermAcceptedByRaisingBCO",
+    "description": "Processes _isPaymentTermAcceptedByRaisingBCO business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_doesOrgBelongToFinance",
+    "description": "Processes _doesOrgBelongToFinance business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_insertUpcomingTransactionDetails",
+    "description": "Processes _insertUpcomingTransactionDetails business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_updateUpcomigTransactionWithActualPaymentDate",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIfCompanyInvoiceComboExists",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_recalculateFinanceCommission",
+    "description": "Calculates index amounts using business formulas"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getApplyFinanceCalculationDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_otherChargesFeeCalculations",
+    "description": "Processes _otherChargesFeeCalculations business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_batchProcessingFinanceReport",
+    "description": "Processes index executing business workflow"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processingFinanceApplicationReportDetails",
+    "description": "Processes index payment executing settlement workflow"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_transactionPageCalculation",
+    "description": "Processes _transactionPageCalculation business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getPreviousTransactionsById",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_transactionPageCalculationForLending",
+    "description": "Processes _transactionPageCalculationForLending business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_transactionPageCalculationUtil",
+    "description": "Processes _transactionPageCalculationUtil business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceInstitutionAssessmentInputInformation",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getUpcomingTransactionObject",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceInvoiceDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getDueDate",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getRequestParamsForCalcApi",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getCreditLimitStartEndDateForYear",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIfFirstDisbursalApplicationInYearForCreditLimit",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getBankBranchCodeType",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkCounterPartyDetail",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_getFinanceSubmissionMessage",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIsUserAuthorisedSingatory",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_insertAuthUsersToApprovalMatrix",
+    "description": "Processes _insertAuthUsersToApprovalMatrix business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_sendEmailToRemainingAuthSignatories",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkFinanceSubmittedByAuthSignatories",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processDocumentMapping",
+    "description": "Processes index executing business workflow"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_deepEqual",
+    "description": "Processes _deepEqual business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_isObject",
+    "description": "Processes _isObject business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processDeltaHistoryForInvoicesAndtrackingInfo",
+    "description": "Processes index payment executing settlement workflow"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateTotalCreditLimit",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateCounterPartyCreditLimit",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateCreditLimitAtProductLevel",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_checkIsDisbursalRestricted",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateCounterPartyCreditLimitBasedOnFlag",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_isThereChangesInFinanceEffectingCharges",
+    "description": "Processes _isThereChangesInFinanceEffectingCharges business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateDocumentRequiredTypesForFinanceNew",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateDocumentRequiredTypesForFinance",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_processNotes",
+    "description": "Processes index executing business workflow"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_updateNewSetOfAuthSignatories",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#validateIfUserBelongsToOrg",
+    "description": "Validates index against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#_validateUpdatedDueDate",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleAddress",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleApplicantBank",
+    "description": "Processes handleApplicantBank business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleCounterPartyBank",
+    "description": "Processes handleCounterPartyBank business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#handleSponsorBank",
+    "description": "Processes handleSponsorBank business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCurrencyBenchmarkAndMargin",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceUsersDetailsWithOrgType",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getBankBranchCode",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getMasterInstrumentList",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getPreShipmentOutstandingFinanceAmount",
+    "description": "Calculates outstanding index amounts by organisation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#generateSyncAPIDataForFIVaidation",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#calculateOverdueFee",
+    "description": "Calculates index amounts using business formulas"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#generateTaxInfo",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#generateContainerAndUrl",
+    "description": "Generates index documents or reports"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#ehblFinanceAssociation",
+    "description": "Processes ehblFinanceAssociation business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#identifyCounterPartyAcceptanceStateFromFinanceState",
+    "description": "Processes identifyCounterPartyAcceptanceStateFromFinanceState business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#identifyApplicantAcceptanceStateFromFinanceState",
+    "description": "Processes identifyApplicantAcceptanceStateFromFinanceState business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceCurrentInvoicesDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinancePaymentTermsAndActiveDisbursalEvents",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#isIdOrganisation",
+    "description": "Processes isIdOrganisation business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#isIdBank",
+    "description": "Processes isIdBank business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#doesUserBelongsToOrgType",
+    "description": "Processes doesUserBelongsToOrgType business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#isLogisticsFinanceEventCompleted",
+    "description": "Processes isLogisticsFinanceEventCompleted business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getOrgDetailsFromUserIdQuery",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getStaticData",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCreditSummary",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDetailsForUser",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDocumentsData",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getShipmentStatusByFinanceId",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getListOfFinanceDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getAllFinanceIdsByUser",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getListOfUpcomingTransactionDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getLogisticsFinanceProofDoc",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceCountByFinanceId",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#processFinanceData",
+    "description": "Processes index payment executing settlement workflow"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#financeInsertNewRecord",
+    "description": "Processes financeInsertNewRecord business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#financeUpdateRecord",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateBankAssessment",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getBankAssessmentData",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#bulkUpdateBankAssessment",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#checkPermissionAndGetTransactionData",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#bcoAcceptPaymentTerm",
+    "description": "Processes bcoAcceptPaymentTerm business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#acceptPaymentTermByApplicantForUnregCounterParty",
+    "description": "Processes acceptPaymentTermByApplicantForUnregCounterParty business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#createTransaction",
+    "description": "Creates index with business logic processing"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getTransactionsByUser",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceOrgs",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getDocument",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#cancelFinance",
+    "description": "Processes cancelFinance business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#sendFinanceTermsAcceptanceMail",
+    "description": "Sends index email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDataByIdPublic",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceDocumentPublic",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#acceptFinanceTermsPublic",
+    "description": "Processes acceptFinanceTermsPublic business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#fiAssessmentCalculation",
+    "description": "Processes fiAssessmentCalculation business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#transactionPageCalculationForUI",
+    "description": "Processes transactionPageCalculationForUI business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#arrangingPageCalculationForUI",
+    "description": "Processes arrangingPageCalculationForUI business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getApplyFinanceCalculation",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getFinanceApplicationDataReport",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCompletedTransactionsReport",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getUpcomingTransactionsReport",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateFinanceApplicationtDataForBoomi",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#bulkInsertOCRInformationForFinance",
+    "description": "Processes bulkInsertOCRInformationForFinance business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getTransactionsViewPageFilterValues",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getCombinedDiscountRate",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#getTransactionViewValues",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#fiTermValidation",
+    "description": "Processes fiTermValidation business logic for index"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateFinanceDataByFI",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/index.js#updateCreditLimitGraphDetails",
+    "description": "Updates index applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#preamble",
+    "description": "Implements business logic for highlighting operations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#mkKey",
+    "description": "Processes mkKey business logic for highlighting"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#calculateAndCheckExhaustionPerFinance",
+    "description": "Calculates highlighting amounts using business formulas"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_getUntilisedLimitsPerCf",
+    "description": "Retrieves highlighting data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#calculateExhaustionPerCf",
+    "description": "Calculates highlighting amounts using business formulas"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_checkExhaustionAndHighlightFinances",
+    "description": "Validates highlighting against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#makeLocalCache",
+    "description": "Processes makeLocalCache business logic for highlighting"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_checkIsDisbursalRestricted",
+    "description": "Validates highlighting against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#convertAmount",
+    "description": "Processes convertAmount business logic for highlighting"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#getCurrencyRateMap",
+    "description": "Retrieves highlighting data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#applyCurrencyConversion",
+    "description": "Processes applyCurrencyConversion business logic for highlighting"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_getCountOfFinancesRaisedAfterDefaulterFinance",
+    "description": "Retrieves highlighting data with business transformations"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#_checkForNextDefaulter",
+    "description": "Validates highlighting against business rules and constraints"
+  },
+  {
+    "id": "backend/src/services/logistics_finance_service/highlighting.js#updateIsFinanceDefaultedColumn",
+    "description": "Updates highlighting applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#preamble",
+    "description": "Implements business logic for index operations"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#_processApplyCreditLimitAutoSaveApplication",
+    "description": "Updates index status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#autoSave",
+    "description": "Processes autoSave business logic for index"
+  },
+  {
+    "id": "backend/src/services/draft/index.js#getSaveDetails",
+    "description": "Retrieves index data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/sofr_rates.js#preamble",
+    "description": "Implements business logic for sofr rates operations"
+  },
+  {
+    "id": "backend/src/services/external_services/sofr_rates.js#getSofrRatesApi",
+    "description": "Retrieves sofr rates data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#preamble",
+    "description": "Implements business logic for social sign up api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#ssoAuthErrorHandler",
+    "description": "Processes ssoAuthErrorHandler business logic for social sign up api"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromGoogle",
+    "description": "Retrieves social sign up api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromGoogleCallback",
+    "description": "Retrieves social sign up api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromLinkedIn",
+    "description": "Retrieves social sign up api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromLinkedInCallback",
+    "description": "Retrieves social sign up api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromMicrosoft",
+    "description": "Retrieves social sign up api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/social_sign_up_api.js#getDetailsFromMicrosoftCallback",
+    "description": "Retrieves social sign up api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/service_event_handler.js#handleServiceSendEvents",
+    "description": "Notifies users about service event handler events"
+  },
+  {
+    "id": "backend/src/services/external_services/service_event_handler.js#sendServiceBusMessage",
+    "description": "Notifies users about service event handler events"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#preamble",
+    "description": "Implements business logic for runners api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#processErrorFromResponse",
+    "description": "Processes runners api executing business workflow"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#getDocumentByHBLFromRunner",
+    "description": "Retrieves runners api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#getDocumentDataByHBLFromRunner",
+    "description": "Retrieves runners api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#enableDisableOfHBLFromRunner",
+    "description": "Processes enableDisableOfHBLFromRunner business logic for runners api"
+  },
+  {
+    "id": "backend/src/services/external_services/runners_api.js#statusUpdateOfHBLFromRunner",
+    "description": "Updates runners api status applying workflow transitions"
+  },
+  {
+    "id": "backend/src/services/external_services/qa_api.js#triggerQAPushAPI",
+    "description": "Processes triggerQAPushAPI business logic for qa api"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#preamble",
+    "description": "Implements business logic for probe42 api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#searchCompany",
+    "description": "Processes searchCompany business logic for probe42 api"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#companyConsolidatedReport",
+    "description": "Processes companyConsolidatedReport business logic for probe42 api"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#companyReferenceDocument",
+    "description": "Processes companyReferenceDocument business logic for probe42 api"
+  },
+  {
+    "id": "backend/src/services/external_services/probe42_api.js#companyReferenceDocumentById",
+    "description": "Processes companyReferenceDocumentById business logic for probe42 api"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#preamble",
+    "description": "Implements business logic for panjiva api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#_formatPanjivaResponse",
+    "description": "Processes _formatPanjivaResponse business logic for panjiva api"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#simpleStringify",
+    "description": "Processes simpleStringify business logic for panjiva api"
+  },
+  {
+    "id": "backend/src/services/external_services/panjiva_api.js#getPanjivaCompanyDetails",
+    "description": "Retrieves panjiva api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/nanonets_api.js#preamble",
+    "description": "Implements business logic for nanonets api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/nanonets_api.js#getOCRPredictedData",
+    "description": "Retrieves nanonets api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/nanonets_api.js#getOCRDataByID",
+    "description": "Retrieves nanonets api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#preamble",
+    "description": "Implements business logic for lending api operations"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#headers",
+    "description": "Processes headers business logic for lending api"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#_generateEventId",
+    "description": "Generates lending api documents or reports"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#sendEmailForFailedSyncReq",
+    "description": "Sends lending api email notification to stakeholders"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#getTaxDataFromLending",
+    "description": "Retrieves lending api data with business transformations"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#bcoSaveLendingFinance",
+    "description": "Processes bcoSaveLendingFinance business logic for lending api"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#financeLendingPushData",
+    "description": "Processes financeLendingPushData business logic for lending api"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#lendingAddRemarks",
+    "description": "Creates lending api with business logic processing"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#publishDocumentsToArrangingPlatform",
+    "description": "Processes publishDocumentsToArrangingPlatform business logic for lending api"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#sendLendingSyncData",
+    "description": "Notifies users about lending api events"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#sendLendingSyncDataForFinance",
+    "description": "Notifies users about lending api events"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#evictCacheAtLendingPlatfrom",
+    "description": "Processes evictCacheAtLendingPlatfrom business logic for lending api"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#getCreditFaciltyUpdateRequestIds",
+    "description": "Updates lending api applying business rule validation"
+  },
+  {
+    "id": "backend/src/services/external_services/lending_api.js#fixCreditFacilityAmountsAtLending",
+    "description": "Updates lending api applying business rule validation"
+  }
+]
