@@ -17,7 +17,7 @@ let db = null;
 function getDb() {
   if (!db) {
     db = new Database(DB_PATH, { readonly: true });
-    console.log('[mcp:symbol] SQLite symbol map loaded');
+    console.error('[mcp:symbol] SQLite symbol map loaded');
   }
   return db;
 }

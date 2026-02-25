@@ -14,7 +14,7 @@ let db = null;
 async function init() {
   if (!db) {
     db = await loadBm25Index();
-    console.log('[mcp:bm25] BM25 index loaded');
+    console.error('[mcp:bm25] BM25 index loaded');
   }
   return db;
 }

@@ -1,0 +1,47 @@
+# CargoFin Backend — Cursor Rules
+
+## 7-Checkpoint Workflow (MANDATORY)
+1. ✋ Requirements Validation — parse PRD, map to codebase, identify gaps → STOP
+2. ✋ Architecture & Design — file plan, patterns, workflow states, integrations → STOP
+3. ✋ Test Strategy — test cases per requirement, edge cases, mocks → STOP
+4. ✋ Data Model & Contracts — migrations, API contracts, Joi schemas → STOP
+5. ✋ Implementation — code file by file, cite pattern sources → STOP after each file
+6. ✋ Quality Gate — lint, tests, coverage report → STOP
+7. ✋ Release Summary — change log, deployment steps, rollback plan → STOP
+
+**NEVER skip a checkpoint. NEVER proceed without explicit "approved" from the user.**
+
+## Mandatory First Steps
+1. Call `get_repo_map` to understand the codebase
+2. Read `.agent-rules.json` for project conventions and domain knowledge
+3. Read `prds/current.md` for the feature specification
+
+## Architecture Rules (NEVER violate)
+- Controllers: parse request → validate → call service → respond. No business logic.
+- Services: business logic only. No req/res. Receive plain params, return data.
+- DB Service: Knex queries only. No business logic.
+- Every endpoint needs: route + controller + service + schema.
+
+## Workflow Rules
+New workflows require seeding in THREE places:
+1. `lending.workflow` table — state transitions
+2. `lending.skip_workflow` table — skip conditions
+3. Product config — WORKFLOW_TYPE constants
+
+## Code Style
+- `'use strict';` at top of every file
+- Module aliases: @config, @main, @lending, @services, @middlewares, @errors, @utils
+- Error handling: try/catch → respondError(res, err)
+- Logging: logger.info/error/warn — NEVER console.log
+- Validation: Joi schemas via joiValidation.validate()
+- JSDoc on every exported function
+- Transactions for multi-table writes
+
+## Never Do
+- Install new packages without flagging
+- Modify existing migration files
+- Skip Joi validation on input endpoints
+- Put business logic in controllers or DB layer
+- Use console.log
+- Skip any checkpoint
+- Generate code before design checkpoints are approved

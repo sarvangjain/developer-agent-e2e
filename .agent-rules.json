@@ -1,0 +1,135 @@
+{
+  "project": {
+    "name": "CargoFin_Backend",
+    "description": "Trade finance platform for DP World — handles credit facilities, finance applications, lending, insurance, compliance, and more",
+    "language": "javascript",
+    "framework": "express",
+    "runtime": "node",
+    "database": "postgresql",
+    "orm": "knex",
+    "modules": ["main", "lending"]
+  },
+  "structure": {
+    "routes": ["backend/src/main/routes", "backend/src/lending/routes"],
+    "controllers": ["backend/src/main/controllers", "backend/src/lending/controllers"],
+    "services": ["backend/src/services", "backend/src/lending/services"],
+    "db_services": ["backend/src/services/db_service", "backend/src/lending/services/db_service"],
+    "schemas": ["backend/src/main/schemas", "backend/src/lending/schemas"],
+    "middleware": "backend/src/middlewares",
+    "errors": "backend/src/errors",
+    "utils": "backend/src/utils",
+    "config": "backend/config",
+    "tests": "backend/test",
+    "migrations": "backend/db/migrations"
+  },
+  "conventions": {
+    "naming": {
+      "files": "snake_case",
+      "routes": "kebab-case URL paths",
+      "functions": "camelCase",
+      "constants": "UPPER_SNAKE_CASE",
+      "database_tables": "snake_case",
+      "database_columns": "snake_case"
+    },
+    "routePattern": "Plain objects with method, path, function properties exported from route files. NOT app.get() style.",
+    "controllerPattern": "module.exports = { fnName: async (req, res) => { try { ... } catch (err) { respondError(res, err); } } }",
+    "errorHandling": "try/catch in controllers → respondError(res, err). Custom error classes: APIError, ArgumentError, JoiSchemaError, ForbiddenError, NotFoundError, UserAuthenticationError",
+    "asyncPattern": "async/await with try/catch",
+    "validation": "Joi schemas in /schemas directories. Validated via joiValidation.validate(schema, payload)",
+    "imports": "Module aliases via module-alias: @config, @main, @lending, @services, @middlewares, @errors, @utils, @root, @seeds, @scripts, @staticData",
+    "logging": "logger.info(), logger.error(), logger.warn() from @utils/logger. NEVER console.log in production.",
+    "slackNotifications": "slackNotify.info/error() for critical operations and errors",
+    "caching": "Redis via @utils/cache — setObj(), getObj(), deleteObj()",
+    "database": "Knex query builder — config.getDb() returns db instance. Transactions via db.transaction(trx => ...)",
+    "configAccess": "config.getConfig('KEY') for runtime config values",
+    "userContext": "getUserID(), getOrgID(), getTenantCode() from @middlewares/user_object",
+    "noNewPackages": true,
+    "strictMode": "'use strict' at top of every file",
+    "jsdoc": "JSDoc comment on every exported function"
+  },
+  "layerResponsibilities": {
+    "routes": "Define HTTP endpoints only. Map method + path to controller function. Attach middleware and permissions. Never contain business logic.",
+    "controllers": "Parse request (req.body, req.params, req.query, req.headers). Validate with Joi schema. Call service layer. Format HTTP response. Handle errors via respondError(res, err).",
+    "services": "Contain all business logic. Call db_service for data access. Call external_services for APIs. Orchestrate workflows. Never access req/res directly.",
+    "db_services": "Raw database queries only using Knex. Accept (db/trx, params). Return data. No business logic, no HTTP awareness.",
+    "middleware": "Cross-cutting concerns: auth, rate limiting, user context, request parsing.",
+    "schemas": "Joi validation schemas. Export a single schema object per file.",
+    "migrations": "Database schema changes. Always create NEW migration files, never modify existing ones. Must be rollback-safe."
+  },
+  "domainKnowledge": {
+    "workflowSystem": {
+      "description": "Feature workflows are state machines managed via 3 components",
+      "tables": {
+        "lending.workflow": "Defines state machine — maps (workflow_type, state, action) → (next_state, active_user, allowed_services). Each row is a state transition.",
+        "lending.skip_workflow": "Defines conditions where a workflow step can be auto-skipped. Maps (workflow_type, skip_condition) → action.",
+        "config WORKFLOW_TYPE": "Constants that identify workflow types. Defined in config/product_config."
+      },
+      "pattern": "New workflows require: (1) new WORKFLOW_TYPE constant, (2) rows in lending.workflow for each state transition, (3) rows in lending.skip_workflow for skip conditions, (4) processWorkflow() call in the service layer",
+      "key_function": "processWorkflow(trx, entityId, workflow, workType, action, notes, external, workflowState, changeActive, processTogether, notificationSend, requestId, skipParamsMap)",
+      "helper_functions": ["getUserAllowedDetailsForWorkflow", "getUserDeptListForEmail", "createSkipFlowTable", "updateCreditFacilityActiveDept"]
+    },
+    "serviceBus": {
+      "description": "Azure Service Bus for async inter-service communication",
+      "internal": "@lending/services/service_bus — sendMessage(dataMessage, eventId), receiveMessage(receiveMode)",
+      "external_nss": "@lending/services/external_service_bus/notification_service — sendNssServiceBusMessage for external notification service",
+      "external_mawani": "@lending/services/external_service_bus/mawani_service — sendMawaniServiceBusMessage",
+      "pattern": "Messages have eventType, eventSubType, payload. Consumers use handleServiceEvent to process."
+    },
+    "oracleFusion": {
+      "description": "Oracle ERP integration for accounting (AR, receipts, credit notes, interest accrual)",
+      "services": {
+        "oracle_fusion.js": "Main Oracle integration — tax, exchange rates, bank details, interest accrual",
+        "oracle_credit_note_service.js": "Credit memo/note creation via Oracle API with retry and response handling"
+      },
+      "pattern": "Call Oracle API → handle response → update local status. On failure: move to Resubmission state, allow retry.",
+      "response_handling": "handleCreditMemoResponseFromOracle — processes Success/ResubmissionRequested/failure"
+    },
+    "notificationSystem": {
+      "description": "Bell notifications + email notifications",
+      "service": "@lending/services/notification_service",
+      "key_function": "sendNotification(trx, usersOrgsToNotify, ownerId, ownerType, messageToBeSent, type, actionable, notificationType, markPreviousNotificationsRead, ccEmails, notificationInfo)",
+      "email_function": "sendEmailNotification(trx, usersToEmail, ownerId, ownerType, emailType, message, subject, attachments, ccEmails)",
+      "recipient_resolution": "getUserDeptListForEmail() from process_workflow/helper.js resolves role-based recipients"
+    },
+    "departmentTypes": {
+      "description": "User roles/departments in the workflow system",
+      "types": ["FINANCE_MANAGER", "OPERATIONS_MAKER", "OPERATIONS_CHECKER", "CREDIT_ANALYST", "CREDIT_MANAGER", "SALES"],
+      "config_key": "FINANCE_DEPARTMENT_TYPES"
+    }
+  },
+  "checkpoints": {
+    "count": 7,
+    "workflow": [
+      "Requirements Validation",
+      "Architecture & Design Approval",
+      "Test Strategy Approval",
+      "Data Model & Contract Review",
+      "Implementation Review",
+      "Test Coverage & Quality Gate",
+      "Pre-Merge Release Approval"
+    ],
+    "rules": [
+      "Never skip a checkpoint",
+      "Always produce the required deliverable at each checkpoint",
+      "Always STOP and wait for explicit human approval before proceeding",
+      "If human requests changes, incorporate them and re-present the checkpoint",
+      "Track checkpoint status: PENDING → APPROVED → (next checkpoint)"
+    ]
+  },
+  "testing": {
+    "framework": "jest",
+    "filePattern": "*.test.js",
+    "testDir": "backend/test",
+    "coverageTarget": 80,
+    "newCodeCoverageTarget": 90,
+    "criticalPathCoverageTarget": 100,
+    "mockStrategy": "jest.mock for external dependencies and services",
+    "criticalPaths": ["workflow transitions", "financial calculations", "Oracle API calls", "payment processing"]
+  },
+  "done_definition": {
+    "must_pass": ["lint", "tests", "all_7_checkpoints_approved"],
+    "lint_command": "npm run lint",
+    "test_command": "npm test",
+    "max_fix_retries": 3
+  }
+}
