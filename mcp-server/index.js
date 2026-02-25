@@ -8,7 +8,9 @@
  * 
  * Tools:
  *   get_repo_map        — compressed structural overview of the codebase
- *   search_codebase     — hybrid BM25 + vector search with MMR re-ranking
+ *   search_codebase     — hybrid BM25 + vector search with Phase 2 enhancements
+ *   advanced_search     — Phase 3: cross-encoder, agentic multi-hop, Layer 0
+ *   get_query_stats     — query logging statistics
  *   get_symbol          — exact symbol lookup from SQLite
  *   get_routes          — filtered Express route query
  *   get_dependencies    — dependency graph traversal
@@ -41,6 +43,16 @@ const { readFile } = require('./tools/read-file');
 const { listDirectory } = require('./tools/list-directory');
 const { grepCodebase } = require('./tools/grep-codebase');
 
+// Phase 2 & 3: Advanced retrieval (use free local versions by default)
+const enhancerMod = process.env.USE_CLAUDE_ENHANCER === '1' ? './tools/query-enhancer' : './tools/query-enhancer-local';
+const advancedMod = process.env.USE_CLAUDE_ENHANCER === '1' ? './tools/advanced-retrieval' : './tools/advanced-retrieval-local';
+const { getQueryLogStats } = require(enhancerMod);
+const { advancedSearch } = require(advancedMod);
+
+// New tools: DB schema, test patterns
+const { listSchemas, getTable, searchSchema } = require('./tools/get-db-schema');
+const { getTestPatterns } = require('./tools/get-test-patterns');
+
 // ---------------------------------------------------------------------------
 // Server setup
 // ---------------------------------------------------------------------------
@@ -65,24 +77,108 @@ server.tool(
   }
 );
 
-// 2. search_codebase — hybrid search
+// 2. search_codebase — hybrid search with graceful degradation
 server.tool(
   'search_codebase',
-  'Search the codebase using hybrid BM25 + semantic vector search with diversity re-ranking. Use for finding code that handles specific features, patterns, or concepts. Use lambda=0.5 for broad PRD queries, lambda=0.8 for specific function lookups.',
+  'Search the codebase using hybrid BM25 + semantic vector search with diversity re-ranking. Supports optional query enhancement (decomposition, HyDE). Use lambda=0.5 for broad PRD queries, lambda=0.8 for specific function lookups.',
   {
     query: z.string().describe('Natural language search query'),
     limit: z.number().optional().default(20).describe('Max results to return (default 20)'),
     lambda: z.number().optional().default(0.5).describe('MMR diversity: 0.5=diverse/broad, 0.8=relevant/specific'),
   },
   async ({ query, limit, lambda }) => {
-    const results = await searchCodebase(query, limit, lambda);
+    const { degraded, results, enhanced } = await searchCodebase(query, limit, lambda);
+
+    let header = '';
+    if (degraded) {
+      header = '⚠️ DEGRADED MODE: Vector search unavailable. Results below are BM25 keyword-only.\n\n';
+    }
+    
+    // Show enhancement info if any features were applied
+    if (enhanced && (enhanced.decomposed || enhanced.hydeApplied)) {
+      const enhancements = [];
+      if (enhanced.decomposed) enhancements.push(`decomposed into ${enhanced.queryCount} sub-queries`);
+      if (enhanced.hydeApplied) enhancements.push('HyDE applied');
+      header += `🔍 Query enhanced: ${enhancements.join(', ')}\n\n`;
+    }
+
     const formatted = results.map(r =>
       `[${r.rank}] ${r.file_path}${r.function_name ? '#' + r.function_name : ''}\n` +
       `    ${r.description || 'No description'}\n` +
       `    Layer: ${r.layer || 'unknown'} | Module: ${r.module || 'unknown'} | Lines: ${r.start_line}-${r.end_line}\n` +
       `    Code:\n${r.code.slice(0, 500)}${r.code.length > 500 ? '\n    ... (truncated)' : ''}`
     ).join('\n\n');
-    return { content: [{ type: 'text', text: formatted || 'No results found' }] };
+
+    return { content: [{ type: 'text', text: header + (formatted || 'No results found') }] };
+  }
+);
+
+// 2b. advanced_search — Phase 3 features (cross-encoder, agentic, Layer 0)
+server.tool(
+  'advanced_search',
+  'Advanced codebase search with all Phase 3 features: cross-encoder reranking for precision, agentic multi-hop for complex queries, and Layer 0 query understanding. Use for complex feature exploration or when basic search misses relevant code.',
+  {
+    query: z.string().describe('Natural language search query'),
+    limit: z.number().optional().default(15).describe('Max results to return (default 15)'),
+    use_cross_encoder: z.boolean().optional().default(true).describe('Use LLM to rerank top results for precision'),
+    use_agentic: z.boolean().optional().default(false).describe('Enable iterative multi-hop retrieval (slower but more thorough)'),
+    use_layer0: z.boolean().optional().default(true).describe('Extract intent and layer hints from query'),
+  },
+  async ({ query, limit, use_cross_encoder, use_agentic, use_layer0 }) => {
+    const result = await advancedSearch(query, searchCodebase, {
+      limit,
+      useCrossEncoder: use_cross_encoder,
+      useAgentic: use_agentic,
+      useLayer0: use_layer0,
+    });
+
+    let header = '';
+    
+    // Show metadata
+    const { metadata } = result;
+    if (metadata.layer0) {
+      const l0 = metadata.layer0;
+      if (l0.intent !== 'find' || l0.layers.length > 0 || l0.entities.length > 0) {
+        header += `🎯 Query Analysis: intent=${l0.intent}`;
+        if (l0.layers.length > 0) header += `, layers=[${l0.layers.join(',')}]`;
+        if (l0.entities.length > 0) header += `, entities=[${l0.entities.join(',')}]`;
+        header += '\n';
+      }
+    }
+    
+    if (metadata.iterations > 1) {
+      header += `🔄 Agentic: ${metadata.iterations} iterations`;
+      if (metadata.followUpQueries.length > 0) {
+        header += `, follow-ups: ${metadata.followUpQueries.map(q => `"${q.slice(0, 30)}..."`).join(', ')}`;
+      }
+      header += '\n';
+    }
+    
+    if (metadata.crossEncoderApplied) {
+      header += '✨ Cross-encoder reranking applied\n';
+    }
+    
+    if (header) header += '\n';
+
+    const formatted = result.results.map((r, i) =>
+      `[${i + 1}] ${r.file_path}${r.function_name ? '#' + r.function_name : ''}\n` +
+      `    ${r.description || 'No description'}\n` +
+      `    Layer: ${r.layer || 'unknown'} | Module: ${r.module || 'unknown'} | Lines: ${r.start_line}-${r.end_line}\n` +
+      `    Code:\n${r.code.slice(0, 500)}${r.code.length > 500 ? '\n    ... (truncated)' : ''}`
+    ).join('\n\n');
+
+    return { content: [{ type: 'text', text: header + (formatted || 'No results found') }] };
+  }
+);
+
+// 2c. get_query_stats — query logging stats
+server.tool(
+  'get_query_stats',
+  'Get statistics about logged search queries. Useful for understanding query patterns and tuning retrieval.',
+  {},
+  async () => {
+    const stats = getQueryLogStats();
+    return { content: [{ type: 'text', text: JSON.stringify(stats, null, 2) }] };
   }
 );
 
@@ -214,6 +310,94 @@ server.tool(
         text: `Pattern: "${pattern}" — ${result.total_matches} matches${result.total_matches > 50 ? ' (showing first 50)' : ''}\n\n${formatted || 'No matches found'}`,
       }],
     };
+  }
+);
+
+// 11. get_db_schema — database schema query
+server.tool(
+  'get_db_schema',
+  'Query the database schema. Use action="list" to see all schemas/tables, action="table" with table_name to get column details (e.g. "lending.credit_notes" or just "credit_notes"), action="search" with keyword to find tables/columns by name. Essential for Checkpoint 4 (Data Model & Contract Review).',
+  {
+    action: z.enum(['list', 'table', 'search']).describe('Action: list=all schemas, table=columns for a table, search=find by keyword'),
+    table_name: z.string().optional().describe('For action=table: schema.table_name or just table_name'),
+    keyword: z.string().optional().describe('For action=search: keyword to search tables and columns'),
+  },
+  async ({ action, table_name, keyword }) => {
+    let result;
+    switch (action) {
+      case 'list':
+        result = listSchemas();
+        if (result.error) return { content: [{ type: 'text', text: result.error }] };
+        const schemaList = Object.entries(result.schemas)
+          .map(([schema, tables]) => `${schema} (${tables.length} tables):\n  ${tables.join(', ')}`)
+          .join('\n\n');
+        return { content: [{ type: 'text', text: `${result.total_schemas} schemas, ${result.total_tables} tables, ${result.total_columns} columns\n\n${schemaList}` }] };
+      
+      case 'table':
+        if (!table_name) return { content: [{ type: 'text', text: 'table_name is required for action=table' }] };
+        result = getTable(table_name);
+        if (result.error) return { content: [{ type: 'text', text: result.error }] };
+        const tableDetails = result.tables.map(t => {
+          const cols = t.columns.map(c => 
+            `  ${c.name.padEnd(30)} ${c.type.padEnd(25)} ${c.nullable ? 'NULL' : 'NOT NULL'}${c.default ? ` DEFAULT ${c.default.slice(0, 40)}` : ''}`
+          ).join('\n');
+          return `${t.full_name} (${t.columns.length} columns):\n${cols}`;
+        }).join('\n\n');
+        return { content: [{ type: 'text', text: tableDetails }] };
+      
+      case 'search':
+        if (!keyword) return { content: [{ type: 'text', text: 'keyword is required for action=search' }] };
+        result = searchSchema(keyword);
+        if (result.error) return { content: [{ type: 'text', text: result.error }] };
+        let output = `Search: "${keyword}"\n\n`;
+        if (result.matching_tables.length > 0) {
+          output += `Tables (${result.matching_tables.length}):\n`;
+          output += result.matching_tables.map(t => `  ${t.full_name} (${t.column_count} cols)`).join('\n');
+          output += '\n\n';
+        }
+        if (result.matching_columns.length > 0) {
+          output += `Columns (${result.matching_columns.length}):\n`;
+          output += result.matching_columns.map(c => `  ${c.table}.${c.column} (${c.type}${c.nullable ? ', nullable' : ''})`).join('\n');
+        }
+        return { content: [{ type: 'text', text: output }] };
+      
+      default:
+        return { content: [{ type: 'text', text: 'Invalid action. Use: list, table, or search' }] };
+    }
+  }
+);
+
+// 12. get_test_patterns — find existing test patterns by domain
+server.tool(
+  'get_test_patterns',
+  'Find existing test patterns for a domain. Returns test files, mocks, describe blocks, test cases, and assertion patterns. Essential for Checkpoint 3 (Test Strategy) — follow existing test patterns exactly.',
+  {
+    domain: z.string().describe('Domain keyword to search for (e.g. "credit_note", "finance_application", "auth")'),
+  },
+  async ({ domain }) => {
+    const result = getTestPatterns(domain);
+    if (result.test_files_found === 0) {
+      return { content: [{ type: 'text', text: result.message }] };
+    }
+
+    let output = `Test patterns for "${domain}": ${result.test_files_found} test files\n`;
+    output += `Common mocks: ${result.common_mocks.join(', ')}\n\n`;
+
+    for (const file of result.files) {
+      if (file.error) {
+        output += `${file.path}: ERROR - ${file.error}\n`;
+        continue;
+      }
+      output += `--- ${file.path} (${file.line_count} lines) ---\n`;
+      output += `Mocks: ${file.mocks.join(', ')}\n`;
+      output += `Describes: ${file.describes.join(', ')}\n`;
+      output += `Tests (${file.tests.length}): ${file.tests.slice(0, 10).join('; ')}${file.tests.length > 10 ? '...' : ''}\n`;
+      output += `Setup: ${Object.entries(file.setup).filter(([_, v]) => v).map(([k]) => k).join(', ') || 'none'}\n`;
+      output += `Assertions: ${file.assertion_patterns.join(', ')}\n`;
+      output += `\nPreview (first 100 lines):\n${file.preview}\n\n`;
+    }
+
+    return { content: [{ type: 'text', text: output }] };
   }
 );
 

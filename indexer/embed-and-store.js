@@ -32,11 +32,17 @@ const config = require('./config');
 const CHUNKS_PATH = path.join(config.projectRoot, 'index', 'chunks.json');
 
 const QDRANT_URL = process.env.QDRANT_URL || 'http://localhost:6333';
-const QDRANT_COLLECTION = 'codebase';
+const QDRANT_COLLECTION = process.env.QDRANT_COLLECTION || 'codebase';
 
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://127.0.0.1:11434';
-const EMBEDDING_MODEL = 'nomic-embed-text';
-const EMBEDDING_DIMENSIONS = 768;
+
+// Embedding model configuration
+// Supported models:
+//   - nomic-embed-text (768 dims, general purpose, default)
+//   - manutic/nomic-embed-code (768 dims, code-specific, recommended for code search)
+//   - jina/jina-embeddings-v2-small-en (512 dims, fast)
+const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || 'nomic-embed-text';
+const EMBEDDING_DIMENSIONS = parseInt(process.env.EMBEDDING_DIMENSIONS || '768', 10);
 
 /** Batch size for embedding requests */
 const EMBED_BATCH_SIZE = 10;
@@ -284,10 +290,147 @@ async function embedAndStore() {
 }
 
 // ---------------------------------------------------------------------------
+// Incremental embed and store
+// ---------------------------------------------------------------------------
+
+/**
+ * Delete old chunk IDs from Qdrant and embed/upsert new chunks.
+ * 
+ * @param {string[]} oldChunkIds - Chunk IDs to delete from Qdrant (format: "filePath#functionName")
+ * @param {object[]} newChunks - New chunks to embed and upsert
+ */
+async function embedAndStoreIncremental(oldChunkIds, newChunks) {
+  console.log('[embed] starting incremental embed-and-store...');
+  console.log(`[embed] chunks to delete: ${oldChunkIds.length}, chunks to add: ${newChunks.length}`);
+
+  // Verify Qdrant collection exists
+  const collections = await qdrant.getCollections();
+  const exists = collections.collections.some(c => c.name === QDRANT_COLLECTION);
+
+  if (!exists) {
+    console.warn('[embed] collection does not exist — falling back to full embed');
+    return embedAndStore();
+  }
+
+  // Delete old chunks from Qdrant
+  if (oldChunkIds.length > 0) {
+    console.log(`[embed] deleting ${oldChunkIds.length} old chunks from Qdrant...`);
+    const uuidsToDelete = oldChunkIds.map(chunkIdToUuid);
+
+    // Delete in batches to avoid overwhelming Qdrant
+    const deleteBatchSize = 100;
+    let deleted = 0;
+
+    for (let i = 0; i < uuidsToDelete.length; i += deleteBatchSize) {
+      const batch = uuidsToDelete.slice(i, i + deleteBatchSize);
+      await qdrant.delete(QDRANT_COLLECTION, {
+        points: batch,
+        wait: true,
+      });
+      deleted += batch.length;
+      const pct = Math.round((deleted / uuidsToDelete.length) * 100);
+      process.stdout.write(`\r[embed] deleted: ${deleted}/${uuidsToDelete.length} (${pct}%)`);
+    }
+    console.log(''); // newline after progress
+  }
+
+  // If no new chunks to embed, we're done
+  if (newChunks.length === 0) {
+    console.log('[embed] no new chunks to embed');
+    const collectionInfo = await qdrant.getCollection(QDRANT_COLLECTION);
+    console.log(`[embed] Qdrant collection '${QDRANT_COLLECTION}': ${collectionInfo.points_count} points`);
+    return;
+  }
+
+  // Verify Ollama is running
+  try {
+    console.log(`[embed] checking Ollama at ${OLLAMA_URL}...`);
+    const healthResp = await httpGet(`${OLLAMA_URL}/api/tags`);
+    if (!healthResp.ok) throw new Error(`Ollama returned status ${healthResp.status}`);
+    console.log('[embed] Ollama is running');
+  } catch (err) {
+    console.error(`[embed] Ollama health check failed: ${err.message}`);
+    throw new Error(`Ollama is not running at ${OLLAMA_URL}. Start it with: ollama serve`);
+  }
+
+  // Generate embeddings for new chunks
+  console.log(`[embed] generating embeddings for ${newChunks.length} new chunks...`);
+
+  const points = [];
+  let embedded = 0;
+  let truncated = 0;
+
+  for (let i = 0; i < newChunks.length; i++) {
+    const chunk = newChunks[i];
+    const text = chunk.textForEmbedding || chunk.code;
+
+    if (text.length > MAX_EMBED_CHARS) truncated++;
+
+    try {
+      const embedding = await embedSingle(text);
+
+      points.push({
+        id: chunkIdToUuid(chunk.id),
+        vector: embedding,
+        payload: {
+          chunk_id: chunk.id,
+          file_path: chunk.filePath,
+          function_name: chunk.functionName || null,
+          description: chunk.description || null,
+          code: chunk.code,
+          start_line: chunk.startLine,
+          end_line: chunk.endLine,
+          is_exported: chunk.isExported || false,
+          is_async: chunk.isAsync || false,
+          symbol_type: chunk.symbolType || null,
+          module: chunk.module || null,
+          layer: chunk.layer || null,
+          is_route_handler: chunk.isRouteHandler || false,
+        },
+      });
+    } catch (err) {
+      console.warn(`\n[embed] skipping chunk ${chunk.id}: ${err.message.slice(0, 80)}`);
+    }
+
+    embedded++;
+    if (embedded % 50 === 0 || embedded === newChunks.length) {
+      const pct = Math.round((embedded / newChunks.length) * 100);
+      process.stdout.write(`\r[embed] embedded: ${embedded}/${newChunks.length} (${pct}%)`);
+    }
+  }
+
+  console.log('');
+  if (truncated > 0) console.log(`[embed] ${truncated} chunks were truncated to ${MAX_EMBED_CHARS} chars`);
+
+  // Upsert into Qdrant in batches
+  console.log(`[embed] upserting ${points.length} points into Qdrant...`);
+
+  let upserted = 0;
+  for (let i = 0; i < points.length; i += UPSERT_BATCH_SIZE) {
+    const batch = points.slice(i, i + UPSERT_BATCH_SIZE);
+    await qdrant.upsert(QDRANT_COLLECTION, {
+      wait: true,
+      points: batch,
+    });
+
+    upserted += batch.length;
+    const pct = Math.round((upserted / points.length) * 100);
+    process.stdout.write(`\r[embed] upserted: ${upserted}/${points.length} (${pct}%)`);
+  }
+
+  console.log(''); // newline after progress
+
+  // Verify
+  const collectionInfo = await qdrant.getCollection(QDRANT_COLLECTION);
+  console.log(`[embed] Qdrant collection '${QDRANT_COLLECTION}': ${collectionInfo.points_count} points`);
+  console.log('[embed] incremental update done');
+}
+
+// ---------------------------------------------------------------------------
 // Export
 // ---------------------------------------------------------------------------
 
-module.exports = { embedAndStore, embedSingle, QDRANT_COLLECTION, QDRANT_URL };
+module.exports = { embedAndStore, embedAndStoreIncremental, embedSingle, chunkIdToUuid, QDRANT_COLLECTION, QDRANT_URL };
 
 if (require.main === module) {
   embedAndStore().catch(err => {

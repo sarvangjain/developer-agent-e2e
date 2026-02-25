@@ -305,10 +305,174 @@ function printSampleQueries(db) {
 }
 
 // ---------------------------------------------------------------------------
+// Incremental update
+// ---------------------------------------------------------------------------
+
+/**
+ * Update symbol map for changed files only.
+ * Deletes old entries for affected files and inserts new ones.
+ * 
+ * @param {object} parsedFiles - Full parsed files object (already merged with changes)
+ * @param {string[]} affectedFiles - Relative paths of files that were changed or deleted
+ */
+function updateSymbolMap(parsedFiles, affectedFiles) {
+  console.log('[symbol-map] updating symbol map incrementally...');
+  console.log(`[symbol-map] affected files: ${affectedFiles.length}`);
+
+  if (!fs.existsSync(DB_PATH)) {
+    console.log('[symbol-map] no existing database found — falling back to full build');
+    return buildSymbolMap(parsedFiles);
+  }
+
+  const db = new Database(DB_PATH);
+
+  // Prepare delete statements
+  const deleteSymbols = db.prepare('DELETE FROM symbols WHERE file_path = ?');
+  const deleteDeps = db.prepare('DELETE FROM dependencies WHERE source_file = ?');
+  const deleteRoutes = db.prepare('DELETE FROM routes WHERE file_path = ?');
+
+  // Prepare insert statements (same as in populateDatabase)
+  const insertSymbol = db.prepare(`
+    INSERT INTO symbols (name, type, file_path, start_line, end_line, params, is_exported, is_async, parent)
+    VALUES (@name, @type, @file_path, @start_line, @end_line, @params, @is_exported, @is_async, @parent)
+  `);
+
+  const insertDep = db.prepare(`
+    INSERT INTO dependencies (source_file, target_file, raw_import, imported_names)
+    VALUES (@source_file, @target_file, @raw_import, @imported_names)
+  `);
+
+  const insertRoute = db.prepare(`
+    INSERT INTO routes (name, method, path, handler, handler_function, controller_file, file_path, middlewares, public_access, start_line, end_line)
+    VALUES (@name, @method, @path, @handler, @handler_function, @controller_file, @file_path, @middlewares, @public_access, @start_line, @end_line)
+  `);
+
+  let deletedSymbols = 0;
+  let deletedDeps = 0;
+  let deletedRoutes = 0;
+  let insertedSymbols = 0;
+  let insertedDeps = 0;
+  let insertedRoutes = 0;
+
+  const update = db.transaction(() => {
+    // Delete old entries for all affected files
+    for (const filePath of affectedFiles) {
+      const symbolResult = deleteSymbols.run(filePath);
+      const depResult = deleteDeps.run(filePath);
+      const routeResult = deleteRoutes.run(filePath);
+      
+      deletedSymbols += symbolResult.changes;
+      deletedDeps += depResult.changes;
+      deletedRoutes += routeResult.changes;
+    }
+
+    // Insert new entries for changed files (not deleted files)
+    for (const filePath of affectedFiles) {
+      const fileData = parsedFiles[filePath];
+      if (!fileData) continue; // File was deleted, nothing to insert
+
+      // Insert symbols: functions
+      for (const fn of fileData.functions) {
+        insertSymbol.run({
+          name: fn.name,
+          type: 'function',
+          file_path: filePath,
+          start_line: fn.startLine,
+          end_line: fn.endLine,
+          params: fn.params,
+          is_exported: fn.isExported ? 1 : 0,
+          is_async: fn.isAsync ? 1 : 0,
+          parent: null,
+        });
+        insertedSymbols++;
+      }
+
+      // Insert symbols: classes and their methods
+      for (const cls of fileData.classes) {
+        insertSymbol.run({
+          name: cls.name,
+          type: 'class',
+          file_path: filePath,
+          start_line: cls.startLine,
+          end_line: cls.endLine,
+          params: null,
+          is_exported: 0,
+          is_async: 0,
+          parent: null,
+        });
+        insertedSymbols++;
+
+        for (const method of cls.methods) {
+          insertSymbol.run({
+            name: method.name,
+            type: 'method',
+            file_path: filePath,
+            start_line: method.startLine,
+            end_line: method.endLine,
+            params: method.params,
+            is_exported: 0,
+            is_async: method.isAsync ? 1 : 0,
+            parent: cls.name,
+          });
+          insertedSymbols++;
+        }
+      }
+
+      // Insert dependencies
+      for (const imp of fileData.imports) {
+        if (!imp.resolved) continue;
+
+        let targetRelative;
+        if (path.isAbsolute(imp.resolved)) {
+          targetRelative = path.relative(config.targetCodebase, imp.resolved);
+        } else {
+          targetRelative = imp.resolved;
+        }
+
+        insertDep.run({
+          source_file: filePath,
+          target_file: targetRelative,
+          raw_import: imp.raw,
+          imported_names: JSON.stringify(imp.names),
+        });
+        insertedDeps++;
+      }
+
+      // Insert routes
+      for (const route of fileData.routes) {
+        insertRoute.run({
+          name: route.name,
+          method: route.method,
+          path: route.path,
+          handler: route.handler,
+          handler_function: route.handlerFunction || null,
+          controller_file: route.controllerFile || null,
+          file_path: filePath,
+          middlewares: route.middlewares ? JSON.stringify(route.middlewares) : null,
+          public_access: route.publicAccess ? 1 : 0,
+          start_line: route.startLine,
+          end_line: route.endLine,
+        });
+        insertedRoutes++;
+      }
+    }
+  });
+
+  update();
+
+  console.log(`[symbol-map] incremental update complete:`);
+  console.log(`[symbol-map]   deleted: ${deletedSymbols} symbols, ${deletedDeps} deps, ${deletedRoutes} routes`);
+  console.log(`[symbol-map]   inserted: ${insertedSymbols} symbols, ${insertedDeps} deps, ${insertedRoutes} routes`);
+
+  db.close();
+  console.log(`[symbol-map] database updated at ${DB_PATH}`);
+}
+
+// ---------------------------------------------------------------------------
 // Export
 // ---------------------------------------------------------------------------
 
-module.exports = { buildSymbolMap };
+module.exports = { buildSymbolMap, updateSymbolMap };
 
 if (require.main === module) {
   buildSymbolMap();

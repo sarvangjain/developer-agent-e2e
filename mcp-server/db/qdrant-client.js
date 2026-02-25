@@ -12,11 +12,105 @@ const { QdrantClient } = require('@qdrant/js-client-rest');
 
 const QDRANT_URL = process.env.QDRANT_URL || 'http://localhost:6333';
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://127.0.0.1:11434';
-const EMBEDDING_MODEL = 'nomic-embed-text';
-const COLLECTION = 'codebase';
+
+// Embedding model configuration (must match indexer settings)
+// Supported models: nomic-embed-text (default), manutic/nomic-embed-code, jina/jina-embeddings-v2-small-en
+const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || 'nomic-embed-text';
+
+const COLLECTION = process.env.QDRANT_COLLECTION || 'codebase';
 const PRD_COLLECTION = 'prd_history';
 
 const qdrant = new QdrantClient({ url: QDRANT_URL });
+
+// ---------------------------------------------------------------------------
+// LRU Cache for Query Embeddings
+// ---------------------------------------------------------------------------
+
+/**
+ * Simple LRU (Least Recently Used) cache for query embeddings.
+ * Caches embedding vectors to avoid redundant Ollama API calls for repeated queries.
+ * 
+ * @param {number} maxSize - Maximum number of entries to cache (default 100)
+ */
+class EmbeddingCache {
+  constructor(maxSize = 100) {
+    this.maxSize = maxSize;
+    this.cache = new Map();
+    this.hits = 0;
+    this.misses = 0;
+  }
+
+  /**
+   * Generate a cache key from query and model.
+   */
+  _key(text) {
+    return `${EMBEDDING_MODEL}:${text}`;
+  }
+
+  /**
+   * Get embedding from cache if present, moving to most recent.
+   * @param {string} text - Query text
+   * @returns {number[]|null} - Embedding vector or null if not cached
+   */
+  get(text) {
+    const key = this._key(text);
+    if (!this.cache.has(key)) {
+      this.misses++;
+      return null;
+    }
+    // Move to end (most recently used)
+    const value = this.cache.get(key);
+    this.cache.delete(key);
+    this.cache.set(key, value);
+    this.hits++;
+    return value;
+  }
+
+  /**
+   * Store embedding in cache, evicting LRU entry if at capacity.
+   * @param {string} text - Query text
+   * @param {number[]} embedding - Embedding vector
+   */
+  set(text, embedding) {
+    const key = this._key(text);
+    // Delete existing to update position
+    if (this.cache.has(key)) {
+      this.cache.delete(key);
+    }
+    // Evict LRU (first entry) if at capacity
+    while (this.cache.size >= this.maxSize) {
+      const oldestKey = this.cache.keys().next().value;
+      this.cache.delete(oldestKey);
+    }
+    this.cache.set(key, embedding);
+  }
+
+  /**
+   * Get cache statistics for monitoring.
+   */
+  stats() {
+    const total = this.hits + this.misses;
+    return {
+      size: this.cache.size,
+      maxSize: this.maxSize,
+      hits: this.hits,
+      misses: this.misses,
+      hitRate: total > 0 ? (this.hits / total * 100).toFixed(1) + '%' : 'N/A',
+    };
+  }
+
+  /**
+   * Clear the cache.
+   */
+  clear() {
+    this.cache.clear();
+    this.hits = 0;
+    this.misses = 0;
+  }
+}
+
+// Singleton cache instance (100 entries, ~75KB for 768-dim vectors)
+const embeddingCache = new EmbeddingCache(100);
 
 // ---------------------------------------------------------------------------
 // HTTP helper (Node 18.14 compatible)
@@ -50,15 +144,44 @@ function httpPost(url, body) {
 }
 
 // ---------------------------------------------------------------------------
-// Embedding
+// Embedding (with LRU cache)
 // ---------------------------------------------------------------------------
 
+/**
+ * Generate embedding for query text using Ollama.
+ * Results are cached to avoid redundant API calls.
+ * 
+ * @param {string} text - Query text to embed
+ * @returns {Promise<number[]>} - Embedding vector
+ */
 async function embedQuery(text) {
+  // Check cache first
+  const cached = embeddingCache.get(text);
+  if (cached) {
+    return cached;
+  }
+
+  // Cache miss - call Ollama
   const data = await httpPost(`${OLLAMA_URL}/api/embed`, {
     model: EMBEDDING_MODEL,
     input: text,
   });
-  return data.embeddings[0];
+  const embedding = data.embeddings[0];
+
+  // Cache the result
+  embeddingCache.set(text, embedding);
+
+  return embedding;
+}
+
+/**
+ * Get embedding cache statistics.
+ * Useful for monitoring cache effectiveness.
+ * 
+ * @returns {object} Cache stats (size, hits, misses, hitRate)
+ */
+function getEmbeddingCacheStats() {
+  return embeddingCache.stats();
 }
 
 // ---------------------------------------------------------------------------
@@ -217,6 +340,66 @@ async function searchPrdHistory(query, limit = 10) {
 }
 
 // ---------------------------------------------------------------------------
+// Health checks
+// ---------------------------------------------------------------------------
+
+/**
+ * Check if Qdrant is healthy and the codebase collection exists.
+ * 
+ * @returns {{ healthy: boolean, qdrant: boolean, ollama: boolean, details: string }}
+ */
+async function isHealthy() {
+  const status = {
+    healthy: false,
+    qdrant: false,
+    ollama: false,
+    details: '',
+  };
+
+  // Check Qdrant
+  try {
+    const collections = await qdrant.getCollections();
+    const exists = collections.collections.some(c => c.name === COLLECTION);
+    status.qdrant = exists;
+    if (!exists) {
+      status.details += `Qdrant collection '${COLLECTION}' not found. `;
+    }
+  } catch (err) {
+    status.qdrant = false;
+    status.details += `Qdrant unavailable: ${err.message}. `;
+  }
+
+  // Check Ollama
+  try {
+    await httpPost(`${OLLAMA_URL}/api/embed`, {
+      model: EMBEDDING_MODEL,
+      input: 'health check',
+    });
+    status.ollama = true;
+  } catch (err) {
+    status.ollama = false;
+    status.details += `Ollama unavailable: ${err.message}. `;
+  }
+
+  status.healthy = status.qdrant && status.ollama;
+  if (status.healthy) {
+    status.details = 'All services operational';
+  }
+
+  return status;
+}
+
+/**
+ * Quick check if vector search is available (Qdrant + Ollama).
+ * 
+ * @returns {boolean}
+ */
+async function canDoVectorSearch() {
+  const { healthy } = await isHealthy();
+  return healthy;
+}
+
+// ---------------------------------------------------------------------------
 // Export
 // ---------------------------------------------------------------------------
 
@@ -225,6 +408,9 @@ module.exports = {
   mmrRerank,
   embedQuery,
   searchPrdHistory,
+  isHealthy,
+  canDoVectorSearch,
+  getEmbeddingCacheStats,
   COLLECTION,
   PRD_COLLECTION,
 };

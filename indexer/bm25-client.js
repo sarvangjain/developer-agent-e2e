@@ -31,7 +31,7 @@ const CHUNKS_PATH = path.join(config.projectRoot, 'index', 'chunks.json');
 const BM25_INDEX_PATH = path.join(config.projectRoot, 'index', 'bm25-index.json');
 
 // ---------------------------------------------------------------------------
-// Schema
+// Schema (enhanced with contextual fields for Contextual BM25)
 // ---------------------------------------------------------------------------
 
 const ORAMA_SCHEMA = {
@@ -43,6 +43,10 @@ const ORAMA_SCHEMA = {
   start_line: 'number',
   end_line: 'number',
   is_exported: 'boolean',
+  // Contextual fields for better retrieval (Anthropic Contextual Retrieval approach)
+  module: 'string',          // 'lending', 'main', 'shared'
+  layer: 'string',           // 'controller', 'service', 'db_service', etc.
+  contextual_text: 'string', // Combined context for BM25 matching
 };
 
 // ---------------------------------------------------------------------------
@@ -65,9 +69,14 @@ async function buildBm25Index(chunks) {
     schema: ORAMA_SCHEMA,
   });
 
-  // Insert all chunks
+  // Insert all chunks with contextual data
   let inserted = 0;
   for (const chunk of chunks) {
+    // Build contextual text if not already present
+    // Format: "filePath module layer functionName description"
+    const contextualText = chunk.contextualText || 
+      `${chunk.filePath} ${chunk.module || ''} ${chunk.layer || ''} ${chunk.functionName || ''} ${chunk.description || ''}`;
+
     await insert(db, {
       chunk_id: chunk.id,
       file_path: chunk.filePath,
@@ -77,6 +86,10 @@ async function buildBm25Index(chunks) {
       start_line: chunk.startLine || 0,
       end_line: chunk.endLine || 0,
       is_exported: chunk.isExported || false,
+      // Contextual fields
+      module: chunk.module || '',
+      layer: chunk.layer || '',
+      contextual_text: contextualText,
     });
     inserted++;
   }
@@ -114,7 +127,11 @@ async function loadBm25Index() {
 // ---------------------------------------------------------------------------
 
 /**
- * Search the BM25 index.
+ * Search the BM25 index with contextual matching.
+ * 
+ * The search now includes contextual_text which contains:
+ * - File path, module, layer, function name, and description
+ * This improves matching for queries like "lending service" or "controller auth"
  * 
  * @param {object} db - Orama database instance
  * @param {string} query - search query
@@ -125,7 +142,8 @@ async function searchBm25(db, query, limit = 50) {
   const results = await search(db, {
     term: query,
     limit,
-    properties: ['function_name', 'description', 'code', 'file_path'],
+    // Include contextual_text in search for better architectural matching
+    properties: ['function_name', 'description', 'code', 'file_path', 'contextual_text', 'module', 'layer'],
   });
 
   return results.hits.map(hit => ({
@@ -137,6 +155,8 @@ async function searchBm25(db, query, limit = 50) {
     start_line: hit.document.start_line,
     end_line: hit.document.end_line,
     is_exported: hit.document.is_exported,
+    module: hit.document.module,
+    layer: hit.document.layer,
     bm25_score: hit.score,
   }));
 }
