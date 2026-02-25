@@ -5,7 +5,6 @@ index/symbol-map.db-wal
 index/symbol-map.db-shm
 index/repo-map.txt
 index/bm25-index.json
-index/chunks.json
 index/.last-indexed
 .env
 *.log
