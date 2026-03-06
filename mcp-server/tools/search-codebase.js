@@ -23,16 +23,12 @@
 const { vectorSearch, mmrRerank, embedQuery } = require('../db/qdrant-client');
 const bm25 = require('../db/bm25-client');
 const { mergeRRF } = require('../db/rrf');
-// Use free (local) query enhancer by default. Set USE_CLAUDE_ENHANCER=1 for Claude-powered version.
-const enhancerModule = process.env.USE_CLAUDE_ENHANCER === '1'
-  ? './query-enhancer'
-  : './query-enhancer-local';
 const { 
   logQuery, 
   enhanceQuery, 
   ENABLE_QUERY_DECOMPOSITION, 
   ENABLE_HYDE 
-} = require(enhancerModule);
+} = require('./query-enhancer');
 
 /**
  * Hybrid codebase search with graceful degradation and query enhancement.

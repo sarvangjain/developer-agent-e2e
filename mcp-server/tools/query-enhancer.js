@@ -58,7 +58,7 @@ function initQueryLog() {
   try {
     fs.mkdirSync(path.dirname(QUERY_LOG_PATH), { recursive: true });
     queryLogStream = fs.createWriteStream(QUERY_LOG_PATH, { flags: 'a' });
-    console.log(`[query-enhancer] Query logging enabled: ${QUERY_LOG_PATH}`);
+    console.error(`[query-enhancer] Query logging enabled: ${QUERY_LOG_PATH}`);
   } catch (err) {
     console.error('[query-enhancer] Could not init query log:', err.message);
   }
@@ -158,7 +158,7 @@ Sub-queries:`
     const allQueries = [query, ...subQueries.slice(0, 3)];
     const unique = [...new Set(allQueries)];
     
-    console.log(`[query-enhancer] decomposed "${query.slice(0, 50)}..." into ${unique.length} queries`);
+    console.error(`[query-enhancer] decomposed "${query.slice(0, 50)}..." into ${unique.length} queries`);
     return unique;
   } catch (err) {
     console.error('[query-enhancer] decomposition failed:', err.message);
@@ -219,7 +219,7 @@ Hypothetical code snippet:
     // Combine query context with hypothetical code for embedding
     const hydeText = `// Query: ${query}\n${code}`;
     
-    console.log(`[query-enhancer] HyDE generated ${code.split('\n').length} lines for "${query.slice(0, 40)}..."`);
+    console.error(`[query-enhancer] HyDE generated ${code.split('\n').length} lines for "${query.slice(0, 40)}..."`);
     return hydeText;
   } catch (err) {
     console.error('[query-enhancer] HyDE generation failed:', err.message);

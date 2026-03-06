@@ -43,14 +43,12 @@ const { readFile } = require('./tools/read-file');
 const { listDirectory } = require('./tools/list-directory');
 const { grepCodebase } = require('./tools/grep-codebase');
 
-// Phase 2 & 3: Advanced retrieval (use free local versions by default)
-const enhancerMod = process.env.USE_CLAUDE_ENHANCER === '1' ? './tools/query-enhancer' : './tools/query-enhancer-local';
-const advancedMod = process.env.USE_CLAUDE_ENHANCER === '1' ? './tools/advanced-retrieval' : './tools/advanced-retrieval-local';
-const { getQueryLogStats } = require(enhancerMod);
-const { advancedSearch } = require(advancedMod);
+// Phase 2 & 3: Advanced retrieval
+const { getQueryLogStats } = require('./tools/query-enhancer');
+const { advancedSearch } = require('./tools/advanced-retrieval');
 
-// New tools: DB schema, test patterns
-const { listSchemas, getTable, searchSchema } = require('./tools/get-db-schema');
+// New tools: DB schema (hybrid with migrations), test patterns
+const { listSchemas, getTable, searchSchema, getMigrationPatterns, getRecentMigrations } = require('./tools/get-db-schema');
 const { getTestPatterns } = require('./tools/get-test-patterns');
 
 // ---------------------------------------------------------------------------
@@ -313,14 +311,14 @@ server.tool(
   }
 );
 
-// 11. get_db_schema — database schema query
+// 11. get_db_schema — database schema query (hybrid: schema snapshot + migration patterns)
 server.tool(
   'get_db_schema',
-  'Query the database schema. Use action="list" to see all schemas/tables, action="table" with table_name to get column details (e.g. "lending.credit_notes" or just "credit_notes"), action="search" with keyword to find tables/columns by name. Essential for Checkpoint 4 (Data Model & Contract Review).',
+  'Query the database schema (hybrid: current state + migration patterns). Actions: "list"=all schemas/tables, "table"=column details + migration info, "search"=find by keyword, "migrations"=migration patterns for a table, "recent"=recent migrations. Essential for Checkpoint 4 (Data Model & Contract Review).',
   {
-    action: z.enum(['list', 'table', 'search']).describe('Action: list=all schemas, table=columns for a table, search=find by keyword'),
+    action: z.enum(['list', 'table', 'search', 'migrations', 'recent']).describe('Action: list/table/search (schema), migrations/recent (patterns)'),
     table_name: z.string().optional().describe('For action=table: schema.table_name or just table_name'),
-    keyword: z.string().optional().describe('For action=search: keyword to search tables and columns'),
+    keyword: z.string().optional().describe('For action=search/migrations: keyword to search'),
   },
   async ({ action, table_name, keyword }) => {
     let result;
@@ -341,7 +339,23 @@ server.tool(
           const cols = t.columns.map(c => 
             `  ${c.name.padEnd(30)} ${c.type.padEnd(25)} ${c.nullable ? 'NULL' : 'NOT NULL'}${c.default ? ` DEFAULT ${c.default.slice(0, 40)}` : ''}`
           ).join('\n');
-          return `${t.full_name} (${t.columns.length} columns):\n${cols}`;
+          let output = `${t.full_name} (${t.columns.length} columns):\n${cols}`;
+          
+          // Include migration info if available
+          if (t.migration) {
+            output += `\n\n  Migration Info:`;
+            if (t.migration.created_in) output += `\n    Created in: ${t.migration.created_in}`;
+            if (t.migration.altered_in && t.migration.altered_in.length > 0) {
+              output += `\n    Altered in: ${t.migration.altered_in.join(', ')}`;
+            }
+            if (t.migration.indexes && t.migration.indexes.length > 0) {
+              output += `\n    Indexes: ${t.migration.indexes.map(i => i.columns.join('+') + (i.type === 'unique' ? ' (unique)' : '')).join(', ')}`;
+            }
+            if (t.migration.foreign_keys && t.migration.foreign_keys.length > 0) {
+              output += `\n    FKs: ${t.migration.foreign_keys.map(fk => `${fk.column} -> ${fk.table}.${fk.references}`).join(', ')}`;
+            }
+          }
+          return output;
         }).join('\n\n');
         return { content: [{ type: 'text', text: tableDetails }] };
       
@@ -361,8 +375,57 @@ server.tool(
         }
         return { content: [{ type: 'text', text: output }] };
       
+      case 'migrations':
+        result = getMigrationPatterns(keyword || '');
+        if (result.error) return { content: [{ type: 'text', text: result.error + (result.hint ? `\n\n${result.hint}` : '') }] };
+        let migOutput = `Migration Patterns${keyword ? ` for "${keyword}"` : ''}\n\n`;
+        
+        if (result.common_patterns) {
+          migOutput += 'Common Column Types:\n';
+          const types = Object.entries(result.common_patterns.column_types)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10);
+          migOutput += types.map(([type, count]) => `  ${type}: ${count}`).join('\n');
+          migOutput += '\n\n';
+        }
+        
+        if (result.matching_tables.length > 0) {
+          migOutput += `Tables (${result.matching_tables.length}):\n`;
+          for (const t of result.matching_tables.slice(0, 10)) {
+            migOutput += `\n  ${t.table}:\n`;
+            migOutput += `    Created: ${t.created_in || 'unknown'}\n`;
+            if (t.altered_in.length > 0) migOutput += `    Altered: ${t.altered_in.slice(0, 3).join(', ')}\n`;
+            migOutput += `    Stats: ${t.column_count} cols, ${t.index_count} indexes, ${t.fk_count} FKs\n`;
+            if (t.columns.length > 0) {
+              migOutput += `    Columns: ${t.columns.slice(0, 5).map(c => `${c.name}(${c.type})`).join(', ')}${t.columns.length > 5 ? '...' : ''}\n`;
+            }
+          }
+        }
+        
+        if (result.matching_migrations.length > 0) {
+          migOutput += `\nRecent Matching Migrations:\n`;
+          for (const m of result.matching_migrations.slice(0, 5)) {
+            migOutput += `  ${m.file}: creates=${m.tables_created.join(',')||'none'}, alters=${m.tables_altered.join(',')||'none'}\n`;
+          }
+        }
+        
+        return { content: [{ type: 'text', text: migOutput }] };
+      
+      case 'recent':
+        result = getRecentMigrations(10);
+        if (result.error) return { content: [{ type: 'text', text: result.error }] };
+        let recentOutput = `Recent Migrations (${result.total_migrations} total):\n\n`;
+        for (const m of result.recent) {
+          recentOutput += `${m.file}\n`;
+          recentOutput += `  ${m.timestamp || 'no timestamp'}\n`;
+          if (m.tables_created.length > 0) recentOutput += `  Creates: ${m.tables_created.join(', ')}\n`;
+          if (m.tables_altered.length > 0) recentOutput += `  Alters: ${m.tables_altered.join(', ')}\n`;
+          recentOutput += `  Stats: ${m.column_count} cols, ${m.index_count} idx, ${m.fk_count} fk\n\n`;
+        }
+        return { content: [{ type: 'text', text: recentOutput }] };
+      
       default:
-        return { content: [{ type: 'text', text: 'Invalid action. Use: list, table, or search' }] };
+        return { content: [{ type: 'text', text: 'Invalid action. Use: list, table, search, migrations, or recent' }] };
     }
   }
 );

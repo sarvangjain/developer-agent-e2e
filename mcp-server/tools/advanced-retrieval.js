@@ -128,7 +128,7 @@ Most relevant results:`
       }
     }
     
-    console.log(`[advanced-retrieval] cross-encoder reranked ${candidates.length} candidates`);
+    console.error(`[advanced-retrieval] cross-encoder reranked ${candidates.length} candidates`);
     return reranked;
   } catch (err) {
     console.error('[advanced-retrieval] cross-encoder reranking failed:', err.message);
@@ -224,14 +224,14 @@ Response:`
       const text = response.content[0].text.trim();
       
       if (text.toUpperCase().includes('DONE') || text.length < 5) {
-        console.log(`[advanced-retrieval] agentic retrieval complete after ${iterations} iterations`);
+        console.error(`[advanced-retrieval] agentic retrieval complete after ${iterations} iterations`);
         break;
       }
       
       // Use the follow-up query
       currentQuery = text.replace(/^["']|["']$/g, '').slice(0, 200);
       followUpQueries.push(currentQuery);
-      console.log(`[advanced-retrieval] iteration ${iterations}: follow-up query: "${currentQuery.slice(0, 50)}..."`);
+      console.error(`[advanced-retrieval] iteration ${iterations}: follow-up query: "${currentQuery.slice(0, 50)}..."`);
       
     } catch (err) {
       console.error('[advanced-retrieval] agentic iteration failed:', err.message);
@@ -336,7 +336,7 @@ JSON:`
         result.enhancedQuery = `${query} ${contextParts.join(' ')}`;
       }
       
-      console.log(`[advanced-retrieval] Layer 0: intent=${result.intent}, entities=${result.entities.length}, layers=${result.layers.join(',') || 'any'}`);
+      console.error(`[advanced-retrieval] Layer 0: intent=${result.intent}, entities=${result.entities.length}, layers=${result.layers.join(',') || 'any'}`);
     }
   } catch (err) {
     console.error('[advanced-retrieval] Layer 0 analysis failed:', err.message);

@@ -3,13 +3,15 @@
 /**
  * build-db-schema.js
  * 
- * Parses the db-schema.csv (exported from information_schema.columns)
- * into a structured JSON file grouped by schema → table → columns.
+ * Hybrid schema indexer that combines:
+ * 1. Schema snapshot from CSV (accurate current state from DB)
+ * 2. Migration patterns (how tables were created/modified)
  * 
- * Also generates a compact schema summary for the repo map.
+ * The schema file is the source of truth for WHAT exists.
+ * The migrations show HOW and WHEN tables were created.
  * 
  * Usage: node indexer/build-db-schema.js
- * Input:  index/db-schema.csv
+ * Input:  index/db-schema.csv, index/migration-patterns.json (optional)
  * Output: index/db-schema.json
  */
 
@@ -18,6 +20,7 @@ const path = require('path');
 
 const CSV_PATH = path.join(__dirname, '..', 'index', 'db-schema.csv');
 const JSON_PATH = path.join(__dirname, '..', 'index', 'db-schema.json');
+const MIGRATIONS_PATH = path.join(__dirname, '..', 'index', 'migration-patterns.json');
 
 function parseCSV(content) {
   const lines = content.split('\n').filter(l => l.trim());
@@ -111,6 +114,40 @@ function buildSchema() {
     console.log(`  ${schema}: ${tables.length} tables`);
   }
 
+  // Load migration patterns if available
+  let migrationData = null;
+  if (fs.existsSync(MIGRATIONS_PATH)) {
+    try {
+      migrationData = JSON.parse(fs.readFileSync(MIGRATIONS_PATH, 'utf-8'));
+      console.log(`[db-schema] loaded ${migrationData.total_migrations} migration patterns`);
+    } catch (err) {
+      console.warn(`[db-schema] could not load migrations: ${err.message}`);
+    }
+  } else {
+    console.log('[db-schema] no migration patterns found (run: node indexer/index-migrations.js)');
+  }
+
+  // Merge migration info into schema tables
+  if (migrationData && migrationData.tables) {
+    for (const [schemaName, schemaTables] of Object.entries(schemas)) {
+      for (const [tableName, tableData] of Object.entries(schemaTables)) {
+        // Try to find migration info for this table
+        // Migrations might use schema-prefixed names or just table names
+        const migInfo = migrationData.tables[tableName] || 
+                        migrationData.tables[`${schemaName}.${tableName}`];
+        
+        if (migInfo) {
+          tableData.migration = {
+            created_in: migInfo.created_in,
+            altered_in: migInfo.altered_in || [],
+            indexes: migInfo.indexes || [],
+            foreign_keys: migInfo.foreign_keys || [],
+          };
+        }
+      }
+    }
+  }
+
   // Write output
   const output = {
     generated: new Date().toISOString(),
@@ -118,6 +155,12 @@ function buildSchema() {
     total_tables: totalTables,
     total_columns: rows.length,
     schemas,
+    // Include migration summary
+    migrations: migrationData ? {
+      total: migrationData.total_migrations,
+      common_patterns: migrationData.common_patterns,
+      recent: migrationData.migrations ? migrationData.migrations.slice(-10) : [],
+    } : null,
   };
 
   fs.writeFileSync(JSON_PATH, JSON.stringify(output, null, 2));

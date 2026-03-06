@@ -13,6 +13,10 @@
     "parse": "node indexer/parse-codebase.js",
     "build:symbol-map": "node indexer/build-symbol-map.js",
     "build:repo-map": "node indexer/build-repo-map.js",
+    "build:db-schema": "node indexer/index-migrations.js && node indexer/build-db-schema.js",
+    "build:db-schema:full": "node indexer/index-migrations.js --full && node indexer/build-db-schema.js",
+    "build:migrations": "node indexer/index-migrations.js",
+    "build:migrations:full": "node indexer/index-migrations.js --full",
     "validate:index": "node scripts/validate-index.js"
   },
   "dependencies": {
