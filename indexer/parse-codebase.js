@@ -823,10 +823,129 @@ function markExportedFunctions(symbols) {
 }
 
 // ---------------------------------------------------------------------------
+// Incremental parse pipeline
+// ---------------------------------------------------------------------------
+
+/**
+ * Parse only changed files and merge with existing parsed-files.json.
+ * 
+ * @param {string[]} changedFiles - Relative paths of files that were added/modified
+ * @param {string[]} deletedFiles - Relative paths of files that were deleted
+ * @returns {object} - The merged parsed files object
+ */
+async function parseCodebaseIncremental(changedFiles, deletedFiles) {
+  console.log('[parse] starting incremental codebase parse...');
+  console.log(`[parse] target: ${config.targetCodebase}`);
+  console.log(`[parse] changed files: ${changedFiles.length}, deleted files: ${deletedFiles.length}`);
+
+  // Load existing parsed-files.json
+  const outputPath = path.join(config.projectRoot, 'index', 'parsed-files.json');
+  let parsedFiles = {};
+
+  if (fs.existsSync(outputPath)) {
+    try {
+      parsedFiles = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
+      console.log(`[parse] loaded existing index with ${Object.keys(parsedFiles).length} files`);
+    } catch (err) {
+      console.warn(`[parse] could not load existing index: ${err.message}`);
+    }
+  }
+
+  // Remove deleted files from the index
+  for (const relPath of deletedFiles) {
+    if (parsedFiles[relPath]) {
+      delete parsedFiles[relPath];
+      console.log(`[parse] removed deleted file: ${relPath}`);
+    }
+  }
+
+  // If no changed files, just write and return
+  if (changedFiles.length === 0) {
+    fs.writeFileSync(outputPath, JSON.stringify(parsedFiles, null, 2));
+    console.log(`[parse] no changed files to parse, index updated`);
+    return parsedFiles;
+  }
+
+  // Initialize tree-sitter
+  await initTreeSitter();
+
+  // Parse only the changed files
+  let totalFunctions = 0;
+  let totalClasses = 0;
+  let totalImports = 0;
+  let totalRoutes = 0;
+  let parseErrors = 0;
+
+  for (const relPath of changedFiles) {
+    const filePath = path.join(config.targetCodebase, relPath);
+
+    try {
+      // Check if file exists (it might have been deleted after git diff)
+      if (!fs.existsSync(filePath)) {
+        console.log(`[parse] skipping non-existent file: ${relPath}`);
+        if (parsedFiles[relPath]) {
+          delete parsedFiles[relPath];
+        }
+        continue;
+      }
+
+      // Skip files larger than 1MB
+      const stat = fs.statSync(filePath);
+      if (stat.size > 1024 * 1024) {
+        console.log(`[parse] skipping large file (${(stat.size / 1024).toFixed(0)}KB): ${relPath}`);
+        continue;
+      }
+
+      const source = fs.readFileSync(filePath, 'utf-8');
+      const tree = Parser.parse(source);
+
+      const symbols = extractSymbols(tree, source, filePath);
+      markExportedFunctions(symbols);
+
+      parsedFiles[relPath] = {
+        absolutePath: filePath,
+        lineCount: source.split('\n').length,
+        functions: symbols.functions,
+        classes: symbols.classes,
+        exports: symbols.exports,
+        imports: symbols.imports,
+        routes: symbols.routes,
+      };
+
+      totalFunctions += symbols.functions.length;
+      totalClasses += symbols.classes.length;
+      totalImports += symbols.imports.length;
+      totalRoutes += symbols.routes.length;
+
+      console.log(`[parse] re-parsed: ${relPath}`);
+    } catch (err) {
+      parseErrors++;
+      console.error(`[parse] error parsing ${relPath}: ${err.message}`);
+    }
+  }
+
+  console.log(`[parse] incremental parse complete.`);
+  console.log(`[parse]   files re-parsed: ${changedFiles.length}`);
+  console.log(`[parse]   functions in changed files: ${totalFunctions}`);
+  console.log(`[parse]   classes in changed files: ${totalClasses}`);
+  console.log(`[parse]   imports in changed files: ${totalImports}`);
+  console.log(`[parse]   routes in changed files: ${totalRoutes}`);
+  console.log(`[parse]   parse errors: ${parseErrors}`);
+  console.log(`[parse]   total files in index: ${Object.keys(parsedFiles).length}`);
+
+  // Write updated output
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, JSON.stringify(parsedFiles, null, 2));
+  console.log(`[parse] output written to ${outputPath}`);
+
+  return parsedFiles;
+}
+
+// ---------------------------------------------------------------------------
 // Export for use by other modules + direct execution
 // ---------------------------------------------------------------------------
 
-module.exports = { parseCodebase, resolveImportPath, initTreeSitter };
+module.exports = { parseCodebase, parseCodebaseIncremental, resolveImportPath, initTreeSitter };
 
 if (require.main === module) {
   parseCodebase().catch(err => {

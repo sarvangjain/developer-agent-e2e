@@ -3,13 +3,23 @@
 /**
  * run-indexer.js
  *
- * Orchestrator for the full indexing pipeline. Runs all steps in order:
+ * Orchestrator for the full and incremental indexing pipeline.
+ *
+ * Full mode runs all steps:
  *   1. parse-codebase.js     → index/parsed-files.json
  *   2. build-symbol-map.js   → index/symbol-map.db
  *   3. build-repo-map.js     → index/repo-map.txt
  *   4. chunk-and-describe.js → index/chunks.json
  *   5. embed-and-store.js    → Qdrant collection
  *   6. bm25-client.js        → index/bm25-index.json
+ *
+ * Incremental mode only processes changed files:
+ *   1. Parse only changed files, merge with existing parsed-files.json
+ *   2. Update symbol-map.db (delete old entries, insert new)
+ *   3. Rebuild repo-map.txt (depends on full graph)
+ *   4. Re-chunk only changed files, merge with existing chunks
+ *   5. Delete old chunks from Qdrant, embed and upsert new
+ *   6. Rebuild BM25 index (fast, ~3 seconds)
  *
  * Modes:
  *   --mode=full         Full re-index of the entire codebase
@@ -25,9 +35,11 @@ require('dotenv').config({ path: require('path').join(__dirname, '..', '.env') }
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const minimatch = require('minimatch');
 const config = require('./config');
 
 const LAST_INDEXED_PATH = path.join(config.projectRoot, 'index', '.last-indexed');
+const INCREMENTAL_THRESHOLD = 50;
 
 // ---------------------------------------------------------------------------
 // Parse args
@@ -52,27 +64,61 @@ function parseArgs() {
 }
 
 // ---------------------------------------------------------------------------
+// File exclusion check
+// ---------------------------------------------------------------------------
+
+function shouldExclude(relPath) {
+  for (const pattern of config.excludePatterns) {
+    if (minimatch(relPath, pattern, { dot: true })) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// ---------------------------------------------------------------------------
 // Git diff for incremental mode
 // ---------------------------------------------------------------------------
 
+/**
+ * Returns changed files since last indexed commit.
+ * @returns {{ changed: string[], deleted: string[] } | null} - null means fall back to full
+ */
 function getChangedFiles() {
   if (!fs.existsSync(LAST_INDEXED_PATH)) {
     console.log('[indexer] no .last-indexed found — falling back to full index');
-    return null; // null means full index
+    return null;
   }
 
   const lastCommit = fs.readFileSync(LAST_INDEXED_PATH, 'utf-8').trim();
   console.log(`[indexer] last indexed commit: ${lastCommit}`);
 
   try {
-    const diff = execSync(
-      `git diff --name-only ${lastCommit} HEAD -- '*.js'`,
+    const diffOutput = execSync(
+      `git diff --name-status ${lastCommit} HEAD -- '*.js'`,
       { cwd: config.targetCodebase, encoding: 'utf-8' }
     );
 
-    const files = diff.split('\n').filter(f => f.trim());
-    console.log(`[indexer] ${files.length} files changed since last index`);
-    return files;
+    const changed = [];
+    const deleted = [];
+
+    for (const line of diffOutput.split('\n')) {
+      if (!line.trim()) continue;
+
+      const [status, ...pathParts] = line.split('\t');
+      const relPath = pathParts.join('\t').trim();
+
+      if (!relPath || shouldExclude(relPath)) continue;
+
+      if (status === 'D') {
+        deleted.push(relPath);
+      } else {
+        changed.push(relPath);
+      }
+    }
+
+    console.log(`[indexer] ${changed.length} files changed, ${deleted.length} files deleted`);
+    return { changed, deleted };
   } catch (err) {
     console.warn(`[indexer] git diff failed: ${err.message}. Falling back to full index.`);
     return null;
@@ -95,33 +141,10 @@ function saveCurrentCommit() {
 }
 
 // ---------------------------------------------------------------------------
-// Main
+// Full Pipeline
 // ---------------------------------------------------------------------------
 
-async function main() {
-  const { mode } = parseArgs();
-  const startTime = Date.now();
-
-  console.log(`\n${'='.repeat(60)}`);
-  console.log(`  Developer Agent Indexer — ${mode.toUpperCase()} mode`);
-  console.log(`  Target: ${config.targetCodebase}`);
-  console.log(`${'='.repeat(60)}\n`);
-
-  if (mode === 'incremental') {
-    const changedFiles = getChangedFiles();
-    if (changedFiles === null || changedFiles.length > 50) {
-      // Fall back to full if too many changes or no baseline
-      console.log('[indexer] running full index (incremental not viable)');
-    } else if (changedFiles.length === 0) {
-      console.log('[indexer] no files changed since last index. Nothing to do.');
-      return;
-    } else {
-      // TODO: implement incremental — for now, fall back to full
-      console.log(`[indexer] incremental mode: ${changedFiles.length} changed files`);
-      console.log('[indexer] NOTE: incremental update not yet implemented — running full index');
-    }
-  }
-
+async function runFullPipeline() {
   // Step 1: Parse codebase
   console.log('\n--- Step 1/6: Parse codebase ---');
   const { parseCodebase } = require('./parse-codebase');
@@ -151,6 +174,92 @@ async function main() {
   console.log('\n--- Step 6/6: Build BM25 index ---');
   const { buildBm25Index } = require('./bm25-client');
   await buildBm25Index(chunks);
+}
+
+// ---------------------------------------------------------------------------
+// Incremental Pipeline
+// ---------------------------------------------------------------------------
+
+async function runIncrementalPipeline(changedFiles, deletedFiles) {
+  const allAffectedFiles = [...changedFiles, ...deletedFiles];
+
+  // Step 1: Parse only changed files and merge
+  console.log('\n--- Step 1/6: Incremental parse ---');
+  const { parseCodebaseIncremental } = require('./parse-codebase');
+  const parsedFiles = await parseCodebaseIncremental(changedFiles, deletedFiles);
+
+  // Step 2: Update symbol map (delete old, insert new)
+  console.log('\n--- Step 2/6: Update symbol map ---');
+  const { updateSymbolMap } = require('./build-symbol-map');
+  updateSymbolMap(parsedFiles, allAffectedFiles);
+
+  // Step 3: Rebuild repo map (fast, depends on full graph)
+  console.log('\n--- Step 3/6: Rebuild repo map ---');
+  const { buildRepoMap } = require('./build-repo-map');
+  buildRepoMap();
+
+  // Step 4: Re-chunk only changed files and merge
+  console.log('\n--- Step 4/6: Incremental chunk and describe ---');
+  const { chunkAndDescribeIncremental } = require('./chunk-and-describe');
+  const { chunks, oldChunkIds, newChunks } = await chunkAndDescribeIncremental(changedFiles, deletedFiles);
+
+  // Step 5: Delete old chunks from Qdrant, embed and upsert new
+  console.log('\n--- Step 5/6: Incremental embed and store ---');
+  const { embedAndStoreIncremental } = require('./embed-and-store');
+  await embedAndStoreIncremental(oldChunkIds, newChunks);
+
+  // Step 6: Rebuild BM25 index (fast, ~3 seconds)
+  console.log('\n--- Step 6/6: Rebuild BM25 index ---');
+  const { buildBm25Index } = require('./bm25-client');
+  await buildBm25Index(chunks);
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+
+async function main() {
+  const { mode } = parseArgs();
+  const startTime = Date.now();
+
+  console.log(`\n${'='.repeat(60)}`);
+  console.log(`  Developer Agent Indexer — ${mode.toUpperCase()} mode`);
+  console.log(`  Target: ${config.targetCodebase}`);
+  console.log(`${'='.repeat(60)}\n`);
+
+  let runIncremental = false;
+  let changedFiles = [];
+  let deletedFiles = [];
+
+  if (mode === 'incremental') {
+    const diffResult = getChangedFiles();
+
+    if (diffResult === null) {
+      console.log('[indexer] running full index (no baseline commit)');
+    } else {
+      const totalChanged = diffResult.changed.length + diffResult.deleted.length;
+
+      if (totalChanged === 0) {
+        console.log('[indexer] no files changed since last index. Nothing to do.');
+        return;
+      }
+
+      if (totalChanged > INCREMENTAL_THRESHOLD) {
+        console.log(`[indexer] ${totalChanged} files changed (threshold: ${INCREMENTAL_THRESHOLD}) — falling back to full index`);
+      } else {
+        runIncremental = true;
+        changedFiles = diffResult.changed;
+        deletedFiles = diffResult.deleted;
+        console.log(`[indexer] incremental mode: ${changedFiles.length} changed, ${deletedFiles.length} deleted`);
+      }
+    }
+  }
+
+  if (runIncremental) {
+    await runIncrementalPipeline(changedFiles, deletedFiles);
+  } else {
+    await runFullPipeline();
+  }
 
   // Save commit hash
   saveCurrentCommit();

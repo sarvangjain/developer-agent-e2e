@@ -13,18 +13,22 @@
     "parse": "node indexer/parse-codebase.js",
     "build:symbol-map": "node indexer/build-symbol-map.js",
     "build:repo-map": "node indexer/build-repo-map.js",
+    "build:db-schema": "node indexer/index-migrations.js && node indexer/build-db-schema.js",
+    "build:db-schema:full": "node indexer/index-migrations.js --full && node indexer/build-db-schema.js",
+    "build:migrations": "node indexer/index-migrations.js",
+    "build:migrations:full": "node indexer/index-migrations.js --full",
     "validate:index": "node scripts/validate-index.js"
   },
   "dependencies": {
-    "web-tree-sitter": "^0.24.3",
-    "tree-sitter-javascript": "^0.23.0",
-    "better-sqlite3": "^11.7.0",
-    "glob": "^11.0.0",
     "@anthropic-ai/sdk": "^0.39.0",
-    "@qdrant/js-client-rest": "^1.13.0",
-    "@orama/orama": "^3.1.0",
     "@modelcontextprotocol/sdk": "^1.12.1",
-    "dotenv": "^16.4.0"
-  },
-  "devDependencies": {}
+    "@orama/orama": "^3.1.0",
+    "@qdrant/js-client-rest": "^1.13.0",
+    "better-sqlite3": "^11.7.0",
+    "dotenv": "^16.4.0",
+    "glob": "^11.0.0",
+    "minimatch": "^10.2.3",
+    "tree-sitter-javascript": "^0.23.0",
+    "web-tree-sitter": "^0.24.3"
+  }
 }
