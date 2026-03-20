@@ -31,16 +31,62 @@
       "database_tables": "snake_case",
       "database_columns": "snake_case"
     },
+    "fileNamingExamples": {
+      "controller": "credit_facility_controller.js",
+      "service": "credit_facility_service.js",
+      "db_service": "credit_facility_db_service.js",
+      "schema": "credit_facility_schema.js",
+      "route": "credit_facility_routes.js",
+      "test": "credit_facility.test.js",
+      "migration": "20260320120000_add_credit_facility_table.js"
+    },
     "routePattern": "Plain objects with method, path, function properties exported from route files. NOT app.get() style.",
     "controllerPattern": "module.exports = { fnName: async (req, res) => { try { ... } catch (err) { respondError(res, err); } } }",
     "errorHandling": "try/catch in controllers → respondError(res, err). Custom error classes: APIError, ArgumentError, JoiSchemaError, ForbiddenError, NotFoundError, UserAuthenticationError",
+    "errorClasses": {
+      "APIError": { "use": "External API failures (Oracle, Service Bus, third-party)", "httpStatus": 500 },
+      "ArgumentError": { "use": "Invalid function arguments in service layer", "httpStatus": 400 },
+      "JoiSchemaError": { "use": "Request validation failures", "httpStatus": 400 },
+      "ForbiddenError": { "use": "Permission denied", "httpStatus": 403 },
+      "NotFoundError": { "use": "Resource not found", "httpStatus": 404 },
+      "UserAuthenticationError": { "use": "Auth token invalid/expired", "httpStatus": 401 }
+    },
     "asyncPattern": "async/await with try/catch",
     "validation": "Joi schemas in /schemas directories. Validated via joiValidation.validate(schema, payload)",
     "imports": "Module aliases via module-alias: @config, @main, @lending, @services, @middlewares, @errors, @utils, @root, @seeds, @scripts, @staticData",
+    "commonImports": {
+      "logger": "const logger = require('@utils/logger');",
+      "config": "const config = require('@config');",
+      "respondError": "const { respondError } = require('@errors');",
+      "joiValidation": "const joiValidation = require('@utils/joi_validation');",
+      "APIError": "const { APIError } = require('@errors');",
+      "ArgumentError": "const { ArgumentError } = require('@errors');",
+      "NotFoundError": "const { NotFoundError } = require('@errors');",
+      "ForbiddenError": "const { ForbiddenError } = require('@errors');",
+      "JoiSchemaError": "const { JoiSchemaError } = require('@errors');",
+      "db": "const db = config.getDb();",
+      "Joi": "const Joi = require('joi');"
+    },
     "logging": "logger.info(), logger.error(), logger.warn() from @utils/logger. NEVER console.log in production.",
     "slackNotifications": "slackNotify.info/error() for critical operations and errors",
     "caching": "Redis via @utils/cache — setObj(), getObj(), deleteObj()",
     "database": "Knex query builder — config.getDb() returns db instance. Transactions via db.transaction(trx => ...)",
+    "transactionPattern": {
+      "when": "Any operation that writes to multiple tables",
+      "syntax": "await db.transaction(async trx => { ... })",
+      "rule": "Pass trx to all db_service functions inside the transaction, not db"
+    },
+    "responseFormat": {
+      "success": "res.status(200).json({ success: true, data: {...} })",
+      "created": "res.status(201).json({ success: true, data: {...} })",
+      "error": "respondError(res, err) — automatically formats error response",
+      "list": "{ success: true, data: [...], pagination: { total, page, limit } }"
+    },
+    "permissionPattern": {
+      "format": "MODULE_ACTION_RESOURCE (e.g., LENDING_VIEW_CREDIT_FACILITY)",
+      "location": "Defined in permissions table, attached to routes via permission property",
+      "check": "Middleware checks user permissions before controller executes"
+    },
     "configAccess": "config.getConfig('KEY') for runtime config values",
     "userContext": "getUserID(), getOrgID(), getTenantCode() from @middlewares/user_object",
     "noNewPackages": true,
@@ -98,23 +144,88 @@
     }
   },
   "checkpoints": {
-    "count": 7,
+    "count": 8,
+    "phases": {
+      "phase1_analysis": {
+        "name": "Analysis Phase",
+        "context": "Single conversation with full context",
+        "checkpoints": [1, 2, 3]
+      },
+      "phase2_module_execution": {
+        "name": "Module Execution Phase",
+        "context": "Fresh context per module (can parallelize)",
+        "checkpoints": [4, 5, 6],
+        "repeats": "Per module"
+      },
+      "phase3_integration": {
+        "name": "Integration Phase",
+        "context": "Fresh context for final integration",
+        "checkpoints": [7, 8]
+      }
+    },
     "workflow": [
       "Requirements Validation",
-      "Architecture & Design Approval",
-      "Test Strategy Approval",
-      "Data Model & Contract Review",
-      "Implementation Review",
-      "Test Coverage & Quality Gate",
-      "Pre-Merge Release Approval"
+      "Module Decomposition",
+      "Data Model Overview",
+      "Module Design",
+      "Module Implementation",
+      "Module Testing",
+      "Integration & Quality Gate",
+      "Release Summary"
     ],
     "rules": [
       "Never skip a checkpoint",
       "Always produce the required deliverable at each checkpoint",
       "Always STOP and wait for explicit human approval before proceeding",
       "If human requests changes, incorporate them and re-present the checkpoint",
-      "Track checkpoint status: PENDING → APPROVED → (next checkpoint)"
-    ]
+      "Track checkpoint status: PENDING → APPROVED → (next checkpoint)",
+      "Modules can be implemented in parallel if they have no dependencies",
+      "Each module should be completable in 1-2 conversation sessions",
+      "State module transitions explicitly: 'Starting Module N' / 'Module N Complete'"
+    ],
+    "toolsPerCheckpoint": {
+      "checkpoint1_requirements": ["get_repo_map", "search_codebase", "search_prd_history", "get_routes"],
+      "checkpoint2_modules": ["get_db_schema", "search_codebase", "get_routes", "get_dependencies"],
+      "checkpoint3_data_model": ["get_db_schema", "read_file", "grep_codebase"],
+      "checkpoint4_module_design": ["get_dependencies", "read_file", "grep_codebase", "get_symbol"],
+      "checkpoint5_module_impl": ["read_file", "get_symbol", "get_dependencies"],
+      "checkpoint6_module_test": ["get_test_patterns", "search_codebase", "list_directory"],
+      "checkpoint7_integration": [],
+      "checkpoint8_release": []
+    },
+    "moduleSpec": {
+      "required_fields": [
+        "scope",
+        "prd_requirements_covered",
+        "files_to_create",
+        "files_to_modify",
+        "database_tables",
+        "api_endpoints",
+        "dependencies_on_other_modules",
+        "outputs_for_other_modules",
+        "context_bootstrap_files",
+        "acceptance_criteria"
+      ],
+      "sizing_guidelines": {
+        "target_files_per_module": "3-8",
+        "max_files_per_module": 10,
+        "split_if_exceeds": true
+      }
+    },
+    "moduleHandoff": {
+      "when_starting_module": [
+        "Read .agent-rules.json",
+        "Read approved Module Decomposition document",
+        "Read approved Data Model document",
+        "Read Context Bootstrap files from module spec",
+        "State: 'Starting Module [N]: [Name]'"
+      ],
+      "when_completing_module": [
+        "Run module-specific tests",
+        "Report coverage for this module",
+        "State: 'Module [N]: [Name] — COMPLETE'"
+      ]
+    }
   },
   "testing": {
     "framework": "jest",

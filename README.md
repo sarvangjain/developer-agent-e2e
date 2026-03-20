@@ -237,17 +237,37 @@ node indexer/run-indexer.js --mode=incremental
 
 ## 🎓 How It Works
 
-### The Full Workflow
+### The Full Workflow (3-Phase, 8-Checkpoint)
 
 ```
-Developer writes PRD → Agent loads context → Searches codebase → Generates plan
-         ↓                                                             ↓
-   ✋ Human approves plan                                    Agent generates code
-         ↓                                                             ↓
-   Agent runs lint + tests                                      Fixes if needed
-         ↓                                                             ↓
-   ✋ Human reviews diffs                                        Merge ready!
+PHASE 1: ANALYSIS (Single Conversation)
+┌─────────────────────────────────────────────────────────────────────┐
+│ PRD → ✋ Requirements Validation → ✋ Module Decomposition           │
+│                                    (break into independent modules) │
+│        → ✋ Data Model Overview (full schema for all modules)       │
+└─────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+PHASE 2: MODULE EXECUTION (Fresh Context per Module, Parallelizable)
+┌─────────────────────────────────────────────────────────────────────┐
+│ For each module:                                                    │
+│   ✋ Module Design → ✋ Module Implementation → ✋ Module Testing     │
+│                                                                      │
+│ Modules with no dependencies can run in PARALLEL                    │
+└─────────────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+PHASE 3: INTEGRATION (Fresh Context)
+┌─────────────────────────────────────────────────────────────────────┐
+│ ✋ Integration & Quality Gate → ✋ Release Summary → Merge Ready!    │
+└─────────────────────────────────────────────────────────────────────┘
 ```
+
+**Why Modules?**
+- Large PRDs exhaust context windows
+- Modules can be implemented by multiple agents in parallel
+- Each module gets focused attention without context pollution
+- Human reviews are smaller and more effective
 
 ### Why This Approach Works
 

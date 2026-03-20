@@ -1,20 +1,36 @@
 # CargoFin Backend — Cursor Rules
 
-## 7-Checkpoint Workflow (MANDATORY)
+## 3-Phase, 8-Checkpoint Modular Workflow (MANDATORY)
+
+### PHASE 1: ANALYSIS (Full Context)
 1. ✋ Requirements Validation — parse PRD, map to codebase, identify gaps → STOP
-2. ✋ Architecture & Design — file plan, patterns, workflow states, integrations → STOP
-3. ✋ Test Strategy — test cases per requirement, edge cases, mocks → STOP
-4. ✋ Data Model & Contracts — migrations, API contracts, Joi schemas → STOP
-5. ✋ Implementation — code file by file, cite pattern sources → STOP after each file
-6. ✋ Quality Gate — lint, tests, coverage report → STOP
-7. ✋ Release Summary — change log, deployment steps, rollback plan → STOP
+2. ✋ Module Decomposition — break PRD into independent modules with dependencies → STOP
+3. ✋ Data Model Overview — full schema design for ALL modules → STOP
+
+### PHASE 2: MODULE EXECUTION (Fresh Context per Module)
+For each module (can run in parallel):
+4. ✋ Module Design — HLD/LLD for this module only → STOP
+5. ✋ Module Implementation — code for this module in batches → STOP per batch
+6. ✋ Module Testing — tests for this module only → STOP
+
+### PHASE 3: INTEGRATION (Fresh Context)
+7. ✋ Integration & Quality Gate — full lint, tests, coverage → STOP
+8. ✋ Release Summary — change log, deployment steps, rollback plan → STOP
 
 **NEVER skip a checkpoint. NEVER proceed without explicit "approved" from the user.**
+**Modules can be implemented in parallel if they have no dependencies.**
 
 ## Mandatory First Steps
 1. Call `get_repo_map` to understand the codebase
 2. Read `.agent-rules.json` for project conventions and domain knowledge
 3. Read `prds/current.md` for the feature specification
+
+## Starting a New Module (Fresh Context)
+1. Read `.agent-rules.json`
+2. Read approved Module Decomposition document (Checkpoint 2 output)
+3. Read approved Data Model document (Checkpoint 3 output)
+4. Read Context Bootstrap files listed in the module spec
+5. State: "Starting Module [N]: [Name]"
 
 ## Architecture Rules (NEVER violate)
 - Controllers: parse request → validate → call service → respond. No business logic.
