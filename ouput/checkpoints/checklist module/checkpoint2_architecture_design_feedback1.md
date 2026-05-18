@@ -25,13 +25,12 @@ This approach will incorrectly merge tasks that have the **same name but differe
 
 ### Required Change
 
-The aggregation engine should consider **multiple dimensions** when identifying duplicates, not just task name. Two tasks are duplicates ONLY if ALL of the following match:
+The aggregation engine should consider **multiple dimensions** when identifying duplicates, not task name. Two tasks are duplicates ONLY if ALL of the following match:
 
-1. **Task Name** (case-insensitive normalized)
-2. **Stage** (workflow lifecycle stage)
-3. **Category** (Documentation, Legal, Compliance, etc.)
-4. **Owner Role** (who completes the task)
-5. **Completion Criteria Type** (Document, Input Field, Undertaking)
+1. **Stage** (workflow lifecycle stage)
+2. **Category** (Documentation, Legal, Compliance, etc.)
+3. **Owner Role** (who completes the task)
+4. **Completion Criteria Type** (Document, Input Field, Undertaking)
 
 If any of these differ, the tasks are **NOT duplicates** and should both appear in the instance.
 

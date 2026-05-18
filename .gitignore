@@ -10,3 +10,4 @@ index/chunks.json
 .env
 *.log
 .DS_Store
+output/
